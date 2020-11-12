@@ -1,0 +1,85 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://themes/Default/default.tres" type="Theme" id=2]
+[ext_resource path="res://fonts/DejaVu/DejaVuSans.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 42
+font_data = ExtResource( 4 )
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends Label
+
+
+func _ready():
+	self.text = Settings.get(\"application/config/name\")
+"
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends Label
+
+
+func _ready():
+	self.text = Settings.get(\"rakugo/game/info/version\")
+"
+
+[node name="AboutScreen" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchor_left = 0.1
+anchor_right = 0.9
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="About" type="VBoxContainer" parent="ScrollContainer"]
+margin_right = 650.0
+margin_bottom = 275.0
+rect_min_size = Vector2( 650, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameTitle" type="Label" parent="ScrollContainer/About"]
+margin_right = 650.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 0, 200 )
+theme = ExtResource( 2 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.6, 0.8, 1, 1 )
+valign = 2
+script = SubResource( 2 )
+
+[node name="GameVersion" type="Label" parent="ScrollContainer/About"]
+margin_top = 204.0
+margin_right = 650.0
+margin_bottom = 231.0
+theme = ExtResource( 2 )
+script = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RakugoTextLabel" type="RichTextLabel" parent="ScrollContainer/About"]
+margin_top = 235.0
+margin_right = 650.0
+margin_bottom = 275.0
+rect_min_size = Vector2( 100, 40 )
+rect_clip_content = false
+focus_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+custom_colors/selection_color = Color( 0, 0.6, 0.8, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+scroll_active = false
+selection_enabled = true

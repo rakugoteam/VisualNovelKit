@@ -1,0 +1,168 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://themes/Default/default.tres" type="Theme" id=1]
+[ext_resource path="res://gui/Screens/PreferencesScreen/WindowCheck.gd" type="Script" id=2]
+[ext_resource path="res://gui/Screens/PreferencesScreen/FullscreenCheck.gd" type="Script" id=3]
+[ext_resource path="res://gui/Screens/PreferencesScreen/TextSpeedSlider.gd" type="Script" id=6]
+[ext_resource path="res://gui/Screens/PreferencesScreen/AutoSpeedSlider.gd" type="Script" id=7]
+
+[sub_resource type="ButtonGroup" id=1]
+
+[node name="PreferencesScreen" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rows" type="VBoxContainer" parent="."]
+anchor_left = 0.1
+anchor_top = 0.2
+anchor_right = 0.9
+anchor_bottom = 0.8
+custom_constants/separation = 40
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionScreen" type="HBoxContainer" parent="Rows"]
+margin_right = 1024.0
+margin_bottom = 93.0
+custom_constants/separation = 100
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Display" type="VBoxContainer" parent="Rows/OptionScreen"]
+margin_right = 138.0
+margin_bottom = 93.0
+theme = ExtResource( 1 )
+
+[node name="Title" type="Label" parent="Rows/OptionScreen/Display"]
+margin_right = 138.0
+margin_bottom = 27.0
+grow_horizontal = 0
+size_flags_vertical = 1
+theme = ExtResource( 1 )
+text = "Display"
+valign = 1
+
+[node name="WindowCheck" type="CheckButton" parent="Rows/OptionScreen/Display"]
+margin_top = 31.0
+margin_right = 138.0
+margin_bottom = 60.0
+theme = ExtResource( 1 )
+group = SubResource( 1 )
+text = "Window"
+script = ExtResource( 2 )
+
+[node name="FullscreenCheck" type="CheckButton" parent="Rows/OptionScreen/Display"]
+margin_top = 64.0
+margin_right = 138.0
+margin_bottom = 93.0
+theme = ExtResource( 1 )
+text = "Fullscreen"
+script = ExtResource( 3 )
+
+[node name="Skip" type="VBoxContainer" parent="Rows/OptionScreen"]
+margin_left = 238.0
+margin_right = 413.0
+margin_bottom = 93.0
+
+[node name="Title" type="Label" parent="Rows/OptionScreen/Skip"]
+margin_right = 175.0
+margin_bottom = 27.0
+grow_horizontal = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme = ExtResource( 1 )
+text = "Skip"
+valign = 1
+
+[node name="UnseenTextCheck" type="CheckButton" parent="Rows/OptionScreen/Skip"]
+margin_top = 31.0
+margin_right = 175.0
+margin_bottom = 60.0
+theme = ExtResource( 1 )
+text = "Unseen Text"
+
+[node name="AfterChoicesCheck" type="CheckButton" parent="Rows/OptionScreen/Skip"]
+margin_top = 64.0
+margin_right = 175.0
+margin_bottom = 93.0
+grow_horizontal = 0
+theme = ExtResource( 1 )
+text = "After Choices"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Rows"]
+margin_top = 133.0
+margin_right = 1024.0
+margin_bottom = 255.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Rows/HBoxContainer"]
+margin_right = 300.0
+margin_bottom = 122.0
+custom_constants/separation = 20
+
+[node name="TextSpeedBox" type="VBoxContainer" parent="Rows/HBoxContainer/VBoxContainer"]
+margin_right = 300.0
+margin_bottom = 51.0
+
+[node name="Label" type="Label" parent="Rows/HBoxContainer/VBoxContainer/TextSpeedBox"]
+margin_right = 300.0
+margin_bottom = 27.0
+size_flags_vertical = 1
+theme = ExtResource( 1 )
+text = "Text Speed"
+valign = 1
+
+[node name="TextSpeedSlider" type="HSlider" parent="Rows/HBoxContainer/VBoxContainer/TextSpeedBox"]
+margin_top = 31.0
+margin_right = 300.0
+margin_bottom = 51.0
+grow_horizontal = 0
+rect_min_size = Vector2( 300, 0 )
+size_flags_vertical = 1
+theme = ExtResource( 1 )
+min_value = -1.0
+max_value = -0.005
+step = 0.005
+value = -0.05
+ticks_on_borders = true
+script = ExtResource( 6 )
+
+[node name="AutoBox" type="VBoxContainer" parent="Rows/HBoxContainer/VBoxContainer"]
+margin_top = 71.0
+margin_right = 300.0
+margin_bottom = 122.0
+
+[node name="Label" type="Label" parent="Rows/HBoxContainer/VBoxContainer/AutoBox"]
+margin_right = 300.0
+margin_bottom = 27.0
+size_flags_vertical = 1
+theme = ExtResource( 1 )
+text = "Auto Forward Speed"
+valign = 1
+
+[node name="AutoSpeedSlider" type="HSlider" parent="Rows/HBoxContainer/VBoxContainer/AutoBox"]
+margin_top = 31.0
+margin_right = 300.0
+margin_bottom = 51.0
+grow_horizontal = 0
+rect_min_size = Vector2( 300, 0 )
+size_flags_vertical = 1
+theme = ExtResource( 1 )
+min_value = -10.0
+max_value = -0.1
+step = 0.1
+value = -3.0
+script = ExtResource( 7 )
+[connection signal="toggled" from="Rows/OptionScreen/Display/WindowCheck" to="Rows/OptionScreen/Display/WindowCheck" method="_on_toggled"]
+[connection signal="visibility_changed" from="Rows/OptionScreen/Display/WindowCheck" to="Rows/OptionScreen/Display/WindowCheck" method="_on_visibility_changed"]
+[connection signal="toggled" from="Rows/OptionScreen/Display/FullscreenCheck" to="Rows/OptionScreen/Display/FullscreenCheck" method="_on_toggled"]
+[connection signal="visibility_changed" from="Rows/OptionScreen/Display/FullscreenCheck" to="Rows/OptionScreen/Display/FullscreenCheck" method="_on_visibility_changed"]
+[connection signal="value_changed" from="Rows/HBoxContainer/VBoxContainer/TextSpeedBox/TextSpeedSlider" to="Rows/HBoxContainer/VBoxContainer/TextSpeedBox/TextSpeedSlider" method="_on_value_changed"]
+[connection signal="visibility_changed" from="Rows/HBoxContainer/VBoxContainer/TextSpeedBox/TextSpeedSlider" to="Rows/HBoxContainer/VBoxContainer/TextSpeedBox/TextSpeedSlider" method="_on_visibility_changed"]
+[connection signal="value_changed" from="Rows/HBoxContainer/VBoxContainer/AutoBox/AutoSpeedSlider" to="Rows/HBoxContainer/VBoxContainer/AutoBox/AutoSpeedSlider" method="_on_value_changed"]
+[connection signal="visibility_changed" from="Rows/HBoxContainer/VBoxContainer/AutoBox/AutoSpeedSlider" to="Rows/HBoxContainer/VBoxContainer/AutoBox/AutoSpeedSlider" method="_on_visibility_changed"]
