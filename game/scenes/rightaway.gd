@@ -3,12 +3,6 @@ extends Dialogue
 const game = 1
 const book = 2
 
-func _ready():
-	var me = load("res://game/characters/me.tres")
-	Rakugo.StoreManager.set("m", me)
-	var sylive = load("res://game/characters/sylvie/sylvie.tres")
-	Rakugo.StepBlocker.set("s", sylive)
-
 func rightaway():
 	start_event("rightaway")
 	
@@ -65,13 +59,16 @@ func rightaway():
 	say("s", "Sure, but what's a {i}visual novel?{/i}")
 	var choice = menu([
 		["It's a videogame.", game, {}],
-		["It's an interactive book.", book]
+		["It's an interactive book.", book, {}]
 	])
 
-	end_event()
+	# to make menu use safe for rollback
+	if is_active():
+		if cond(choice == game):
+			$game.start()
 
-	if choice == game:
-		jump("Start", "game", "game")
-		
-	if choice == book:
-		jump("Start", "book", "book")
+		elif cond(choice == book):
+			$book.start()
+
+	exit()
+	end_event()

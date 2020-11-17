@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://themes/Default/default.tres" type="Theme" id=1]
+[ext_resource path="res://themes/question/question.tres" type="Theme" id=1]
 [ext_resource path="res://gui/InGame/ChoiceMenu/ChoiceMenu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://gui/InGame/InGameGUI.gd" type="Script" id=3]
 [ext_resource path="res://gui/InGame/NotifyDisplay/NotifyDisplay.tscn" type="PackedScene" id=4]

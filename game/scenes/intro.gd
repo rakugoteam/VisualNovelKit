@@ -5,6 +5,13 @@ const now = 2
 
 func intro_dialog():
 	start_event("intro_dialog")
+
+	# load characters and make them saveable
+	var me = load("res://game/characters/me.tres")
+	Rakugo.StoreManager.set("m", me)
+	var sylive = load("res://game/characters/sylvie/sylvie.tres")
+	Rakugo.StoreManager.set("s", sylive)
+
 	show("bg lecturehall")
 	say(null,
 		"It's only when I hear the sounds of shuffling feet and supplies being put away that I realize that the lecture's over."
@@ -59,11 +66,13 @@ func intro_dialog():
 		["To ask her later.", now, {}],
 	])
 
+	# to make menu use safe for rollback
+	if is_active():
+		if cond(choice == now):
+			$rightaway.start()
+
+		elif cond(choice == later):
+			$later.start()
+
+	exit()
 	end_event()
-	
-	if choice == now:
-		jump("Start", "rightaway", "rightaway")
-	
-	if choice == later:
-		jump("Start", "later", "later")
-	
