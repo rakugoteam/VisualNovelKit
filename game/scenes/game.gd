@@ -1,11 +1,10 @@
 extends Dialogue
 
-func _ready():
-	# saveable bool
-	Rakugo.StoreManager.set("book", false)
-
 func game():
 	start_event("game")
+
+	# saveable bool
+	Rakugo.StoreManager.set("book", false)
 
 	say("m", "It's a kind of videogame you can play on your computer or a console.")
 	step()

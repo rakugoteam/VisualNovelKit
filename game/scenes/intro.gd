@@ -3,15 +3,15 @@ extends Dialogue
 const later = 1
 const now = 2
 
-func _ready():
+func intro_dialog():
+	start_event("intro_dialog")
+
 	# load characters and make them saveable
 	var me = load("res://game/characters/me.tres")
 	Rakugo.StoreManager.set("m", me)
 	var sylive = load("res://game/characters/sylvie/sylvie.tres")
 	Rakugo.StoreManager.set("s", sylive)
 
-func intro_dialog():
-	start_event("intro_dialog")
 	show("bg lecturehall")
 	say(null,
 		"It's only when I hear the sounds of shuffling feet and supplies being put away that I realize that the lecture's over."
