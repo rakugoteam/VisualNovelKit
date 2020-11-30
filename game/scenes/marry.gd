@@ -1,6 +1,5 @@
 extends Dialogue
 
-
 func marry():
 	start_event("marry")
 
@@ -90,7 +89,7 @@ func marry():
 	step()
 
 	show("bg black")
-    show("label Good Ending")
+	show("label Good Ending")
 	step()
 
 	Rakugo.reset_game()

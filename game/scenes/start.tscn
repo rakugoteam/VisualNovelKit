@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://game/backgrounds/backgrounds.tscn" type="PackedScene" id=1]
 [ext_resource path="res://game/characters/sylvie/Sylvie.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://game/scenes/later.gd" type="Script" id=7]
 [ext_resource path="res://fonts/DejaVu/DejaVuSans-Bold.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://game/scenes/Label.gd" type="Script" id=9]
+[ext_resource path="res://game/scenes/book.gd" type="Script" id=10]
+[ext_resource path="res://game/scenes/marry.gd" type="Script" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 8 )
@@ -30,10 +32,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 679.0
-margin_top = 341.0
-margin_right = 721.0
-margin_bottom = 355.0
+margin_left = 587.431
+margin_top = 336.243
+margin_right = 647.431
+margin_bottom = 355.243
 custom_fonts/font = SubResource( 1 )
 text = "Ending"
 script = ExtResource( 9 )
@@ -66,8 +68,12 @@ script = ExtResource( 6 )
 default_starting_event = "game"
 
 [node name="book" type="Node" parent="DialogsTree/intro/rightaway"]
+script = ExtResource( 10 )
+default_starting_event = "book"
 
 [node name="marry" type="Node" parent="DialogsTree/intro/rightaway"]
+script = ExtResource( 11 )
+default_starting_event = "marry"
 
 [node name="BGMusic" type="AudioStreamPlayer" parent="."]
 pause_mode = 2
