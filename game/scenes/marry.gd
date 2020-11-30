@@ -1,86 +1,97 @@
 extends Dialogue
 
-var s
-var m
+func marry():
+	start_event("marry")
 
-func _init_marry():
-	s = get_var("s")
-	m = get_var("m")
+	hide("sylvie")
+	show("bg black")
+	show("label And so, we become a visual novel creating duo")
+	step()
 
-func marry(node_name, dialog_name):
-	if !check_dialog(node_name, dialog_name, "marry"):
-		return
+	hide("label")
+	show("bg club")
+	say(null, "Over the years, we make lots of games and have a lot of fun making them.")
+	step()
 
-	if !dialog_init:
-		_init_marry()
-		dialog_init = true
+	var book = Rakugo.StoreManager.get("book")
+	if cond(book):
+		say(null, "Our first game is based on one of Sylvie's ideas,"
+		+ " but afterwards I get to come up with stories of my own, too."
+		)
+		step()
 
-	if next_state():
-		say({
-		"what": "{center}And so, we become a visual novel creating duo.{/center}",
-		"kind": "fullscreen"
-			})
+	say(null, "We take turns coming up with stories and"
+		+" characters and support each other to make some great games!"
+		)
+	step()
 
-	if next_state():
-		show("bg club")
-		say({
-		"what": "Over the years, we make lots of games and have a lot of fun making them."
-		})
+	say(null, "And one day...")
+	step()
 
-	if next_state():
-		if get_value("book"):
-			say({"what":
-				"Our first game is based on one of Sylvie's ideas,"
-			+ " but afterwards I get to come up with stories of my own, too."
-			})
+	show("sylvie blue normal")
+	say("s", "Hey...")
+	step()
 
-	if next_state():
-		say({"what":
-			"We take turns coming up with stories and"
-			+" characters and support each other to make some great games!"
-			})
+	say("m", "Yes?")
+	step()
 
-	if next_state():
-		say({"what": "And one day..."})
+	show("show sylvie blue giggle")
+	say("s", "Will you marry me?")
+	step()
 
-	if next_state():
-		show("sylvie blue normal")
-		s.say({"what": "Hey..."})
+	say("m", "What? Where did this come from?")
+	step()
 
-	if next_state():
-		m.say({"what": "Yes?"})
+	show("sylvie blue surprised")
+	say("s", "Come on, how long have we been dating?")
+	step()
 
-	if next_state():
-		show("show sylvie blue giggle")
-		s.say({"what": "Will you marry me?"})
+	say("m", "A while...")
+	step()
 
-	if next_state():
-		m.say({"what": "What? Where did this come from?"})
+	show("sylvie blue smile")
+	say("s", "These last few years we've been making visual novels together, spending time together, helping each other...")
+	step()
 
-	if next_state():
-		show("sylvie blue surprised")
-		s.say({"what": "Come on, how long have we been dating?"})
+	say("s", "I've gotten to know you and care about you better than anyone else. And I think the same goes for you, right?")
+	step()
 
-	if next_state():
-		m.say({"what": "A while..."})
+	say("m", "[s.name]")
+	step()
 
-	if next_state():
-		show("sylvie blue smile")
-		s.say({"what": "These last few years we've been making visual novels together, spending time together, helping each other..."})
+	show("sylvie blue giggle")
+	say("s", "But I know you're the indecisive type. If I held back, who knows when you'd propose?")
+	step()
 
-	if next_state():
-		s.say({"what": "I've gotten to know you and care about you better than anyone else. And I think the same goes for you, right?"})
+	show("sylvie blue normal")
+	say("s", "So will you marry me?")
+	step()
 
-	if next_state():
-		m.say({"what":"[s.name]"})
+	say("m", "Of course I will! I've actually been meaning to propose, honest!")
+	step()
 
-	if next_state():
-		show("sylvie blue giggle")
-		s.say({"what": "But I know you're the indecisive type. If I held back, who knows when you'd propose?"})
+	say("s", "I know, I know.")
+	step()
 
-	if next_state():
-		show("sylvie blue normal")
-		s.say({"what": "So will you marry me?"})
+	say("m", "I guess... I was too worried about timing. I wanted to ask the right question at the right time.")
+	step()
 
-	if next_state():
-		end_game()
+	show("sylvie blue giggle")
+	say("s", "You worry too much. If only this were a visual novel and I could pick an option to give you more courage!")
+	step()
+
+	say(null, "We get married shortly after that.")
+	step()
+
+	say(null, "Our visual novel duo lives on even after we're married...and I try my best to be more decisive.")
+	step()
+
+	say(null, "Together, we live happily ever after even now.") 
+	step()
+
+	show("bg black")
+	show("label Good Ending")
+	step()
+
+	Rakugo.reset_game()
+	end_event()

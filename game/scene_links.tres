@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource( 1 )
 ids = [ "Start" ]
-scenes = [ "res://game/scenes/Start/start.tscn" ]
+scenes = [ "res://game/scenes/start.tscn" ]
 _dict = {
-"Start": "res://game/scenes/Start/start.tscn"
+"Start": "res://game/scenes/start.tscn"
 }
