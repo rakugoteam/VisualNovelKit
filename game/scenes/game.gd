@@ -39,5 +39,4 @@ func game():
 	step()
 
 	get_node("../marry").start()
-	exit()
 	end_event()

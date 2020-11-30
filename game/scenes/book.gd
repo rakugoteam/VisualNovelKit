@@ -1,6 +1,6 @@
 extends Dialogue
 
-func book(node_name, dialog_name):
+func book():
 	start_event("book")
 
 	# saveable bool
@@ -40,5 +40,5 @@ func book(node_name, dialog_name):
 	say("s", "I'd love to!")
 	step()
 
-
-	jump("Start", "marry", "marry")
+	get_node("../marry").start()
+	end_event()

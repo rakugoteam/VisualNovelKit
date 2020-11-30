@@ -8,6 +8,7 @@ func marry():
 	show("label And so, we become a visual novel creating duo")
 	step()
 
+	hide("label")
 	show("bg club")
 	say(null, "Over the years, we make lots of games and have a lot of fun making them.")
 	step()
