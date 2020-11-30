@@ -288,6 +288,8 @@ mikey (ATP Projects)
 {b}Rakugo Port{/b}
 Jeremi360 (Rakugo Team)"
 default/gui/theme="res://themes/question/question.tres"
+editor/debug=true
+saves/test_mode=false
 
 [rendering]
 
