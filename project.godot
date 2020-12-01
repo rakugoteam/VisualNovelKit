@@ -87,7 +87,7 @@ _global_script_class_icons={
 "HistoryEntry": "",
 "ProjectTools": "",
 "PropertyInfo": "",
-"RakugoAnimPlayer": "",
+"RakugoAnimPlayer": "res://addons/Rakugo/icons/rakugo_animation_player.svg",
 "RakugoText": "",
 "RakugoTheme": "res://addons/Rakugo/icons/theme.svg",
 "SceneLinks": "res://addons/Rakugo/icons/scene_links.svg",
@@ -110,7 +110,7 @@ config/quit_on_go_back=false
 [autoload]
 
 Rakugo="*res://addons/Rakugo/Rakugo.tscn"
-Settings="*res://addons/Rakugo/Settings.gd"
+Settings="*res://addons/Rakugo/settings.gd"
 Window="*res://gui/Window/Window.tscn"
 
 [debug]
