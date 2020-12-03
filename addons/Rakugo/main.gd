@@ -108,7 +108,7 @@ func load_scene(scene_id:String, force_reload:bool = false):
 
 
 func reset_game():
-	SceneLoader.load_packed_scene(Settings.get("application/run/main_scene"))
+	SceneLoader.load_scene(Settings.get("application/run/main_scene"))
 	started = false
 	emit_signal("game_ended")
 
