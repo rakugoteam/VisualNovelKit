@@ -7,7 +7,9 @@
 [ext_resource path="res://gui/InGame/DialoguePanel/DialoguePanel.tscn" type="PackedScene" id=5]
 [ext_resource path="res://gui/QuickMenu/QuickMenu.tscn" type="PackedScene" id=6]
 
-[node name="InGameGUI" type="Control"]
+[node name="InGameGUI" type="Control" groups=[
+"showable game_ui",
+]]
 pause_mode = 1
 anchor_right = 1.0
 anchor_bottom = 1.0
