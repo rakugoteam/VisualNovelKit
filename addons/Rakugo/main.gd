@@ -127,12 +127,12 @@ func story_step(_unblock=false):
 
 
 func exit_dialogue():
-	if self.current_dialogue:
-		self.current_dialogue.exit()
+	self.set_current_dialogue(null)
 
 func set_current_dialogue(new_dialogue:Dialogue):
 	if current_dialogue != new_dialogue:
-		exit_dialogue()
+		if self.current_dialogue and not self.current_dialogue.exiting:
+			self.current_dialogue.exit()
 		current_dialogue = new_dialogue
 
 func activate_skipping():
