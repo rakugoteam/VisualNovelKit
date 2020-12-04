@@ -1,7 +1,6 @@
 extends Node
 
-const rakugo_version := "3.0.0"
-const credits_path := "res://addons/Rakugo/credits.txt"
+const rakugo_version := "3.0.0 Beta"
 
 # project settings integration
 onready var game_title : String = Settings.get("application/config/name")
@@ -68,11 +67,6 @@ func _ready():
 	History.init()
 
 	OS.set_window_title(game_title + " " + game_version)
-
-	#file.open(credits_path, file.READ)
-	#define("rakugo_credits", file.get_as_text(), false)
-	#file.close()
-
 
 
 ## Rakugo flow control
