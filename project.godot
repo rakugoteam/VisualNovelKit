@@ -110,7 +110,7 @@ config/quit_on_go_back=false
 [autoload]
 
 Rakugo="*res://addons/Rakugo/Rakugo.tscn"
-Settings="*res://addons/Rakugo/Settings.gd"
+Settings="*res://addons/Rakugo/settings.gd"
 Window="*res://gui/Window/Window.tscn"
 
 [debug]
