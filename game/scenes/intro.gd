@@ -54,7 +54,8 @@ func intro_dialog():
 
 	step()
 	say(null,
-		"More than just talking, more than just walking home together when our classes end."
+		"More than just talking, more than just walking home together when our classes end.",
+		{"typing":false}
 	)
 
 	step()
