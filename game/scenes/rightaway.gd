@@ -56,7 +56,7 @@ func rightaway():
 	step()
 
 	show("sylvie green smile")
-	say("s", "Sure, but what's a {i}visual novel?{/i}")
+	say("s", "Sure, but what's a {i}visual novel?{/i}", {"typing":false})
 	var choice = menu([
 		["It's a videogame.", game, {}],
 		["It's an interactive book.", book, {}]
