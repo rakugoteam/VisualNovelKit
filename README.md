@@ -16,9 +16,9 @@ Inspired by [Ren'Py](https://www.renpy.org), Rakugo is a framework aimed at prov
 
 Unlock the potential of [Godot](https://godotengine.org) 3.x with Rakugo!
 
-Now you can support this project by buing it on [itch.io](https://jebedaia.itch.io/rakugo).
+Now you can support this project here [itch.io](https://rakugoteam.github.io/donations/).
 
-You can download 2.0 for Godot 3.1 [here](https://github.com/rakugoteam/Rakugo/releases).
+<!-- You can download 2.0 for Godot 3.1 [here](https://github.com/rakugoteam/Rakugo/releases). -->
 
 ## Showcase
 
@@ -29,7 +29,7 @@ Games using Rakugo v 0.9.x :
 If your game uses Rakugo write to me on [Discord](https://discord.gg/K9gvjdg).
 
 Games using Rakugo v 2.0.x :
-- [**The Question: Rakugo Editon**](https://github.com/rakugoteam/Rakugo/tree/the-question-1.2)
+- [**The Question: Rakugo Editon**](https://github.com/rakugoteam/Rakugo/tree/the-question)
 
 ## The Question: Rakugo Editon
 
@@ -47,7 +47,7 @@ It means games that are for example:
 You can use it with:
 - GDScript
 - RakugoScript (ToDo)
-- VisualScript (ToDo)
+- VisualScript (ToDo, maybe?)
 
 ## FAQ:
 
@@ -72,9 +72,8 @@ This project's dialog functions can do more than Ren'Py's equivalents.
 
 If you want to help please write to us on our [Discord](https://discord.gg/K9gvjdg).
 
-Docs repo is here: https://github.com/rakugoteam/RakugoDocs
-
-I need help with this [visual script support](https://github.com/rakugoteam/Rakugo/issues/26).
+- Docs is here: https://rakugoteam.github.io/RakugoDocs/
+- Docs repo here: https://github.com/rakugoteam/RakugoDocs
 
 - [Godot icons](https://github.com/godotengine/godot-design/tree/master/engine/icons/optimized)
 - [Linux Pop icon theme](https://github.com/pop-os/icon-theme)
