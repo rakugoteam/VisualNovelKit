@@ -14,15 +14,15 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/Rakugo/lib/resources/character.gd"
 }, {
-"base": "BoxContainer",
-"class": "CollapsedList",
-"language": "GDScript",
-"path": "res://gui/Screens/PreferencesScreen/SoundBusControl/CollapsedList.gd"
-}, {
 "base": "Node",
 "class": "Dialogue",
 "language": "GDScript",
 "path": "res://addons/Rakugo/lib/nodes/dialogue.gd"
+}, {
+"base": "PanelContainer",
+"class": "DialoguePanel",
+"language": "GDScript",
+"path": "res://gui/InGame/DialoguePanel/DialoguePanel.gd"
 }, {
 "base": "Reference",
 "class": "Emojis",
@@ -43,11 +43,6 @@ _global_script_classes=[ {
 "class": "PropertyInfo",
 "language": "GDScript",
 "path": "res://addons/Rakugo/tools/project_settings/property_info.gd"
-}, {
-"base": "AnimationPlayer",
-"class": "RakugoAnimPlayer",
-"language": "GDScript",
-"path": "res://addons/Rakugo/lib/nodes/rakugo_anim_player.gd"
 }, {
 "base": "Object",
 "class": "RakugoText",
@@ -81,13 +76,12 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Character": "",
-"CollapsedList": "",
 "Dialogue": "res://addons/Rakugo/icons/dialogue.svg",
+"DialoguePanel": "res://addons/Rakugo/icons/dialogue_panel.svg",
 "Emojis": "",
 "HistoryEntry": "",
 "ProjectTools": "",
 "PropertyInfo": "",
-"RakugoAnimPlayer": "res://addons/Rakugo/icons/rakugo_animation_player.svg",
 "RakugoText": "",
 "RakugoTheme": "res://addons/Rakugo/icons/theme.svg",
 "SceneLinks": "res://addons/Rakugo/icons/scene_links.svg",
