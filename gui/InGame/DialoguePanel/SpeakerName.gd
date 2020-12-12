@@ -1,10 +1,17 @@
 extends RichTextLabel
 
+export var style = "default"
+
 func _ready():
-	Rakugo.connect("say" ,self, "_on_say")
+	Rakugo.connect("say", self, "_on_say")
 
 
 func _on_say(_character, _text, _parameters):
+	
+	if "style" in _parameters:
+		if _parameters.style != style:
+			return
+	
 	if _character:
 		self.bbcode_text = _character.get_composite_name("bbcode")
 	else:

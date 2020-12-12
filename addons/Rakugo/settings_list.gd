@@ -47,7 +47,8 @@ var default_property_list:Dictionary = {
 	"rakugo/game/text/markup" : [
 		"renpy", PropertyInfo.new(
 			"", TYPE_STRING, PROPERTY_HINT_ENUM, 
-			"renpy,bbcode,markdown,markdown_simple", PROPERTY_USAGE_CATEGORY)
+			"renpy,bbcode,markdown,markdown_simple",
+			PROPERTY_USAGE_CATEGORY)
 	],
 
 
@@ -102,14 +103,14 @@ var default_property_list:Dictionary = {
 
 
 	"rakugo/default/statements/default_say_parameters" : [
-		{}, PropertyInfo.new(
+		{"typing":true, "style": "default"}, PropertyInfo.new(
 			"", TYPE_DICTIONARY, PROPERTY_HINT_NONE, 
 			"", PROPERTY_USAGE_EDITOR)
 	],
 
 
 	"rakugo/default/statements/default_ask_parameters" : [
-		{}, PropertyInfo.new(
+		{"style": "default"}, PropertyInfo.new(
 			"", TYPE_DICTIONARY, PROPERTY_HINT_NONE, 
 			"", PROPERTY_USAGE_EDITOR)
 	],
