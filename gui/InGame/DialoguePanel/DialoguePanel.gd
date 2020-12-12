@@ -1,4 +1,5 @@
 extends PanelContainer
+class_name DialoguePanel, "res://addons/Rakugo/icons/dialogue_panel.svg"
 
 export var style = "default"
 
