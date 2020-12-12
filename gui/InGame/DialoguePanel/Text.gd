@@ -1,5 +1,7 @@
 extends RichTextLabel
 
+export var style = "default"
+
 var regex = RegEx.new()
 var skip_typing = false
 
@@ -11,7 +13,7 @@ signal typing_effect_started
 signal typing_effect_ended
 
 func _ready():
-	Rakugo.connect("say" ,self, "_on_say")
+	Rakugo.connect("say", self, "_on_say")
 	regex.compile("[[:graph:]]")
 
 
@@ -20,6 +22,11 @@ func _blocked_step():
 
 
 func _on_say(_character, _text, _parameters):
+
+	if "style" in _parameters:
+		if _parameters.style != style:
+			return
+
 	self.visible_characters = -1
 	self.bbcode_text = _text
 	if not Rakugo.skipping and _parameters.get('typing'):
