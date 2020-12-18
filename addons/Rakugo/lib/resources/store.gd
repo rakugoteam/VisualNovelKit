@@ -63,6 +63,4 @@ func duplicate(_deep:bool=true) -> Resource:##Store duplication should always be
 
 
 func _to_duplicate(v):
-	var output = false
-	output = output or v is Object and v.has_method('duplicate')
-	return output
+	return v is Object and v.has_method('duplicate')
