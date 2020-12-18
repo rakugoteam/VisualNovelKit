@@ -36,6 +36,7 @@ func _ready():
 	if self.auto_start and not Rakugo.current_dialogue:
 		start()
 
+
 func _store(save):
 	if Rakugo.current_dialogue == self:
 		#print("Storing dialogue ",self.name, "  ", self.event_stack)
@@ -84,7 +85,7 @@ func start(event_name=''):
 
 func dialogue_loop(_a):
 	#print("Starting threaded dialog ", self, " ", event_stack)
-	Rakugo.current_dialogue = self
+	Rakugo.set_current_dialogue(self)
 	while event_stack:
 		var_access.lock()
 		var e = event_stack.pop_front()
@@ -94,6 +95,8 @@ func dialogue_loop(_a):
 		if self.exiting:
 			break
 
+	if Rakugo.current_dialogue == self:
+		Rakugo.set_current_dialogue(null)
 	#print("Ending threaded dialog")
 	thread.call_deferred('wait_to_finish')
 

@@ -102,7 +102,7 @@ func load_scene(scene_id:String, force_reload:bool = false):
 
 
 func reset_game():
-	SceneLoader.load_packed_scene(Settings.get("application/run/main_scene"))
+	SceneLoader.load_scene(Settings.get("application/run/main_scene"))
 	started = false
 	emit_signal("game_ended")
 
@@ -121,12 +121,12 @@ func story_step(_unblock=false):
 
 
 func exit_dialogue():
-	if self.current_dialogue:
-		self.current_dialogue.exit()
+	self.set_current_dialogue(null)
 
 func set_current_dialogue(new_dialogue:Dialogue):
 	if current_dialogue != new_dialogue:
-		exit_dialogue()
+		if self.current_dialogue and not self.current_dialogue.exiting:
+			self.current_dialogue.exit()
 		current_dialogue = new_dialogue
 
 func activate_skipping():
