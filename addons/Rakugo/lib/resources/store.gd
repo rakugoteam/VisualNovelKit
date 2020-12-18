@@ -56,8 +56,7 @@ func duplicate(_deep:bool=true) -> Resource:##Store duplication should always be
 	var output = .duplicate(true)
 	output.script = self.script
 	for k in self.properties.keys():
-		if _to_duplicate(self.properties[k]):
-			print("duplicating %s" % k)
+		if k != "script" and _to_duplicate(self.properties[k]):
 			output.properties[k] = self.properties[k].duplicate(true)
 	return output
 
