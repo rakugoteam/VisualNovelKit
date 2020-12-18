@@ -1,6 +1,5 @@
 extends LineEdit
 
-export var style = "default"
 var variable_name:String = ""
 
 func _ready():
@@ -8,11 +7,6 @@ func _ready():
 
 
 func _on_ask(default_answer, _parameters):
-	if "style" in _parameters:
-		if _parameters.style != style:
-			hide()
-			return
-	
 	if _parameters.has('placeholder'):
 		self.placeholder_text = _parameters['placeholder']
 		
