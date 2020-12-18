@@ -19,11 +19,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/Rakugo/lib/nodes/dialogue.gd"
 }, {
-"base": "PanelContainer",
-"class": "DialoguePanel",
-"language": "GDScript",
-"path": "res://gui/InGame/DialoguePanel/DialoguePanel.gd"
-}, {
 "base": "Reference",
 "class": "Emojis",
 "language": "GDScript",
@@ -77,7 +72,6 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "Character": "",
 "Dialogue": "res://addons/Rakugo/icons/dialogue.svg",
-"DialoguePanel": "res://addons/Rakugo/icons/dialogue_panel.svg",
 "Emojis": "",
 "HistoryEntry": "",
 "ProjectTools": "",
@@ -254,6 +248,9 @@ rakugo_hide_ui_toggle={
 [rakugo]
 
 default/narrator/name=""
+default/statements/default_say_parameters={
+"typing": true
+}
 
 [rendering]
 
