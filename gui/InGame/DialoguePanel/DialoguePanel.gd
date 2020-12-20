@@ -1,9 +1,8 @@
 extends PanelContainer
 
-
 func _ready():
-	Rakugo.connect("say" ,self, "_on_say")
-	Rakugo.connect("ask" ,self, "_on_ask")
+	Rakugo.connect("say", self, "_on_say")
+	Rakugo.connect("ask", self, "_on_ask")
 
 func _on_say(_character, _text, _parameters):
 	show()

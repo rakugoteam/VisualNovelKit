@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -16,8 +14,8 @@
    height="220.34404"
    viewBox="0 0 729.66601 220.34404"
    sodipodi:docname="SplashV2.svg"
-   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   inkscape:export-filename="C:\Users\jerem\Desktop\Jeremi\DevProjects\Godot\Rakugo\graphics\splash.png"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   inkscape:export-filename="C:\Users\Jeremi Biernacki\Desktop\DevProjects\Godot\Rakugo\graphics\splash.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    style="enable-background:new">
@@ -29,7 +27,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -66,7 +64,7 @@
        y1="266.04935"
        x2="442.44562"
        y2="264.91339"
-       gradientTransform="translate(5.1907464)" />
+       gradientTransform="translate(-20.312233,57.831479)" />
   </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -77,22 +75,23 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1366"
-     inkscape:window-height="715"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
      id="namedview817"
      showgrid="false"
-     inkscape:zoom="0.62493325"
-     inkscape:cx="318.11997"
-     inkscape:cy="82.378316"
+     inkscape:zoom="1.2498665"
+     inkscape:cx="411.26014"
+     inkscape:cy="117.08119"
      inkscape:window-x="-8"
-     inkscape:window-y="22"
+     inkscape:window-y="32"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer3"
      inkscape:pagecheckerboard="true"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0" />
+     fit-margin-bottom="0"
+     inkscape:document-rotation="0" />
   <g
      inkscape:groupmode="layer"
      id="layer10"
@@ -306,36 +305,26 @@
     <text
        transform="scale(1.0039115,0.99610374)"
        id="text4670"
-       y="254.01212"
-       x="344.15451"
-       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:54.49773407px;line-height:1.25;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono Medium Italic';letter-spacing:0px;word-spacing:0px;opacity:0.5;fill:#0e232e;fill-opacity:1;stroke:none;stroke-width:1.36244321"
+       y="311.8436"
+       x="318.65152"
+       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:54.4977px;line-height:1.25;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono Medium Italic';letter-spacing:0px;word-spacing:0px;opacity:0.5;fill:#0e232e;fill-opacity:1;stroke:none;stroke-width:1.36244"
        xml:space="preserve"><tspan
-         style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono Medium Italic';fill:#0e232e;fill-opacity:1;stroke-width:1.36244321"
-         y="254.01212"
-         x="344.15451"
-         id="tspan4666"
-         sodipodi:role="line">Powered by</tspan><tspan
          id="tspan4668"
-         style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono Medium Italic';fill:#0e232e;fill-opacity:1;stroke-width:1.36244321"
-         y="322.13428"
-         x="344.15451"
-         sodipodi:role="line">Rakugo Framework</tspan></text>
+         style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono Medium Italic';fill:#0e232e;fill-opacity:1;stroke-width:1.36244"
+         y="311.8436"
+         x="318.65152"
+         sodipodi:role="line">Powered by Rakugo</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:54.49773407px;line-height:1.25;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono Medium Italic';letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient4664);fill-opacity:1;stroke:none;stroke-width:1.36244321"
-       x="337.392"
-       y="254.01212"
+       style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:54.4977px;line-height:1.25;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono Medium Italic';letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient4664);fill-opacity:1;stroke:none;stroke-width:1.36244"
+       x="311.88901"
+       y="311.8436"
        id="text342"
        transform="scale(1.0039115,0.99610374)"><tspan
          sodipodi:role="line"
-         id="tspan340"
-         x="337.392"
-         y="254.01212"
-         style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono Medium Italic';fill:url(#linearGradient4664);fill-opacity:1;stroke-width:1.36244321">Powered by</tspan><tspan
-         sodipodi:role="line"
-         x="337.392"
-         y="322.13428"
-         style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono Medium Italic';fill:url(#linearGradient4664);fill-opacity:1;stroke-width:1.36244321"
-         id="tspan948">Rakugo Framework</tspan></text>
+         x="311.88901"
+         y="311.8436"
+         style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono Medium Italic';fill:url(#linearGradient4664);fill-opacity:1;stroke-width:1.36244"
+         id="tspan948">Powered by Rakugo </tspan></text>
   </g>
 </svg>

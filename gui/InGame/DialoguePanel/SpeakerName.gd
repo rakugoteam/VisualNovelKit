@@ -1,7 +1,7 @@
 extends RichTextLabel
 
 func _ready():
-	Rakugo.connect("say" ,self, "_on_say")
+	Rakugo.connect("say", self, "_on_say")
 
 
 func _on_say(_character, _text, _parameters):
