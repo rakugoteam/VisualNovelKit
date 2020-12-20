@@ -1,12 +1,12 @@
 extends Node
 
-const rakugo_version := "3.0.0 Beta"
+const rakugo_version := "3.0.1"
 
 # project settings integration
 onready var game_title : String = Settings.get("application/config/name")
 onready var game_version : String = Settings.get("rakugo/game/info/version")
 onready var game_credits : String = Settings.get("rakugo/game/info/credits")
-onready var markup : String = Settings.get("rakugo/game/text/markup")#TODO remove that line 
+onready var markup : String = Settings.get("rakugo/game/text/markup")#TODO remove that line
 onready var debug_on : bool = Settings.get("rakugo/editor/debug")#Same same
 onready var scene_links : String = Settings.get("rakugo/game/scenes/scene_links")
 onready var theme : RakugoTheme = load(Settings.get("rakugo/default/gui/theme"))
@@ -18,7 +18,7 @@ var current_scene_node: Node = null
 var current_dialogue:Node = null setget set_current_dialogue
 
 var store = null setget set_current_store, get_current_store
-var persistent = null setget set_persistent_store, get_persistent_store 
+var persistent = null setget set_persistent_store, get_persistent_store
 
 # don't save this
 var scene_anchor:Node
@@ -190,7 +190,7 @@ func debug(some_text = []):
 		return
 
 	if not started:
-		return	
+		return
 
 	if typeof(some_text) == TYPE_ARRAY:
 		var new_text = ""
@@ -255,9 +255,9 @@ func jump(scene_id:String, dialogue_name:String, event_name:String, force_reload
 func get_current_store():
 	return StoreManager.get_current_store()
 func set_current_store(value):
-	return 
+	return
 
 func get_persistent_store():
 	return StoreManager.get_persistent_store()
 func set_persistent_store(value):
-	return 
+	return
