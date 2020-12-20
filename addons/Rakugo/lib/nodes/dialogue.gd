@@ -156,8 +156,7 @@ func step():
 func end_event():
 	var_access.lock()
 	event_stack.pop_front()
-	if event_stack.size() > 0:
-		event_stack[0][1] -= 1# Realign step counter before returning
+	event_stack[0][1] -= 1# Realign step counter before returning
 	var_access.unlock()
 
 
