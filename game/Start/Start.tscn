@@ -4,7 +4,11 @@
 
 [sub_resource type="ButtonGroup" id=1]
 
-[node name="Start" type="Node2D"]
+[node name="Start" type="Control"]
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="RedRectangle" type="ColorRect" parent="." groups=[
 "showable rect red",
@@ -13,6 +17,7 @@ margin_left = 434.811
 margin_top = 71.5382
 margin_right = 474.811
 margin_bottom = 111.539
+mouse_filter = 2
 color = Color( 1, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -25,6 +30,7 @@ margin_left = 359.612
 margin_top = 124.293
 margin_right = 399.612
 margin_bottom = 164.293
+mouse_filter = 2
 color = Color( 0.156863, 0.909804, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -37,6 +43,7 @@ margin_left = 520.818
 margin_top = 119.509
 margin_right = 560.818
 margin_bottom = 159.509
+mouse_filter = 2
 color = Color( 0.0745098, 0, 0.972549, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
