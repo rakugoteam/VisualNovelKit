@@ -9,3 +9,4 @@ func _on_say(_character, _text, _parameters):
 		self.bbcode_text = _character.get_composite_name("bbcode")
 	else:
 		self.bbcode_text = Rakugo.Say.get_narrator().name
+
