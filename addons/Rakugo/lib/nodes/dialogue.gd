@@ -23,7 +23,6 @@ var step_semaphore = Semaphore.new()
 var return_lock:Semaphore = Semaphore.new()
 
 func reset(): ## Need to check if this is actually needed.
-	#print("Resetting dialogue")
 	exiting = false
 	thread = Thread.new()
 	step_semaphore = Semaphore.new()
@@ -39,7 +38,6 @@ func _ready():
 
 func _store(save):
 	if Rakugo.current_dialogue == self:
-		#print("Storing dialogue ",self.name, "  ", self.event_stack)
 		save.current_dialogue = self.name
 		save.current_dialogue_event_stack = self.event_stack.duplicate(true)
 		save.current_dialogue_script_version = _script_version
@@ -49,19 +47,14 @@ func _restore(save):
 	if save.current_dialogue == self.name:
 		if check_for_version_error(save):
 			return
-		#print("Restoring dialogue ", self.name, self,"  ", save.current_dialogue_event_stack)
 		self.exit()
 		if not is_ended():
-			#print("Waiting for the thread to finish")
 			thread.wait_to_finish()
-			#print("Thread finished")
 		self.reset()
 	
-		#print("Setting event_stack to  ", save.current_dialogue_event_stack)
 		var_access.lock()
 		event_stack = save.current_dialogue_event_stack.duplicate(true)
 		var_access.unlock()
-		#print("Setting Rakugo.current_dialogue to  ",self, "  ", (Rakugo.current_dialogue == self))
 		thread.start(self, "dialogue_loop")
 
 func _step():
@@ -84,26 +77,22 @@ func start(event_name=''):
 ## Thread life cycle
 
 func dialogue_loop(_a):
-	#print("Starting threaded dialog ", self, " ", event_stack)
 	Rakugo.set_current_dialogue(self)
 	while event_stack:
 		var_access.lock()
 		var e = event_stack.pop_front()
 		var_access.unlock()
-		#print("Calling event ",e)
 		self.call_event(e[0], e[1], e[3])
 		if self.exiting:
 			break
 
 	if Rakugo.current_dialogue == self:
 		Rakugo.set_current_dialogue(null)
-	#print("Ending threaded dialog")
 	thread.call_deferred('wait_to_finish')
 
 
 func exit():
 	if not is_ended():## Not checking for active thread makes the mutex deadlocks somehow
-		#print("Exitting Dialogue")
 		self.exiting = true
 		step_semaphore.post()
 		return_lock.post()
