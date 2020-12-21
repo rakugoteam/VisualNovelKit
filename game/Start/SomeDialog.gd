@@ -6,16 +6,16 @@ func some_dialog():
 	start_event("some_dialog")
 
 
-	say(null, "Show 'rect {color=red}red{/color}', step #%d" % get_event_step(), {"typing":true})
+	say(null, "Show 'rect {color=red}red{/color}'", {"typing":true})
 	show("rect red")
 	step()
 	
-	say(null, "Show 'rect {color=blue}blue{/color}', step #%d" % get_event_step(), {"typing":true})
+	say(null, "Show 'rect {color=blue}blue{/color}'", {"typing":true})
 	show("rect blue")
 	notify("Some notification that is really important to show")
 	step()
 	
-	say(null, "Hide 'rect red', step #%d" % get_event_step(), {"typing":true})
+	say(null, "Hide 'rect red'", {"typing":true})
 	hide("rect red")
 	step()
 	
@@ -23,18 +23,18 @@ func some_dialog():
 	var choice = menu([["Choice 1", 1, {}], ["Choice 2", 2, {'visible':true}],["Choice 3", 3, {'visible':false}]])
 	step()
 	
-	say(null, "You chose '%s' (not saved)  image tag test :{img=res://addons/Rakugo/emojis/16x16/1f1e6.tres}" % str(choice))
+	say(null, "You chose '%s' (not saved, this will not display correctly after loading or rolling), image tag test :{img=res://addons/Rakugo/emojis/16x16/1f1e6.tres}" % str(choice))
 	step()
 	
-	say(null, "Show 'rect'(inexistant), step #%d  emoji tag test {:1f1e6:}" % get_event_step())
+	say(null, "Show 'rect'(inexistant), emoji tag test {:1f1e6:}")
 	show("rect")
 	step()
 	
-	say(null, "Hide 'rect', step #%d" % get_event_step())
+	say(null, "Hide 'rect'")
 	hide("rect")
 	step()
 	
-	say(null, "Select a path")
+	say(null, "Select a path. This an example of a path choosing without using menu()")
 	show("rect red")
 	show("pathchoice")
 	step()
@@ -47,13 +47,6 @@ func some_dialog():
 		
 		say(null, "I confirm {color=[path_color]}[path_color]{/color} chosen")
 		step()
-		
-		say(null, "Step #%d Green" % get_event_step())
-		step()
-		say(null, "Step #%d Green" % get_event_step())
-		step()
-		say(null, "Step #%d Green" % get_event_step())
-		step()
 	elif cond(path_choice == 'blue'):
 		say(null, "Blue FTW, Green is for tards, amiright")
 		show("rect blue")
@@ -62,34 +55,12 @@ func some_dialog():
 		
 		say(null, "I confirm {color=[path_color]}[path_color]{/color} chosen")
 		step()
-		
-		say(null, "Step #%d Blue" % get_event_step())
-		step()
-		say(null, "Step #%d Blue" % get_event_step())
-		step()
-		say(null, "Step #%d Blue" % get_event_step())
-		step()
-		say(null, "Step #%d Blue" % get_event_step())
-		step()
 	else:
 		say(null, "Haha you did the right thing not picking of those inferior colors, ")
 		hide("pathchoice")
 		step()
 		
-		say(null, "Step #%d RED" % get_event_step())
-		step()
-		say(null, "Step #%d RED" % get_event_step())
-		step()
-		say(null, "Step #%d RED" % get_event_step())
-		step()
-		say(null, "Step #%d RED" % get_event_step())
-		step()
-		say(null, "Step #%d RED" % get_event_step())
-		step()
-		
-	say(null, "Step #%d" % get_event_step())
-	step()
-	say(null, "Step #%d" % get_event_step())
+	say(null, "Merging back paths.")
 	step()
 	
 	end_event()
