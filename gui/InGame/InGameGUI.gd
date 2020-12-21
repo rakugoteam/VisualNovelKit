@@ -33,7 +33,7 @@ func _input(event):
 			show()
 
 
-func _gui_input(event):
+func _unhandled_input(event):
 	if event.is_action_pressed("ui_left_click"):
 		Rakugo.story_step()
 
