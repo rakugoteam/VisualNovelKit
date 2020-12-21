@@ -14,12 +14,7 @@ func _on_ask(default_answer, _parameters):
 	show()
 
 
-func _on_text_entered(new_text):
-	hide()
-	Rakugo.ask_return(new_text)
-
-
-func _on_visibility_changed():
+func _on_AskEntry_visibility_changed() -> void:
 	var current_focus_control = get_focus_owner()
 	if current_focus_control != self:
 		if current_focus_control != null:
@@ -27,5 +22,11 @@ func _on_visibility_changed():
 		
 		grab_focus()
 		caret_position = text.length()
+
+
+func _on_text_entered(new_text):
+	hide()
+	Rakugo.ask_return(new_text)
+
 
 
