@@ -16,7 +16,7 @@ func init_project_settings():
 func init_tools():
 	var theme = get_editor_interface().get_base_control().theme
 
-	rakugo_tools = preload("res://addons/rakugo/tools/RakugoTools.tscn").instance()
+	rakugo_tools = preload("tools/RakugoTools.tscn").instance()
 	rakugo_tools.theme = theme
 	add_child(rakugo_tools)
 
