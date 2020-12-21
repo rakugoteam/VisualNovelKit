@@ -160,27 +160,10 @@ func is_active(_strict=false):
 	return output
 
 
-
-## The "Framework" section
-# ,the section of methods there "just in case" that should probably be removed
-
-func get_event_stack():
-	var output
-	var_access.lock()
-	output = event_stack.duplicate(true)
-	var_access.unlock()
-	return output
-
 func get_event_name():
 	var output = ""
 	if event_stack:
 		output = event_stack[0][0]
-	return output
-
-func get_event_step():
-	var output = -1
-	if event_stack:
-		output = event_stack[0][1]
 	return output
 
 
@@ -190,9 +173,6 @@ func get_parent_event_name():
 		output = event_stack[1][0]
 	return output
 
-
-func story_step() -> void:
-	Rakugo.story_step()#Don't remember why I put that here, probably a leftover from the old system
 
 ## Version control
 # 
