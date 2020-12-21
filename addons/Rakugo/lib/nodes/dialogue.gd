@@ -230,7 +230,7 @@ func check_for_version_error(store):
 
 func set_var(var_name: String, value):
 	if is_active():
-		return Rakugo.set_var(var_name, value)
+		return Rakugo.store.call_deferred('set', var_name, value)
 	return null
 
 
