@@ -11,7 +11,8 @@ __meta__ = {
 }
 
 [node name="RedRectangle" type="ColorRect" parent="." groups=[
-"showable rect red",
+"$ rect red",
+"showable",
 ]]
 margin_left = 434.811
 margin_top = 71.5382
@@ -24,7 +25,8 @@ __meta__ = {
 }
 
 [node name="GreenRectangle" type="ColorRect" parent="." groups=[
-"showable rect green",
+"$ rect green",
+"showable",
 ]]
 margin_left = 359.612
 margin_top = 124.293
@@ -36,8 +38,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BlueRectangle" type="ColorRect" parent="." groups=[
-"showable rect blue",
+[node name="rect blue" type="ColorRect" parent="." groups=[
+"$ #",
+"showable",
 ]]
 margin_left = 520.818
 margin_top = 119.509
@@ -55,7 +58,8 @@ default_starting_event = "some_dialog"
 auto_start = true
 
 [node name="GreenChoice" type="Button" parent="." groups=[
-"showable pathchoice",
+"$ pathchoice",
+"showable",
 ]]
 visible = false
 margin_left = 346.117
@@ -69,7 +73,8 @@ __meta__ = {
 }
 
 [node name="BlueChoice" type="Button" parent="." groups=[
-"showable pathchoice",
+"$ pathchoice",
+"showable",
 ]]
 visible = false
 margin_left = 496.31
