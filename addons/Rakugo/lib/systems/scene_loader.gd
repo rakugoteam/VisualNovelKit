@@ -42,7 +42,7 @@ func load_scene(scene:String, force_reload = false):
 	else:
 		scene_id = scene
 		scene_path = self.scene_links[scene]
-	
+
 	if force_reload or self.current_scene != scene_id:
 		get_tree().paused = true
 		Rakugo.exit_dialogue()
@@ -52,7 +52,7 @@ func load_scene(scene:String, force_reload = false):
 		self.thread.start( self, "_thread_load", scene_path)
 
 		return true
-	
+
 	return false
 
 
@@ -79,16 +79,16 @@ func _thread_done(resource):
 	assert(resource)
 
 	thread.wait_to_finish()
-	
+
 	# Free current scene
 	Rakugo.clean_scene_anchor()
-	
+
 	# Instantiate new scene
 	var new_scene = resource.instance()
-	Rakugo.ShowableManager.declare_showables(new_scene)
+	Rakugo.ShowableManager.declare_showables()
 	Rakugo.scene_anchor.add_child(new_scene)
 	#get_tree().set_current_scene(new_scene)
-	
+
 	get_tree().paused = false
 	print(Rakugo.current_dialogue)
 	self.emit_signal("scene_loaded")
