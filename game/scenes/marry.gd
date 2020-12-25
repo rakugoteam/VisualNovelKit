@@ -5,7 +5,7 @@ func marry():
 
 	hide("sylvie")
 	show("bg black")
-	show("label And so, we become a visual novel creating duo")
+	show("label", {"text":"And so, we become a visual novel creating duo"})
 	step()
 
 	hide("label")
@@ -90,7 +90,7 @@ func marry():
 	step()
 
 	show("bg black")
-	show("label Good Ending")
+	show("label", {"text":"Good Ending"})
 	step()
 
 	Rakugo.reset_game()

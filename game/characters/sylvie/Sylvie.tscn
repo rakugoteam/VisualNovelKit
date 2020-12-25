@@ -12,22 +12,22 @@
 [ext_resource path="res://game/characters/sylvie/blue/sylvie blue surprised.png" type="Texture" id=13]
 
 [node name="Sylvie" type="Node2D" groups=[
-"$ sylvie",
+"$ sylvie *",
 "showable",
 ]]
 scale = Vector2( 0.8, 0.8 )
 
 [node name="green" type="Sprite" parent="." groups=[
-"$ sylvie",
-"$ sylvie green #",
+"$ sylvie #",
+"$ sylvie green *",
 "showable",
 ]]
 position = Vector2( 5.61863, -1.87286 )
 texture = ExtResource( 4 )
 
 [node name="giggle" type="Sprite" parent="green" groups=[
-"$ sylvie",
 "$ sylvie green #",
+"$ sylvie green *",
 "showable",
 ]]
 visible = false
@@ -35,16 +35,16 @@ position = Vector2( -38.5953, -231.822 )
 texture = ExtResource( 5 )
 
 [node name="normal" type="Sprite" parent="green" groups=[
-"$ sylvie",
 "$ sylvie green #",
+"$ sylvie green *",
 "showable",
 ]]
 position = Vector2( -38.5953, -231.822 )
 texture = ExtResource( 6 )
 
 [node name="smile" type="Sprite" parent="green" groups=[
-"$ sylvie",
 "$ sylvie green #",
+"$ sylvie green *",
 "showable",
 ]]
 visible = false
@@ -52,8 +52,8 @@ position = Vector2( -38.5953, -231.822 )
 texture = ExtResource( 7 )
 
 [node name="surprised" type="Sprite" parent="green" groups=[
-"$ sylvie",
 "$ sylvie green #",
+"$ sylvie green *",
 "showable",
 ]]
 visible = false
@@ -61,16 +61,16 @@ position = Vector2( -38.5953, -231.822 )
 texture = ExtResource( 8 )
 
 [node name="blue" type="Sprite" parent="." groups=[
-"$ sylvie",
-"$ sylvie blue #",
+"$ sylvie #",
+"$ sylvie blue *",
 "showable",
 ]]
 visible = false
 texture = ExtResource( 9 )
 
 [node name="giggle" type="Sprite" parent="blue" groups=[
-"$ sylvie",
 "$ sylvie blue #",
+"$ sylvie blue *",
 "showable",
 ]]
 visible = false
@@ -78,16 +78,16 @@ position = Vector2( -10.9797, -238.261 )
 texture = ExtResource( 10 )
 
 [node name="normal" type="Sprite" parent="blue" groups=[
-"$ sylvie",
 "$ sylvie blue #",
+"$ sylvie blue *",
 "showable",
 ]]
 position = Vector2( -10.9797, -237.364 )
 texture = ExtResource( 11 )
 
 [node name="smile" type="Sprite" parent="blue" groups=[
-"$ sylvie",
 "$ sylvie blue #",
+"$ sylvie blue *",
 "showable",
 ]]
 visible = false
@@ -95,8 +95,8 @@ position = Vector2( -10.9797, -236.916 )
 texture = ExtResource( 12 )
 
 [node name="surprised" type="Sprite" parent="blue" groups=[
-"$ sylvie",
 "$ sylvie blue #",
+"$ sylvie blue *",
 "showable",
 ]]
 visible = false
