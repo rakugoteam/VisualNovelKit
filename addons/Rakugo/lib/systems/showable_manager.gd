@@ -127,5 +127,8 @@ func hide(tag):
 
 	for t in to_hide:
 		for n in get_tree().get_nodes_in_group(t):
-			if n.has_method('hide'):
+			if n.has_method('_hide'):
+				n._hide()
+			elif n.has_method('hide'):
 				n.hide()
+			

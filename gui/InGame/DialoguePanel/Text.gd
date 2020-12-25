@@ -1,5 +1,8 @@
 extends RichTextLabel
 
+export (NodePath) var dialogue_panel_path
+onready var dialogue_panel = get_node(dialogue_panel_path)
+
 var regex = RegEx.new()
 var skip_typing = false
 
@@ -20,19 +23,20 @@ func _blocked_step():
 
 
 func _on_say(_character, _text, _parameters):
-	self.visible_characters = -1
-	self.bbcode_text = _text
-	if not Rakugo.skipping and _parameters.get('typing'):
-		if _parameters.get('typing_effect_delay'):
-			delay = _parameters.get('typing_effect_delay')
-		else:
-			delay = float(Settings.get("rakugo/default/delays/typing_effect_delay"))
-		
-		if _parameters.get('typing_effect_punctuation_factor'):
-			punc_delay = _parameters.get('typing_effect_punctuation_factor')
-		else:
-			punc_delay = delay * float(Settings.get("rakugo/default/delays/typing_effect_punctuation_factor"))
-		start_typing_effect()
+	if dialogue_panel.visible:
+		self.visible_characters = -1
+		self.bbcode_text = _text
+		if not Rakugo.skipping and _parameters.get('typing'):
+			if _parameters.get('typing_effect_delay'):
+				delay = _parameters.get('typing_effect_delay')
+			else:
+				delay = float(Settings.get("rakugo/default/delays/typing_effect_delay"))
+			
+			if _parameters.get('typing_effect_punctuation_factor'):
+				punc_delay = _parameters.get('typing_effect_punctuation_factor')
+			else:
+				punc_delay = delay * float(Settings.get("rakugo/default/delays/typing_effect_punctuation_factor"))
+			start_typing_effect()
 
 
 func start_typing_effect():

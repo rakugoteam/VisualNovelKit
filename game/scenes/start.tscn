@@ -24,6 +24,7 @@ anchor_mode = 0
 margin_top = 1.0
 margin_right = 1279.0
 margin_bottom = 721.0
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -48,7 +49,6 @@ position = Vector2( 639.147, 359.847 )
 z_index = -10
 
 [node name="Sylvie" parent="." instance=ExtResource( 2 )]
-visible = false
 position = Vector2( 634.96, 438.123 )
 z_index = -5
 
