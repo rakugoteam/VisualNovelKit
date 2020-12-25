@@ -63,11 +63,12 @@ func rightaway():
 	])
 
 	# to make menu use safe for rollback
-	if is_active():
-		if cond(choice == game):
+	if cond(choice == game):
+		if is_active():
 			$game.start()
 
-		elif cond(choice == book):
+	elif cond(choice == book):
+		if is_active():
 			$book.start()
 
 	exit()

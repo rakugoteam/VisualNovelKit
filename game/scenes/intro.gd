@@ -69,11 +69,12 @@ func intro_dialog():
 		["To ask her later.", later, {}],
 	])
 	
-	if is_active():
-		if cond(choice == now):
+	if cond(choice == now):
+		if is_active():
 			$rightaway.start()
 
-		elif cond(choice == later):
+	elif cond(choice == later):
+		if is_active():
 			$later.start()
 	
 	exit()
