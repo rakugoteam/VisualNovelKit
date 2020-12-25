@@ -57,7 +57,7 @@ func get_tags_to_show(tag):
 	var to_show = [tag]
 	tag = tag.trim_prefix("$ ")
 
-	var tag_components = tag.split(' ', false, 1)
+	var tag_components = tag.split(' ', false)
 	tag_components.remove(tag_components.size() - 1)
 
 	var composite = ""
