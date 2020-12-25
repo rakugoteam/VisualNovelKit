@@ -47,34 +47,35 @@ func _restore(save):
 	if save.current_dialogue == self.name:
 		if check_for_version_error(save):
 			return
-		self.exit()
-		if not is_ended():
-			thread.wait_to_finish()
-		self.reset()
-	
-		var_access.lock()
-		event_stack = save.current_dialogue_event_stack.duplicate(true)
-		var_access.unlock()
-		thread.start(self, "dialogue_loop")
+		start_thread(save.current_dialogue_event_stack.duplicate(true))
 
 func _step():
 	if thread.is_active() and Rakugo.current_dialogue == self:
 		self.step_semaphore.post()
 
 func start(event_name=''):
-	var_access.lock()
 	if event_name:
-		event_stack = [[event_name, 0, 0, []]]
+		start_thread([[event_name, 0, 0, []]])
 	elif self.has_method(default_starting_event):
-		event_stack = [[default_starting_event, 0, 0, []]]
+		start_thread([[default_starting_event, 0, 0, []]])
 	else:
 		push_error("Dialog '"+self.name+"' started without given event nor default event.")
-	var_access.unlock()
-	thread.start(self, "dialogue_loop")
 
 
 
 ## Thread life cycle
+
+func start_thread(_event_stack):
+	self.exit()
+	if not is_ended():
+		thread.wait_to_finish()
+	self.reset()
+
+	var_access.lock()
+	event_stack = _event_stack
+	var_access.unlock()
+	thread.start(self, "dialogue_loop")
+
 
 func dialogue_loop(_a):
 	Rakugo.set_current_dialogue(self)
