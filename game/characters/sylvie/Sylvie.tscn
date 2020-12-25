@@ -27,7 +27,6 @@ texture = ExtResource( 4 )
 
 [node name="giggle" type="Sprite" parent="green" groups=[
 "$ sylvie green #",
-"$ sylvie green *",
 "showable",
 ]]
 visible = false
@@ -36,7 +35,6 @@ texture = ExtResource( 5 )
 
 [node name="normal" type="Sprite" parent="green" groups=[
 "$ sylvie green #",
-"$ sylvie green *",
 "showable",
 ]]
 position = Vector2( -38.5953, -231.822 )
@@ -44,7 +42,6 @@ texture = ExtResource( 6 )
 
 [node name="smile" type="Sprite" parent="green" groups=[
 "$ sylvie green #",
-"$ sylvie green *",
 "showable",
 ]]
 visible = false
@@ -53,7 +50,6 @@ texture = ExtResource( 7 )
 
 [node name="surprised" type="Sprite" parent="green" groups=[
 "$ sylvie green #",
-"$ sylvie green *",
 "showable",
 ]]
 visible = false
@@ -70,7 +66,6 @@ texture = ExtResource( 9 )
 
 [node name="giggle" type="Sprite" parent="blue" groups=[
 "$ sylvie blue #",
-"$ sylvie blue *",
 "showable",
 ]]
 visible = false
@@ -79,7 +74,6 @@ texture = ExtResource( 10 )
 
 [node name="normal" type="Sprite" parent="blue" groups=[
 "$ sylvie blue #",
-"$ sylvie blue *",
 "showable",
 ]]
 position = Vector2( -10.9797, -237.364 )
@@ -87,7 +81,6 @@ texture = ExtResource( 11 )
 
 [node name="smile" type="Sprite" parent="blue" groups=[
 "$ sylvie blue #",
-"$ sylvie blue *",
 "showable",
 ]]
 visible = false
@@ -96,7 +89,6 @@ texture = ExtResource( 12 )
 
 [node name="surprised" type="Sprite" parent="blue" groups=[
 "$ sylvie blue #",
-"$ sylvie blue *",
 "showable",
 ]]
 visible = false
