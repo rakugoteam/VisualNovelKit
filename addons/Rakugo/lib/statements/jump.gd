@@ -3,20 +3,25 @@ extends Node
 
 func invoke(scene_id: String, dialogue_name: String, event_name: String, force_reload := false) -> void:
 	Rakugo.exit_dialogue()
-	if Rakugo.load_scene(scene_id, force_reload):
-		yield(Rakugo.SceneLoader, "scene_loaded")
-
+	if scene_id:
+		#print("Jumping to new scene")
+		Rakugo.load_scene(scene_id, force_reload)
+		#print("New scene, loaded")
+	
 	var dialogue_node
 	if dialogue_name:
-		dialogue_node = get_dialogue(get_tree().current_scene, dialogue_name)
+		#print("Looking for Dialogue '%s' to start"%dialogue_name)
+		dialogue_node = get_dialogue(Rakugo.SceneLoader.current_scene_node, dialogue_name)
 	else:
-		dialogue_node = get_first_dialogue(get_tree().current_scene)
-	
+		dialogue_node = get_first_autostart_dialogue(Rakugo.SceneLoader.current_scene_node)
 	if dialogue_node:
+		#print("Dialogue found, starting ...")
 		if event_name:
 			dialogue_node.start(event_name)
 		else:
 			dialogue_node.start()
+	elif dialogue_name:
+		push_warning("No Dialogue named '%s' found." % dialogue_name)
 
 
 func get_dialogue(node, dialogue_name):
@@ -31,12 +36,12 @@ func get_dialogue(node, dialogue_name):
 	return null
 
 
-func get_first_dialogue(node):
-	if node is Dialogue:
+func get_first_autostart_dialogue(node):
+	if node is Dialogue and node.auto_start:
 		return node
 
 	for c in node.get_children():
-		var out = get_first_dialogue(c)
+		var out = get_first_autostart_dialogue(c)
 		if out:
 			return out
 

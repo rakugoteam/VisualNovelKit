@@ -31,11 +31,6 @@ func reset(): ## Need to check if this is actually needed.
 		event_stack = [[default_starting_event, 0, 0, []]]
 
 
-func _ready():
-	if self.auto_start and not Rakugo.current_dialogue:
-		start()
-
-
 func _store(save):
 	if Rakugo.current_dialogue == self:
 		save.current_dialogue = self.name
