@@ -248,9 +248,6 @@ rakugo_hide_ui_toggle={
 [rakugo]
 
 default/narrator/name=""
-default/statements/default_say_parameters={
-
-}
 
 [rendering]
 
