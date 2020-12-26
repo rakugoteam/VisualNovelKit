@@ -54,7 +54,7 @@ func start(event_name=''):
 	elif self.has_method(default_starting_event):
 		start_thread([[default_starting_event, 0, 0, []]])
 	else:
-		push_error("Dialog '"+self.name+"' started without given event nor default event.")
+		push_error("Dialogue '%s' started without given event nor default event." % self.name)
 
 
 
@@ -125,7 +125,7 @@ func cond(condition):
 		condition = true
 	else:
 		condition = false
-	
+
 	if is_active(true):
 		event_stack[0][3].push_front(condition)
 	else:
@@ -171,7 +171,7 @@ func get_parent_event_name():
 
 
 ## Version control
-# 
+#
 
 func _get_dialogue_script_hash():
 	return load("res://addons/Rakugo/lib/nodes/dialogue.gd").new()._get_script_hash()
@@ -232,7 +232,7 @@ func menu(choices:Array, parameters: Dictionary = {}):
 func _menu_yield(returns:Array):
 	returns[0] = yield(Rakugo, "menu_return")
 	return_lock.post()
-	
+
 
 
 func show(node_id: String, parameters := {}):
