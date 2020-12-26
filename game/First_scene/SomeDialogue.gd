@@ -2,8 +2,8 @@ extends Dialogue
 
 var path_choice = ''
 
-func some_dialog():
-	start_event("some_dialog")
+func some_event():
+	start_event("some_event")
 
 
 	say(null, "Show 'rect {color=red}red{/color}'", {"typing":true})
@@ -34,6 +34,15 @@ func some_dialog():
 	hide("rect")
 	step()
 	
+	say(null, "Show 'rect orange'")
+	show("rect orange")
+	step()
+	
+	say(null, "Show 'rect orange 1'")
+	show("rect orange 1")
+	step()
+	
+	
 	say(null, "Select a path. This an example of a path choosing without using menu()")
 	show("rect red")
 	show("pathchoice")
@@ -62,6 +71,8 @@ func some_dialog():
 		
 	say(null, "Merging back paths.")
 	step()
+	
+	jump("Second", "First", "")
 	
 	end_event()
 

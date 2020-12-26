@@ -76,6 +76,7 @@ func start(after_load:bool = false):
 	started = true
 	if not after_load:
 		emit_signal("started")
+	jump("", "", "")# Engage the auto-start
 
 
 func save_game(save_name:String = "quick"):
@@ -98,7 +99,7 @@ func prepare_quitting():
 
 
 func load_scene(scene_id:String, force_reload:bool = false):
-	SceneLoader.load_scene(scene_id, force_reload)
+	return SceneLoader.load_scene(scene_id, force_reload)
 
 
 func reset_game():
