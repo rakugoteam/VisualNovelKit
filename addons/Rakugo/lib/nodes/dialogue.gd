@@ -19,9 +19,6 @@ var thread:Thread
 var step_semaphore:Semaphore
 var return_lock:Semaphore
 
-func init(): ## Need to check if this is actually needed.
-	thread = Thread.new()
-
 
 func _store(save):
 	if Rakugo.current_dialogue == self:
@@ -87,15 +84,15 @@ func start_thread(_event_stack):
 		self.state = State.RESTARTING
 		self.exit()
 		thread.wait_to_finish()
-	self.init()
 
 	event_stack = _event_stack
 	Rakugo.set_current_dialogue(self)
-	self.state = State.RUNNING
+	thread = Thread.new()
 	thread.start(self, "dialogue_loop")
 
 
 func dialogue_loop(_a):
+	self.state = State.RUNNING
 	while is_running() and event_stack and event_stack.size() > 0:
 		var e = event_stack.pop_front()
 		self.call_event(e[0], e[1], e[3])
