@@ -1,6 +1,6 @@
 extends Node
 
-
+var default_force_reload = false
 var scene_links:Dictionary = {}
 var inverse_scene_links:Dictionary = {}
 var preloaded_scenes:Dictionary = {}
@@ -14,6 +14,7 @@ signal loading_scene()
 signal scene_loaded()
 
 func _ready():
+	default_force_reload = Settings.get("rakugo/game/scenes/force_reload")
 	preloaded_scenes_lock = Mutex.new()
 	scene_links = load(Settings.get("rakugo/game/scenes/scene_links")).get_as_dict()
 	current_scene = Settings.get("application/run/main_scene")
@@ -28,7 +29,8 @@ func _store(store):
 	store.current_scene = current_scene
 
 func _restore(store):
-	load_scene(store.current_scene)
+	if store.current_scene != current_scene or default_force_reload:
+		load_scene(store.current_scene)
 
 func preload_scenes():
 	var load_threads = {}
@@ -54,14 +56,14 @@ func preload_scene(scene_entry):
 	load_thread.wait_to_finish()
 
 
-func load_scene(scene:String, force_reload = false):
+func load_scene(scene:String, force_reload = default_force_reload):
 	var scene_entry = get_scene_entry(scene)
 	
 	if current_scene == scene_entry[0] and not force_reload:
 		return
-	
+
 	preloaded_scenes_lock.lock()
-	if not scene_entry[0] in preloaded_scenes:
+	if not scene_entry[0] in preloaded_scenes or force_reload:
 		preloaded_scenes_lock.unlock()
 		preload_scene(scene_entry)
 	preloaded_scenes_lock.unlock()

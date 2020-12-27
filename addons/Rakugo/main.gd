@@ -246,8 +246,14 @@ func notify(text:String, parameters:Dictionary):
 
 # use this to change/assign current scene and dialogue
 # id_of_current_scene is id to scene defined in scene_links or full path to scene
-func jump(scene_id:String, dialogue_name:String, event_name:String, force_reload:bool = false):
-	$Statements/Jump.invoke(scene_id, dialogue_name, event_name, force_reload)
+func jump(scene_id:String, dialogue_name:String, event_name:String, force_reload = null):
+	if force_reload != null:
+		if force_reload:# Sanitize potentially non bool into bool
+			$Statements/Jump.invoke(scene_id, dialogue_name, event_name, true)
+		else:
+			$Statements/Jump.invoke(scene_id, dialogue_name, event_name, false)
+	else:
+		$Statements/Jump.invoke(scene_id, dialogue_name, event_name)
 
 
 
