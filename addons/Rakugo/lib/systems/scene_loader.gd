@@ -8,6 +8,7 @@ var preloaded_scenes_lock:Mutex
 var current_scene:String = ''
 var current_scene_node:Node
 
+var previous_scene:Node
 
 signal load_scene(resource_interactive_loader)
 signal loading_scene()
@@ -78,6 +79,7 @@ func load_scene(scene:String, force_reload = default_force_reload):
 		var output = preloaded_scenes[scene_entry[0]]
 		preloaded_scenes_lock.unlock()
 		current_scene = scene_entry[0]
+		previous_scene = current_scene_node # Prevent previous scene to be freed too soon (in case a Dialogue Thread is not yet finished) 
 		current_scene_node = output.instance()
 		Rakugo.clean_scene_anchor()
 		Rakugo.scene_anchor.add_child(current_scene_node)
