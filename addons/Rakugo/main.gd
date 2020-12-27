@@ -126,7 +126,7 @@ func exit_dialogue():
 
 func set_current_dialogue(new_dialogue:Dialogue):
 	if current_dialogue != new_dialogue:
-		if self.current_dialogue and not self.current_dialogue.exiting:
+		if self.current_dialogue and self.current_dialogue.is_running():
 			self.current_dialogue.exit()
 		current_dialogue = new_dialogue
 

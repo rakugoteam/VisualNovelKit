@@ -8,8 +8,6 @@ export var default_starting_event = ""
 export var auto_start = false
 export var version_control = false
 
-var exiting = false
-
 #Those are only used as analogues of arguments
 var target = 0
 var condition_stack = []
@@ -17,18 +15,12 @@ var condition_stack = []
 
 var event_stack = []#LIFO stack of elements [event_name, current_counter, target, condition_stack(FIFO stack)]
 
-var var_access = Mutex.new()#That mutex is probably completely useless
-var thread = Thread.new()
-var step_semaphore = Semaphore.new()
-var return_lock:Semaphore = Semaphore.new()
+var thread:Thread
+var step_semaphore:Semaphore
+var return_lock:Semaphore
 
-func reset(): ## Need to check if this is actually needed.
-	exiting = false
+func init(): ## Need to check if this is actually needed.
 	thread = Thread.new()
-	step_semaphore = Semaphore.new()
-	var_access = Mutex.new()
-	if self.has_method(default_starting_event):
-		event_stack = [[default_starting_event, 0, 0, []]]
 
 
 func _store(save):
@@ -45,8 +37,9 @@ func _restore(save):
 		start_thread(save.current_dialogue_event_stack.duplicate(true))
 
 func _step():
-	if thread.is_active() and Rakugo.current_dialogue == self:
-		self.step_semaphore.post()
+	if Rakugo.current_dialogue == self and is_running():
+		if self.step_semaphore:
+			self.step_semaphore.post()
 
 func start(event_name=''):
 	if event_name:
@@ -57,45 +50,73 @@ func start(event_name=''):
 		push_error("Dialogue '%s' started without given event nor default event." % self.name)
 
 
+## Dialogue life cycle state
+
+enum State {
+	READY,
+	RUNNING,
+	EXITING,
+	ENDED,
+	RESTARTING
+}
+var state:int = State.READY  setget ,get_state
+
+func get_state():
+	return state
+
+func is_ready():
+	return self.state == State.READY
+
+func is_running():
+	return self.state == State.RUNNING
+
+func is_exiting():
+	return self.state == State.EXITING
+
+func is_ended():
+	return self.state == State.ENDED
+	
+func is_restarting():
+	return self.state == State.RESTARTING
+
 
 ## Thread life cycle
 
 func start_thread(_event_stack):
-	self.exit()
-	if not is_ended():
+	if not is_ready() and not is_ended():
+		self.state = State.RESTARTING
+		self.exit()
 		thread.wait_to_finish()
-	self.reset()
+	self.init()
 
-	var_access.lock()
 	event_stack = _event_stack
-	var_access.unlock()
+	Rakugo.set_current_dialogue(self)
+	self.state = State.RUNNING
 	thread.start(self, "dialogue_loop")
 
 
 func dialogue_loop(_a):
-	Rakugo.set_current_dialogue(self)
-	while event_stack:
-		var_access.lock()
+	while is_running() and event_stack and event_stack.size() > 0:
 		var e = event_stack.pop_front()
-		var_access.unlock()
 		self.call_event(e[0], e[1], e[3])
-		if self.exiting:
-			break
+	self.state = State.EXITING
+	self.call_deferred('end_thread')
 
-	if Rakugo.current_dialogue == self:
-		Rakugo.set_current_dialogue(null)
-	thread.call_deferred('wait_to_finish')
-
+func end_thread():
+	if is_exiting():
+		self.state = State.ENDED
+		thread.wait_to_finish()
+		if Rakugo.current_dialogue == self:
+			Rakugo.set_current_dialogue(null)
 
 func exit():
-	if not is_ended():## Not checking for active thread makes the mutex deadlocks somehow
-		self.exiting = true
-		step_semaphore.post()
-		return_lock.post()
-
-
-func is_ended():
-	return not thread or not thread.is_active()
+	if is_running():
+		self.state = State.EXITING
+	if not is_ended():
+		if step_semaphore:
+			step_semaphore.post()
+		if return_lock:
+			return_lock.post()
 
 
 
@@ -111,44 +132,48 @@ func call_event(event, _target = 0, _condition_stack = []):
 func start_event(event_name):
 	if event_stack:
 		event_stack[0][1] += 1# Disalign step counter in case of saving before returning
-	var_access.lock()
 	if not is_active():
 		event_stack.push_front([event_name, 0, INF, self.condition_stack])
 	else:
 		event_stack.push_front([event_name, 0, self.target, self.condition_stack])#Should be "get_stack()[1]['function']" instead of passing event_name, if get_stack() worked
 	if is_active():
 		Rakugo.History.log_event(self.name ,event_name)
-	var_access.unlock()
+
 
 func cond(condition):
+	if not is_running():
+		return false
 	if condition:#transform 'condition' into a bool
 		condition = true
 	else:
 		condition = false
-
+	
 	if is_active(true):
 		event_stack[0][3].push_front(condition)
 	else:
 		condition = event_stack[0][3].pop_back()
 	return condition
 
+
 func step():
+	if not step_semaphore:
+		step_semaphore = Semaphore.new()
 	if is_active():
 		step_semaphore.wait()
 	event_stack[0][1] += 1
 	step_semaphore = Semaphore.new()# Preventing a case of multiple post skipping steps
 
+
 func end_event():
-	var_access.lock()
-	if event_stack.size() > 1:
-		event_stack.pop_front()
-		event_stack[0][1] -= 1# Realign step counter before returning
-	var_access.unlock()
+	if is_running():
+		if event_stack.size() > 0:
+			event_stack.pop_front()
+			event_stack[0][1] -= 1# Realign step counter before returning
 
 
 func is_active(_strict=false):
-	var output:bool = not self.exiting
-	if event_stack:
+	var output:bool = self.state == State.RUNNING
+	if output and event_stack:
 		if _strict:# Allow to check if it's the last step until waiting for semaphore
 			output = output and event_stack[0][1] > event_stack[0][2]
 		else:
@@ -211,6 +236,7 @@ func ask(default_answer:String, parameters: Dictionary = {}):
 		_ask_yield(returns)
 		Rakugo.call_deferred('ask', default_answer, parameters)
 		return_lock.wait()
+		return_lock = null
 		return returns[0]
 	return null
 
@@ -226,6 +252,7 @@ func menu(choices:Array, parameters: Dictionary = {}):
 		_menu_yield(returns)
 		Rakugo.call_deferred('menu', choices, parameters)
 		return_lock.wait()
+		return_lock = null
 		return returns[0]
 	return null
 
@@ -263,6 +290,7 @@ func call_ext_ret(object, func_name:String, args := []):
 			var returns = [null]
 			self.call_deferred("_call_ext_ret_call", returns,  object, func_name, args)
 			return_lock.wait()
+			return_lock = null
 			return returns[0]
 	return null
 
