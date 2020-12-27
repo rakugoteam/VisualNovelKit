@@ -2,28 +2,44 @@ extends Node
 
 
 var shown = {}
+## Shown structure:
+#{<radical>:[{<tags>:true}, {<params>}]}
 
-func _ready():
+
+func init():
+	Rakugo.SceneLoader.connect("scene_changed", self, "_on_scene_changed")
 	self.declare_showables()
 
 
 func _store(store):
-	store.showable_shown = self.shown
+	store.showable_shown = self.shown.duplicate(true)
 
 func _restore(store):
-	var to_hide = self.shown.duplicate()
-	for k in shown.keys():
-		if k in store.showable_shown:
-			to_hide.erase(k)
-	self.shown = store.showable_shown
+	self.shown = store.showable_shown.duplicate(true)
+	apply_shown()
 
-	if store.current_scene != Rakugo.SceneLoader.current_scene:
-		yield(Rakugo.SceneLoader, "scene_loaded")
 
-	for k in to_hide.keys():
-		hide(k)
-	for k in self.shown.keys():
-		show(k, self.shown[k])
+func _on_scene_changed(scene):
+	declare_showables()
+	clean_shown()
+	apply_shown()
+
+
+
+func clean_shown():
+	var tmp_shown = self.shown.duplicate(true)
+	for radical_tag in tmp_shown:
+		var tag_used
+		for t in tmp_shown[radical_tag][0]:
+			tag_used = false
+			for n in get_tree().get_nodes_in_group(radical_tag):
+				if n.is_in_group(t):
+					tag_used = true
+					break
+			if not tag_used:
+				self.shown[radical_tag][0].erase(t)
+		if self.shown[radical_tag][0].size() == 0:
+			self.shown.erase(radical_tag)
 
 
 func declare_showables():
@@ -53,7 +69,7 @@ func get_radical_tag(tag):
 	return ""
 
 
-func get_tags_to_show(tag):
+func get_matching_tags(tag):
 	var to_show = [tag]
 	tag = tag.trim_prefix("$ ")
 
@@ -67,24 +83,10 @@ func get_tags_to_show(tag):
 	return to_show
 
 
-func remove_from_shown(tag): # This function pulls double-duty, as it both clean the shown dict and returns a list of tags to hide
-	tag = tag.trim_prefix("$ ").trim_suffix(" _")
-	var removed = [tag]
-	self.shown.erase(tag)# Erasing exact tag
-
-	var old_shown = self.shown.duplicate()
-	for k in old_shown.keys():
-		if k.begins_with(tag + " "): # Erasing tags starting by but longer than the tag
-			removed.append(k)
-			self.shown.erase(k)
-
-	return removed
-
-
 func show(tag, args):
 	tag = "$ " + tag.trim_prefix("$ ")
 	var radical_tag = get_radical_tag(tag)
-	var to_show = get_tags_to_show(tag)
+	var to_show = get_matching_tags(tag)
 
 	var shown_any = false
 	for t in to_show:
@@ -93,20 +95,32 @@ func show(tag, args):
 			break
 
 	if shown_any:
-		remove_from_shown(radical_tag)
-		self.shown[tag] = args
+		self.shown[radical_tag] = [{}, args]
+		for t in to_show:
+			self.shown[radical_tag][0][t] = true
+		apply_shown()
 
-		var is_shown
-		for n in get_tree().get_nodes_in_group(radical_tag):
-			is_shown = false
-			for t in to_show:
-				if n.is_in_group(t):
-					is_shown = true
-					break
-			if is_shown:
-				show_showable(n, tag, args)
-			else:
-				n.hide()
+
+func apply_shown():
+	var to_hide = {}
+	for n in get_tree().get_nodes_in_group("showable"):
+		if n.has_method("hide"):
+			to_hide[n] = true
+	if self.shown:
+		for radical_tag in self.shown:
+			var first_tag
+			for n in get_tree().get_nodes_in_group(radical_tag):
+				first_tag = ""
+				for t in self.shown[radical_tag][0]:
+					if n.is_in_group(t):
+						first_tag = t
+						break
+				if first_tag:
+					show_showable(n, first_tag, self.shown[radical_tag][1])
+					to_hide.erase(n)
+	for n in to_hide:
+		n.hide()
+
 
 func show_showable(node, tag, args):
 	if node.has_method("_show"):
@@ -120,12 +134,23 @@ func show_showable(node, tag, args):
 func hide(tag):
 	tag = "$ " + tag.trim_prefix("$ ")
 	var radical_tag = get_radical_tag(tag)
-	var to_hide = remove_from_shown(tag)
 
 	if radical_tag.trim_suffix(" _") == tag.trim_suffix(" _"): # Hide all
-		to_hide.append(radical_tag)
-
-	for t in to_hide:
-		for n in get_tree().get_nodes_in_group(t):
-			if n.has_method('hide'):
-				n.hide()
+		self.shown.erase(radical_tag)
+		apply_shown()
+	else:
+		var to_hide = get_matching_tags(tag)
+		
+		var hid_any = false
+		for t in to_hide:
+			if get_tree().get_nodes_in_group(t):
+				hid_any = true
+				break
+		
+		if hid_any:
+			for t in to_hide:
+				if radical_tag in self.shown:
+					self.shown[radical_tag][0].erase(t)
+					if self.shown[radical_tag][0].size() == 0:
+						self.shown.erase(radical_tag)
+			apply_shown()

@@ -10,9 +10,12 @@ var current_scene_node:Node
 
 var previous_scene:Node
 
+signal scene_changed(scene_node)
+#Assess the need of those
 signal load_scene(resource_interactive_loader)
 signal loading_scene()
 signal scene_loaded()
+
 
 func _ready():
 	default_force_reload = Settings.get("rakugo/game/scenes/force_reload")
@@ -83,7 +86,7 @@ func load_scene(scene:String, force_reload = default_force_reload):
 		current_scene_node = output.instance()
 		Rakugo.clean_scene_anchor()
 		Rakugo.scene_anchor.add_child(current_scene_node)
-		Rakugo.ShowableManager.declare_showables()
+		emit_signal("scene_changed", current_scene_node)
 		return current_scene_node
 
 

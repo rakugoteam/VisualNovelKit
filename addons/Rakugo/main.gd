@@ -64,6 +64,7 @@ signal stop_audio(node_id)
 func _ready():
 	self.scene_anchor = get_tree().get_root()
 	StoreManager.init()
+	ShowableManager.init()
 	History.init()
 
 	OS.set_window_title(game_title + " " + game_version)
