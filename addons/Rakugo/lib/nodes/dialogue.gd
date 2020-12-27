@@ -242,7 +242,8 @@ func ask(default_answer:String, parameters: Dictionary = {}):
 
 func _ask_yield(returns:Array):
 	returns[0] = yield(Rakugo, "ask_return")
-	return_lock.post()
+	if return_lock:
+		return_lock.post()
 
 
 func menu(choices:Array, parameters: Dictionary = {}):
@@ -258,7 +259,8 @@ func menu(choices:Array, parameters: Dictionary = {}):
 
 func _menu_yield(returns:Array):
 	returns[0] = yield(Rakugo, "menu_return")
-	return_lock.post()
+	if return_lock:
+		return_lock.post()
 
 
 
@@ -296,7 +298,8 @@ func call_ext_ret(object, func_name:String, args := []):
 
 func _call_ext_ret_call(returns:Array, object, func_name:String, args:Array):
 	returns[0] = object.callv(func_name, args)
-	return_lock.post()
+	if return_lock:
+		return_lock.post()
 
 
 func jump(scene_id: String, dialogue_name: String, event_name: String) -> void:
