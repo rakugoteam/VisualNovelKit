@@ -17,6 +17,7 @@ func default_event():
 	step()
 	
 	say(null, "Starting the Second Dialogue.")
+	step()
 	
 	jump("", "Second", "")
 	
