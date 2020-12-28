@@ -86,6 +86,7 @@ func change_current_stack_index(index):
 ### Store Stack
 
 func init_store_stack():
+	store_stack_max_length = Settings.get("rakugo/game/store/rollback_steps")
 	var new_save := Store.new()
 	new_save.game_version = Rakugo.game_version
 	new_save.rakugo_version = Rakugo.rakugo_version

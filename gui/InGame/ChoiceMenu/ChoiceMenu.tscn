@@ -6,6 +6,7 @@
 [node name="ChoiceMenu" type="VBoxContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 custom_constants/separation = 6
 alignment = 1
 script = ExtResource( 2 )
@@ -15,14 +16,16 @@ __meta__ = {
 choice_button = ExtResource( 1 )
 
 [node name="ChoiceButton" parent="." instance=ExtResource( 1 )]
+margin_top = 318.0
+margin_bottom = 342.0
 
 [node name="DisabledChoiceButton" parent="." instance=ExtResource( 1 )]
-margin_top = 353.0
-margin_bottom = 367.0
+margin_top = 348.0
+margin_bottom = 372.0
 disabled = true
 
 [node name="PressedChoiceButton" parent="." instance=ExtResource( 1 )]
-margin_top = 373.0
-margin_bottom = 387.0
+margin_top = 378.0
+margin_bottom = 402.0
 toggle_mode = true
 pressed = true

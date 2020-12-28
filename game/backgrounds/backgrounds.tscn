@@ -1,18 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://game/backgrounds/backgrounds.gd" type="Script" id=1]
 [ext_resource path="res://game/backgrounds/bg lecturehall.jpg" type="Texture" id=2]
 [ext_resource path="res://game/backgrounds/bg club.jpg" type="Texture" id=3]
 [ext_resource path="res://game/backgrounds/bg meadow.jpg" type="Texture" id=4]
 [ext_resource path="res://game/backgrounds/bg uni.jpg" type="Texture" id=5]
 
-[node name="backgrounds" type="Node2D" groups=[
-"showable bg *",
-]]
+[node name="backgrounds" type="Node2D"]
 position = Vector2( 638.624, 360.36 )
-script = ExtResource( 1 )
 
-[node name="black" type="ColorRect" parent="."]
+[node name="black" type="ColorRect" parent="." groups=[
+"$ bg #",
+"showable",
+]]
 margin_left = -640.0
 margin_top = -359.0
 margin_right = 642.0
@@ -22,14 +21,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="lecturehall" type="Sprite" parent="."]
+[node name="lecturehall" type="Sprite" parent="." groups=[
+"$ bg #",
+"showable",
+]]
 texture = ExtResource( 2 )
 
-[node name="club" type="Sprite" parent="."]
+[node name="club" type="Sprite" parent="." groups=[
+"$ bg #",
+"showable",
+]]
 texture = ExtResource( 3 )
 
-[node name="meadow" type="Sprite" parent="."]
+[node name="meadow" type="Sprite" parent="." groups=[
+"$ bg #",
+"showable",
+]]
 texture = ExtResource( 4 )
 
-[node name="uni" type="Sprite" parent="."]
+[node name="uni" type="Sprite" parent="." groups=[
+"$ bg #",
+"showable",
+]]
 texture = ExtResource( 5 )
