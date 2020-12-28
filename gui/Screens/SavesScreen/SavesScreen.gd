@@ -268,6 +268,7 @@ func get_next_iterative_name(file_name):
 func load_save(caller: String) -> void:
 	if Rakugo.load_game(caller):
 		emit_signal("load_file")
+		Window.select_ui_tab(1)
 
 
 func _on_visibility_changed():
