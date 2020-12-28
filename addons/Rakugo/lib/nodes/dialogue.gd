@@ -93,7 +93,7 @@ func start_thread(_event_stack):
 
 func dialogue_loop(_a):
 	self.state = State.RUNNING
-	while is_running() and event_stack and event_stack.size() > 0:
+	while is_running() and event_stack:
 		var e = event_stack.pop_front()
 		self.call_event(e[0], e[1], e[3])
 	self.state = State.EXITING
@@ -163,8 +163,8 @@ func step():
 
 func end_event():
 	if is_running():
-		if event_stack.size() > 0:
-			event_stack.pop_front()
+		event_stack.pop_front()
+		if event_stack:
 			event_stack[0][1] -= 1# Realign step counter before returning
 
 
