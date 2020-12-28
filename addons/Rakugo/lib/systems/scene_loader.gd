@@ -1,6 +1,6 @@
 extends Node
 
-
+var default_force_reload = false
 var scene_links:Dictionary = {}
 var inverse_scene_links:Dictionary = {}
 var preloaded_scenes:Dictionary = {}
@@ -8,12 +8,17 @@ var preloaded_scenes_lock:Mutex
 var current_scene:String = ''
 var current_scene_node:Node
 
+var previous_scene:Node
 
+signal scene_changed(scene_node)
+#Assess the need of those
 signal load_scene(resource_interactive_loader)
 signal loading_scene()
 signal scene_loaded()
 
+
 func _ready():
+	default_force_reload = Settings.get("rakugo/game/scenes/force_reload")
 	preloaded_scenes_lock = Mutex.new()
 	scene_links = load(Settings.get("rakugo/game/scenes/scene_links")).get_as_dict()
 	current_scene = Settings.get("application/run/main_scene")
@@ -28,7 +33,8 @@ func _store(store):
 	store.current_scene = current_scene
 
 func _restore(store):
-	load_scene(store.current_scene)
+	if store.current_scene != current_scene or default_force_reload:
+		load_scene(store.current_scene)
 
 func preload_scenes():
 	var load_threads = {}
@@ -54,14 +60,14 @@ func preload_scene(scene_entry):
 	load_thread.wait_to_finish()
 
 
-func load_scene(scene:String, force_reload = false):
+func load_scene(scene:String, force_reload = default_force_reload):
 	var scene_entry = get_scene_entry(scene)
 	
 	if current_scene == scene_entry[0] and not force_reload:
 		return
-	
+
 	preloaded_scenes_lock.lock()
-	if not scene_entry[0] in preloaded_scenes:
+	if not scene_entry[0] in preloaded_scenes or force_reload:
 		preloaded_scenes_lock.unlock()
 		preload_scene(scene_entry)
 	preloaded_scenes_lock.unlock()
@@ -76,10 +82,11 @@ func load_scene(scene:String, force_reload = false):
 		var output = preloaded_scenes[scene_entry[0]]
 		preloaded_scenes_lock.unlock()
 		current_scene = scene_entry[0]
+		previous_scene = current_scene_node # Prevent previous scene to be freed too soon (in case a Dialogue Thread is not yet finished) 
 		current_scene_node = output.instance()
 		Rakugo.clean_scene_anchor()
 		Rakugo.scene_anchor.add_child(current_scene_node)
-		Rakugo.ShowableManager.declare_showables()
+		emit_signal("scene_changed", current_scene_node)
 		return current_scene_node
 
 

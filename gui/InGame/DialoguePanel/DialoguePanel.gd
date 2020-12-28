@@ -8,20 +8,15 @@ func _ready():
 	Rakugo.connect("ask", self, "_on_ask")
 
 func _on_say(_character, _text, _parameters):
-	if is_active:
-		show()
+	$HideTimer.stop()
+	show()
 
 func _on_ask(_default_answer, _parameters):
-	if is_active:
-		show()
+	$HideTimer.stop()
+	show()
 
 func _step():
-	if is_active:
-		hide()
+	$HideTimer.start()
 
-func _show(tag, args):
-	is_active = true
-
-func _hide():
-	is_active = false
+func _on_HideTimer_timeout():
 	hide()

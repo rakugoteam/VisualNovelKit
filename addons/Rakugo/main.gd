@@ -64,6 +64,7 @@ signal stop_audio(node_id)
 func _ready():
 	self.scene_anchor = get_tree().get_root()
 	StoreManager.init()
+	ShowableManager.init()
 	History.init()
 
 	OS.set_window_title(game_title + " " + game_version)
@@ -126,7 +127,7 @@ func exit_dialogue():
 
 func set_current_dialogue(new_dialogue:Dialogue):
 	if current_dialogue != new_dialogue:
-		if self.current_dialogue and not self.current_dialogue.exiting:
+		if self.current_dialogue and self.current_dialogue.is_running():
 			self.current_dialogue.exit()
 		current_dialogue = new_dialogue
 
@@ -246,8 +247,14 @@ func notify(text:String, parameters:Dictionary):
 
 # use this to change/assign current scene and dialogue
 # id_of_current_scene is id to scene defined in scene_links or full path to scene
-func jump(scene_id:String, dialogue_name:String, event_name:String, force_reload:bool = false):
-	$Statements/Jump.invoke(scene_id, dialogue_name, event_name, force_reload)
+func jump(scene_id:String, dialogue_name:String, event_name:String, force_reload = null):
+	if force_reload != null:
+		if force_reload:# Sanitize potentially non bool into bool
+			$Statements/Jump.invoke(scene_id, dialogue_name, event_name, true)
+		else:
+			$Statements/Jump.invoke(scene_id, dialogue_name, event_name, false)
+	else:
+		$Statements/Jump.invoke(scene_id, dialogue_name, event_name)
 
 
 
