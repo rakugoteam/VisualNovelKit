@@ -7,11 +7,12 @@ func _ready():
 
 
 func _on_ask(default_answer, _parameters):
-	if _parameters.has('placeholder'):
-		self.placeholder_text = _parameters['placeholder']
-		
-	self.text = default_answer
-	show()
+	if is_visible_in_tree():
+		if _parameters.has('placeholder'):
+			self.placeholder_text = _parameters['placeholder']
+			
+		self.text = default_answer
+		show()
 
 
 func _on_AskEntry_visibility_changed() -> void:
