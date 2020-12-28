@@ -1,8 +1,5 @@
 extends RichTextLabel
 
-export (NodePath) var dialogue_panel_path
-onready var dialogue_panel = get_node(dialogue_panel_path)
-
 var regex = RegEx.new()
 var skip_typing = false
 
@@ -23,7 +20,7 @@ func _blocked_step():
 
 
 func _on_say(_character, _text, _parameters):
-	if dialogue_panel.visible:
+	if is_visible_in_tree():
 		self.visible_characters = -1
 		self.bbcode_text = _text
 		if not Rakugo.skipping and _parameters.get('typing'):

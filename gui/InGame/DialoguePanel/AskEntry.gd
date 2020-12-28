@@ -1,8 +1,5 @@
 extends LineEdit
 
-export (NodePath) var dialogue_panel_path
-onready var dialogue_panel = get_node(dialogue_panel_path)
-
 var variable_name:String = ""
 
 func _ready():
@@ -10,7 +7,7 @@ func _ready():
 
 
 func _on_ask(default_answer, _parameters):
-	if dialogue_panel.visible:
+	if is_visible_in_tree():
 		if _parameters.has('placeholder'):
 			self.placeholder_text = _parameters['placeholder']
 			
