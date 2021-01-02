@@ -1,4 +1,4 @@
-extends Popup
+extends PanelContainer
 
 export(float, 0, 1, 0.1) var fade_time = 0.3
 export(float, 0.5, 3, 0.1) var base_duration = 2
@@ -6,25 +6,22 @@ export(float, 0, 0.5, 0.05) var duration_factor_per_word = 0.1
 
 func _ready():
 	Rakugo.connect("notify", self, "_on_notify")
+	hide()
 
 
 func _on_notify(text:String, parameters:Dictionary):
 	$Label.text = text
-	fade_in()
+	rect_size = Vector2.ZERO
+	fade_in_out()
 
-func fade_in():
+func fade_in_out():
 	var splits = $Label.text.split(" ", false)
+	var wait_duration = base_duration * (1 + duration_factor_per_word * splits.size())
 	$Tween.remove_all()
 	$Tween.interpolate_property(self, "modulate", Color(1,1,1,0), Color(1,1,1,1), fade_time, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-	$Tween.interpolate_deferred_callback(self, fade_time + base_duration * (1 + duration_factor_per_word * splits.size()), "fade_out")
+	$Tween.interpolate_property(self, "modulate", Color(1,1,1,1), Color(1,1,1,0), fade_time, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT, fade_time + wait_duration)
+	$Tween.interpolate_deferred_callback(self, 2 * fade_time + wait_duration, "hide")
 	$Tween.start()
-	popup()
-
-
-func fade_out():
-	$Tween.remove_all()
-	$Tween.interpolate_property(self, "modulate", Color(1,1,1,1), Color(1,1,1,0), fade_time, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-	$Tween.interpolate_deferred_callback(self, fade_time, "hide")
-	$Tween.start()
-
-
+	$Label.hide()#This is to reset the size of the panel
+	show()
+	$Label.show()
