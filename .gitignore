@@ -11,6 +11,7 @@ mono_crash.*.*.json
 # Project specific
 addons/*
 !addons/Rakugo
+!addons/Rakugo-Point-N-Click
 fontconfig
 refences/
 saves/
