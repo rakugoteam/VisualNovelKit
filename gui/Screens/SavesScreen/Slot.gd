@@ -13,7 +13,7 @@ var file := File.new()
 
 var save_name:String = ""
 var save_page_index:Vector2 = Vector2.ZERO
-var screenshot:Texture = null
+var screenshot:ImageTexture = null
 
 func init(name:String, page_index:Vector2, hide_delete:bool = false):
 	save_name = Rakugo.StoreManager.get_save_name(name)
@@ -27,7 +27,7 @@ func init(name:String, page_index:Vector2, hide_delete:bool = false):
 		var png_path = Rakugo.StoreManager.get_save_path(filename + ".png", true)
 		if file.file_exists(png_path):
 			Rakugo.debug("slot exist, loading image")
-			set_screenshot(load(png_path))
+			set_screenshot(load_screenshot_texture(png_path))
 	else:
 		hide_delete_button()
 	
@@ -39,6 +39,21 @@ func init(name:String, page_index:Vector2, hide_delete:bool = false):
 	else:
 		set_datetime(file.get_modified_time(Rakugo.StoreManager.get_save_path(filename)))
 	
+
+
+func load_screenshot_texture(path):
+	var image_file = File.new()
+	image_file.open(path, File.READ)
+	
+	var image = Image.new()
+	image.load_png_from_buffer(image_file.get_buffer(image_file.get_len()))
+
+	image_file.close()
+	image.lock()
+	
+	var output = ImageTexture.new()
+	output.create_from_image(image)
+	return output
 
 
 func _on_save_select():
