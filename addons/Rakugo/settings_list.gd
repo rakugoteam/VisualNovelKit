@@ -47,7 +47,8 @@ var default_property_list:Dictionary = {
 	"rakugo/game/text/markup" : [
 		"renpy", PropertyInfo.new(
 			"", TYPE_STRING, PROPERTY_HINT_ENUM, 
-			"renpy,bbcode,markdown,markdown_simple", PROPERTY_USAGE_CATEGORY)
+			"renpy,bbcode,markdown,markdown_simple",
+			PROPERTY_USAGE_CATEGORY)
 	],
 
 

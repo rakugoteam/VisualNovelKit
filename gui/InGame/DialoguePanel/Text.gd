@@ -11,7 +11,7 @@ signal typing_effect_started
 signal typing_effect_ended
 
 func _ready():
-	Rakugo.connect("say" ,self, "_on_say")
+	Rakugo.connect("say", self, "_on_say")
 	regex.compile("[[:graph:]]")
 
 

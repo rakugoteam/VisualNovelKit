@@ -78,7 +78,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.184314, 0.235294, 1, 1 )
-text = "Version 3.0.0 Beta"
+text = "Version 3.1.0"
 
 [node name="WebSiteButton" type="LinkButton" parent="VBoxContainer/HBoxContainer/Box/HBoxContainer"]
 margin_left = 330.0
@@ -118,7 +118,7 @@ bbcode_enabled = true
 bbcode_text = "
 Rakugo is made by:
 	[url=https://github.com/Jeremi360]Jeremi Biernacki ([i]Jeremi360[/i])[/url],
-	[url=https://github.com/Vaasref]Vaasref[/url] 
+	[url=https://github.com/Vaasref]Vaasref[/url]
 	[url=https://github.com/BurningWood]Zon Petilla ([i]Title Pending[/i])[/url],
 	[url=https://github.com/ivandardi]Ivan Borgia Dardi([i]ivandardi/MelodicStream[/i])[/url],
 	[url=https://github.com/deep-gaurav]Deep Gaurav[/url]
@@ -138,7 +138,7 @@ Special Thanks for:
 text = "
 Rakugo is made by:
 	Jeremi Biernacki (Jeremi360),
-	Vaasref 
+	Vaasref
 	Zon Petilla (Title Pending),
 	Ivan Borgia Dardi(ivandardi/MelodicStream),
 	Deep Gaurav
