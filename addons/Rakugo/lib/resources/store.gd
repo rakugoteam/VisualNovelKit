@@ -10,11 +10,16 @@ func _init():
 	properties = {}
 	property_signals = []
 
+
 func _get(property):
 	if property in self.get_property_list():
 		return self[property]
 	elif self.properties.has(property):
-		return self.properties[property]
+		if self.properties[property] != null:
+			return self.properties[property]
+		else:
+			push_warning("Tried to get a variable '%s' erased from the store. Returning false instead." % property)
+			return false
 	return null
 
 
