@@ -1,6 +1,6 @@
 extends Node
 
-const rakugo_version := "3.0.1"
+const rakugo_version := "3.1.0"
 
 # project settings integration
 onready var game_title : String = Settings.get("application/config/name")
