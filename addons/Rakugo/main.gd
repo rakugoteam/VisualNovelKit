@@ -61,6 +61,8 @@ signal stop_anim(node_id, reset)
 signal play_audio(node_id, from_pos)
 signal stop_audio(node_id)
 
+signal loading(progress) ## Progress is to be either NaN or [0,1], loading(1) meaning loadding finished.
+
 func _ready():
 	self.scene_anchor = get_tree().get_root()
 	StoreManager.init()
