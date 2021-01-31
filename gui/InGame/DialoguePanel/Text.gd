@@ -68,4 +68,6 @@ func _on_timer_tick():
 						$TypingTimer.start(delay)
 				else:
 					_on_timer_tick()
+			else:
+				end_typing_effect()
 

@@ -31,7 +31,11 @@ func _get(property):
 	if property in self.get_property_list():
 		return self[property]
 	elif self.variables.has(property):
-		return self.variables[property]
+		if self.variables[property] != null:
+			return self.variables[property]
+		else:
+			push_warning("Tried to get the erased character variable '%s' from '%s'. Returning false instead." % [property, name])
+			return false
 	return null
 
 
