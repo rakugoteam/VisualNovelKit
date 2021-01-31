@@ -68,17 +68,11 @@ __meta__ = {
 
 [node name="InGameGUI" parent="Panel/TabContainer" instance=ExtResource( 2 )]
 visible = false
-margin_left = 5.0
-margin_right = -5.0
-margin_bottom = -5.0
 
 [node name="Loading" type="Control" parent="Panel/TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 5.0
-margin_right = -5.0
-margin_bottom = -5.0
 mouse_filter = 2
 theme = ExtResource( 6 )
 script = ExtResource( 7 )

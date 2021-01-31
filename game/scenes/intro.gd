@@ -15,17 +15,20 @@ func intro_dialog():
 	hide("sylvie")
 	show("bg lecturehall")
 	say(null,
-		"It's only when I hear the sounds of shuffling feet and supplies being put away that I realize that the lecture's over."
+		"It's only when I hear the sounds of shuffling"
+		+ "feet and supplies being put away that I realize that the lecture's over."
 	)
 
 	step()
 	say(null,
-		"Professor Eileen's lectures are usually interesting, but today I just couldn't concentrate on it."
+		"Professor Eileen's lectures are usually interesting,"+
+		"but today I just couldn't concentrate on it."
 	)
 
 	step()
 	say(null,
-		"I've had a lot of other thoughts on my mind...thoughts that culminate in a question."
+		"I've had a lot of other thoughts on my mind..."
+		+"thoughts that culminate in a question."
 	)
 
 	step()
@@ -43,7 +46,9 @@ func intro_dialog():
 	show("sylvie green normal")
 	var s_name = s.get_composite_name("renpy")
 	say(null,
-		"I've known %s since we were kids. She's got a big heart and she's always been a good friend to me." %s_name
+		"I've known " + s_name + " since we were kids."
+		+" She's got a big heart and she's"
+		+"always been a good friend to me."
 	)
 
 	step()
@@ -58,7 +63,8 @@ func intro_dialog():
 
 	step()
 	say(null,
-		"More than just talking, more than just walking home together when our classes end.",
+		"More than just talking, more than just walking"
+		+"home together when our classes end.",
 		{"typing":false}
 	)
 
@@ -77,5 +83,4 @@ func intro_dialog():
 		if is_active():
 			$later.start()
 	
-	exit()
 	end_event()
