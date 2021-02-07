@@ -19,30 +19,50 @@ var thread:Thread
 var step_semaphore:Semaphore
 var return_lock:Semaphore
 
+var step_event_stack:Array
 
 func _store(save):
 	if Rakugo.current_dialogue == self:
 		save.current_dialogue = self.name
-		save.current_dialogue_event_stack = self.event_stack.duplicate(true)
+		save.current_dialogue_event_stack = event_stack.duplicate(true)
+		save.current_dialogue_event_stack[0][1] += 1
 		save.current_dialogue_script_version = _script_version
 		save.dialogue_class_script_version = _class_script_version
+		
+
+func _deep_store():
+	var save = Rakugo.store
+	save.current_dialogue = self.name
+	save.current_dialogue_event_stack = event_stack.duplicate(true)
+	save.current_dialogue_script_version = _script_version
+	save.dialogue_class_script_version = _class_script_version
+	
+	save = Rakugo.StoreManager.get_current_staked_store()
+	save.current_dialogue = self.name
+	save.current_dialogue_event_stack = event_stack.duplicate(true)
+	save.current_dialogue_script_version = _script_version
+	save.dialogue_class_script_version = _class_script_version
+	
 
 func _restore(save):
-	if save.current_dialogue == self.name:
+	if save.get('current_dialogue') == self.name:
 		if check_for_version_error(save):
 			return
+		if Rakugo.StoreManager.current_store_id == 0:
+			pass
 		start_thread(save.current_dialogue_event_stack.duplicate(true))
 
 func _step():
 	if Rakugo.current_dialogue == self and is_running():
 		if self.step_semaphore:
 			self.step_semaphore.post()
+	
 
 func start(event_name=''):
 	if event_name:
-		start_thread([[event_name, 0, 0, []]])
+		start_thread([[event_name, 0, 0, []]], true)
 	elif self.has_method(default_starting_event):
-		start_thread([[default_starting_event, 0, 0, []]])
+		start_thread([[default_starting_event, 0, 0, []]], true)
 	else:
 		push_error("Dialogue '%s' started without given event nor default event." % self.name)
 
@@ -79,13 +99,15 @@ func is_restarting():
 
 ## Thread life cycle
 
-func start_thread(_event_stack):
+func start_thread(_event_stack, _set_stack_store=false):
 	if not is_ready() and not is_ended():
 		self.state = State.RESTARTING
 		self.exit()
 		thread.wait_to_finish()
 
 	event_stack = _event_stack
+	if _set_stack_store:
+		_deep_store()
 	Rakugo.set_current_dialogue(self)
 	thread = Thread.new()
 	thread.start(self, "dialogue_loop")
@@ -157,6 +179,7 @@ func step():
 		step_semaphore = Semaphore.new()
 	if is_active():
 		step_semaphore.wait()
+	
 	event_stack[0][1] += 1
 	step_semaphore = Semaphore.new()# Preventing a case of multiple post skipping steps
 

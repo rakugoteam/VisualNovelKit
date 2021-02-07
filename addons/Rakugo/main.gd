@@ -79,6 +79,7 @@ func start(after_load:bool = false):
 	started = true
 	if not after_load:
 		emit_signal("started")
+	story_step()
 	jump("", "", "")# Engage the auto-start
 
 
@@ -91,7 +92,7 @@ func load_game(save_name := "quick"):
 
 
 func rollback(amount:int = 1):
-	self.StoreManager.change_current_stack_index(self.StoreManager.current_store_id + amount)
+	self.StoreManager.change_current_stack_index(amount)
 
 
 func prepare_quitting():
@@ -119,6 +120,7 @@ func story_step(_unblock=false):
 		StoreManager.stack_next_store()
 		print("Emitting _step")
 		get_tree().get_root().propagate_call('_step')
+		
 	else:
 		print("Emitting _blocked_step")
 		get_tree().get_root().propagate_call('_blocked_step')
