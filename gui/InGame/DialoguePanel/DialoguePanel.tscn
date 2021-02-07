@@ -21,6 +21,7 @@ __meta__ = {
 
 [node name="HideTimer" type="Timer" parent="."]
 wait_time = 0.1
+one_shot = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 margin_right = 1280.0
@@ -59,6 +60,7 @@ script = ExtResource( 2 )
 
 [node name="TypingTimer" type="Timer" parent="MarginContainer/VBox/Text"]
 wait_time = 0.1
+one_shot = true
 
 [node name="AskEntry" type="LineEdit" parent="MarginContainer/VBox"]
 visible = false
