@@ -7,6 +7,8 @@ func book():
 	Rakugo.StoreManager.set("book", true)
 
 	say("m", "It's like an interactive book that you can read on a computer or a console.")
+	step()
+
 	show("sylvie green surprised")
 	say("s", "Interactive?")
 	step()
