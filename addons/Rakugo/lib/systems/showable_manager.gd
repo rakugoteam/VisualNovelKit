@@ -106,6 +106,8 @@ func apply_shown():
 	for n in get_tree().get_nodes_in_group("showable"):
 		if n.has_method("hide"):
 			to_hide[n] = true
+	for n in to_hide:
+		n.hide()
 	if self.shown:
 		for radical_tag in self.shown:
 			var first_tag
@@ -118,8 +120,6 @@ func apply_shown():
 				if first_tag:
 					show_showable(n, first_tag, self.shown[radical_tag][1])
 					to_hide.erase(n)
-	for n in to_hide:
-		n.hide()
 
 
 func show_showable(node, tag, args):

@@ -117,10 +117,10 @@ func reset_game():
 func story_step(_unblock=false):
 	if _unblock or not StepBlocker.is_blocking():
 		StoreManager.stack_next_store()
-		print("Emitting _step")
+		# print("Emitting _step")
 		get_tree().get_root().propagate_call('_step')
 	else:
-		print("Emitting _blocked_step")
+		# print("Emitting _blocked_step")
 		get_tree().get_root().propagate_call('_blocked_step')
 
 

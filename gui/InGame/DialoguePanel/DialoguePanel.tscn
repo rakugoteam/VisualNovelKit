@@ -45,6 +45,7 @@ mouse_filter = 2
 bbcode_enabled = true
 scroll_active = false
 script = ExtResource( 1 )
+dialogue_panel_path = NodePath("../../..")
 
 [node name="Text" type="RichTextLabel" parent="MarginContainer/VBox"]
 margin_top = 34.0
@@ -56,6 +57,7 @@ text = "Some text displayed"
 fit_content_height = true
 scroll_active = false
 script = ExtResource( 2 )
+dialogue_panel_path = NodePath("../../..")
 
 [node name="TypingTimer" type="Timer" parent="MarginContainer/VBox/Text"]
 wait_time = 0.1

@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://gui/Window/Window.gd" type="Script" id=1]
 [ext_resource path="res://gui/InGame/InGameGUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://themes/question/question.tres" type="Theme" id=3]
 [ext_resource path="res://gui/Screens/Screens.tscn" type="PackedScene" id=4]
 [ext_resource path="res://themes/Default/default.tres" type="Theme" id=6]
 [ext_resource path="res://gui/Window/Loading.gd" type="Script" id=7]
@@ -9,16 +10,31 @@
 [ext_resource path="res://gui/QuitScreen/QuitScreen.tscn" type="PackedScene" id=9]
 [ext_resource path="res://gui/Window/SceneAnchor.gd" type="Script" id=10]
 
-[node name="Window" type="Node2D"]
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[node name="Window" type="Control"]
 pause_mode = 2
-z_as_relative = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1280.0
+margin_bottom = -720.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Panel" type="Control" parent="."]
-margin_right = 1280.0
-margin_bottom = 720.0
+margin_top = -1.0
+margin_right = 1282.0
+margin_bottom = 725.0
 mouse_filter = 2
-theme = ExtResource( 6 )
+theme = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -29,13 +45,20 @@ anchor_bottom = 1.0
 mouse_filter = 2
 script = ExtResource( 10 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="TabContainer" type="TabContainer" parent="Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_top = -1.0
+margin_right = -2.0
+margin_bottom = -5.0
 mouse_filter = 2
+custom_styles/tab_fg = SubResource( 1 )
+custom_styles/tab_disabled = SubResource( 2 )
+custom_styles/tab_bg = SubResource( 3 )
+custom_styles/panel = SubResource( 4 )
 tabs_visible = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -45,7 +68,6 @@ __meta__ = {
 
 [node name="InGameGUI" parent="Panel/TabContainer" instance=ExtResource( 2 )]
 visible = false
-mouse_filter = 2
 
 [node name="Loading" type="Control" parent="Panel/TabContainer"]
 visible = false

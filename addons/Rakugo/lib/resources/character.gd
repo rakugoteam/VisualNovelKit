@@ -57,7 +57,7 @@ func _set_color(_color) -> void:## That setter is to convert potential color giv
 	if _color is Color:
 		color = Color(_color.r, _color.g, _color.b, _color.a)
 	else:
-		color = Color(color)
+		color = Color(_color)
 
 
 func apply_default(input:Dictionary, default:Dictionary):

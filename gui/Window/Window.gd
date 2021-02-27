@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 onready var SceneAnchor := $Panel/SceneAnchor
 onready var Screens := $Panel/TabContainer/Screens

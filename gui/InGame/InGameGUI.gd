@@ -33,9 +33,9 @@ func _input(event):
 			show()
 
 
-func _unhandled_input(event):
-	if event.is_action_pressed("ui_left_click"):
-		Rakugo.story_step()
+#func _unhandled_input(event):
+#	if event.is_action_pressed("ui_left_click"):
+#		Rakugo.story_step()
 
 
 func _on_quick_button_press(quick_action):
