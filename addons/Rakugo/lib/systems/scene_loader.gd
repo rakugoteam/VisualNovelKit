@@ -26,11 +26,11 @@ func _ready():
 
 
 func _store(store):
-	store.current_scene = current_scene
+	store.scene = current_scene
 
 func _restore(store):
-	if store.current_scene != current_scene or default_force_reload:
-		load_scene(store.current_scene)
+	if store.get('scene') and store.scene != current_scene or default_force_reload:
+		load_scene(store.scene)
 
 
 func preload_scenes():
