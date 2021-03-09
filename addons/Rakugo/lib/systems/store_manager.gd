@@ -187,3 +187,9 @@ func save_persistent_store():
 	if error != OK:
 		print("Error writing persistent store %s to %s error_number: %s" % ["persistent.tres", save_folder_path, error])
 
+
+func _get(property):
+	return persistent_store._get(property)
+
+func _set(property, value):
+	return persistent_store._set(property, value)
