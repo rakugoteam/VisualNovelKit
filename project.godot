@@ -59,16 +59,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/Rakugo/settings_list.gd"
 }, {
-"base": "AnimatedSprite",
-"class": "StepAnimatedSprite",
-"language": "GDScript",
-"path": "res://addons/Rakugo/lib/nodes/StepAnimatedSprite.gd"
-}, {
-"base": "AnimationPlayer",
-"class": "StepAnimationPlayer",
-"language": "GDScript",
-"path": "res://addons/Rakugo/lib/nodes/StepAnimationPlayer.gd"
-}, {
 "base": "Resource",
 "class": "Store",
 "language": "GDScript",
@@ -90,8 +80,6 @@ _global_script_class_icons={
 "RakugoTheme": "res://addons/Rakugo/icons/theme.svg",
 "SceneLinks": "res://addons/Rakugo/icons/scene_links.svg",
 "SettingsList": "",
-"StepAnimatedSprite": "",
-"StepAnimationPlayer": "",
 "Store": "res://addons/Rakugo/icons/save.svg",
 "StoreStack": ""
 }
@@ -260,11 +248,16 @@ rakugo_hide_ui_toggle={
 [rakugo]
 
 default/narrator/name=""
+default/statements/default_say_parameters={
+"style": "default"
+}
+default/statements/default_ask_parameters={
+"style": "default"
+}
 
 [rendering]
 
 quality/intended_usage/framebuffer_allocation=0
 quality/intended_usage/framebuffer_allocation.mobile=0
 quality/2d/use_pixel_snap=true
-threads/thread_model=2
 environment/default_environment="res://default_env.tres"

@@ -15,9 +15,8 @@ func _store(store):
 	store.showable_shown = self.shown.duplicate(true)
 
 func _restore(store):
-	if store.get('showable'):
-		self.shown = store.showable_shown.duplicate(true)
-		apply_shown()
+	self.shown = store.showable_shown.duplicate(true)
+	apply_shown()
 
 
 func _on_scene_changed(scene):
