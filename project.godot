@@ -252,6 +252,8 @@ default/narrator/name=""
 default/statements/default_say_parameters={
 "typing": true
 }
+default/statements/default_ask_parameters={
+}
 
 [rendering]
 
