@@ -86,8 +86,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="The Question - Rakugo Port"
-run/main_scene="res://game/scenes/start.tscn"
+config/name="Rakugo Template"
+run/main_scene="res://game/First_scene/First.tscn"
 boot_splash/image="res://graphics/splash.png"
 boot_splash/fullsize=false
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
@@ -253,6 +253,7 @@ default/statements/default_say_parameters={
 "typing": true
 }
 default/statements/default_ask_parameters={
+
 }
 
 [rendering]
