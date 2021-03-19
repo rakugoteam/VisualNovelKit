@@ -18,6 +18,8 @@ Unlock the potential of [Godot](https://godotengine.org) 3.x with Rakugo!
 
 Now you can support this project here [itch.io](https://rakugoteam.github.io/donations/).
 
+Trello Project Roadmap: <https://trello.com/b/sx9eofUy>
+
 <!-- You can download 2.0 for Godot 3.1 [here](https://github.com/rakugoteam/Rakugo/releases). -->
 
 ## Showcase
