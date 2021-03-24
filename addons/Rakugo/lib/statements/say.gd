@@ -19,16 +19,13 @@ func exec(character, text:String, parameters = {}) -> void:
 
 
 #Utils functions
-
 func _get_character(character):
 	if character is String:
 		character = Rakugo.get_current_store().get(character)
 	return character
 
-
 func get_narrator():
-	return default_narrator#TODO improve upon that at some point
-
+	return default_narrator
 
 func _apply_default(input:Dictionary, default:Dictionary):
 	var output = input.duplicate()
