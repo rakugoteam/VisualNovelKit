@@ -6,8 +6,8 @@ const rakugo_version := "3.2.0"
 onready var game_title : String = Settings.get("application/config/name")
 onready var game_version : String = Settings.get("rakugo/game/info/version")
 onready var game_credits : String = Settings.get("rakugo/game/info/credits")
-onready var markup : String = Settings.get("rakugo/game/text/markup")#TODO remove that line
-onready var debug_on : bool = Settings.get("rakugo/editor/debug")#Same same
+onready var markup : String = Settings.get("rakugo/game/text/markup")
+onready var debug_on : bool = Settings.get("rakugo/editor/debug")
 onready var scene_links : String = Settings.get("rakugo/game/scenes/scene_links")
 onready var theme : RakugoTheme = load(Settings.get("rakugo/default/gui/theme"))
 
@@ -50,18 +50,9 @@ signal ask(default_answer, parameters)
 signal ask_return(result)
 signal menu(choices, parameters)
 signal menu_return(result)
-#TODO clean those
 signal started()
 signal game_ended()
-#TODO assert the need of those
-signal hide_ui(value)
-#TODO prune those
-signal play_anim(node_id, anim_name)
-signal stop_anim(node_id, reset)
-signal play_audio(node_id, from_pos)
-signal stop_audio(node_id)
-
-signal loading(progress) ## Progress is to be either NaN or [0,1], loading(1) meaning loadding finished.
+signal loading(progress) ## Progress is to be either NaN or [0,1], loading(1) meaning loading finished.
 
 func _ready():
 	self.scene_anchor = get_tree().get_root()
@@ -100,17 +91,13 @@ func prepare_quitting():
 	StoreManager.save_persistent_store()
 	Settings.save_property_list()
 
-
 func load_scene(scene_id:String, force_reload:bool = false):
 	return SceneLoader.load_scene(scene_id, force_reload)
-
 
 func reset_game():
 	SceneLoader.load_scene(Settings.get("application/run/main_scene"))
 	started = false
 	emit_signal("game_ended")
-
-
 
 ## Dialogue flow control
 
@@ -122,7 +109,6 @@ func story_step(_unblock=false):
 	else:
 		# print("Emitting _blocked_step")
 		get_tree().get_root().propagate_call('_blocked_step')
-
 
 func exit_dialogue():
 	self.set_current_dialogue(null)
@@ -139,30 +125,24 @@ func activate_skipping():
 func deactivate_skipping():
 	self.skipping = false
 
-
 func activate_auto_stepping():
 	self.auto_stepping = true
 	auto_timer.start()
 func deactivate_auto_stepping():
 	self.auto_stepping = false
 
-
-
 ## Utils
-
 func clean_scene_anchor():
 	if self.scene_anchor != get_tree().get_root():
 		for c in self.scene_anchor.get_children():
 			self.scene_anchor.remove_child(c)
-
 
 # parse rich text markups to bbcode for RichTextLabel
 # defaults to project setting if null
 func parse_rich_text(text:String, markup = null):
 	return TextParser.parse(text, markup)
 
-
-# create new character, store it into current store ising its tag, then return it
+# create new character, store it into current store using its tag, then return it
 func define_character(character_name:String, character_tag:String, color=null) -> Character:
 	var new_character = Character.new()
 	if color:
@@ -171,7 +151,6 @@ func define_character(character_name:String, character_tag:String, color=null) -
 		new_character.init(character_name, character_tag)
 	StoreManager.get_current_store()[character_tag] = new_character
 	return new_character
-
 
 func debug_dict(parameters:Dictionary, parameters_names:Array = [], some_custom_text:String = "") -> String:
 	var dbg = ""
@@ -185,7 +164,6 @@ func debug_dict(parameters:Dictionary, parameters_names:Array = [], some_custom_
 		dbg.erase(dbg.length() - 2, 2)
 
 	return some_custom_text + dbg
-
 
 # for printing debugs is only print if debug_on == true
 # put some string array or string as argument
