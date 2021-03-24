@@ -83,3 +83,5 @@ If you want to help please write to us on our [Discord](https://discord.gg/K9gvj
 - icons from [game-icons.net](https://game-icons.net)
 
 Emoji mode use [![Creative Commons](https://img.shields.io/badge/license-CC0%201.0-orange.svg)](http://creativecommons.org/publicdomain/zero/1.0/) [Twemoji](https://twemoji.twitter.com/).
+
+<!-- just to push commit -->
