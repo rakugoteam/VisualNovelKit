@@ -249,12 +249,6 @@ rakugo_hide_ui_toggle={
 
 game/info/version="3.1.1"
 default/narrator/name=""
-default/statements/default_say_parameters={
-"typing": true
-}
-default/statements/default_ask_parameters={
-
-}
 
 [rendering]
 

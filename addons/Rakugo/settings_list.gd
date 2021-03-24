@@ -53,7 +53,7 @@ var default_property_list:Dictionary = {
 
 
 	"rakugo/default/narrator/name" : [
-		"Narrator", PropertyInfo.new(
+		"", PropertyInfo.new(
 			"", TYPE_STRING, PROPERTY_HINT_NONE, 
 			"", PROPERTY_USAGE_DEFAULT)
 	],
