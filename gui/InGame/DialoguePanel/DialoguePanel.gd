@@ -6,12 +6,18 @@ func _ready():
 	Rakugo.connect("ask", self, "_on_ask")
 
 func _on_say(_character, _text, _parameters):
-	$HideTimer.stop()
-	show()
+	hide()
+	if _parameters.has("style"):
+		if _parameters["style"] == style:
+			$HideTimer.stop()
+			show()
 
 func _on_ask(_default_answer, _parameters):
-	$HideTimer.stop()
-	show()
+	hide()
+	if _parameters.has("style"):
+		if _parameters["style"] == style:
+			$HideTimer.stop()
+			show()
 
 func _step():
 	$HideTimer.start()
