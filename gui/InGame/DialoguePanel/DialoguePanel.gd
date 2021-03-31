@@ -7,17 +7,23 @@ func _ready():
 
 func _on_say(_character, _text, _parameters):
 	hide()
+	
 	if _parameters.has("style"):
-		if _parameters["style"] == style:
-			$HideTimer.stop()
-			show()
+		if _parameters["style"] != style:
+			return;
+
+	$HideTimer.stop()
+	show()
 
 func _on_ask(_default_answer, _parameters):
 	hide()
+	
 	if _parameters.has("style"):
-		if _parameters["style"] == style:
-			$HideTimer.stop()
-			show()
+		if _parameters["style"] != style:
+			return;
+
+	$HideTimer.stop()
+	show()
 
 func _step():
 	$HideTimer.start()
