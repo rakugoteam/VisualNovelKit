@@ -63,10 +63,10 @@ You can use it with:
 You can make your game 2d, 2.5d or 3d - you can only 2d in Ren'Py.
 You can easy add minigames or mix it with other game genre.
 It will have mechanics for point&click games and rpgs - Ren'Py and Twine are only for vn.
-This project's dialog functions can do more than Ren'Py's equivalents.
+This project's dialog functions can do more than Ren'Py equivalents.
 
-**Q:** How does the projectinteract with the engine ? </p>
-**A:** For now this projectis a singleton and a collection of special nodes. There is also gui include in example project that is connected with the project and has all functions like in a Ren'Py game.
+**Q:** How does the project interact with the engine ? </p>
+**A:** For now this project is a singleton and a collection of special nodes. There is also gui include in example project that is connected with the project and has all functions like in a Ren'Py game.
 
 **Q:** Is it easy to use ?</p>
 **A:** For now it is not that easy as I want it to be, but I am working to make it use RakugoScript (this project's own language) and visual script.
@@ -83,3 +83,5 @@ If you want to help please write to us on our [Discord](https://discord.gg/K9gvj
 - icons from [game-icons.net](https://game-icons.net)
 
 Emoji mode use [![Creative Commons](https://img.shields.io/badge/license-CC0%201.0-orange.svg)](http://creativecommons.org/publicdomain/zero/1.0/) [Twemoji](https://twemoji.twitter.com/).
+
+<!-- just to push commit -->
