@@ -97,7 +97,9 @@ var default_property_list:Dictionary = {
 	],
 
 	"rakugo/default/statements/default_ask_parameters" : [
-		{}, PropertyInfo.new(
+		{
+			"style": "default"
+		}, PropertyInfo.new(
 			"", TYPE_DICTIONARY, PROPERTY_HINT_NONE, 
 			"", PROPERTY_USAGE_EDITOR)
 	],
