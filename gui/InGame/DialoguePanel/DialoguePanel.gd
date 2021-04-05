@@ -10,8 +10,10 @@ func _on_say(_character, _text, _parameters):
 	
 	if _parameters.has("style"):
 		if _parameters["style"] != style:
-			return;
-
+			pause_mode = PAUSE_MODE_STOP
+			return
+	
+	pause_mode = PAUSE_MODE_INHERIT
 	$HideTimer.stop()
 	show()
 
@@ -20,8 +22,10 @@ func _on_ask(_default_answer, _parameters):
 	
 	if _parameters.has("style"):
 		if _parameters["style"] != style:
-			return;
-
+			pause_mode = PAUSE_MODE_STOP
+			return
+	
+	pause_mode = PAUSE_MODE_INHERIT
 	$HideTimer.stop()
 	show()
 
