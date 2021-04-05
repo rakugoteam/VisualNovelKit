@@ -3,7 +3,7 @@ extends Node
 var default_parameters = {}
 
 func _ready():
-	default_parameters = Settings.get("rakugo/default/statements/default_ask_parameters", {}, false)
+	default_parameters = Settings.get(SettingsList.default_ask_parameters, {}, false)
 
 
 func exec(variable_name:String, parameters = {}) -> void:

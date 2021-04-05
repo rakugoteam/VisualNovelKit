@@ -5,8 +5,10 @@ var default_narrator = null
 
 func _ready():
 	default_narrator = Character.new()
-	default_narrator.init(Settings.get("rakugo/default/narrator/name"), "", Settings.get("rakugo/default/narrator/color"))
-	default_parameters = Settings.get("rakugo/default/statements/default_say_parameters", {}, false)
+	default_narrator.init(
+		Settings.get(SettingsList.narrator_name), 
+		"", Settings.get(SettingsList.narrator_color))
+	default_parameters = Settings.get(SettingsList.default_say_parameters, {}, false)
 
 
 func exec(character, text:String, parameters = {}) -> void:

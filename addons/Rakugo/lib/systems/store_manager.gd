@@ -14,8 +14,8 @@ func init():
 	self.init_store_stack()
 
 func init_save_folder():
-	save_folder_path = Settings.get("rakugo/saves/save_folder")
-	if not Settings.get("rakugo/saves/test_mode"):
+	save_folder_path = Settings.get(SettingsList.save_folder)
+	if not Settings.get(SettingsList.test_mode):
 		save_folder_path = save_folder_path.replace("res://", "user://")
 	Directory.new().make_dir_recursive(save_folder_path)
 	save_folder_path = save_folder_path.trim_suffix("/") + "/"
@@ -86,9 +86,9 @@ func change_current_stack_index(index):
 ### Store Stack
 
 func init_store_stack():
-	store_stack_max_length = Settings.get("rakugo/game/store/rollback_steps")
+	store_stack_max_length = Settings.get(SettingsList.rollback_steps)
 	var new_save := Store.new()
-	new_save.game_version = Rakugo.game_version
+	new_save.game_version = Settings.get(SettingsList.game_version)
 	new_save.rakugo_version = Rakugo.rakugo_version
 	new_save.scene = Rakugo.current_scene_name
 	new_save.history = []
@@ -179,7 +179,7 @@ func init_persistent_store():
 		persistent_store = load(persistent_path)
 	else:
 		persistent_store = Store.new()
-	persistent_store.game_version = Rakugo.game_version
+	persistent_store.game_version = Settings.get(SettingsList.game_version)
 	persistent_store.rakugo_version = Rakugo.rakugo_version
 
 func save_persistent_store():

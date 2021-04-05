@@ -26,12 +26,12 @@ func _on_say(_character, _text, _parameters):
 			if _parameters.get('typing_effect_delay'):
 				delay = _parameters.get('typing_effect_delay')
 			else:
-				delay = float(Settings.get("rakugo/default/delays/typing_effect_delay"))
+				delay = float(Settings.get(SettingsList.typing_effect_delay))
 			
 			if _parameters.get('typing_effect_punctuation_factor'):
 				punc_delay = _parameters.get('typing_effect_punctuation_factor')
 			else:
-				punc_delay = delay * float(Settings.get("rakugo/default/delays/typing_effect_punctuation_factor"))
+				punc_delay = delay * float(Settings.get(SettingsList.typing_effect_punctuation_factor))
 			start_typing_effect()
 
 
