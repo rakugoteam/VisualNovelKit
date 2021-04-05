@@ -1,4 +1,4 @@
-# Rakugo![Logo](graphics/window_icon.png)
+# ![Logo](graphics/window_icon.png) Rakugo
 
 [![Documentation Status](https://readthedocs.org/projects/rakugodocs/badge/?version=latest)](https://rakugodocs.readthedocs.io/en/latest/?badge=latest)
 [![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE)
@@ -9,8 +9,6 @@
 [![GitHub](https://img.shields.io/github/watchers/badges/shields.svg?label=Watch)](https://github.com/rakugoteam/Rakugo)
 [![GitHub](https://img.shields.io/github/issues/rakugoteam/Rakugo.svg)](https://github.com/rakugoteam/Rakugo/issues)
 [![GitHub](https://img.shields.io/github/issues-closed/rakugoteam/Rakugo.svg)](https://github.com/rakugoteam/Rakugo/issues)
-
-## Rakugo
 
 Inspired by [Ren'Py](https://www.renpy.org), Rakugo is a projectaimed at providing a better toolset for narrative-based games on [Godot](https://godotengine.org). Simplify your project, if it is a visual novel, point and click, RPG, interactive text game or many other styles and blends of styles.
 
