@@ -1,12 +1,12 @@
 # ![Logo](graphics/window_icon.png) Rakugo
 
 [![Documentation Status](https://readthedocs.org/projects/rakugodocs/badge/?version=latest)](https://rakugodocs.readthedocs.io/en/latest/?badge=latest)
-[![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE)
-[![Discord Server](https://img.shields.io/discord/484604562183815169.svg)](https://discord.gg/K9gvjdg)
+![MIT License](https://img.shields.io/static/v1.svg?label=📜%20License&message=MIT&color=informational)
+[![Join the Discord channel](https://img.shields.io/static/v1.svg?label=Join%20our%20Discord%20channel&message=🎆&color=7289DA&logo=discord&logoColor=white&labelColor=2C2F33)](https://discord.gg/K9gvjdg)
 [![GitHub](https://img.shields.io/github/contributors/rakugoteam/Rakugo.svg)](https://github.com/rakugoteam/Rakugo)
 [![GitHub](https://img.shields.io/github/stars/rakugoteam/Rakugo.svg)](https://github.com/rakugoteam/Rakugo)
 [![GitHub](https://img.shields.io/github/forks/rakugoteam/Rakugo.svg)](https://github.com/rakugoteam/Rakugo/network)
-[![GitHub](https://img.shields.io/github/watchers/badges/shields.svg?label=Watch)](https://github.com/rakugoteam/Rakugo)
+[![github-watchers](https://img.shields.io/github/watchers/rakugoteam/Rakugo?label=Watch&style=social&logo=github)](https://github.com/rakugoteam/Rakugo)
 [![GitHub](https://img.shields.io/github/issues/rakugoteam/Rakugo.svg)](https://github.com/rakugoteam/Rakugo/issues)
 [![GitHub](https://img.shields.io/github/issues-closed/rakugoteam/Rakugo.svg)](https://github.com/rakugoteam/Rakugo/issues)
 
