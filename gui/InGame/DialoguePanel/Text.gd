@@ -11,14 +11,13 @@ signal typing_effect_started
 signal typing_effect_ended
 
 func _ready():
-	Rakugo.connect("say", self, "_on_say")
 	regex.compile("[[:graph:]]")
-
 
 func _blocked_step():
 	end_typing_effect()
 
 
+# now its called from DialoguePanel
 func _on_say(_character, _text, _parameters):
 	if is_visible_in_tree():
 		self.visible_characters = -1

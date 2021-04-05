@@ -2,11 +2,9 @@ extends LineEdit
 
 export var style = "default"
 
-var variable_name:String = ""
-func _ready():
-	Rakugo.connect("ask", self, "_on_ask")
+var variable_name := ""
 
-
+# now its called from DialoguePanel
 func _on_ask(default_answer, _parameters):
 	if is_visible_in_tree():
 		if _parameters.has('placeholder'):
