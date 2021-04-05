@@ -2,15 +2,6 @@ extends Node
 
 const rakugo_version := "3.2.0"
 
-# project settings integration
-onready var game_title : String = Settings.get("application/config/name")
-onready var game_version : String = Settings.get("rakugo/game/info/version")
-onready var game_credits : String = Settings.get("rakugo/game/info/credits")
-onready var markup : String = Settings.get("rakugo/game/text/markup")
-onready var debug_on : bool = Settings.get("rakugo/editor/debug")
-onready var scene_links : String = Settings.get("rakugo/game/scenes/scene_links")
-onready var theme : RakugoTheme = load(Settings.get("rakugo/default/gui/theme"))
-
 
 var current_scene_name := ""
 var current_scene_path := ""
@@ -59,8 +50,9 @@ func _ready():
 	StoreManager.init()
 	ShowableManager.init()
 	History.init()
-
-	OS.set_window_title(game_title + " " + game_version)
+	var version = Settings.get(SettingsList.game_version)
+	var title = Settings.get(SettingsList.game_title)
+	OS.set_window_title(title + " " + version)
 
 
 ## Rakugo flow control
@@ -168,7 +160,7 @@ func debug_dict(parameters:Dictionary, parameters_names:Array = [], some_custom_
 # for printing debugs is only print if debug_on == true
 # put some string array or string as argument
 func debug(some_text = []):
-	if not debug_on:
+	if not Settings.get(SettingsList.debug):
 		return
 
 	if not started:

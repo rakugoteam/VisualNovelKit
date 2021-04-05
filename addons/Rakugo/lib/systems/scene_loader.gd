@@ -14,8 +14,8 @@ signal scene_changed(scene_node)
 
 
 func _ready():
-	default_force_reload = Settings.get("rakugo/game/scenes/force_reload")
-	scene_links = load(Settings.get("rakugo/game/scenes/scene_links")).get_as_dict()
+	default_force_reload = Settings.get(SettingsList.force_reload)
+	scene_links = load(Settings.get(SettingsList.scene_links)).get_as_dict()
 	current_scene = Settings.get("application/run/main_scene")
 	current_scene_node = get_tree().current_scene
 	

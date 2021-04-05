@@ -5,7 +5,7 @@ var emojis = Emojis.new()
 
 func parse(text:String, _markup=null):
 	if not _markup:
-		_markup = Settings.get("rakugo/game/text/markup")
+		_markup = Settings.get(SettingsList.markup)
 	
 	text = dirty_escaping(text)
 	match _markup:

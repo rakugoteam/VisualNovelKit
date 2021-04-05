@@ -12,7 +12,7 @@ onready var box : BoxContainer = $ScrollContainer/VBoxContainer
 func _ready() -> void:
 	$Add.icon = get_icon("CreateNewSceneFrom", "EditorIcons")
 	
-	file_path = ProjectSettings.get("rakugo/game/scenes/scene_links")
+	file_path = ProjectSettings.get(SettingsList.scene_links)
 	init()
 
 
