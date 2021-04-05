@@ -1,6 +1,7 @@
 extends Object
 class_name SettingsList
 
+# Rakugo
 const game_version := "rakugo/game/info/version"
 const game_credits := "rakugo/game/info/credits"
 const scene_links := "rakugo/game/scenes/scene_links"
@@ -24,6 +25,9 @@ const save_folder := "rakugo/saves/save_folder"
 const save_screen_layout := "rakugo/saves/save_screen_layout"
 const test_mode := "rakugo/saves/test_mode"
 const saved_rollback_steps := "rakugo/saves/saved_rollback_steps"
+
+#Godot
+const game_title := "application/config/name"
 
 var default_property_list:Dictionary = {
 	 game_version : [
