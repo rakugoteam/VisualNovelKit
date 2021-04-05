@@ -1,9 +1,10 @@
 extends Node
+class_name RakugoTextParser
 
 var emojis = Emojis.new()
 
 
-func parse(text:String, _markup=null):
+func parse(text:String, _markup:="", editor:=false):
 	if not _markup:
 		_markup = Settings.get(SettingsList.markup)
 	
@@ -11,12 +12,17 @@ func parse(text:String, _markup=null):
 	match _markup:
 		"renpy":
 			text = convert_renpy_markup(text)
+
 		"markdown_simple":
 			text = dirty_escaping_sub(text, "[")
 			text = convert_markdown_markup(text)
+
 		"markdown":
 			text = convert_markdown_markup(text)
-	text = replace_variables(text)
+	
+	if !editor:
+		text = replace_variables(text)
+	
 	text = replace_emojis(text)
 	return text
 
@@ -39,7 +45,7 @@ func convert_markdown_markup(text:String):
 			if result.get_string(4):
 				replacement = "[url]" + result.get_string(4) + "[/url]"
 			else:
-				replacement = "[url=" + result.get_string(3) + "]" + result.get_string(2) + "[/url]" #That can can be the user eroneously writing "[b](url)[\b]" need to be pointed in the doc
+				replacement = "[url=" + result.get_string(3) + "]" + result.get_string(2) + "[/url]" #That can can be the user erroneously writing "[b](url)[\b]" need to be pointed in the doc
 			output = regex_replace(result, output, replacement)
 	text = output
 	
