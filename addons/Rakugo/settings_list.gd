@@ -28,6 +28,11 @@ const saved_rollback_steps := "rakugo/saves/saved_rollback_steps"
 
 #Godot
 const game_title := "application/config/name"
+const main_scene := "application/run/main_scene"
+const width := "display/window/size/width"
+const height := "display/window/size/height"
+const fullscreen := "display/window/size/fullscreen"
+const maximized := "display/window/size/maximized"
 
 var default_property_list:Dictionary = {
 	 game_version : [
