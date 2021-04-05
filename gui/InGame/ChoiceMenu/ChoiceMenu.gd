@@ -1,5 +1,6 @@
 extends VBoxContainer
 
+export var style := "default"
 export var choice_button:PackedScene = null
 
 onready var expression = Expression.new()
@@ -19,6 +20,10 @@ func on_choice_button_pressed(_choice_button):
 
 
 func build(choices:Array, parameters:Dictionary):
+	if parameters.has("style"):
+		if parameters["style"] != style:
+			return
+
 	purge_childs()
 	for i in choices.size():
 		if _is_entry_visible(choices[i]):
