@@ -8,10 +8,6 @@ func _ready():
 
 
 func _on_ask(default_answer, _parameters):
-	if _parameters.has("style"):
-		if _parameters["style"] != style:
-			return;
-
 	if is_visible_in_tree():
 		if _parameters.has('placeholder'):
 			self.placeholder_text = _parameters['placeholder']
