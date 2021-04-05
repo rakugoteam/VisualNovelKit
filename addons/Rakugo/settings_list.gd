@@ -104,6 +104,14 @@ var default_property_list:Dictionary = {
 			"", PROPERTY_USAGE_EDITOR)
 	],
 
+	"rakugo/default/statements/default_menu_parameters" : [
+		{
+			"style": "default"
+		}, PropertyInfo.new(
+			"", TYPE_DICTIONARY, PROPERTY_HINT_NONE, 
+			"", PROPERTY_USAGE_EDITOR)
+	],
+
 	"rakugo/default/statements/default_show_parameters" : [
 		{}, PropertyInfo.new(
 			"", TYPE_DICTIONARY, PROPERTY_HINT_NONE, 

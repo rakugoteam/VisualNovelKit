@@ -2,7 +2,6 @@ extends Node
 
 var default_parameters = {}
 
-
 func _ready():
 	default_parameters = Settings.get("rakugo/default/statements/default_menu_parameters", {}, false)
 
