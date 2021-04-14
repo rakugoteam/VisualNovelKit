@@ -3,7 +3,7 @@ extends RakugoTextLabel
 
 # now its called from DialoguePanel
 func _on_say(_character, _text:="", _parameters:={}):
-	self._markup = _parameters.get("markup", "")
+	self.markup = _parameters.get("markup", "")
 
 	if _character:
 		self.rakugo_text = _character.get_composite_name("bbcode")

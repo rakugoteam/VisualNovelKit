@@ -21,7 +21,7 @@ func _blocked_step():
 func _on_say(_character, _text, _parameters):
 	if is_visible_in_tree():
 		self.visible_characters = -1
-		self._markup = _parameters.get("markup", "")
+		self.markup = _parameters.get("markup", "")
 		self.rakugo_text = _text
 		if not Rakugo.skipping and _parameters.get('typing'):
 			if _parameters.get('typing_effect_delay'):
