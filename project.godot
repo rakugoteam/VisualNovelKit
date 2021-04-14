@@ -82,7 +82,7 @@ _global_script_class_icons={
 "ProjectTools": "",
 "PropertyInfo": "",
 "RakugoTextLabel": "res://addons/Rakugo/icons/rakugo_text_label.svg",
-"RakugoTextParser": "",
+"RakugoTextParser": "res://addons/Rakugo/icons/rakugo_text_parser.svg",
 "RakugoTheme": "",
 "SceneLinks": "res://addons/Rakugo/icons/scene_links.svg",
 "SettingsList": "",
