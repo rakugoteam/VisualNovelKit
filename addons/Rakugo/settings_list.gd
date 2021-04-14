@@ -74,7 +74,7 @@ var default_property_list:Dictionary = {
 	markup : [
 		"renpy", PropertyInfo.new(
 			"", TYPE_STRING, PROPERTY_HINT_ENUM, 
-			"renpy,bbcode,markdown,markdown_simple",
+			"renpy,bbcode,markdown",
 			PROPERTY_USAGE_CATEGORY)
 	],
 

@@ -5,10 +5,7 @@ onready var grid := $ScrollContainer/GridContainer
 var file := File.new()
 var emojis = Emojis.new()
 
-var markup:String = "none"
-
 signal emoji_selected(emoji_name, emoji_code)
-
 
 func _ready():
 	for e in emojis.name_to_code_emojis.keys():
@@ -29,7 +26,7 @@ func on_emoji_clicked(button: Button):
 	OS.clipboard = emoji
 
 func add_markup(text:String):
-	match markup:
+	match ProjectSettings.get(SettingsList.markup):
 		"bbcode":
 			text = "[:%s:]" % text
 		"renpy":
@@ -38,5 +35,3 @@ func add_markup(text:String):
 			text = ":%s:" % text
 	return text
 
-func _on_markup_selected(_markup):
-	markup = _markup
