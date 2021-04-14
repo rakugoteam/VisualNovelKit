@@ -81,12 +81,12 @@ _global_script_class_icons={
 "HistoryEntry": "",
 "ProjectTools": "",
 "PropertyInfo": "",
-"RakugoTextLabel": "",
+"RakugoTextLabel": "res://addons/Rakugo/icons/rakugo_text_label.svg",
 "RakugoTextParser": "",
-"RakugoTheme": "res://addons/Rakugo/icons/theme.svg",
+"RakugoTheme": "",
 "SceneLinks": "res://addons/Rakugo/icons/scene_links.svg",
 "SettingsList": "",
-"Store": "res://addons/Rakugo/icons/save.svg",
+"Store": "",
 "StoreStack": ""
 }
 
@@ -266,7 +266,6 @@ default/statements/default_menu_parameters={
 default/statements/default_show_parameters={
 
 }
-game/text/markup="markdown"
 
 [rendering]
 
