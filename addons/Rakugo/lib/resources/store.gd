@@ -1,5 +1,5 @@
 extends Resource
-class_name Store, "res://addons/Rakugo/icons/save.svg"
+class_name Store
 
 export var game_version:String = ""
 export var rakugo_version:String = ""
