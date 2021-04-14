@@ -12,11 +12,7 @@ func parse(text:String, _markup:="", editor:=false):
 	match _markup:
 		"renpy":
 			text = convert_renpy_markup(text)
-
-		"markdown_simple":
-			text = dirty_escaping_sub(text, "[")
-			text = convert_markdown_markup(text)
-
+			
 		"markdown":
 			text = convert_markdown_markup(text)
 	
