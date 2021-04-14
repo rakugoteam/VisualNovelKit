@@ -1,10 +1,12 @@
-extends RichTextLabel
+extends RakugoTextLabel
 
 
 # now its called from DialoguePanel
-func _on_say(_character, _text, _parameters):
+func _on_say(_character, _text:="", _parameters:={}):
+	self._markup = _parameters.get("markup", "")
+
 	if _character:
-		self.bbcode_text = _character.get_composite_name("bbcode")
+		self.rakugo_text = _character.get_composite_name("bbcode")
 		return
 	
-	self.bbcode_text = Rakugo.Say.get_narrator().name
+	self.rakugo_text = Rakugo.Say.get_narrator().name

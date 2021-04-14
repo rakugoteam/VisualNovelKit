@@ -11,12 +11,14 @@ func _ready():
 	default_parameters = Settings.get(SettingsList.default_say_parameters, {}, false)
 
 
-func exec(character, text:String, parameters = {}) -> void:
+func exec(character, text:String, parameters := {}) -> void:
 	character = _get_character(character)
+
+	# parameters > character default parameters > project parameters
 	if character:
-		parameters = _apply_default(parameters, character.say_parameters)# parameters > character default parameters > project parameters
+		parameters = _apply_default(parameters, character.say_parameters)
+	
 	parameters = _apply_default(parameters, default_parameters)
-	text = Rakugo.TextParser.parse(text, parameters.get("markup", null))
 	Rakugo.emit_signal("say", character, text, parameters)
 
 
