@@ -6,7 +6,10 @@ var emojis = Emojis.new()
 
 func parse(text:String, _markup:="", editor:=false):
 	if not _markup:
-		_markup = Settings.get(SettingsList.markup)
+		if Engine.editor_hint:
+			_markup = ProjectSettings.get(SettingsList.markup)
+		else:
+			_markup = Settings.get(SettingsList.markup)
 	
 	text = dirty_escaping(text)
 	match _markup:

@@ -1,28 +1,41 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://gui/InGame/NotifyDisplay/NotifyDisplay.gd" type="Script" id=1]
+[ext_resource path="res://addons/Rakugo/lib/nodes/rakugo_text_label.gd" type="Script" id=2]
+[ext_resource path="res://themes/Default/default.tres" type="Theme" id=3]
 
 [node name="NotifyDisplay" type="PanelContainer"]
+self_modulate = Color( 1, 1, 1, 0.439216 )
 anchor_top = 0.1
 anchor_bottom = 0.1
+margin_right = 255.0
+margin_bottom = 37.0
 rect_min_size = Vector2( 100, 20 )
 mouse_filter = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+theme = ExtResource( 3 )
 script = ExtResource( 1 )
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
+min_size = Vector2( 0, 10 )
+char_size = Vector2( 10, 20 )
 
-[node name="Label" type="Label" parent="."]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 110.0
-margin_bottom = 21.0
-text = "Notification text"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Label" type="RichTextLabel" parent="."]
+margin_left = 6.0
+margin_top = 4.0
+margin_right = 245.0
+margin_bottom = 33.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "[i]Notify Text[/i]
+"
+text = "Notify Text
+"
+scroll_active = false
+script = ExtResource( 2 )
+markup = "game_setting"
 
 [node name="Tween" type="Tween" parent="."]

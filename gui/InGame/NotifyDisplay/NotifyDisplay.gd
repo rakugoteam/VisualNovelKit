@@ -1,21 +1,25 @@
 extends PanelContainer
 
-export(float, 0, 1, 0.1) var fade_time = 0.3
-export(float, 0.5, 3, 0.1) var base_duration = 2
-export(float, 0, 0.5, 0.05) var duration_factor_per_word = 0.1
+export var min_size := Vector2(10, 20)
+export var char_size := Vector2(5, 10)
+export(float, 0, 1, 0.1) var fade_time := 0.3
+export(float, 0.5, 3, 0.1) var base_duration := 2.0
+export(float, 0, 0.5, 0.05) var duration_factor_per_word := 0.1
 
 func _ready():
 	Rakugo.connect("notify", self, "_on_notify")
 	hide()
 
-
 func _on_notify(text:String, parameters:Dictionary):
-	$Label.text = text
-	rect_size = Vector2.ZERO
+	$Label.rakugo_text = text
+	rect_size = min_size
+	rect_size.x += $Label.rakugo_text.length() * char_size.x
+	var new_lines:int = $Label.rakugo_text.split("\n", false).size()
+	rect_size.y += new_lines * char_size.y;
 	fade_in_out()
 
 func fade_in_out():
-	var splits = $Label.text.split(" ", false)
+	var splits = $Label.rakugo_text.split(" ", false)
 	var wait_duration = base_duration * (1 + duration_factor_per_word * splits.size())
 	$Tween.remove_all()
 	$Tween.interpolate_property(self, "modulate", Color(1,1,1,0), Color(1,1,1,1), fade_time, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
