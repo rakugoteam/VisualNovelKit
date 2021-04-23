@@ -56,5 +56,6 @@ anchor_bottom = 0.7
 [node name="QuickMenu" parent="." instance=ExtResource( 6 )]
 
 [node name="NotifyDisplay" parent="." instance=ExtResource( 4 )]
+
 [connection signal="pressed" from="StepButton" to="StepButton" method="_on_StepButton_pressed"]
 [connection signal="quick_button_press" from="QuickMenu" to="." method="_on_quick_button_press"]

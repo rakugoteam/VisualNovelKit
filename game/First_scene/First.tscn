@@ -156,5 +156,6 @@ text = "Blue Path"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="GreenChoice" to="SomeDialogue" method="_on_green_path_chosen"]
 [connection signal="pressed" from="BlueChoice" to="SomeDialogue" method="_on_blue_path_chosen"]

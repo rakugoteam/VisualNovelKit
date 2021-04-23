@@ -12,10 +12,7 @@ func _ready():
 
 func _on_notify(text:String, parameters:Dictionary):
 	$Label.rakugo_text = text
-	rect_size = min_size
-	rect_size.x += $Label.rakugo_text.length() * char_size.x
-	var new_lines:int = $Label.rakugo_text.split("\n", false).size()
-	rect_size.y += new_lines * char_size.y;
+	$Label.resize_to_text(min_size, char_size)
 	fade_in_out()
 
 func fade_in_out():
