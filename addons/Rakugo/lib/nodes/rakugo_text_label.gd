@@ -4,13 +4,14 @@ class_name RakugoTextLabel, "res://addons/Rakugo/icons/rakugo_text_label.svg"
 
 var text_parser : RakugoTextParser setget , _get_text_parser
 export(String, MULTILINE) var rakugo_text:String setget _set_rakugo_text, _get_rakugo_text
-export(String, "game_setting", "renpy", "bbcode", "markdown" ,"markdown_simple") var markup := "project_setting"
+export(String, "game_setting", "renpy", "bbcode", "markdown") var markup := "project_setting"
 
 var _rakugo_text := ""
 var _text_parser : RakugoTextParser
 
 func _ready() -> void:
 	bbcode_enabled = true
+	_set_rakugo_text(_rakugo_text)
 
 func _get_text_parser() -> RakugoTextParser:
 	if !_text_parser:
@@ -23,9 +24,16 @@ func _get_text_parser() -> RakugoTextParser:
 	return _text_parser
 	
 func _set_rakugo_text(value:String) -> void:
-	if Rakugo.started or Engine.editor_hint:
-		_rakugo_text = value
-		bbcode_text = _get_text_parser().parse(value, _get_markup(), Engine.editor_hint)
+	_rakugo_text = value
+
+	var can_be_parsed := false
+	can_be_parsed = Engine.editor_hint
+
+	if not can_be_parsed:
+		can_be_parsed = Rakugo.started
+	
+	if can_be_parsed:
+		parse_bbcode(_get_text_parser().parse(value, _get_markup(), Engine.editor_hint))
 	
 func _get_rakugo_text() -> String:
 	return _rakugo_text
@@ -35,3 +43,9 @@ func _get_markup() -> String:
 		return ""
 	
 	return markup
+
+func resize_to_text(min_size: Vector2, char_size:Vector2):
+	rect_size = min_size
+	rect_size.x += _rakugo_text.length() * char_size.x
+	var new_lines:int = _rakugo_text.split("\n", false).size()
+	rect_size.y += new_lines * char_size.y;
