@@ -39,11 +39,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/Rakugo/tools/project_settings/property_info.gd"
 }, {
-"base": "RakugoTextLabel",
-"class": "RakugoButton",
-"language": "GDScript",
-"path": "res://gui/InGame/ChoiceMenu/ChoiceButton.gd"
-}, {
 "base": "RichTextLabel",
 "class": "RakugoTextLabel",
 "language": "GDScript",
@@ -86,7 +81,6 @@ _global_script_class_icons={
 "HistoryEntry": "",
 "ProjectTools": "",
 "PropertyInfo": "",
-"RakugoButton": "",
 "RakugoTextLabel": "res://addons/Rakugo/icons/rakugo_text_label.svg",
 "RakugoTextParser": "res://addons/Rakugo/icons/rakugo_text_parser.svg",
 "RakugoTheme": "",
@@ -270,12 +264,12 @@ default/statements/default_menu_parameters={
 "style": "default"
 }
 default/statements/default_show_parameters={
+
 }
 
 [rendering]
 
 quality/intended_usage/framebuffer_allocation=0
 quality/intended_usage/framebuffer_allocation.mobile=0
-2d/snapping/use_gpu_pixel_snap=true
-environment/default_environment="res://default_env.tres"
 quality/2d/use_pixel_snap=true
+environment/default_environment="res://default_env.tres"

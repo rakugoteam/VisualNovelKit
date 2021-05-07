@@ -259,9 +259,12 @@ func _menu_yield(returns:Array):
 	if return_lock:
 		return_lock.post()
 
+
+
 func show(node_id: String, parameters := {}):
 	if is_active():
 		Rakugo.call_deferred('show', node_id, parameters)
+
 
 func hide(node_id: String) -> void:
 	if is_active():
