@@ -7,6 +7,13 @@ func _ready():
 
 
 func exec(choices:Array, parameters = {}) -> void:
+	for choice in choices:
+		if choice.size() == 1:
+			choice.append(choice[0])
+			
+		if choice.size() == 2:
+			choice.append({})
+
 	parameters = _apply_default(parameters, default_parameters)
 	Rakugo.StepBlocker.block('menu')
 	Rakugo.emit_signal("menu", choices, parameters)
