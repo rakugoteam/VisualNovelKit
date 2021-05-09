@@ -96,11 +96,6 @@ func convert_renpy_markup(text:String):
 			output = regex_replace(result, output, "<" + result.get_string(1) + ">")
 	text = output
 	
-	re.compile("(?<!\\[)\\[([^\\]]+)\\]")#Check there is still some variable inclusion and complain if so
-	for result in re.search_all(text):
-		if result.get_string():
-			push_error("Incompatible variable inclusion '%s'" % result.get_string())
-	
 	re.compile("(?<!\\{)\\{(\\/{0,1})a(?:(=[^\\}]+)\\}|\\})")#match unescaped "{a=" and "{/a}"
 	for result in re.search_all(text):
 		if result.get_string():
