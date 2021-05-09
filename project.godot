@@ -264,12 +264,12 @@ default/statements/default_menu_parameters={
 "style": "default"
 }
 default/statements/default_show_parameters={
-
 }
 
 [rendering]
 
 quality/intended_usage/framebuffer_allocation=0
 quality/intended_usage/framebuffer_allocation.mobile=0
-quality/2d/use_pixel_snap=true
+2d/snapping/use_gpu_pixel_snap=true
 environment/default_environment="res://default_env.tres"
+quality/2d/use_pixel_snap=true

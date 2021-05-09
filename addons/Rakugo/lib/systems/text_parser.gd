@@ -5,8 +5,8 @@ var emojis = Emojis.new()
 
 
 func parse(text:String, _markup:="", editor:=false):
-	if not _markup:
-		if Engine.editor_hint:
+	if _markup.empty():
+		if editor:
 			_markup = ProjectSettings.get(SettingsList.markup)
 		else:
 			_markup = Settings.get(SettingsList.markup)
