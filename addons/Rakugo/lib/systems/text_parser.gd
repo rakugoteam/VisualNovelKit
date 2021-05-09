@@ -1,12 +1,12 @@
 extends Node
-class_name RakugoTextParser, "res://addons/Rakugo/icons/rakugo_text_parser.svg"
+class_name RakugoTextParser
 
 var emojis = Emojis.new()
 
 
 func parse(text:String, _markup:="", editor:=false):
-	if not _markup:
-		if Engine.editor_hint:
+	if _markup in ["", "project_setting"]:
+		if editor:
 			_markup = ProjectSettings.get(SettingsList.markup)
 		else:
 			_markup = Settings.get(SettingsList.markup)
@@ -20,7 +20,7 @@ func parse(text:String, _markup:="", editor:=false):
 			text = convert_markdown_markup(text)
 	
 	if !editor:
-		text = replace_variables(text)
+		text = replace_variables(text, editor)
 	
 	text = replace_emojis(text)
 	return text
@@ -153,7 +153,7 @@ func dirty_escaping_sub(text:String, substring:String):
 	return text
 
 
-func replace_variables(text:String):
+func replace_variables(text:String, editor:=false):
 	var re = RegEx.new()
 	var output = "" + text
 	var replacement = ""
@@ -161,7 +161,12 @@ func replace_variables(text:String):
 	re.compile("<([\\w.]+)>")
 	for result in re.search_all(text):
 		if result.get_string():
-			replacement = str(get_variable(result.get_string(1)))
+			
+			if editor:
+				replacement = str(get_variable(result.get_string(1)))
+			else:
+				replacement = "[code]" + result.get_string(1) + "[/code]"
+
 			output = regex_replace(result, output, replacement)
 	
 	return output
@@ -183,8 +188,9 @@ func replace_emojis(text:String):
 
 func regex_replace(result:RegExMatch, output:String, replacement:String, string_to_replace=0):
 	var offset = output.length() - result.subject.length()
-	return output.left(result.get_start(string_to_replace) + offset) + replacement + output.right(result.get_end(string_to_replace) + offset)
-
+	var left = output.left(result.get_start(string_to_replace) + offset)
+	var right = output.right(result.get_end(string_to_replace) + offset)
+	return left + replacement + right 
 
 func get_variable(var_name:String):
 	var parts = var_name.split('.', false)
