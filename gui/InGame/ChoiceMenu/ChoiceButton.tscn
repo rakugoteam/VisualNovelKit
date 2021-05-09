@@ -1,18 +1,24 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://gui/InGame/ChoiceMenu/ChoiceButton.gd" type="Script" id=1]
+[ext_resource path="res://addons/Rakugo/lib/nodes/rakugo_text_label.gd" type="Script" id=2]
+[ext_resource path="res://fonts/DejaVu/DejaVuSans-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://fonts/DejaVu/DejaVuSansMono.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://fonts/DejaVu/DejaVuSans-BoldOblique.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://fonts/DejaVu/DejaVuSans.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://fonts/DejaVu/DejaVuSans-Oblique.ttf" type="DynamicFontData" id=7]
 
 [sub_resource type="StyleBoxFlat" id=1]
 content_margin_top = 5.0
 content_margin_bottom = 5.0
 bg_color = Color( 0.2432, 0.2816, 0.32, 0.784314 )
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=2]
 content_margin_top = 5.0
 content_margin_bottom = 5.0
 bg_color = Color( 0.4028, 0.4664, 0.53, 0.784314 )
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=3]
 content_margin_top = 5.0
 content_margin_bottom = 5.0
 bg_color = Color( 0, 0, 0, 0.784314 )
@@ -22,15 +28,35 @@ border_width_right = 2
 border_width_bottom = 2
 border_color = Color( 0.435294, 0.435294, 0.435294, 1 )
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=4]
 content_margin_top = 5.0
 content_margin_bottom = 5.0
 bg_color = Color( 0, 0, 0, 0.352941 )
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=5]
 content_margin_top = 5.0
 content_margin_bottom = 5.0
 bg_color = Color( 0, 0, 0, 0.501961 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 22
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 22
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 22
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 22
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 22
+font_data = ExtResource( 6 )
 
 [node name="ChoiceButton" type="Button"]
 margin_top = 333.0
@@ -38,18 +64,40 @@ margin_right = 1280.0
 margin_bottom = 347.0
 focus_mode = 0
 custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 5 )
-custom_styles/focus = SubResource( 2 )
-custom_styles/disabled = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 custom_colors/font_color_disabled = Color( 0.443137, 0.443137, 0.443137, 1 )
 custom_colors/font_color = Color( 0.709804, 0.709804, 0.709804, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 enabled_focus_mode = 0
-text = "Choice Button"
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="RakugoTextLabel" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/mono_font = SubResource( 6 )
+custom_fonts/bold_italics_font = SubResource( 7 )
+custom_fonts/italics_font = SubResource( 8 )
+custom_fonts/bold_font = SubResource( 9 )
+custom_fonts/normal_font = SubResource( 10 )
+bbcode_enabled = true
+tab_size = 2
+text = "Choice Button"
+scroll_active = false
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+rakugo_text = "[center]Choice Button[/center]"
+markup = "bbcode"
+
 [connection signal="pressed" from="." to="." method="_on_pressed"]

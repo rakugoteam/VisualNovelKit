@@ -5,6 +5,15 @@ var path_choice = ''
 func some_event():
 	start_event("some_event")
 
+	say(null, "Menu test")
+	var test = menu(
+		[
+			["One size array"],
+			["Two size array", 2],
+			["There size array", 3, {}]
+		]
+	)
+	prints("choice:", test) 
 
 	say(null, "Show 'rect {color=red}red{/color}'", {"typing":true})
 	show("rect red")
