@@ -43,11 +43,12 @@ func _set_markup(value:="") -> void:
 	_markup = value
 	_set_rakugo_text(_rakugo_text)
 
-func _get_markup() -> String:	
+func _get_markup() -> String:
 	return _markup
 
-func resize_to_text(min_size: Vector2, char_size:Vector2):
-	rect_size = min_size
-	rect_size.x += _rakugo_text.length() * char_size.x
-	var new_lines:int = _rakugo_text.split("\n", false).size()
-	rect_size.y += new_lines * char_size.y;
+func resize_to_text(char_size:Vector2, axis:="xy"):
+	if "x" in axis:
+		rect_size.x += _rakugo_text.length() * char_size.x
+	if "y" in axis:
+		var new_lines:int = _rakugo_text.split("\n", false).size()
+		rect_size.y += new_lines * char_size.y;

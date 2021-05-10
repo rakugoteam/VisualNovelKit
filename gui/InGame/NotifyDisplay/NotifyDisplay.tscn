@@ -19,7 +19,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-min_size = Vector2( 0, 10 )
 char_size = Vector2( 10, 20 )
 
 [node name="Label" type="RichTextLabel" parent="."]

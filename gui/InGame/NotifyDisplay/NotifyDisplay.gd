@@ -1,6 +1,5 @@
 extends PanelContainer
 
-export var min_size := Vector2(10, 20)
 export var char_size := Vector2(5, 10)
 export(float, 0, 1, 0.1) var fade_time := 0.3
 export(float, 0.5, 3, 0.1) var base_duration := 2.0
@@ -12,7 +11,7 @@ func _ready():
 
 func _on_notify(text:String, parameters:Dictionary):
 	$Label.rakugo_text = text
-	$Label.resize_to_text(min_size, char_size)
+	$Label.resize_to_text(char_size)
 	fade_in_out()
 
 func fade_in_out():
