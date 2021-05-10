@@ -10,7 +10,9 @@ func some_event():
 		[
 			["One size array"],
 			["Two size array", 2],
-			["There size array", 3, {}]
+			["There size array", 3, {}],
+			["Very Looong Text Test Choice"],
+			["Line1\nLine2"]
 		]
 	)
 	prints("choice:", test) 

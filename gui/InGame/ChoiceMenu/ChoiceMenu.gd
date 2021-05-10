@@ -3,8 +3,6 @@ extends VBoxContainer
 export var style := "default"
 export var choice_button:PackedScene = null
 
-onready var expression = Expression.new()
-
 func _ready():
 	purge_childs()
 	Rakugo.connect("menu", self, "build")

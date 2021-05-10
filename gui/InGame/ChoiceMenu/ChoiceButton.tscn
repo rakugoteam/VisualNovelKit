@@ -61,8 +61,10 @@ font_data = ExtResource( 6 )
 [node name="ChoiceButton" type="Button"]
 margin_top = 333.0
 margin_right = 1280.0
-margin_bottom = 347.0
+margin_bottom = 357.0
+rect_min_size = Vector2( 0, 24 )
 focus_mode = 0
+size_flags_horizontal = 3
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
@@ -77,6 +79,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+char_size = Vector2( 10, 24 )
 
 [node name="RakugoTextLabel" type="RichTextLabel" parent="."]
 anchor_right = 1.0
