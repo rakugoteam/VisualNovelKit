@@ -7,7 +7,8 @@ func some_event():
 
 	say(null, "Menu test")
 	var test = menu(
-		[
+		[	
+			"just a string",
 			["One size array"],
 			["Two size array", 2],
 			["There size array", 3, {}],
