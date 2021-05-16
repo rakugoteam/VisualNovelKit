@@ -100,6 +100,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 rakugo_text = "[center]Choice Button[/center]"
-markup = "bbcode"
+markup = "game_setting"
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
