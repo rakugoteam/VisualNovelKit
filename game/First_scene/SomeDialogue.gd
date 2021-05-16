@@ -16,6 +16,9 @@ func some_event():
 	)
 	prints("choice:", test) 
 
+	say(null, "emoji test {:sunglasses:} {wave amp=70 freq=5}wave test{/wave}")
+	step()
+
 	say(null, "Show 'rect {color=red}red{/color}'", {"typing":true})
 	show("rect red")
 	step()

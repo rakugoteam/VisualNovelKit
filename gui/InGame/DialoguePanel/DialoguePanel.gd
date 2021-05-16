@@ -1,6 +1,9 @@
 extends PanelContainer
 export var style = "default"
 
+signal say(character, text, parameters)
+signal ask(default_answer, parameters)
+
 func _ready():
 	Rakugo.connect("say", self, "_on_say")
 	Rakugo.connect("ask", self, "_on_ask")
@@ -21,8 +24,7 @@ func _on_say(_character, _text, _parameters):
 	
 	$HideTimer.stop()
 	show()
-	$MarginContainer/VBox/Text._on_say(_character, _text, _parameters)
-	$MarginContainer/VBox/SpeakerName._on_say(_character, _text, _parameters)
+	emit_signal("say", _character, _text, _parameters)
 
 func _on_ask(_default_answer, _parameters):
 	hide()
@@ -32,7 +34,7 @@ func _on_ask(_default_answer, _parameters):
 
 	$HideTimer.stop()
 	show()
-	$MarginContainer/VBox/AskEntry._on_ask(_default_answer, _parameters)
+	emit_signal("ask", _default_answer, _parameters)
 
 func _step():
 	$HideTimer.start()
