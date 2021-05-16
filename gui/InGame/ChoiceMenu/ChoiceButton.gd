@@ -2,7 +2,7 @@ extends Button
 
 export var char_size := Vector2(10, 20)
 
-var rakugo_text setget _set_rakugo_text, _get_rakugo_text
+export var rakugo_text:String setget _set_rakugo_text, _get_rakugo_text
 
 var _rakugo_text := ""
 

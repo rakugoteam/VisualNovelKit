@@ -25,6 +25,7 @@ func _get_text_parser() -> RakugoTextParser:
 	return _text_parser
 	
 func _set_rakugo_text(value:String) -> void:
+	bbcode_enabled = true
 	_rakugo_text = value
 
 	var can_be_parsed := false
@@ -34,7 +35,8 @@ func _set_rakugo_text(value:String) -> void:
 		can_be_parsed = Rakugo.started
 	
 	if can_be_parsed:
-		parse_bbcode(_get_text_parser().parse(value, _markup, Engine.editor_hint))
+		var p = _get_text_parser()
+		bbcode_text = p.parse(value, _markup, Engine.editor_hint)
 	
 func _get_rakugo_text() -> String:
 	return _rakugo_text
