@@ -6,7 +6,13 @@ func _ready():
 	default_parameters = Settings.get(SettingsList.default_menu_parameters, {}, false)
 
 func exec(choices:Array, parameters = {}) -> void:
+	var id := -1
 	for choice in choices:
+		id += 1
+		if choice is String:
+			choices[id] = [choice]
+			choice = choices[id]
+
 		if choice.size() == 1:
 			choice.append(choice[0])
 			

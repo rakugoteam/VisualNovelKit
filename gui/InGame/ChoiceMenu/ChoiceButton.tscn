@@ -63,7 +63,6 @@ margin_top = 333.0
 margin_right = 1280.0
 margin_bottom = 357.0
 rect_min_size = Vector2( 0, 24 )
-focus_mode = 0
 size_flags_horizontal = 3
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
@@ -74,7 +73,6 @@ custom_colors/font_color_disabled = Color( 0.443137, 0.443137, 0.443137, 1 )
 custom_colors/font_color = Color( 0.709804, 0.709804, 0.709804, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
-enabled_focus_mode = 0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -93,6 +91,7 @@ custom_fonts/italics_font = SubResource( 8 )
 custom_fonts/bold_font = SubResource( 9 )
 custom_fonts/normal_font = SubResource( 10 )
 bbcode_enabled = true
+bbcode_text = "[center]Choice Button[/center]"
 tab_size = 2
 text = "Choice Button"
 scroll_active = false
@@ -101,6 +100,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 rakugo_text = "[center]Choice Button[/center]"
-markup = "bbcode"
+markup = "game_setting"
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
