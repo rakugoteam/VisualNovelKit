@@ -29,6 +29,7 @@ func build(choices:Array, parameters:Dictionary):
 			button.set_meta("entry_number", i)
 			button.set_meta("return_value", choices[i][1])
 			button.set_meta("parameters", _apply_default(choices[i][2], parameters))
+			
 			button.rakugo_text = choices[i][0]
 			self.add_child(button)
 			button.connect("choice_button_pressed", self, "on_choice_button_pressed")

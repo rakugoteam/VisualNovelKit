@@ -10,7 +10,9 @@ func some_event():
 		[	
 			"just a string",
 			["[:sunglasses:] Emoji in menu"],
+			["{:sunglasses:} Emoji in menu"],
 			["[wave amp=70 freq=5]Waves in menu[/wave]", 2],
+			["{wave amp=70 freq=5}Waves in menu{/wave}", 2],
 			["Line1\nLine2"]
 		]
 	)
