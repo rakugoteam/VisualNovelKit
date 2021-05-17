@@ -18,14 +18,17 @@ choice_button = ExtResource( 1 )
 [node name="ChoiceButton" parent="." instance=ExtResource( 1 )]
 margin_top = 318.0
 margin_bottom = 342.0
+rakugo_text = "Choice Button"
 
 [node name="DisabledChoiceButton" parent="." instance=ExtResource( 1 )]
 margin_top = 348.0
 margin_bottom = 372.0
 disabled = true
+rakugo_text = "Choice Button"
 
 [node name="PressedChoiceButton" parent="." instance=ExtResource( 1 )]
 margin_top = 378.0
 margin_bottom = 402.0
 toggle_mode = true
 pressed = true
+rakugo_text = "Choice Button"

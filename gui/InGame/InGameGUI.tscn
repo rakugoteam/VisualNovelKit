@@ -31,8 +31,6 @@ __meta__ = {
 [node name="StepButton" type="Button" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 12.0
-margin_bottom = 20.0
 mouse_default_cursor_shape = 2
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
@@ -56,5 +54,6 @@ anchor_bottom = 0.7
 [node name="QuickMenu" parent="." instance=ExtResource( 6 )]
 
 [node name="NotifyDisplay" parent="." instance=ExtResource( 4 )]
+
 [connection signal="pressed" from="StepButton" to="StepButton" method="_on_StepButton_pressed"]
 [connection signal="quick_button_press" from="QuickMenu" to="." method="_on_quick_button_press"]

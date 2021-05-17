@@ -2,15 +2,14 @@ extends Node
 
 var default_parameters = {}
 
-
 func _ready():
-	default_parameters = Settings.get("rakugo/default/statements/default_ask_parameters", {}, false)
+	default_parameters = Settings.get(SettingsList.default_ask_parameters, {}, false)
 
-
-func exec(variable_name:String, parameters = {}) -> void:
+func exec(default_answer:String, parameters = {}) -> void:
 	parameters = _apply_default(parameters, default_parameters)
+
 	Rakugo.StepBlocker.block('ask')
-	Rakugo.emit_signal("ask", variable_name, parameters)
+	Rakugo.emit_signal("ask", default_answer, parameters)
 
 
 func return(result):

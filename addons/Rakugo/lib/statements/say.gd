@@ -5,16 +5,20 @@ var default_narrator = null
 
 func _ready():
 	default_narrator = Character.new()
-	default_narrator.init(Settings.get("rakugo/default/narrator/name"), "", Settings.get("rakugo/default/narrator/color"))
-	default_parameters = Settings.get("rakugo/default/statements/default_say_parameters", {}, false)
+	default_narrator.init(
+		Settings.get(SettingsList.narrator_name), 
+		"", Settings.get(SettingsList.narrator_color))
+	default_parameters = Settings.get(SettingsList.default_say_parameters, {}, false)
 
 
-func exec(character, text:String, parameters = {}) -> void:
+func exec(character, text:String, parameters := {}) -> void:
 	character = _get_character(character)
+
+	# parameters > character default parameters > project parameters
 	if character:
-		parameters = _apply_default(parameters, character.say_parameters)# parameters > character default parameters > project parameters
+		parameters = _apply_default(parameters, character.say_parameters)
+	
 	parameters = _apply_default(parameters, default_parameters)
-	text = Rakugo.TextParser.parse(text, parameters.get("markup", null))
 	Rakugo.emit_signal("say", character, text, parameters)
 
 

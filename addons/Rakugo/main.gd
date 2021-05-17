@@ -38,7 +38,7 @@ onready var SceneLoader: = $SceneLoader
 onready var StoreManager: = $StoreManager
 onready var ShowableManager: = $ShowableManager
 onready var History: = $History
-onready var TextParser: = $TextParser
+onready var TextParser: RakugoTextParser = $TextParser
 onready var StepBlocker = $StepBlocker
 onready var Say = $Statements/Say
 onready var Ask = $Statements/Ask
@@ -59,8 +59,9 @@ func _ready():
 	StoreManager.init()
 	ShowableManager.init()
 	History.init()
-
-	OS.set_window_title(game_title + " " + game_version)
+	var version = Settings.get(SettingsList.game_version)
+	var title = Settings.get(SettingsList.game_title)
+	OS.set_window_title(title + " " + version)
 
 
 ## Rakugo flow control
@@ -95,7 +96,7 @@ func load_scene(scene_id:String, force_reload:bool = false):
 	return SceneLoader.load_scene(scene_id, force_reload)
 
 func reset_game():
-	SceneLoader.load_scene(Settings.get("application/run/main_scene"))
+	SceneLoader.load_scene(Settings.get(SettingsList.main_scene))
 	started = false
 	emit_signal("game_ended")
 
@@ -168,7 +169,7 @@ func debug_dict(parameters:Dictionary, parameters_names:Array = [], some_custom_
 # for printing debugs is only print if debug_on == true
 # put some string array or string as argument
 func debug(some_text = []):
-	if not debug_on:
+	if not Settings.get(SettingsList.debug):
 		return
 
 	if not started:

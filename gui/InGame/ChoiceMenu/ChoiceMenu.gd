@@ -1,8 +1,7 @@
 extends VBoxContainer
 
+export var style := "default"
 export var choice_button:PackedScene = null
-
-onready var expression = Expression.new()
 
 func _ready():
 	purge_childs()
@@ -19,14 +18,19 @@ func on_choice_button_pressed(_choice_button):
 
 
 func build(choices:Array, parameters:Dictionary):
+	if parameters.has("style"):
+		if parameters["style"] != style:
+			return
+
 	purge_childs()
 	for i in choices.size():
 		if _is_entry_visible(choices[i]):
-			var button = choice_button.instance()
+			var button:Button = choice_button.instance()
 			button.set_meta("entry_number", i)
 			button.set_meta("return_value", choices[i][1])
 			button.set_meta("parameters", _apply_default(choices[i][2], parameters))
-			button.text = choices[i][0]
+			
+			button.rakugo_text = choices[i][0]
 			self.add_child(button)
 			button.connect("choice_button_pressed", self, "on_choice_button_pressed")
 

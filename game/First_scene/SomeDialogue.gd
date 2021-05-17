@@ -5,6 +5,21 @@ var path_choice = ''
 func some_event():
 	start_event("some_event")
 
+	say(null, "Menu test")
+	var test = menu(
+		[	
+			"just a string",
+			["[:sunglasses:] Emoji in menu"],
+			["{:sunglasses:} Emoji in menu"],
+			["[wave amp=70 freq=5]Waves in menu[/wave]", 2],
+			["{wave amp=70 freq=5}Waves in menu{/wave}", 2],
+			["Line1\nLine2"]
+		]
+	)
+	prints("choice:", test) 
+
+	say(null, "emoji test {:sunglasses:} {wave amp=70 freq=5}wave test{/wave}")
+	step()
 
 	say(null, "Show 'rect {color=red}red{/color}'", {"typing":true})
 	show("rect red")
