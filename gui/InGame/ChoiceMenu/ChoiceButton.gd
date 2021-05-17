@@ -13,9 +13,13 @@ func _on_pressed():
 
 func _set_rakugo_text(value:="") -> void:
 	_rakugo_text = value
-	$RakugoTextLabel.rakugo_text = "[center]"
-	$RakugoTextLabel.rakugo_text += value
-	$RakugoTextLabel.rakugo_text += "[/center]"
+	$RakugoTextLabel.markup = "game_setting"
+	$RakugoTextLabel.rakugo_text = value
+	
+	var bbcode = $RakugoTextLabel.bbcode_text
+	bbcode = "[center]" + bbcode +"[/center]"
+	$RakugoTextLabel.bbcode_text = bbcode
+	
 	$RakugoTextLabel.resize_to_text(char_size, "y")
 	self.rect_min_size += $RakugoTextLabel.rect_size
 
