@@ -15,7 +15,6 @@ func is_style_correct( _parameters) -> bool:
 			
 	return false
 		
-
 func _on_say(_character, _text, _parameters):
 	hide()
 	
@@ -25,6 +24,7 @@ func _on_say(_character, _text, _parameters):
 	$HideTimer.stop()
 	show()
 	emit_signal("say", _character, _text, _parameters)
+
 
 func _on_ask(_default_answer, _parameters):
 	hide()

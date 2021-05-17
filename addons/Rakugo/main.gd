@@ -2,6 +2,15 @@ extends Node
 
 const rakugo_version := "3.2.0"
 
+# project settings integration
+onready var game_title : String = Settings.get("application/config/name")
+onready var game_version : String = Settings.get("rakugo/game/info/version")
+onready var game_credits : String = Settings.get("rakugo/game/info/credits")
+onready var markup : String = Settings.get("rakugo/game/text/markup")
+onready var debug_on : bool = Settings.get("rakugo/editor/debug")
+onready var scene_links : String = Settings.get("rakugo/game/scenes/scene_links")
+onready var theme : RakugoTheme = load(Settings.get("rakugo/default/gui/theme"))
+
 
 var current_scene_name := ""
 var current_scene_path := ""
