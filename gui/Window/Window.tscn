@@ -29,7 +29,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-debug_mouse = true
 
 [node name="Panel" type="Control" parent="."]
 margin_top = -1.0
@@ -54,6 +53,8 @@ size = Vector2( 1282, 726 )
 own_world = true
 handle_input_locally = false
 render_target_update_mode = 3
+audio_listener_enable_2d = true
+audio_listener_enable_3d = true
 script = ExtResource( 10 )
 
 [node name="TabContainer" type="TabContainer" parent="Panel"]
