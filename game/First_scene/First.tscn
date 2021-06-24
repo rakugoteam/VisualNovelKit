@@ -1,13 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://game/First_scene/SomeDialogue.gd" type="Script" id=1]
-[ext_resource path="res://game/First_scene/Test.gd" type="Script" id=2]
-[ext_resource path="res://game/First_scene/RayCast2D.gd" type="Script" id=3]
 
 [sub_resource type="ButtonGroup" id=1]
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 20.2678, 20.0348 )
 
 [node name="First" type="Node2D"]
 
@@ -157,45 +152,6 @@ text = "Blue Path"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 1107.71, 244.378 )
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="ColorRect" type="ColorRect" parent="Area2D"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -20.0
-margin_right = 20.0
-margin_bottom = 20.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 2 )
-
-[node name="Button" type="Button" parent="Area2D"]
-margin_left = -19.0273
-margin_top = 26.1625
-margin_right = 19.9727
-margin_bottom = 46.1625
-text = "Test"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
-visible = false
-enabled = true
-cast_to = Vector2( 0, 1 )
-script = ExtResource( 3 )
 
 [connection signal="pressed" from="GreenChoice" to="SomeDialogue" method="_on_green_path_chosen"]
 [connection signal="pressed" from="BlueChoice" to="SomeDialogue" method="_on_blue_path_chosen"]

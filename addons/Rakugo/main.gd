@@ -68,6 +68,7 @@ func save_game(save_name:String = "quick"):
 	StoreManager.save_persistent_store()
 	debug(["save data to :", save_name])
 	return StoreManager.save_store_stack(save_name)
+	
 func load_game(save_name := "quick"):
 	return StoreManager.load_store_stack(save_name)
 
@@ -79,6 +80,7 @@ func rollback(amount:int = 1):
 func prepare_quitting():
 	if self.started:
 		self.save_game("auto")
+
 	StoreManager.save_persistent_store()
 	Settings.save_property_list()
 
@@ -86,7 +88,8 @@ func load_scene(scene_id:String, force_reload:bool = false):
 	return SceneLoader.load_scene(scene_id, force_reload)
 
 func reset_game():
-	SceneLoader.load_scene(Settings.get(SettingsList.main_scene))
+	var s = Settings.get(SettingsList.main_scene)
+	SceneLoader.load_scene(s)
 	started = false
 	emit_signal("game_ended")
 

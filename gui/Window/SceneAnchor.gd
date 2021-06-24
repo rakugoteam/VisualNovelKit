@@ -3,6 +3,7 @@ extends Node
 func _ready():
 	setup()
 	Rakugo.scene_anchor = self
+
 func setup(scene = get_tree().current_scene):
 	scene.connect("ready", self, "attach_scene", [scene])
 

@@ -4,13 +4,11 @@ signal show_menu(menu, game_started)
 signal show_main_menu_confirm()
 
 func _ready():
-	if Engine.editor_hint:
-		return
-
+	get_tree().paused = true
 	get_tree().set_auto_accept_quit(false)
 	#qno_button.connect("pressed", self, "_on_Return_pressed")
 	Rakugo.connect("game_ended", self, "_on_game_end")
-	# connect("visibility_changed", self, "_on_visibility_changed")
+	connect("visibility_changed", self, "_on_visibility_changed")
 
 
 func _on_nav_button_press(nav):
@@ -115,8 +113,5 @@ func _on_SavesSlotScreen_mode_changed(save_mode):
 		emit_signal("show_menu", "load", Rakugo.started)
 	
 func _on_visibility_changed():
-	if visible:
-		Rakugo.scene_anchor.pause_mode = PAUSE_MODE_STOP
+	get_tree().paused = visible
 		
-	else:
-		Rakugo.scene_anchor.pause_mode = PAUSE_MODE_INHERIT

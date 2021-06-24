@@ -9,6 +9,7 @@ func _notification(what):
 		visible = true
 
 func _on_confirmed():
+	get_tree().paused = false
 	Rakugo.prepare_quitting()
 	get_tree().quit()
 

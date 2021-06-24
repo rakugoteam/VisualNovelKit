@@ -49,6 +49,7 @@ __meta__ = {
 }
 
 [node name="SceneAnchor" type="Viewport" parent="Panel/ViewportContainer"]
+pause_mode = 1
 size = Vector2( 1282, 726 )
 own_world = true
 handle_input_locally = false
