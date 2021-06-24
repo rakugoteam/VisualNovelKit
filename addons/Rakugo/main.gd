@@ -2,16 +2,6 @@ extends Node
 
 const rakugo_version := "3.2.0"
 
-# project settings integration
-onready var game_title : String = Settings.get("application/config/name")
-onready var game_version : String = Settings.get("rakugo/game/info/version")
-onready var game_credits : String = Settings.get("rakugo/game/info/credits")
-onready var markup : String = Settings.get("rakugo/game/text/markup")
-onready var debug_on : bool = Settings.get("rakugo/editor/debug")
-onready var scene_links : String = Settings.get("rakugo/game/scenes/scene_links")
-onready var theme : RakugoTheme = load(Settings.get("rakugo/default/gui/theme"))
-
-
 var current_scene_name := ""
 var current_scene_path := ""
 var current_scene_node: Node = null
@@ -78,6 +68,7 @@ func save_game(save_name:String = "quick"):
 	StoreManager.save_persistent_store()
 	debug(["save data to :", save_name])
 	return StoreManager.save_store_stack(save_name)
+	
 func load_game(save_name := "quick"):
 	return StoreManager.load_store_stack(save_name)
 
@@ -89,6 +80,7 @@ func rollback(amount:int = 1):
 func prepare_quitting():
 	if self.started:
 		self.save_game("auto")
+
 	StoreManager.save_persistent_store()
 	Settings.save_property_list()
 
@@ -96,7 +88,8 @@ func load_scene(scene_id:String, force_reload:bool = false):
 	return SceneLoader.load_scene(scene_id, force_reload)
 
 func reset_game():
-	SceneLoader.load_scene(Settings.get(SettingsList.main_scene))
+	var s = Settings.get(SettingsList.main_scene)
+	SceneLoader.load_scene(s)
 	started = false
 	emit_signal("game_ended")
 

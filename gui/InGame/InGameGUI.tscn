@@ -21,7 +21,7 @@
 pause_mode = 1
 anchor_right = 1.0
 anchor_bottom = 1.0
-mouse_filter = 2
+mouse_filter = 1
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_lock_": true,
@@ -31,7 +31,7 @@ __meta__ = {
 [node name="StepButton" type="Button" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-mouse_default_cursor_shape = 2
+margin_bottom = -3.0
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
@@ -44,10 +44,31 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ChoiceMenu" parent="." instance=ExtResource( 2 )]
-anchor_left = 0.15
-anchor_right = 0.85
-anchor_bottom = 0.7
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -301.0
+margin_top = -359.0
+margin_right = 302.0
+margin_bottom = 145.0
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="ChoiceMenu" parent="ScrollContainer" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 603.0
+margin_bottom = 504.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="DialoguePanel" parent="." instance=ExtResource( 5 )]
 

@@ -4,11 +4,7 @@
 
 [sub_resource type="ButtonGroup" id=1]
 
-[node name="First" type="Control"]
-mouse_filter = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="First" type="Node2D"]
 
 [node name="RedRectangle" type="ColorRect" parent="." groups=[
 "$ rect red",

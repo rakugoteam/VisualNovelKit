@@ -266,7 +266,6 @@ default/statements/default_menu_parameters={
 default/statements/default_show_parameters={
 }
 
-
 [rendering]
 
 quality/intended_usage/framebuffer_allocation=0
