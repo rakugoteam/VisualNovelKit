@@ -70,8 +70,8 @@ caret_blink_speed = 0.5
 script = ExtResource( 3 )
 
 [connection signal="ask" from="." to="MarginContainer/VBox/AskEntry" method="_on_ask"]
-[connection signal="say" from="." to="MarginContainer/VBox/SpeakerName" method="_on_say"]
 [connection signal="say" from="." to="MarginContainer/VBox/Text" method="_on_say"]
+[connection signal="say" from="." to="MarginContainer/VBox/SpeakerName" method="_on_say"]
 [connection signal="timeout" from="HideTimer" to="." method="_on_HideTimer_timeout"]
 [connection signal="timeout" from="MarginContainer/VBox/Text/TypingTimer" to="MarginContainer/VBox/Text" method="_on_timer_tick"]
 [connection signal="text_entered" from="MarginContainer/VBox/AskEntry" to="MarginContainer/VBox/AskEntry" method="_on_text_entered"]
