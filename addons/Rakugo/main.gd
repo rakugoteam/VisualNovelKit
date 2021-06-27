@@ -82,7 +82,9 @@ func prepare_quitting():
 		self.save_game("auto")
 	
 	Settings.save_property_list()
-	current_dialogue.exit()
+	
+	if current_dialogue:
+		current_dialogue.exit()
 
 func load_scene(scene_id:String, force_reload:bool = false):
 	return SceneLoader.load_scene(scene_id, force_reload)
