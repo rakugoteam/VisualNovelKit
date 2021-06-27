@@ -24,6 +24,22 @@ func _ready():
 	
 	get_tree().get_root().connect("size_changed", self, "_on_window_resized")
 
+	if debug_mouse:
+		setup_debug_mouse(self)
+	
+func setup_debug_mouse(parent: Node):
+	for ch in parent.get_children():
+		
+		if ch is Control:
+			ch.connect("gui_input", self, "_on_gui_input", [ch])
+
+		setup_debug_mouse(ch)
+
+func _on_gui_input(event, node:Node):
+	if event is InputEventMouseButton:
+		if event.button_index == BUTTON_LEFT and event.pressed:
+			prints("Cliked node:", node.get_path())
+
 func get_window_setting(setting:String) -> float:
 	return Settings.get(setting, null, false, true) * 1.0
 
