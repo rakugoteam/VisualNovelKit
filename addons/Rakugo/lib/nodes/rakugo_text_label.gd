@@ -31,11 +31,14 @@ func _set_rakugo_text(value:String) -> void:
 	var can_be_parsed := false
 	can_be_parsed = Engine.editor_hint
 
-	if not can_be_parsed:
+	if not can_be_parsed and Rakugo:
 		can_be_parsed = Rakugo.started
 	
 	if can_be_parsed:
 		var p = _get_text_parser()
+		if p == null:
+			return
+
 		bbcode_text = p.parse(value, _markup, Engine.editor_hint)
 	
 func _get_rakugo_text() -> String:

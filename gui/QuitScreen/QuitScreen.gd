@@ -9,8 +9,8 @@ func _notification(what):
 		visible = true
 
 func _on_confirmed():
-	get_tree().paused = false
 	Rakugo.prepare_quitting()
+	# print("quit")
 	get_tree().quit()
 
 func _on_visibility_changed():#Using self connected signal to also handle external use
