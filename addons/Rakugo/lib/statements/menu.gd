@@ -12,7 +12,7 @@ func exec(choices:Array, parameters = {}) -> void:
 		if choice is String:
 			choices[id] = [choice]
 			choice = choices[id]
-
+		
 		if choice.size() == 1:
 			choice.append(choice[0])
 			

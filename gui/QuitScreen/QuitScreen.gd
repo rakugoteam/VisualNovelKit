@@ -10,8 +10,8 @@ func _notification(what):
 
 func _on_confirmed():
 	Rakugo.prepare_quitting()
-	print("quit")
-	get_tree().call_deferred("quit")
+	# print("quit")
+	get_tree().quit()
 
 func _on_visibility_changed():#Using self connected signal to also handle external use
 	if visible:
