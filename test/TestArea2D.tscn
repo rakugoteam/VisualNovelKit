@@ -27,6 +27,3 @@ texture = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ClickAndPoint"]
 polygon = PoolVector2Array( 12.9247, -66.2778, -5.00891, -54.9513, -21.9987, -51.6477, -38.0445, -37.4896, -46.0674, -13.8927, -47.9552, 5.92862, -49.843, 23.8622, -27.1899, 49.3468, -1.70538, 67.2805, 30.8583, 57.3698, 43.1287, 36.1326, 40.2971, 23.8622, 46.9042, 16.3112, 53.5113, -12.4769, 49.2639, -34.186, 48.32, -51.6477, 25.667, -50.7038 )
-
-[connection signal="body_entered" from="ClickAndPoint" to="ClickAndPoint" method="_on_body_entered"]
-[connection signal="body_exited" from="ClickAndPoint" to="ClickAndPoint" method="_on_body_exited"]
