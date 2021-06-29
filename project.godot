@@ -85,16 +85,16 @@ _global_script_classes=[ {
 "path": "res://addons/Rakugo/lib/resources/store_stack.gd"
 } ]
 _global_script_class_icons={
-"AreaButton2D": "",
+"AreaButton2D": "res://addons/Rakugo/icons/button_2d.svg",
 "Character": "",
 "Dialogue": "res://addons/Rakugo/icons/dialogue.svg",
 "Emojis": "",
 "HistoryEntry": "",
-"MouseBody2D": "",
+"MouseBody2D": "res://addons/Rakugo/icons/mouse_button_2d.svg",
 "ProjectTools": "",
 "PropertyInfo": "",
-"RakugoTextLabel": "",
-"RakugoTextParser": "",
+"RakugoTextLabel": "res://addons/Rakugo/icons/rakugo_text_label.svg",
+"RakugoTextParser": "res://addons/Rakugo/icons/rakugo_text_parser.svg",
 "RakugoTheme": "",
 "SceneLinks": "res://addons/Rakugo/icons/scene_links.svg",
 "SettingsList": "",

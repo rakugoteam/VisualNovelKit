@@ -1,5 +1,5 @@
 extends Area2D
-class_name AreaButton2D
+class_name AreaButton2D, "res://addons/Rakugo/icons/button_2d.svg"
 
 export var theme: Resource
 export var hover_color := Color.yellowgreen
