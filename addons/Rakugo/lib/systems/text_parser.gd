@@ -1,5 +1,5 @@
 extends Node
-class_name RakugoTextParser
+class_name RakugoTextParser, "res://addons/Rakugo/icons/rakugo_text_parser.svg"
 
 var emojis = Emojis.new()
 

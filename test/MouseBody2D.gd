@@ -1,6 +1,6 @@
 tool
 extends KinematicBody2D
-class_name MouseBody2D
+class_name MouseBody2D, "res://addons/Rakugo/icons/mouse_button_2d.svg"
 
 func _ready():
 	for ch in get_children():

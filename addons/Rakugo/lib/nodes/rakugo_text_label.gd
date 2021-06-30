@@ -1,6 +1,6 @@
 tool
 extends RichTextLabel
-class_name RakugoTextLabel
+class_name RakugoTextLabel, "res://addons/Rakugo/icons/rakugo_text_label.svg"
 
 var text_parser : RakugoTextParser setget , _get_text_parser
 export(String, MULTILINE) var rakugo_text:String setget _set_rakugo_text, _get_rakugo_text
