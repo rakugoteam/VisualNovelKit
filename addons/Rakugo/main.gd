@@ -1,6 +1,6 @@
 extends Node
 
-const rakugo_version := "3.2.0"
+const rakugo_version := "3.2.1"
 
 var current_scene_name := ""
 var current_scene_path := ""
