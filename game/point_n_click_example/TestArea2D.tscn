@@ -9,6 +9,7 @@
 
 [node name="AreaButton2D" type="Area2D" parent="."]
 script = ExtResource( 3 )
+highlight_color = Color( 0.933333, 0.854902, 0, 1 )
 
 [node name="icon" type="Sprite" parent="AreaButton2D"]
 position = Vector2( 604.682, 311.018 )

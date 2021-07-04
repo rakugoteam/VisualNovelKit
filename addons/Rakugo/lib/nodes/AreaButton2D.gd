@@ -80,6 +80,9 @@ func _input(event:InputEvent) -> void:
 					_set_pressed(true)
 					emit_signal("pressed")
 					print("pressed")
+	
+	if Input.is_action_just_pressed("highlight"):
+		modulate = highlight_color
 
-
-#todo add highlight support
+	if Input.is_action_just_released("highlight"):
+		modulate = idle_color
