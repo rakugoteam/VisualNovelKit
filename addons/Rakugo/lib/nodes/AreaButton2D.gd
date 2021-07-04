@@ -73,14 +73,16 @@ func _on_body_exited(body:PhysicsBody2D) -> void:
 
 func _input(event:InputEvent) -> void:
 	if is_mouse_in:
-		if not pressed:
+		if not _pressed:
 			if event is InputEventMouseButton:
 				var button = event as InputEventMouseButton
 				if button.button_index == BUTTON_LEFT:
-					modulate = pressed_color
-					pressed = true
+					_set_pressed(true)
 					emit_signal("pressed")
 					print("pressed")
+	
+	if Input.is_action_just_pressed("highlight"):
+		modulate = highlight_color
 
-
-#todo add highlight support
+	if Input.is_action_just_released("highlight"):
+		modulate = idle_color
