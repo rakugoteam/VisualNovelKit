@@ -1,13 +1,15 @@
 extends Node
 
 const default_window_size := Vector2(1024, 600)
-
+var default_property_list := {}
+var property_list := {}
 var audio_buses := {}
 
 signal window_size_changed(prev, now)
 signal window_fullscreen_changed(value)
 
 func _ready() -> void:
+	pause_mode = PAUSE_MODE_PROCESS
 	load_property_list()
 
 func save_conf() -> void:
@@ -46,6 +48,9 @@ func get(property, default=null, set_default=true, project_setting_only=false):
 	if ProjectSettings.has_setting(property):
 		return ProjectSettings.get_setting(property)
 
+	if default_property_list.empty():
+		default_property_list = SettingsList.new().default_property_list
+
 	if property in default_property_list:
 		return default_property_list[property][0]
 
@@ -60,5 +65,3 @@ func set(property, value, save_changes=true):
 		Rakugo.StoreManager.save_persistent_store()
 
 
-var property_list:Dictionary = {}
-var default_property_list:Dictionary = SettingsList.new().default_property_list

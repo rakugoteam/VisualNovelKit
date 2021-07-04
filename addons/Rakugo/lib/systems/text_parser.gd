@@ -1,9 +1,12 @@
 extends Node
-class_name RakugoTextParser
+class_name RakugoTextParser, "res://addons/Rakugo/icons/rakugo_text_parser.svg"
 
 var emojis = Emojis.new()
 
 func parse(text:String, _markup:="", editor:=false):
+	if null in [ProjectSettings, SettingsList]:
+		return text
+
 	if _markup in ["", "game_setting"]:
 		if editor:
 			_markup = ProjectSettings.get(SettingsList.markup)

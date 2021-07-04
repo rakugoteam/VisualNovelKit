@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/Rakugo/lib/nodes/MouseBody2D.gd" type="Script" id=1]
+[ext_resource path="res://graphics/window_icon5.png" type="Texture" id=2]
+[ext_resource path="res://game/point_n_click_example/TestAreaButton2D.gd" type="Script" id=3]
+[ext_resource path="res://game/point_n_click_example/TestDialogue.gd" type="Script" id=4]
+
+[node name="TestArea2D" type="Node2D"]
+
+[node name="AreaButton2D" type="Area2D" parent="."]
+script = ExtResource( 3 )
+highlight_color = Color( 0.933333, 0.854902, 0, 1 )
+
+[node name="icon" type="Sprite" parent="AreaButton2D"]
+position = Vector2( 604.682, 311.018 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaButton2D"]
+position = Vector2( 604.682, 311.018 )
+polygon = PoolVector2Array( 12.9247, -66.2778, -5.00891, -54.9513, -21.9987, -51.6477, -38.0445, -37.4896, -46.0674, -13.8927, -47.9552, 5.92862, -49.843, 23.8622, -27.1899, 49.3468, -1.70538, 67.2805, 30.8583, 57.3698, 43.1287, 36.1326, 40.2971, 23.8622, 46.9042, 16.3112, 53.5113, -12.4769, 49.2639, -34.186, 48.32, -51.6477, 25.667, -50.7038 )
+
+[node name="Dialogue" type="Node" parent="AreaButton2D"]
+script = ExtResource( 4 )
+default_starting_event = "point_n_click"
+
+[node name="MouseBody2D" type="KinematicBody2D" parent="."]
+script = ExtResource( 1 )
