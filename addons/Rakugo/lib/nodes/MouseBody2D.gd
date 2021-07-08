@@ -21,3 +21,7 @@ func add_collision():
 func _physics_process(delta):
 	if !Engine.editor_hint:
 		position = get_global_mouse_position()
+
+
+func _on_Head_pressed():
+	pass # Replace with function body.
