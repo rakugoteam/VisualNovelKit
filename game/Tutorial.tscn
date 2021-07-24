@@ -1,14 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://game/TutorialDialogue.gd" type="Script" id=1]
-[ext_resource path="res://game/text_edit/TextEdit.tscn" type="PackedScene" id=2]
-[ext_resource path="res://fonts/JetBrainsMono-Medium.ttf" type="DynamicFontData" id=3]
-
-[sub_resource type="DynamicFont" id=1]
-size = 20
-use_mipmaps = true
-use_filter = true
-font_data = ExtResource( 3 )
+[ext_resource path="res://game/Scripting.tscn" type="PackedScene" id=2]
 
 [node name="Tutorial" type="Control"]
 anchor_right = 1.0
@@ -18,32 +11,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TutorialDialogue" type="Node" parent="."]
+[node name="Dialogue" type="Node" parent="."]
 script = ExtResource( 1 )
 default_starting_event = "intro"
 auto_start = true
 
-[node name="CodeViewer" parent="." groups=[
-"$ code",
-"showable",
-] instance=ExtResource( 2 )]
-visible = false
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.0
-margin_left = -382.0
-margin_top = 69.0
-margin_right = 382.0
-margin_bottom = 467.0
-custom_fonts/font = SubResource( 1 )
-text = "extends Dialogue
-
-func this_event():
-	start_event(\"this_event\")
-	
-	say(null, \"This is how I say things.\")
-	step()
-	"
-readonly = true
-show_line_numbers = true
-draw_tabs = true
+[node name="Scripting" parent="." instance=ExtResource( 2 )]
