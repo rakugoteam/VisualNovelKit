@@ -2,6 +2,8 @@ extends Dialogue
 
 func intro():
 	start_event("intro")
+	show("dialogue")
+	
 	hide("code")
 	say(null, 
 		"This is Tutorial/Showcase Demo of Rakugo\n"
@@ -20,7 +22,7 @@ func intro():
 			$"../Scripting/Dialogue".start()
 
 		"Markups":
-			start("markups")
+			$"../Markups/Dialogue".start()
 
 		"showing":
 			pass
@@ -30,36 +32,5 @@ func intro():
 	
 	end_event()
 
-func markups():
-	start_event("markups")
-
-	say(null, "Choose Scripting Tutorial")
-	var markup = menu([
-		"Markdown Example",
-		"Ren`Py Example",
-		"BBCode Example",
-		"Go Back"
-	])
-
-	match markup:
-		"Markdown Example":
-			show("code")
-			# show("rakugo_text")
-			pass
-
-		"Ren`Py Example":
-			show("code")
-			# show("rakugo_text")
-			pass
-
-		"BBCode Example":
-			show("code")
-			# show("rakugo_text")
-			pass
-
-		"Go Back":
-			start("intro")
-
-	end_event()
 
 

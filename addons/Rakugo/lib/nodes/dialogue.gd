@@ -145,11 +145,12 @@ func cond(condition):
 	if not is_running():
 		return false
 
-	if condition:#transform 'condition' into a bool
-		condition = true
+	# transform 'condition' into a bool
+	# if condition: 
+	# 	condition = true
 	
-	else:
-		condition = false
+	# else:
+	# 	condition = false
 	
 	if is_active(true):
 		event_stack[0][3].push_front(condition)

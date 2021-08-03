@@ -3,7 +3,7 @@ extends TextEdit
 # Adds syntax highlighting for common GDScript keywords on
 # top of TextEdit's defaults
 
-
+export(String, FILE, "*.json") var keywords_json = "res://game/text_edit/keywords.json"
 export var class_color : = Color(0.6, 0.6, 1.0)
 export var member_color : = Color(0.6, 1.0, 0.6)
 export var keyword_color : = Color(1.0, 0.6, 0.6)
@@ -28,7 +28,7 @@ func _add_keywords_highlighting() -> void:
 			for key in property:
 				add_keyword_color(key, member_color)
 	
-	var content : = get_file_content("res://game/text_edit/keywords.json")
+	var content : = get_file_content(keywords_json)
 	var keywords : Array = parse_json(content)
 	for keyword in keywords:
 		add_keyword_color(keyword, keyword_color)

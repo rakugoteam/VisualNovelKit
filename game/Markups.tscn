@@ -1,0 +1,113 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://game/Markups.gd" type="Script" id=1]
+[ext_resource path="res://addons/Rakugo/lib/nodes/rakugo_text_label.gd" type="Script" id=2]
+
+[node name="Markups" type="Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -400.0
+margin_top = 24.0
+margin_right = 401.0
+margin_bottom = 576.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogue" type="Node" parent="."]
+script = ExtResource( 1 )
+default_starting_event = "markups"
+options_nodepath = NodePath("../VBox/CenterContainer/HBoxContainer/OptionButton")
+back_button_nodepath = NodePath("../VBox/CenterContainer2/BackButton")
+text_edit_nodepath = NodePath("../VBox/HBox/TextEdit")
+rakugo_text_label_nodepath = NodePath("../VBox/HBox/RakugoTextLabel")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="VBox"]
+margin_right = 801.0
+margin_bottom = 20.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBox/CenterContainer"]
+margin_left = 296.0
+margin_right = 505.0
+margin_bottom = 20.0
+
+[node name="Label" type="Label" parent="VBox/CenterContainer/HBoxContainer"]
+margin_top = 3.0
+margin_right = 137.0
+margin_bottom = 17.0
+text = "Select markup to test"
+
+[node name="OptionButton" type="OptionButton" parent="VBox/CenterContainer/HBoxContainer"]
+margin_left = 141.0
+margin_right = 209.0
+margin_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "RenPy"
+flat = true
+items = [ "RenPy", null, false, 0, null, "Markdown", null, false, 1, null, "BBCode", null, false, 2, null ]
+selected = 0
+
+[node name="HBox" type="HBoxContainer" parent="VBox"]
+margin_top = 24.0
+margin_right = 801.0
+margin_bottom = 524.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 800, 500 )
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="VBox/HBox"]
+margin_right = 398.0
+margin_bottom = 500.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Test Selected Markup here"
+
+[node name="RakugoTextLabel" type="RichTextLabel" parent="VBox/HBox"]
+margin_left = 402.0
+margin_right = 801.0
+margin_bottom = 500.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "Test Selected Markup here"
+text = "Test Selected Markup here"
+script = ExtResource( 2 )
+rakugo_text = "Test Selected Markup here"
+markup = "project_setting"
+
+[node name="CenterContainer2" type="CenterContainer" parent="VBox"]
+margin_top = 528.0
+margin_right = 801.0
+margin_bottom = 552.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="BackButton" type="Button" parent="VBox/CenterContainer2"]
+margin_left = 368.0
+margin_top = 2.0
+margin_right = 432.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Go Back"
+flat = true

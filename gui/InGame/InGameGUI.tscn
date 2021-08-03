@@ -17,7 +17,10 @@
 
 [sub_resource type="StyleBoxEmpty" id=5]
 
-[node name="InGameGUI" type="Control"]
+[node name="InGameGUI" type="Control" groups=[
+"$ dialogue",
+"showable",
+]]
 pause_mode = 1
 anchor_right = 1.0
 anchor_bottom = 1.0

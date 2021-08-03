@@ -1,12 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://game/TutorialDialogue.gd" type="Script" id=1]
 [ext_resource path="res://game/Scripting.tscn" type="PackedScene" id=2]
+[ext_resource path="res://game/Markups.tscn" type="PackedScene" id=3]
+[ext_resource path="res://themes/Default/default.tres" type="Theme" id=4]
 
 [node name="Tutorial" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
+theme = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -17,3 +20,30 @@ default_starting_event = "intro"
 auto_start = true
 
 [node name="Scripting" parent="." instance=ExtResource( 2 )]
+visible = false
+
+[node name="Dialogue" parent="Scripting" index="0"]
+intro_nodepath = NodePath("../../Dialogue")
+
+[node name="Markups" parent="." instance=ExtResource( 3 )]
+visible = false
+
+[node name="Dialogue" parent="Markups" index="0"]
+intro_nodepath = NodePath("../../Dialogue")
+
+[node name="HBoxContainer" parent="Markups/VBox/CenterContainer" index="0"]
+margin_left = 234.0
+margin_right = 566.0
+margin_bottom = 29.0
+
+[node name="OptionButton" parent="Markups/VBox/CenterContainer/HBoxContainer" index="1"]
+items = [ "RenPy", null, false, 0, null, "Markdown", null, false, 1, null, "BBCode", null, false, 2, null ]
+
+[node name="BackButton" parent="Markups/VBox/CenterContainer2" index="0"]
+margin_left = 350.0
+margin_top = 0.0
+margin_right = 450.0
+margin_bottom = 29.0
+
+[editable path="Scripting"]
+[editable path="Markups"]
