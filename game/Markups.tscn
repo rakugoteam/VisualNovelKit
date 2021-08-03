@@ -8,8 +8,9 @@ anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -400.0
 margin_top = 24.0
-margin_right = 401.0
-margin_bottom = 576.0
+margin_right = 400.0
+margin_bottom = 584.0
+rect_min_size = Vector2( 800, 560 )
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
@@ -35,12 +36,12 @@ __meta__ = {
 }
 
 [node name="CenterContainer" type="CenterContainer" parent="VBox"]
-margin_right = 801.0
+margin_right = 800.0
 margin_bottom = 20.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBox/CenterContainer"]
-margin_left = 296.0
-margin_right = 505.0
+margin_left = 295.0
+margin_right = 504.0
 margin_bottom = 20.0
 
 [node name="Label" type="Label" parent="VBox/CenterContainer/HBoxContainer"]
@@ -62,7 +63,7 @@ selected = 0
 
 [node name="HBox" type="HBoxContainer" parent="VBox"]
 margin_top = 24.0
-margin_right = 801.0
+margin_right = 800.0
 margin_bottom = 524.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -83,7 +84,7 @@ text = "Test Selected Markup here"
 
 [node name="RakugoTextLabel" type="RichTextLabel" parent="VBox/HBox"]
 margin_left = 402.0
-margin_right = 801.0
+margin_right = 800.0
 margin_bottom = 500.0
 mouse_filter = 2
 size_flags_horizontal = 3
@@ -97,16 +98,16 @@ markup = "project_setting"
 
 [node name="CenterContainer2" type="CenterContainer" parent="VBox"]
 margin_top = 528.0
-margin_right = 801.0
-margin_bottom = 552.0
+margin_right = 800.0
+margin_bottom = 560.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="BackButton" type="Button" parent="VBox/CenterContainer2"]
 margin_left = 368.0
-margin_top = 2.0
+margin_top = 6.0
 margin_right = 432.0
-margin_bottom = 22.0
+margin_bottom = 26.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Go Back"
