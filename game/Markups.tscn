@@ -22,7 +22,7 @@ script = ExtResource( 1 )
 default_starting_event = "markups"
 options_nodepath = NodePath("../VBox/CenterContainer/HBoxContainer/OptionButton")
 back_button_nodepath = NodePath("../VBox/CenterContainer2/BackButton")
-text_edit_nodepath = NodePath("../VBox/HBox/TabContainer/EditMarkdown")
+tabs_nodepath = NodePath("../VBox/HBox/TabContainer")
 rakugo_text_label_nodepath = NodePath("../VBox/HBox/RakugoTextLabel")
 
 [node name="VBox" type="VBoxContainer" parent="."]
@@ -160,7 +160,7 @@ bbcode_text = "Test Selected Markup here"
 text = "Test Selected Markup here"
 script = ExtResource( 2 )
 rakugo_text = "Test Selected Markup here"
-markup = "project_setting"
+markup = "renpy"
 
 [node name="CenterContainer2" type="CenterContainer" parent="VBox"]
 margin_top = 528.0
