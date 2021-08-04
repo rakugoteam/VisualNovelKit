@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://game/Markups.gd" type="Script" id=1]
 [ext_resource path="res://addons/Rakugo/lib/nodes/rakugo_text_label.gd" type="Script" id=2]
+[ext_resource path="res://addons/Rakugo/lib/nodes/code_edit.gd" type="Script" id=3]
 
 [node name="Markups" type="Panel"]
 anchor_left = 0.5
@@ -21,7 +22,7 @@ script = ExtResource( 1 )
 default_starting_event = "markups"
 options_nodepath = NodePath("../VBox/CenterContainer/HBoxContainer/OptionButton")
 back_button_nodepath = NodePath("../VBox/CenterContainer2/BackButton")
-text_edit_nodepath = NodePath("../VBox/HBox/TextEdit")
+text_edit_nodepath = NodePath("../VBox/HBox/TabContainer/EditMarkdown")
 rakugo_text_label_nodepath = NodePath("../VBox/HBox/RakugoTextLabel")
 
 [node name="VBox" type="VBoxContainer" parent="."]
@@ -75,12 +76,77 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextEdit" type="TextEdit" parent="VBox/HBox"]
+[node name="TabContainer" type="TabContainer" parent="VBox/HBox"]
 margin_right = 398.0
 margin_bottom = 500.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Test Selected Markup here"
+tabs_visible = false
+
+[node name="EditRenpy" type="TextEdit" parent="VBox/HBox/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 8.0
+margin_right = -4.0
+margin_bottom = -4.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Test Selected Markup **here** wave dgfdsgdf djsdnjkjdskgn"
+highlight_current_line = true
+syntax_highlighting = true
+show_line_numbers = true
+smooth_scrolling = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+load_classes = false
+jsons = [ "res://addons/Rakugo/keywords/renpy.json" ]
+
+[node name="EditMarkdown" type="TextEdit" parent="VBox/HBox/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 8.0
+margin_right = -4.0
+margin_bottom = -4.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Test Selected Markup **here** wave dgfdsgdf djsdnjkjdskgn"
+highlight_current_line = true
+syntax_highlighting = true
+show_line_numbers = true
+smooth_scrolling = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+load_classes = false
+jsons = [ "res://addons/Rakugo/keywords/markdown.json" ]
+
+[node name="EditBBCode" type="TextEdit" parent="VBox/HBox/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 8.0
+margin_right = -4.0
+margin_bottom = -4.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Test Selected Markup **here** wave dgfdsgdf djsdnjkjdskgn"
+highlight_current_line = true
+syntax_highlighting = true
+show_line_numbers = true
+smooth_scrolling = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+load_classes = false
+jsons = [ "res://addons/Rakugo/keywords/bbcode.json" ]
 
 [node name="RakugoTextLabel" type="RichTextLabel" parent="VBox/HBox"]
 margin_left = 402.0
