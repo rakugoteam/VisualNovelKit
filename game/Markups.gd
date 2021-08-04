@@ -23,11 +23,12 @@ func _ready():
 
 func switch_tab(id:= 0):
 	var text := ""
-	var caret_pos := 0
+	var caret_pos := Vector2(0, 0)
 	
 	if code_edit != null:
 		text = code_edit.text
-		caret_pos = code_edit.caret_position
+		caret_pos.x = code_edit.cursor_get_column()
+		caret_pos.y = code_edit.cursor_get_line()
 
 		if code_edit.is_connected("text_changed", self, "_on_text_changed"):
 			code_edit.disconnect("text_changed", self, "_on_text_changed")
@@ -35,7 +36,8 @@ func switch_tab(id:= 0):
 	tabs.current_tab = id
 	code_edit = tabs.get_current_tab_control() as CodeEdit
 	code_edit.text = text
-	code_edit.caret_position = caret_pos
+	code_edit.cursor_set_column(int(caret_pos.x))
+	code_edit.cursor_set_line(int(caret_pos.y))
 	code_edit.connect("text_changed", self, "_on_text_changed")
 
 func _on_option_selected(id: int):
