@@ -20,10 +20,12 @@ __meta__ = {
 [node name="Dialogue" type="Node" parent="."]
 script = ExtResource( 1 )
 default_starting_event = "markups"
-options_nodepath = NodePath("../VBox/CenterContainer/HBoxContainer/OptionButton")
+markups_options_nodepath = NodePath("../VBox/CenterContainer/HBoxContainer/OptionButton")
+layout_options_nodepath = NodePath("../VBox/CenterContainer/HBoxContainer/OptionButton2")
+layout_nodepath = NodePath("../VBox/Grid")
 back_button_nodepath = NodePath("../VBox/CenterContainer2/BackButton")
-tabs_nodepath = NodePath("../VBox/HBox/TabContainer")
-rakugo_text_label_nodepath = NodePath("../VBox/HBox/RakugoTextLabel")
+tabs_nodepath = NodePath("../VBox/Grid/TabContainer")
+rakugo_text_label_nodepath = NodePath("../VBox/Grid/RakugoTextLabel")
 
 [node name="VBox" type="VBoxContainer" parent="."]
 anchor_right = 1.0
@@ -41,8 +43,8 @@ margin_right = 800.0
 margin_bottom = 20.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBox/CenterContainer"]
-margin_left = 295.0
-margin_right = 504.0
+margin_left = 201.0
+margin_right = 598.0
 margin_bottom = 20.0
 
 [node name="Label" type="Label" parent="VBox/CenterContainer/HBoxContainer"]
@@ -62,7 +64,25 @@ flat = true
 items = [ "RenPy", null, false, 0, null, "Markdown", null, false, 1, null, "BBCode", null, false, 2, null ]
 selected = 0
 
-[node name="HBox" type="HBoxContainer" parent="VBox"]
+[node name="Label2" type="Label" parent="VBox/CenterContainer/HBoxContainer"]
+margin_left = 213.0
+margin_top = 3.0
+margin_right = 298.0
+margin_bottom = 17.0
+text = "Select Layout"
+
+[node name="OptionButton2" type="OptionButton" parent="VBox/CenterContainer/HBoxContainer"]
+margin_left = 302.0
+margin_right = 397.0
+margin_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Horizontal"
+flat = true
+items = [ "Horizontal", null, false, 0, null, "Vertical", null, false, 1, null ]
+selected = 0
+
+[node name="Grid" type="GridContainer" parent="VBox"]
 margin_top = 24.0
 margin_right = 800.0
 margin_bottom = 524.0
@@ -72,18 +92,15 @@ rect_min_size = Vector2( 800, 500 )
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="TabContainer" type="TabContainer" parent="VBox/HBox"]
-margin_right = 398.0
-margin_bottom = 500.0
+[node name="TabContainer" type="TabContainer" parent="VBox/Grid"]
+margin_right = 800.0
+margin_bottom = 248.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 tabs_visible = false
 
-[node name="EditRenpy" type="TextEdit" parent="VBox/HBox/TabContainer"]
+[node name="EditRenpy" type="TextEdit" parent="VBox/Grid/TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -104,7 +121,7 @@ __meta__ = {
 load_classes = false
 jsons = [ "res://addons/Rakugo/keywords/renpy.json" ]
 
-[node name="EditMarkdown" type="TextEdit" parent="VBox/HBox/TabContainer"]
+[node name="EditMarkdown" type="TextEdit" parent="VBox/Grid/TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -126,7 +143,7 @@ __meta__ = {
 load_classes = false
 jsons = [ "res://addons/Rakugo/keywords/markdown.json" ]
 
-[node name="EditBBCode" type="TextEdit" parent="VBox/HBox/TabContainer"]
+[node name="EditBBCode" type="TextEdit" parent="VBox/Grid/TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -148,8 +165,8 @@ __meta__ = {
 load_classes = false
 jsons = [ "res://addons/Rakugo/keywords/bbcode.json" ]
 
-[node name="RakugoTextLabel" type="RichTextLabel" parent="VBox/HBox"]
-margin_left = 402.0
+[node name="RakugoTextLabel" type="RichTextLabel" parent="VBox/Grid"]
+margin_top = 252.0
 margin_right = 800.0
 margin_bottom = 500.0
 mouse_filter = 2
