@@ -36,12 +36,12 @@
   },
   "font":
   {
-    "color": "#000000",
+    "color": "#ff621b",
     "sings": ["{font=",  "{/font}"]
   },
   "indent":
   {
-    "color": "#000000",
+    "color": "#ff621b",
     "sings": ["{indent=",  "{/indent}"]
   },
   "url":
@@ -51,17 +51,17 @@
   },
   "img":
   {
-    "color": "#7823ff",
+    "color": "#fa00ff",
     "sings": ["{img=",  "{/img}"]
   },
   "color":
   {
-    "color": "#000000",
+    "color": "#ff621b",
     "sings": ["{color=",  "{/color}"]
   },
   "emoji":
   {
-    "color": "#7823ff",
+    "color": "#fa00ff",
     "sings": ["{:", ":}"]
   },
   "code":
@@ -71,12 +71,12 @@
   },
   "table":
   {
-    "color": "#000000",
+    "color": "#ff621b",
     "sings": ["{table=",  "{/table}"]
   },
   "cell":
   {
-    "color": "#000000",
+    "color": "#ff621b",
     "sings": ["{cell=}", "{/cell}"]
   },
   "wave":

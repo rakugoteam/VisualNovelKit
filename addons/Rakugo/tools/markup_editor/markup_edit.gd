@@ -17,9 +17,9 @@ onready var rakugo_text_label : RakugoTextLabel = get_node(rakugo_text_label_nod
 var markup_id := 0
 
 func _ready():
-	code_edit.switch_config(jsons[0])
 	markups_options.connect("item_selected", self, "_on_option_selected")
 	layout_options.connect("item_selected", self, "switch_layout")
+	code_edit.connect("text_changed", self, "_on_text_changed")
 
 func switch_layout(id := 0):
 	layout.columns = id + 1
