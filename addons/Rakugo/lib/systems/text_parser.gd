@@ -9,7 +9,10 @@ func parse(text:String, _markup:="", editor:=false):
 
 	if _markup in ["", "game_setting"]:
 		if editor:
-			_markup = ProjectSettings.get(SettingsList.markup)
+			var setting = ProjectSettings.get(SettingsList.markup)
+			if setting != null:
+				_markup = setting
+			
 		else:
 			_markup = Settings.get(SettingsList.markup)
 	
