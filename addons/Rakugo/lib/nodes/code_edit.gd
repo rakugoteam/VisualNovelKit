@@ -9,6 +9,11 @@ func _ready() -> void:
 	syntax_highlighting = true
 	_add_keywords_highlighting()
 
+func switch_config(json_file:String, id:=0) -> void:
+	clear_colors()
+	jsons[id] = json_file
+	_add_keywords_highlighting()
+
 func _add_keywords_highlighting() -> void:
 	if jsons.size() > 0:
 		for json in jsons:
