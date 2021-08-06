@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://game/Markups.gd" type="Script" id=1]
-[ext_resource path="res://addons/Rakugo/lib/nodes/rakugo_text_label.gd" type="Script" id=2]
-[ext_resource path="res://addons/Rakugo/lib/nodes/code_edit.gd" type="Script" id=3]
+[ext_resource path="res://addons/Rakugo/tools/markup_editor/MarkupEdit.tscn" type="PackedScene" id=2]
 
 [node name="Markups" type="Panel"]
 anchor_left = 0.5
@@ -20,178 +19,25 @@ __meta__ = {
 [node name="Dialogue" type="Node" parent="."]
 script = ExtResource( 1 )
 default_starting_event = "markups"
-markups_options_nodepath = NodePath("../VBox/CenterContainer/HBoxContainer/OptionButton")
-layout_options_nodepath = NodePath("../VBox/CenterContainer/HBoxContainer/OptionButton2")
-layout_nodepath = NodePath("../VBox/Grid")
-back_button_nodepath = NodePath("../VBox/CenterContainer2/BackButton")
-tabs_nodepath = NodePath("../VBox/Grid/TabContainer")
-rakugo_text_label_nodepath = NodePath("../VBox/Grid/RakugoTextLabel")
+back_button_nodepath = NodePath("../MarkupEdit/CenterContainer2/BackButton")
 
-[node name="VBox" type="VBoxContainer" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="MarkupEdit" parent="." instance=ExtResource( 2 )]
 
-[node name="CenterContainer" type="CenterContainer" parent="VBox"]
-margin_right = 800.0
-margin_bottom = 20.0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBox/CenterContainer"]
-margin_left = 201.0
-margin_right = 598.0
-margin_bottom = 20.0
-
-[node name="Label" type="Label" parent="VBox/CenterContainer/HBoxContainer"]
-margin_top = 3.0
-margin_right = 137.0
-margin_bottom = 17.0
-text = "Select markup to test"
-
-[node name="OptionButton" type="OptionButton" parent="VBox/CenterContainer/HBoxContainer"]
-margin_left = 141.0
-margin_right = 209.0
-margin_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "RenPy"
-flat = true
-items = [ "RenPy", null, false, 0, null, "Markdown", null, false, 1, null, "BBCode", null, false, 2, null ]
-selected = 0
-
-[node name="Label2" type="Label" parent="VBox/CenterContainer/HBoxContainer"]
-margin_left = 213.0
-margin_top = 3.0
-margin_right = 298.0
-margin_bottom = 17.0
-text = "Select Layout"
-
-[node name="OptionButton2" type="OptionButton" parent="VBox/CenterContainer/HBoxContainer"]
-margin_left = 302.0
-margin_right = 397.0
-margin_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Horizontal"
-flat = true
-items = [ "Horizontal", null, false, 0, null, "Vertical", null, false, 1, null ]
-selected = 0
-
-[node name="Grid" type="GridContainer" parent="VBox"]
-margin_top = 24.0
-margin_right = 800.0
-margin_bottom = 524.0
-grow_horizontal = 2
-grow_vertical = 2
-rect_min_size = Vector2( 800, 500 )
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="TabContainer" type="TabContainer" parent="VBox/Grid"]
-margin_right = 800.0
-margin_bottom = 248.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-tabs_visible = false
-
-[node name="EditRenpy" type="TextEdit" parent="VBox/Grid/TabContainer"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 8.0
-margin_right = -4.0
-margin_bottom = -4.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Test Selected Markup **here** wave dgfdsgdf djsdnjkjdskgn"
-highlight_current_line = true
-syntax_highlighting = true
-show_line_numbers = true
-smooth_scrolling = true
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-load_classes = false
-jsons = [ "res://addons/Rakugo/keywords/renpy.json" ]
-
-[node name="EditMarkdown" type="TextEdit" parent="VBox/Grid/TabContainer"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 8.0
-margin_right = -4.0
-margin_bottom = -4.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Test Selected Markup **here** wave dgfdsgdf djsdnjkjdskgn"
-highlight_current_line = true
-syntax_highlighting = true
-show_line_numbers = true
-smooth_scrolling = true
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-load_classes = false
-jsons = [ "res://addons/Rakugo/keywords/markdown.json" ]
-
-[node name="EditBBCode" type="TextEdit" parent="VBox/Grid/TabContainer"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 8.0
-margin_right = -4.0
-margin_bottom = -4.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Test Selected Markup **here** wave dgfdsgdf djsdnjkjdskgn"
-highlight_current_line = true
-syntax_highlighting = true
-show_line_numbers = true
-smooth_scrolling = true
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-load_classes = false
-jsons = [ "res://addons/Rakugo/keywords/bbcode.json" ]
-
-[node name="RakugoTextLabel" type="RichTextLabel" parent="VBox/Grid"]
-margin_top = 252.0
-margin_right = 800.0
-margin_bottom = 500.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-bbcode_enabled = true
-bbcode_text = "Test Selected Markup here"
-text = "Test Selected Markup here"
-script = ExtResource( 2 )
-rakugo_text = "Test Selected Markup here"
-markup = "renpy"
-
-[node name="CenterContainer2" type="CenterContainer" parent="VBox"]
+[node name="CenterContainer2" type="CenterContainer" parent="MarkupEdit"]
 margin_top = 528.0
 margin_right = 800.0
 margin_bottom = 560.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="BackButton" type="Button" parent="VBox/CenterContainer2"]
+[node name="BackButton" type="Button" parent="MarkupEdit/CenterContainer2"]
 margin_left = 368.0
 margin_top = 6.0
 margin_right = 432.0
 margin_bottom = 26.0
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+enabled_focus_mode = 0
 text = "Go Back"
 flat = true
