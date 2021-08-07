@@ -9,7 +9,7 @@ func _ready():
 	back_button.connect("pressed", self, "_on_back_button_pressed")
 
 func _on_back_button_pressed():	
-	jump("Tutorial")
+	jump("Tutorial", "Dialogue", "intro")
 
 func markups():
 	start_event("markups")

@@ -1,9 +1,5 @@
 extends Dialogue
 
-export var intro_nodepath : NodePath
-
-onready var intro : Dialogue = get_node(intro_nodepath)
-
 func script_tut():
 	start_event("script_tut")
 
@@ -59,7 +55,7 @@ func script_tut():
 			pass
 
 		"Go Back":
-			jump("Tutorial")
+			jump("Tutorial", "Dialogue", "intro")
 
 	step()
 	hide("code")
