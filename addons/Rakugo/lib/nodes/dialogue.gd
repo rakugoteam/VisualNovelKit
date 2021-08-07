@@ -142,8 +142,9 @@ func start_event(event_name):
 		Rakugo.History.log_event(self.name ,event_name)
 
 func cond(condition):
-	if not is_running():
-		return false
+	"""This is obsoleted. Use just `if` instead."""
+	# if not is_running():
+	# 	return false
 
 	# transform 'condition' into a bool
 	# if condition: 
@@ -152,11 +153,11 @@ func cond(condition):
 	# else:
 	# 	condition = false
 	
-	if is_active(true):
-		event_stack[0][3].push_front(condition)
+	# if is_active(true):
+	# 	event_stack[0][3].push_front(condition)
 	
-	else:
-		condition = event_stack[0][3].pop_back()
+	# else:
+	# 	condition = event_stack[0][3].pop_back()
 	
 	return condition
 
