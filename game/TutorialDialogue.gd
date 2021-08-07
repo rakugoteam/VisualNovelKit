@@ -4,6 +4,18 @@ func intro():
 	start_event("intro")
 	show("dialogue")
 	
+	say(null, "testing cond()")
+	step()
+
+	if cond(true):
+		say(null, "cond: true")
+	else:
+		say(null, "cond: false")
+	step()
+	
+	say(null, "testing cond() 2")
+	step()
+
 	hide("code")
 	say(null, 
 		"This is Tutorial/Showcase Demo of Rakugo\n"
@@ -19,10 +31,12 @@ func intro():
 
 	match begin_from:
 		"scripting":
-			$"../Scripting/Dialogue".start()
+			jump("Scripting")
+			# $"../Scripting/Dialogue".start()
 
 		"Markups":
-			$"../Markups/Dialogue".start()
+			jump("Markups")
+			# $"../Markups/Dialogue".start()
 
 		"showing":
 			pass

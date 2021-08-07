@@ -143,8 +143,8 @@ func start_event(event_name):
 
 func cond(condition):
 	"""This is obsoleted. Use just `if` instead."""
-	# if not is_running():
-	# 	return false
+	if not is_running():
+		return false
 
 	# transform 'condition' into a bool
 	# if condition: 
@@ -153,11 +153,11 @@ func cond(condition):
 	# else:
 	# 	condition = false
 	
-	# if is_active(true):
-	# 	event_stack[0][3].push_front(condition)
+	if is_active(true):
+		event_stack[0][3].push_front(condition)
 	
-	# else:
-	# 	condition = event_stack[0][3].pop_back()
+	else:
+		condition = event_stack[0][3].pop_back()
 	
 	return condition
 
@@ -315,6 +315,6 @@ func _call_ext_ret_call(returns:Array, object, func_name:String, args:Array):
 		return_lock.post()
 
 
-func jump(scene_id: String, dialogue_name: String, event_name: String) -> void:
+func jump(scene_id: String, dialogue_name:="", event_name:="") -> void:
 	if is_active():
 		Rakugo.call_deferred('jump', scene_id, dialogue_name, event_name)

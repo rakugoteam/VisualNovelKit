@@ -59,7 +59,7 @@ func script_tut():
 			pass
 
 		"Go Back":
-			intro.start()
+			jump("Tutorial")
 
 	step()
 	hide("code")

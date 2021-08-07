@@ -19,6 +19,7 @@ __meta__ = {
 [node name="Dialogue" type="Node" parent="."]
 script = ExtResource( 1 )
 default_starting_event = "markups"
+auto_start = true
 back_button_nodepath = NodePath("../MarkupEdit/CenterContainer2/BackButton")
 
 [node name="MarkupEdit" parent="." instance=ExtResource( 2 )]

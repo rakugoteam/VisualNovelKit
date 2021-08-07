@@ -4,8 +4,10 @@
 
 [resource]
 script = ExtResource( 1 )
-ids = [ "Tutorial" ]
-scenes = [ "res://game/Tutorial.tscn" ]
+ids = [ "Tutorial", "Scripting", "Markups" ]
+scenes = [ "res://game/Tutorial.tscn", "res://game/Scripting.tscn", "res://game/Markups.tscn" ]
 _dict = {
+"Markups": "res://game/Markups.tscn",
+"Scripting": "res://game/Scripting.tscn",
 "Tutorial": "res://game/Tutorial.tscn"
 }
