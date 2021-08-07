@@ -38,6 +38,5 @@ margin_bottom = 26.0
 focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-enabled_focus_mode = 0
 text = "Go Back"
 flat = true

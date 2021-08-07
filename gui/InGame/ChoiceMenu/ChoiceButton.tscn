@@ -74,7 +74,6 @@ custom_colors/font_color_disabled = Color( 0.443137, 0.443137, 0.443137, 1 )
 custom_colors/font_color = Color( 0.709804, 0.709804, 0.709804, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
-enabled_focus_mode = 0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
