@@ -1,4 +1,4 @@
-tool
+# tool
 extends KinematicBody2D
 class_name MouseBody2D, "res://addons/Rakugo/icons/mouse_button_2d.svg"
 
@@ -16,7 +16,7 @@ func add_collision():
 	collision.shape = shape
 	collision.name = "CollisionShape2D"
 	add_child(collision, true)
-	print("add collision")
+	# print("add collision")
 
 func _physics_process(delta):
 	if !Engine.editor_hint:
