@@ -9,8 +9,8 @@ export_presets.cfg
 mono_crash.*.*.json
 
 # Project specific
-addons/*
-!addons/Rakugo
+# addons/*
+# !addons/Rakugo
 fontconfig
 refences/
 saves/
@@ -18,7 +18,3 @@ saves/
 .vscode/
 .*.kra
 reference.json
-tests
-
-# For now
-test/

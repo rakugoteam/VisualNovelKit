@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://game/TutorialDialogue.gd" type="Script" id=1]
+[ext_resource path="res://themes/Default/default.tres" type="Theme" id=4]
+
+[node name="Tutorial" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogue" type="Node" parent="."]
+script = ExtResource( 1 )
+default_starting_event = "intro"
+auto_start = true
+version_control = null

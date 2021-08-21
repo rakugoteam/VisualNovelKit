@@ -4,9 +4,9 @@ var store_stack = []
 var store_stack_max_length = 5
 var current_store_id = 0
 var persistent_store = null
-
-
 var save_folder_path = ""
+
+signal saved
 
 func init():
 	self.init_save_folder()
@@ -25,7 +25,6 @@ func get_save_folder_path():
 		init_save_folder()
 	return save_folder_path
 
-
 func get_save_path(save_name, no_ext=false):
 	save_name = save_name.replace('.tres', '')
 	save_name = save_name.replace('.res', '')
@@ -37,14 +36,12 @@ func get_save_path(save_name, no_ext=false):
 			savefile_path += ".res"
 	return savefile_path
 
-
 func get_save_name(save_name):
 	save_name = save_name.split('/', false)
 	save_name = save_name[save_name.size()-1]
 	save_name = save_name.replace('.tres', '')
 	save_name = save_name.replace('.res', '')
 	return save_name
-
 
 ### Store lifecycle
 
@@ -54,10 +51,8 @@ func call_for_restoring():
 func call_for_storing():
 	get_tree().get_root().propagate_call('_store', [get_current_store()])
 
-
 func get_current_store():
 	return store_stack[current_store_id]
-
 
 func stack_next_store():
 	self.call_for_storing()
@@ -69,7 +64,6 @@ func stack_next_store():
 	
 	self.prune_back_stack()
 
-
 func change_current_stack_index(index):
 	if current_store_id == 0:
 		self.call_for_storing()
@@ -80,8 +74,6 @@ func change_current_stack_index(index):
 	current_store_id = index
 	
 	self.call_for_restoring()
-
-
 
 ### Store Stack
 
@@ -148,8 +140,6 @@ func load_store_stack(save_name: String):
 	Rakugo.loading_in_progress = false
 	return true
 
-
-
 func unpack_data(path:String) -> Store:
 	var packed_stack:StoreStack = load(path) as StoreStack
 
@@ -164,7 +154,6 @@ func unpack_data(path:String) -> Store:
 	var game_version = save.game_version
 	
 	return save
-
 
 
 ### Persistent store
@@ -186,6 +175,8 @@ func save_persistent_store():
 	var error = ResourceSaver.save(save_folder_path + "persistent.tres", persistent_store)
 	if error != OK:
 		print("Error writing persistent store %s to %s error_number: %s" % ["persistent.tres", save_folder_path, error])
+	
+	emit_signal("saved")
 
 
 func _get(property):

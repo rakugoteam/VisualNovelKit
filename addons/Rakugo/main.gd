@@ -1,12 +1,11 @@
 extends Node
 
-const rakugo_version := "3.2.0"
-
+const rakugo_version := "3.2.1"
 
 var current_scene_name := ""
 var current_scene_path := ""
 var current_scene_node: Node = null
-var current_dialogue:Node = null setget set_current_dialogue
+var current_dialogue:Dialogue = null setget set_current_dialogue
 
 var store = null setget set_current_store, get_current_store
 var persistent = null setget set_persistent_store, get_persistent_store
@@ -69,6 +68,7 @@ func save_game(save_name:String = "quick"):
 	StoreManager.save_persistent_store()
 	debug(["save data to :", save_name])
 	return StoreManager.save_store_stack(save_name)
+
 func load_game(save_name := "quick"):
 	return StoreManager.load_store_stack(save_name)
 
@@ -80,14 +80,18 @@ func rollback(amount:int = 1):
 func prepare_quitting():
 	if self.started:
 		self.save_game("auto")
-	StoreManager.save_persistent_store()
+	
 	Settings.save_property_list()
+	
+	if current_dialogue:
+		current_dialogue.exit()
 
 func load_scene(scene_id:String, force_reload:bool = false):
 	return SceneLoader.load_scene(scene_id, force_reload)
 
 func reset_game():
-	SceneLoader.load_scene(Settings.get(SettingsList.main_scene))
+	var s = Settings.get(SettingsList.main_scene)
+	SceneLoader.load_scene(s)
 	started = false
 	emit_signal("game_ended")
 
@@ -139,8 +143,10 @@ func define_character(character_name:String, character_tag:String, color=null) -
 	var new_character = Character.new()
 	if color:
 		new_character.init(character_name, character_tag, color)
+
 	else:
 		new_character.init(character_name, character_tag)
+		
 	StoreManager.get_current_store()[character_tag] = new_character
 	return new_character
 
@@ -219,12 +225,14 @@ func notify(text:String, parameters:Dictionary):
 
 # use this to change/assign current scene and dialogue
 # id_of_current_scene is id to scene defined in scene_links or full path to scene
-func jump(scene_id:String, dialogue_name:String, event_name:String, force_reload = null):
+func jump(scene_id:String, dialogue_name:String, event_name:="", force_reload = null):
 	if force_reload != null:
 		if force_reload:# Sanitize potentially non bool into bool
 			$Statements/Jump.invoke(scene_id, dialogue_name, event_name, true)
+
 		else:
 			$Statements/Jump.invoke(scene_id, dialogue_name, event_name, false)
+
 	else:
 		$Statements/Jump.invoke(scene_id, dialogue_name, event_name)
 

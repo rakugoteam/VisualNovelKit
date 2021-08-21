@@ -77,7 +77,7 @@ var default_property_list:Dictionary = {
 			"renpy,bbcode,markdown",
 			PROPERTY_USAGE_CATEGORY)
 	],
-
+  
 	narrator_name : [
 		"", PropertyInfo.new(
 			"", TYPE_STRING, PROPERTY_HINT_NONE, 

@@ -1,6 +1,6 @@
 tool
 extends RichTextLabel
-class_name RakugoTextLabel
+class_name RakugoTextLabel, "res://addons/Rakugo/icons/rakugo_text_label.svg"
 
 var text_parser : RakugoTextParser setget , _get_text_parser
 export(String, MULTILINE) var rakugo_text:String setget _set_rakugo_text, _get_rakugo_text
@@ -31,11 +31,17 @@ func _set_rakugo_text(value:String) -> void:
 	var can_be_parsed := false
 	can_be_parsed = Engine.editor_hint
 
-	if not can_be_parsed:
+	if not can_be_parsed and Rakugo:
 		can_be_parsed = Rakugo.started
 	
 	if can_be_parsed:
 		var p = _get_text_parser()
+		if p == null:
+			return
+		
+		if value == null:
+			return
+
 		bbcode_text = p.parse(value, _markup, Engine.editor_hint)
 	
 func _get_rakugo_text() -> String:
