@@ -3,7 +3,12 @@ extends Control
 var hide_toggle = false
 
 func _input(event):
+
 	if visible:
+		if event.is_action_pressed("ui_left_click"):
+			print("left click")
+			Rakugo.story_step()
+
 		if event.is_action_pressed("ui_cancel"):
 			Window.Screens.call_deferred('_on_nav_button_press', "save")
 
@@ -20,9 +25,11 @@ func _input(event):
 				Rakugo.activate_skipping()
 		
 		if event.is_action_pressed("rakugo_rollback"):
+			print("rollback")
 			Rakugo.rollback(1)
 		
 		if event.is_action_pressed("rakugo_rollforward"):
+			print("rollforward")
 			Rakugo.rollback(-1)
 		
 		if event.is_action_pressed("rakugo_hide_ui"):

@@ -1,21 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://gui/InGame/StepButton.gd" type="Script" id=1]
 [ext_resource path="res://gui/InGame/ChoiceMenu/ChoiceMenu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://gui/InGame/InGameGUI.gd" type="Script" id=3]
 [ext_resource path="res://gui/InGame/NotifyDisplay/NotifyDisplay.tscn" type="PackedScene" id=4]
 [ext_resource path="res://gui/InGame/DialoguePanel/DialoguePanel.tscn" type="PackedScene" id=5]
 [ext_resource path="res://gui/QuickMenu/QuickMenu.tscn" type="PackedScene" id=6]
-
-[sub_resource type="StyleBoxEmpty" id=1]
-
-[sub_resource type="StyleBoxEmpty" id=2]
-
-[sub_resource type="StyleBoxEmpty" id=3]
-
-[sub_resource type="StyleBoxEmpty" id=4]
-
-[sub_resource type="StyleBoxEmpty" id=5]
 
 [node name="InGameGUI" type="Control" groups=[
 "$ dialogue",
@@ -28,23 +17,6 @@ mouse_filter = 1
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="StepButton" type="Button" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_bottom = -3.0
-mouse_filter = 1
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 3 )
-custom_styles/disabled = SubResource( 4 )
-custom_styles/normal = SubResource( 5 )
-action_mode = 0
-flat = true
-script = ExtResource( 1 )
-__meta__ = {
 "_edit_use_anchors_": false
 }
 
@@ -80,5 +52,4 @@ size_flags_vertical = 3
 
 [node name="NotifyDisplay" parent="." instance=ExtResource( 4 )]
 
-[connection signal="pressed" from="StepButton" to="StepButton" method="_on_StepButton_pressed"]
 [connection signal="quick_button_press" from="QuickMenu" to="." method="_on_quick_button_press"]

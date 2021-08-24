@@ -15,7 +15,6 @@ func exec(default_answer:String, parameters = {}) -> void:
 func return(result):
 	Rakugo.emit_signal('ask_return', result)
 	Rakugo.StepBlocker.unblock('ask')
-	# Rakugo.story_step()
 
 #Utils functions
 

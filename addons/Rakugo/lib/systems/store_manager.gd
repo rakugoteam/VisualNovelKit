@@ -29,11 +29,14 @@ func get_save_path(save_name, no_ext=false):
 	save_name = save_name.replace('.tres', '')
 	save_name = save_name.replace('.res', '')
 	var savefile_path = save_folder_path.plus_file(save_name)
+
 	if not no_ext:
 		if Settings.get('rakugo/saves/test_mode'):
 			savefile_path += ".tres"
+
 		else:
 			savefile_path += ".res"
+
 	return savefile_path
 
 func get_save_name(save_name):
@@ -67,9 +70,11 @@ func stack_next_store():
 func change_current_stack_index(index):
 	if current_store_id == 0:
 		self.call_for_storing()
+
 	index = clamp(index, 0, store_stack.size()-1)
 	if index == current_store_id:
 		return
+
 	store_stack[current_store_id].replace_connections(store_stack[index])
 	current_store_id = index
 	
@@ -87,10 +92,15 @@ func init_store_stack():
 	store_stack = [new_save]
 
 
+func next_store_id():
+	var x = current_store_id
+	current_store_id = clamp(x+1, 0, store_stack.size()-1) 
+
+
 func prune_front_stack():
-	if current_store_id:
+	if current_store_id > 0:
 		store_stack = store_stack.slice(current_store_id, store_stack.size() - 1)
-		current_store_id = 0
+		# current_store_id = 0
 
 
 func prune_back_stack():
@@ -146,8 +156,10 @@ func unpack_data(path:String) -> Store:
 	packed_stack = packed_stack.duplicate()
 	
 	self.store_stack = []
+
 	for s in packed_stack.stack:
 		self.store_stack.append(s.duplicate())
+
 	self.current_store_id = packed_stack.current_id
 
 	var save = get_current_store()
