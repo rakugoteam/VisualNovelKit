@@ -26,7 +26,6 @@ func exec(choices:Array, parameters = {}) -> void:
 func return(result):
 	Rakugo.emit_signal('menu_return', result)
 	Rakugo.StepBlocker.unblock('menu')
-	# Rakugo.story_step()
 
 #Utils functions
 func _apply_default(input:Dictionary, default:Dictionary):
@@ -34,4 +33,5 @@ func _apply_default(input:Dictionary, default:Dictionary):
 	for k in default.keys():
 		if not output.has(k):
 			output[k] = default[k]
+			
 	return output

@@ -3,18 +3,6 @@ extends Dialogue
 func intro():
 	start_event("intro")
 	show("dialogue")
-	
-	say(null, "testing cond()")
-	step()
-
-	if cond(true):
-		say(null, "cond: true")
-	else:
-		say(null, "cond: false")
-	step()
-	
-	say(null, "testing cond() 2")
-	step()
 
 	hide("code")
 	say(null, 
@@ -29,14 +17,12 @@ func intro():
 		["More to Come", "more", {"disabled":true}]
 	])
 
-	match begin_from:
+	match cond(begin_from):
 		"scripting":
-			jump("Scripting")
-			# $"../Scripting/Dialogue".start()
+			jump("Scripting", "Dialogue", "")
 
 		"Markups":
-			jump("Markups")
-			# $"../Markups/Dialogue".start()
+			jump("Markups", "Dialogue", "")
 
 		"showing":
 			pass

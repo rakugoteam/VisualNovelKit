@@ -16,4 +16,3 @@ __meta__ = {
 script = ExtResource( 1 )
 default_starting_event = "intro"
 auto_start = true
-version_control = null
