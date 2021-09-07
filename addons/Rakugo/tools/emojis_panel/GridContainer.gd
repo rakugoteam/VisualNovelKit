@@ -1,8 +1,6 @@
 tool
 extends GridContainer
 
-
-
 func _on_filter_changed(text: String):
 	if text == "":
 		for ch in get_children():
