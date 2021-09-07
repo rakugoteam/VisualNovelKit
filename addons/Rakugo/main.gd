@@ -74,7 +74,9 @@ func load_game(save_name := "quick"):
 
 
 func rollback(amount:int = 1):
-	self.StoreManager.change_current_stack_index(self.StoreManager.current_store_id + amount)
+	var next = self.StoreManager.current_store_id + amount
+	prints("roll to: ", next)
+	self.StoreManager.change_current_stack_index(next)
 
 
 func prepare_quitting():
@@ -102,6 +104,8 @@ func story_step(_unblock=false):
 		StoreManager.stack_next_store()
 		# print("Emitting _step")
 		get_tree().get_root().propagate_call('_step')
+		StoreManager.next_store_id()
+
 	else:
 		# print("Emitting _blocked_step")
 		get_tree().get_root().propagate_call('_blocked_step')
@@ -111,19 +115,23 @@ func exit_dialogue():
 
 func set_current_dialogue(new_dialogue:Dialogue):
 	if current_dialogue != new_dialogue:
-		if self.current_dialogue and self.current_dialogue.is_running():
+		if self.current_dialogue \
+		and self.current_dialogue.is_running():
 			self.current_dialogue.exit()
+
 		current_dialogue = new_dialogue
 
 func activate_skipping():
 	self.skipping = true
 	skip_timer.start()
+
 func deactivate_skipping():
 	self.skipping = false
 
 func activate_auto_stepping():
 	self.auto_stepping = true
 	auto_timer.start()
+
 func deactivate_auto_stepping():
 	self.auto_stepping = false
 
@@ -182,8 +190,6 @@ func debug(some_text = []):
 
 	print(some_text)
 
-
-
 ## Statements
 
 # statement of type say
@@ -225,7 +231,7 @@ func notify(text:String, parameters:Dictionary):
 
 # use this to change/assign current scene and dialogue
 # id_of_current_scene is id to scene defined in scene_links or full path to scene
-func jump(scene_id:String, dialogue_name:String, event_name:String, force_reload = null):
+func jump(scene_id:String, dialogue_name:String, event_name:="", force_reload = null):
 	if force_reload != null:
 		if force_reload:# Sanitize potentially non bool into bool
 			$Statements/Jump.invoke(scene_id, dialogue_name, event_name, true)

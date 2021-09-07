@@ -38,6 +38,9 @@ func _set_rakugo_text(value:String) -> void:
 		var p = _get_text_parser()
 		if p == null:
 			return
+		
+		if value == null:
+			return
 
 		bbcode_text = p.parse(value, _markup, Engine.editor_hint)
 	

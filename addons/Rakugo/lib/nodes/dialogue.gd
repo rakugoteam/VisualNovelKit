@@ -136,21 +136,17 @@ func start_event(event_name):
 		event_stack.push_front([event_name, 0, INF, self.condition_stack])
 
 	else:
-		event_stack.push_front([event_name, 0, self.target, self.condition_stack])#Should be "get_stack()[1]['function']" instead of passing event_name, if get_stack() worked
+		event_stack.push_front([event_name, 0, self.target, self.condition_stack])
+		#Should be "get_stack()[1]['function']" instead of passing event_name, if get_stack() worked
 	
 	if is_active():
 		Rakugo.History.log_event(self.name ,event_name)
 
 func cond(condition):
+	"""This is obsoleted. Use just `if` instead."""
 	if not is_running():
 		return false
 
-	if condition:#transform 'condition' into a bool
-		condition = true
-	
-	else:
-		condition = false
-	
 	if is_active(true):
 		event_stack[0][3].push_front(condition)
 	
@@ -167,20 +163,23 @@ func step():
 		step_semaphore.wait()
 
 	event_stack[0][1] += 1
-	step_semaphore = Semaphore.new()# Preventing a case of multiple post skipping steps
+	# Preventing a case of multiple post skipping steps
+	step_semaphore = Semaphore.new()
 
 func end_event():
 	if is_running():
 		event_stack.pop_front()
 
 		if event_stack:
-			event_stack[0][1] -= 1# Realign step counter before returning
+			# Realign step counter before returning
+			event_stack[0][1] -= 1
 
 func is_active(_strict=false):
 	var output:bool = self.state == State.RUNNING
 	if output and event_stack:
 
-		if _strict:# Allow to check if it's the last step until waiting for semaphore
+		# Allow to check if it's the last step until waiting for semaphore
+		if _strict:
 			output = output and event_stack[0][1] > event_stack[0][2]
 
 		else:
@@ -207,7 +206,7 @@ func get_parent_event_name():
 #
 
 func _get_dialogue_script_hash():
-	return load("res://addons/Rakugo/lib/nodes/dialogue.gd").new()._get_script_hash()
+	return Dialogue.new()._get_script_hash()
 
 func _get_script_hash(object=self):
 	return object.get_script().source_code.hash()
@@ -255,6 +254,7 @@ func ask(default_answer:String, parameters: Dictionary = {}):
 
 func _ask_yield(returns:Array):
 	returns[0] = yield(Rakugo, "ask_return")
+
 	if return_lock:
 		return_lock.post()
 
@@ -309,10 +309,11 @@ func call_ext_ret(object, func_name:String, args := []):
 
 func _call_ext_ret_call(returns:Array, object, func_name:String, args:Array):
 	returns[0] = object.callv(func_name, args)
+
 	if return_lock:
 		return_lock.post()
 
 
-func jump(scene_id: String, dialogue_name: String, event_name: String) -> void:
+func jump(scene_id: String, dialogue_name:="", event_name:="") -> void:
 	if is_active():
 		Rakugo.call_deferred('jump', scene_id, dialogue_name, event_name)

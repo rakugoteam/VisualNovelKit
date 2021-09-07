@@ -10,7 +10,7 @@
 [![GitHub](https://img.shields.io/github/issues/rakugoteam/Rakugo.svg)](https://github.com/rakugoteam/Rakugo/issues)
 [![GitHub](https://img.shields.io/github/issues-closed/rakugoteam/Rakugo.svg)](https://github.com/rakugoteam/Rakugo/issues)
 
-Inspired by [Ren'Py](https://www.renpy.org), Rakugo is a projectaimed at providing a better toolset for narrative-based games on [Godot](https://godotengine.org). Simplify your project, if it is a visual novel, point and click, RPG, interactive text game or many other styles and blends of styles.
+Inspired by [Ren'Py](https://www.renpy.org), Rakugo is a project aimed at providing a better toolset for narrative-based games on [Godot](https://godotengine.org). Simplify your project, if it is a visual novel, point and click, RPG, interactive text game or many other styles and blends of styles.
 
 Unlock the potential of [Godot](https://godotengine.org) 3.x with Rakugo!
 

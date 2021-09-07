@@ -15,7 +15,8 @@ signal scene_changed(scene_node)
 
 func _ready():
 	default_force_reload = Settings.get(SettingsList.force_reload)
-	scene_links = load(Settings.get(SettingsList.scene_links)).get_as_dict()
+	var sl_path = Settings.get(SettingsList.scene_links)
+	scene_links = load(sl_path).get_as_dict()
 	current_scene = Settings.get(SettingsList.main_scene)
 	current_scene_node = get_tree().current_scene
 	
@@ -55,7 +56,8 @@ func load_scene(scene:String, force_reload = default_force_reload):
 		Rakugo.emit_signal("loading", NAN)
 		load_scene_resource(scene_entry[0], scene_entry[1], force_reload)
 		current_scene = scene_entry[0]
-		previous_scene_node = current_scene_node # Prevent previous scene to be freed too soon (in case a Dialogue Thread is not yet finished) 
+		previous_scene_node = current_scene_node 
+		# Prevent previous scene to be freed too soon (in case a Dialogue Thread is not yet finished) 
 		current_scene_node = preloaded_scenes[scene_entry[0]].instance()
 		Rakugo.clean_scene_anchor()
 		Rakugo.scene_anchor.add_child(current_scene_node)
@@ -68,13 +70,16 @@ func get_scene_entry(scene):
 	var scene_path
 	var scene_id
 	if not scene in self.scene_links:
+
 		if not scene_id in self.inverse_scene_links:
 			push_warning("Scene '%s' not found in linker" % scene_id)
 			scene_id = scene.get_file()
 		else:
 			scene_id = self.inverse_scene_links[scene_id]
+
 		scene_path = scene
 	else:
 		scene_id = scene
 		scene_path = self.scene_links[scene]
+		
 	return [scene_id, scene_path]
