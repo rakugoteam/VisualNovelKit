@@ -1,7 +1,7 @@
 tool
-extends Node
+extends EditorScript
 
-onready var grid := $ScrollContainer/GridContainer
+var grid := GridContainer.new()
 var file := File.new()
 var emojis = Emojis.new()
 

@@ -18,3 +18,5 @@ saves/
 .vscode/
 .*.kra
 reference.json
+
+*.ini
