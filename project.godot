@@ -32,7 +32,7 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "Emojis",
 "language": "GDScript",
-"path": "res://addons/Rakugo/lib/utils/emojis.gd"
+"path": "res://addons/Rakugo/tools/emojis_panel/emojis/emojis.gd"
 }, {
 "base": "Resource",
 "class": "HistoryEntry",

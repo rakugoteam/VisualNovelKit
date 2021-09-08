@@ -46,7 +46,6 @@ func start(event_name=''):
 	else:
 		push_error("Dialogue '%s' started without given event nor default event." % self.name)
 
-
 ## Dialogue life cycle state
 
 enum State {
@@ -130,7 +129,7 @@ func call_event(event, _target = 0, _condition_stack = []):
 
 func start_event(event_name):
 	if event_stack:
-		event_stack[0][1] += 1# Disalign step counter in case of saving before returning
+		event_stack[0][1] += 1# Disabling step counter in case of saving before returning
 
 	if not is_active():
 		event_stack.push_front([event_name, 0, INF, self.condition_stack])
@@ -143,7 +142,6 @@ func start_event(event_name):
 		Rakugo.History.log_event(self.name ,event_name)
 
 func cond(condition):
-	"""This is obsoleted. Use just `if` instead."""
 	if not is_running():
 		return false
 
@@ -201,12 +199,9 @@ func get_parent_event_name():
 
 	return output
 
-
 ## Version control
-#
-
 func _get_dialogue_script_hash():
-	return Dialogue.new()._get_script_hash()
+	return load("res://res://addons/Rakugo/lib/nodes/dialogue.gd")._get_script_hash()
 
 func _get_script_hash(object=self):
 	return object.get_script().source_code.hash()
@@ -225,9 +220,7 @@ func check_for_version_error(store):
 			push_warning("Dialogue script mismatched, that may corrupt the game state.")
 	return false
 
-
 ## Rakugo statement wrap
-
 func set_var(var_name: String, value):
 	if is_active():
 		return Rakugo.store.call_deferred('set', var_name, value)
@@ -276,7 +269,6 @@ func _menu_yield(returns:Array):
 	if return_lock:
 		return_lock.post()
 
-
 func show(node_id: String, parameters := {}):
 	if is_active():
 		Rakugo.call_deferred('show', node_id, parameters)
@@ -312,7 +304,6 @@ func _call_ext_ret_call(returns:Array, object, func_name:String, args:Array):
 
 	if return_lock:
 		return_lock.post()
-
 
 func jump(scene_id: String, dialogue_name:="", event_name:="") -> void:
 	if is_active():
