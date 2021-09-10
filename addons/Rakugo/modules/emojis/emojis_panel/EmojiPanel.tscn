@@ -29,6 +29,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 grid_path = NodePath("ScrollContainer/GridContainer")
+button_x = 48
 
 [node name="Filter" type="LineEdit" parent="Emoji"]
 margin_right = 432.0

@@ -5,10 +5,6 @@ var grid := GridContainer.new()
 var file := File.new()
 var emojis = preload("../emojis/emojis.gd").new()
 
-var grid_bound := 0.9
-var grid_x := 990 
-var button_x := 36
-
 func _run():
 	var i := 1.0
 	var p: = 0.0
@@ -32,9 +28,6 @@ func _run():
 			print("loaded icons: ", p, "%")
 
 		i += 1
-
-	grid.rect_size.x = grid_x
-	grid.columns = int((grid.rect_size.x / button_x)*grid_bound)
 	
 	var scene = PackedScene.new()
 	var result = scene.pack(grid)
