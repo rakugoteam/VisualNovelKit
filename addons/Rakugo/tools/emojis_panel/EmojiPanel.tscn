@@ -5,6 +5,7 @@
 [ext_resource path="res://addons/Rakugo/tools/emojis_panel/EmojiPanel.gd" type="Script" id=4]
 
 [node name="PopupDialog" type="WindowDialog"]
+visible = true
 margin_right = 280.0
 margin_bottom = 516.0
 window_title = "Emoji"
@@ -17,8 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 8.0
 margin_top = 8.0
-margin_right = -8.0
-margin_bottom = -9.0
+margin_bottom = 12.0
 rect_min_size = Vector2( 100, 100 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -29,17 +29,40 @@ __meta__ = {
 grid_path = NodePath("ScrollContainer/GridContainer")
 
 [node name="Filter" type="LineEdit" parent="Emoji"]
-margin_right = 264.0
+margin_right = 272.0
 margin_bottom = 24.0
 placeholder_text = "Filter"
 placeholder_alpha = 0.3
 caret_blink = true
 caret_blink_speed = 0.5
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Emoji"]
+[node name="HSeparator2" type="HSeparator" parent="Emoji"]
 margin_top = 28.0
-margin_right = 264.0
-margin_bottom = 473.0
+margin_right = 272.0
+margin_bottom = 32.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NotificationLabel" type="Label" parent="Emoji"]
+margin_top = 36.0
+margin_right = 272.0
+margin_bottom = 50.0
+custom_colors/font_color = Color( 0.231373, 0.952941, 0.227451, 1 )
+text = "Copied Emoji message here"
+align = 1
+valign = 1
+clip_text = true
+max_lines_visible = 2
+script = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="Emoji/NotificationLabel"]
+one_shot = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Emoji"]
+margin_top = 54.0
+margin_right = 272.0
+margin_bottom = 520.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
@@ -49,23 +72,6 @@ __meta__ = {
 [node name="GridContainer" parent="Emoji/ScrollContainer" instance=ExtResource( 1 )]
 margin_right = 1244.0
 margin_bottom = 1652.0
-
-[node name="HSeparator2" type="HSeparator" parent="Emoji"]
-margin_top = 477.0
-margin_right = 264.0
-margin_bottom = 481.0
-
-[node name="NotificationLabel" type="Label" parent="Emoji"]
-margin_top = 485.0
-margin_right = 264.0
-margin_bottom = 499.0
-valign = 1
-clip_text = true
-max_lines_visible = 2
-script = ExtResource( 2 )
-
-[node name="Timer" type="Timer" parent="Emoji/NotificationLabel"]
-one_shot = true
 
 [connection signal="emoji_selected" from="Emoji" to="Emoji/NotificationLabel" method="_on_emoji_selected"]
 [connection signal="timeout" from="Emoji/NotificationLabel/Timer" to="Emoji/NotificationLabel" method="_on_timeout"]

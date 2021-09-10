@@ -94,7 +94,7 @@ _global_script_class_icons={
 "Character": "",
 "CodeEdit": "res://addons/Rakugo/icons/code_edit.svg",
 "Dialogue": "res://addons/Rakugo/icons/dialogue.svg",
-"Emojis": "",
+"Emojis": "res://addons/Rakugo/tools/emojis_panel/icon.png",
 "HistoryEntry": "",
 "MouseBody2D": "res://addons/Rakugo/icons/mouse_button_2d.svg",
 "ProjectTools": "",
