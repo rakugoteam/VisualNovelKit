@@ -12,10 +12,10 @@ var button_x := 36
 func _run():
 	var i := 1.0
 	var p: = 0.0
-	var size := float(emojis.name_to_code_emojis.size())
+	var size := float(emojis.emojis.size())
 
-	for e in emojis.name_to_code_emojis.keys():
-		var id = emojis.name_to_code_emojis[e]
+	for e in emojis.emojis.keys():
+		var id = emojis.emojis[e]
 		var png = emojis.get_path_to_emoji(id, 36)
 		if not file.file_exists(png):
 			continue
