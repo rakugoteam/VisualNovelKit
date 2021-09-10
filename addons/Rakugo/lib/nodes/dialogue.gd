@@ -175,13 +175,14 @@ func end_event():
 func is_active(_strict=false):
 	var output:bool = self.state == State.RUNNING
 	if output and event_stack:
-
+		
+		var e = event_stack[0]
 		# Allow to check if it's the last step until waiting for semaphore
 		if _strict:
-			output = output and event_stack[0][1] > event_stack[0][2]
+			output = output and e[1] > e[2]
 
 		else:
-			output = output and event_stack[0][1] >= event_stack[0][2]
+			output = output and e[1] >= e[2]
 
 	return output
 
@@ -227,11 +228,9 @@ func set_var(var_name: String, value):
 
 	return null
 
-
 func say(character, text:String, parameters: Dictionary = {}) -> void:
 	if is_active():
 		Rakugo.call_deferred('say', character, text, parameters)
-
 
 func ask(default_answer:String, parameters: Dictionary = {}):
 	if is_active():
@@ -250,7 +249,6 @@ func _ask_yield(returns:Array):
 
 	if return_lock:
 		return_lock.post()
-
 
 func menu(choices:Array, parameters: Dictionary = {}):
 	if is_active():
@@ -288,7 +286,6 @@ func call_ext(object, func_name:String, args := []) -> void:
 
 func call_ext_ret(object, func_name:String, args := []):
 	if is_active():
-
 		if object:
 			return_lock = Semaphore.new()
 			var returns = [null]

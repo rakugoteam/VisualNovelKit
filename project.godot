@@ -32,7 +32,7 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "Emojis",
 "language": "GDScript",
-"path": "res://addons/Rakugo/tools/emojis_panel/emojis/emojis.gd"
+"path": "res://addons/Rakugo/modules/emojis/emojis/emojis.gd"
 }, {
 "base": "Resource",
 "class": "HistoryEntry",
@@ -94,7 +94,7 @@ _global_script_class_icons={
 "Character": "",
 "CodeEdit": "res://addons/Rakugo/icons/code_edit.svg",
 "Dialogue": "res://addons/Rakugo/icons/dialogue.svg",
-"Emojis": "",
+"Emojis": "res://addons/Rakugo/modules/emojis/icon.png",
 "HistoryEntry": "",
 "MouseBody2D": "res://addons/Rakugo/icons/mouse_button_2d.svg",
 "ProjectTools": "",
