@@ -1,7 +1,7 @@
 tool
-class_name Emojis, "res://addons/Rakugo/tools/emojis_panel/icon.png"
+class_name Emojis, "res://addons/Rakugo/modules/emojis/icon.png"
 
-var path_here = "res://addons/Rakugo/tools/emojis_panel/emojis/"
+var path_here = "res://addons/Rakugo/modules/emojis/emojis"
 var json_path = path_here + "emojis.json"
 var emojis_path = path_here + "%dx%d/%s.tres"
 var emojis:Dictionary = {} setget dummy_set
