@@ -23,6 +23,8 @@ func on_emoji_clicked(button: Button):
 
 func add_markup(text:String):
 	match ProjectSettings.get(SettingsList.markup):
+		"none":
+			return text
 		"bbcode":
 			text = "[:%s:]" % text
 		"renpy":
