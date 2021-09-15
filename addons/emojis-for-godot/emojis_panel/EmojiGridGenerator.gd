@@ -9,7 +9,6 @@ func _run():
 	var i := 1.0
 	var p: = 0.0
 	var size := float(emojis.emojis.size())
-	print(size)
 
 	for id in emojis.emojis.keys():
 		var png = emojis.get_path_to_emoji(id, 36)
