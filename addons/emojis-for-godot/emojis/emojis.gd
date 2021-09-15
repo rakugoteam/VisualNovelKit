@@ -1,7 +1,7 @@
 tool
-class_name Emojis, "res://addons/Rakugo/modules/emojis/icon.png"
+class_name Emojis, "../icon.png"
 
-var path_here = "res://addons/Rakugo/modules/emojis/emojis/"
+var path_here = "res://addons/emojis-for-godot/emojis/"
 var json_path = path_here + "emojis.json"
 var emojis_path = path_here + "%dx%d/%s.tres"
 var emojis:Dictionary = {} setget dummy_set
@@ -36,7 +36,7 @@ func get_path_to_emoji(id:String, size:int = 16) -> String:
 	if id in emojis:
 		return emojis_path % [size, size, emojis[id]]
 
-	push_warning("Emoji '%s' not found." % [id, size])
+	push_warning("Emoji %dx%d/%s not found." % [size, size, id])
 	return ""
 
 func get_emoji_bbcode(id:String, size:int = 16) -> String:
@@ -45,7 +45,6 @@ func get_emoji_bbcode(id:String, size:int = 16) -> String:
 	if path:
 		return "[img]%s[/img]" % path
 
-	push_warning("Emoji '%s' not found." % [id, size])
 	return ""
 
 func dummy_set(_value):

@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://addons/Rakugo/modules/emojis/emojis_panel/NotificationLabel.gd" type="Script" id=1]
-[ext_resource path="res://addons/Rakugo/modules/emojis/emojis_panel/EmojiPanel.gd" type="Script" id=2]
-[ext_resource path="res://addons/Rakugo/modules/emojis/emojis_panel/EmojiGrid.tscn" type="PackedScene" id=3]
-[ext_resource path="res://addons/Rakugo/modules/emojis/emojis_panel/Filter.gd" type="Script" id=4]
+[ext_resource path="res://addons/emojis-for-godot/emojis_panel/NotificationLabel.gd" type="Script" id=1]
+[ext_resource path="res://addons/emojis-for-godot/emojis_panel/EmojiPanel.gd" type="Script" id=2]
+[ext_resource path="res://addons/emojis-for-godot/emojis_panel/EmojiGrid.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/emojis-for-godot/emojis_panel/Filter.gd" type="Script" id=4]
 
 [node name="PopupDialog" type="WindowDialog"]
 margin_right = 448.0
@@ -76,12 +76,11 @@ __meta__ = {
 }
 
 [node name="GridContainer" parent="Emoji/ScrollContainer" instance=ExtResource( 3 )]
-margin_right = 412.0
-margin_bottom = 4918.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 columns = 8
 
 [connection signal="about_to_show" from="." to="Emoji" method="_on_about_to_show"]
 [connection signal="resized" from="." to="Emoji" method="_on_resized"]
-[connection signal="emoji_selected" from="Emoji" to="Emoji/NotificationLabel" method="_on_emoji_selected"]
 [connection signal="text_changed" from="Emoji/Filter" to="Emoji/Filter" method="_on_text_changed"]
 [connection signal="timeout" from="Emoji/NotificationLabel/Timer" to="Emoji/NotificationLabel" method="_on_timeout"]

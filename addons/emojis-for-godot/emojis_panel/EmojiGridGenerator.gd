@@ -9,15 +9,15 @@ func _run():
 	var i := 1.0
 	var p: = 0.0
 	var size := float(emojis.emojis.size())
+	print(size)
 
-	for e in emojis.emojis.keys():
-		var id = emojis.emojis[e]
+	for id in emojis.emojis.keys():
 		var png = emojis.get_path_to_emoji(id, 36)
 		if not file.file_exists(png):
 			continue
 			
 		var b := Button.new()
-		b.name = e
+		b.name = id
 		b.icon = load(png)
 		b.connect("pressed", self, "on_emoji_clicked", [b])
 		grid.add_child(b)
@@ -33,7 +33,7 @@ func _run():
 	var result = scene.pack(grid)
 
 	if result == OK:
-		var path := "res://addons/Rakugo/tools/emojis_panel/EmojiGrid.tscn"
+		var path := "res://addons/emojis-for-godot/emojis_panel/EmojiGrid.tscn"
 		var error = ResourceSaver.save(path, scene)
 		
 		if error != OK:
