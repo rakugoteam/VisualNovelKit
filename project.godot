@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Area2D",
 "class": "AreaButton2D",
 "language": "GDScript",
-"path": "res://addons/Rakugo/lib/nodes/AreaButton2D.gd"
+"path": "res://addons/Rakugo/lib/nodes/area_button_2d.gd"
 }, {
 "base": "Resource",
 "class": "Character",
@@ -32,7 +32,7 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "Emojis",
 "language": "GDScript",
-"path": "res://addons/Rakugo/modules/emojis/emojis/emojis.gd"
+"path": "res://addons/emojis-for-godot/emojis/emojis.gd"
 }, {
 "base": "Resource",
 "class": "HistoryEntry",
@@ -42,7 +42,7 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "MouseBody2D",
 "language": "GDScript",
-"path": "res://addons/Rakugo/lib/nodes/MouseBody2D.gd"
+"path": "res://addons/Rakugo/lib/nodes/mouse_body_2d.gd"
 }, {
 "base": "Reference",
 "class": "ProjectTools",
@@ -53,6 +53,11 @@ _global_script_classes=[ {
 "class": "PropertyInfo",
 "language": "GDScript",
 "path": "res://addons/Rakugo/tools/project_settings/property_info.gd"
+}, {
+"base": "EditorPlugin",
+"class": "RakugoPlugin",
+"language": "GDScript",
+"path": "res://addons/Rakugo/lib/nodes/rakugo_plugin.gd"
 }, {
 "base": "RichTextLabel",
 "class": "RakugoTextLabel",
@@ -94,11 +99,12 @@ _global_script_class_icons={
 "Character": "",
 "CodeEdit": "res://addons/Rakugo/icons/code_edit.svg",
 "Dialogue": "res://addons/Rakugo/icons/dialogue.svg",
-"Emojis": "res://addons/Rakugo/modules/emojis/icon.png",
+"Emojis": "res://addons/emojis-for-godot/icon.png",
 "HistoryEntry": "",
 "MouseBody2D": "res://addons/Rakugo/icons/mouse_button_2d.svg",
 "ProjectTools": "",
 "PropertyInfo": "",
+"RakugoPlugin": "",
 "RakugoTextLabel": "res://addons/Rakugo/icons/rakugo_text_label.svg",
 "RakugoTextParser": "res://addons/Rakugo/icons/rakugo_text_parser.svg",
 "RakugoTheme": "",
@@ -144,7 +150,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/Rakugo/plugin.cfg", "res://addons/explore-editor-theme/plugin.cfg", "res://addons/godot-plugin-refresher/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/Rakugo/plugin.cfg", "res://addons/emojis-for-godot/plugin.cfg", "res://addons/explore-editor-theme/plugin.cfg", "res://addons/godot-plugin-refresher/plugin.cfg", "res://addons/rakugo-template-plugin/plugin.cfg" )
 
 [importer_defaults]
 

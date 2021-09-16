@@ -1,7 +1,7 @@
 tool
 extends Control
 
-func _on_menu(id:int) -> void:
+func _on_menu(id:int, method:="", arg:=null) -> void:
 	match id:
 		# Emoji Panel
 		0:
@@ -18,3 +18,6 @@ func _on_menu(id:int) -> void:
 		# About Rakugo
 		3:
 			$AboutDialog.popup_centered()
+		
+
+
