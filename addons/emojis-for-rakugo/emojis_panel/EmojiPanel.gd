@@ -34,8 +34,9 @@ func add_markup(text:String):
 	return text
 
 func _on_resized():
-	if button_x > 0:
-		grid.columns = int((rect_size.x / button_x)*grid_bound)
+	if grid == null:
+		grid = get_node(grid_path)
+	grid.columns = int((rect_size.x / button_x)*grid_bound)
 
 func _on_about_to_show():
 	_on_resized()

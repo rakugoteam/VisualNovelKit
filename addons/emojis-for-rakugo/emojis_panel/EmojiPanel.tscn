@@ -6,6 +6,7 @@
 [ext_resource path="res://addons/emojis-for-godot/emojis_panel/Filter.gd" type="Script" id=4]
 
 [node name="PopupDialog" type="WindowDialog"]
+visible = true
 margin_right = 448.0
 margin_bottom = 504.0
 window_title = "Emoji"
