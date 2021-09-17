@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://addons/Rakugo/tools/scene_links/SceneLinkEdit.gd" type="Script" id=1]
+[ext_resource path="res://addons/material-design-icons/fonts/material_design_icons.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://addons/material-design-icons/nodes/MaterialButton.gd" type="Script" id=3]
 
-[sub_resource type="Image" id=3]
+[sub_resource type="Image" id=8]
 data = {
 "data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
 "format": "LumAlpha8",
@@ -14,8 +16,23 @@ data = {
 [sub_resource type="ImageTexture" id=2]
 flags = 4
 flags = 4
-image = SubResource( 3 )
+image = SubResource( 8 )
 size = Vector2( 16, 16 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 24
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 24
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 24
+use_filter = true
+font_data = ExtResource( 2 )
 
 [node name="SceneLinkEdit" type="HBoxContainer"]
 margin_right = 501.0
@@ -29,7 +46,7 @@ menu_rect = Rect2( 0, 3, 200, 100 )
 
 [node name="Icon" type="TextureRect" parent="."]
 margin_right = 24.0
-margin_bottom = 24.0
+margin_bottom = 30.0
 rect_min_size = Vector2( 24, 24 )
 texture = SubResource( 2 )
 expand = true
@@ -37,18 +54,21 @@ stretch_mode = 4
 
 [node name="SceneEdit" type="LineEdit" parent="."]
 margin_left = 28.0
-margin_right = 204.0
-margin_bottom = 24.0
+margin_right = 210.0
+margin_bottom = 30.0
 size_flags_horizontal = 3
 
 [node name="Choose" type="Button" parent="."]
-margin_left = 208.0
-margin_right = 236.0
-margin_bottom = 24.0
+margin_left = 214.0
+margin_right = 238.0
+margin_bottom = 30.0
 rect_min_size = Vector2( 24, 24 )
 hint_tooltip = "Choose from open scenes"
-icon = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
+text = "󱜋"
 clip_text = true
+script = ExtResource( 3 )
+icon_name = "movie-open-settings"
 
 [node name="Menu" type="PopupMenu" parent="Choose"]
 margin_left = -5.0
@@ -57,40 +77,46 @@ margin_right = 187.0
 margin_bottom = 178.0
 
 [node name="Browse" type="Button" parent="."]
-margin_left = 240.0
-margin_right = 268.0
-margin_bottom = 24.0
+margin_left = 242.0
+margin_right = 266.0
+margin_bottom = 30.0
 rect_min_size = Vector2( 24, 24 )
 hint_tooltip = "Browse Scene"
-icon = SubResource( 2 )
+custom_fonts/font = SubResource( 6 )
+text = "󰿎"
 clip_text = true
+script = ExtResource( 3 )
+icon_name = "movie-open"
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 272.0
-margin_top = 5.0
-margin_right = 285.0
-margin_bottom = 19.0
+margin_left = 270.0
+margin_top = 8.0
+margin_right = 283.0
+margin_bottom = 22.0
 text = "Id"
 
 [node name="IdEdit" type="LineEdit" parent="."]
-margin_left = 289.0
-margin_right = 465.0
-margin_bottom = 24.0
+margin_left = 287.0
+margin_right = 469.0
+margin_bottom = 30.0
 size_flags_horizontal = 3
 
 [node name="Remove" type="Button" parent="."]
-margin_left = 469.0
+margin_left = 473.0
 margin_right = 497.0
-margin_bottom = 24.0
+margin_bottom = 30.0
 rect_min_size = Vector2( 24, 24 )
 hint_tooltip = "Remove this scene link"
-icon = SubResource( 2 )
+custom_fonts/font = SubResource( 7 )
+text = "󱜉"
 clip_text = true
+script = ExtResource( 3 )
+icon_name = "movie-open-remove"
 
 [node name="FreePos" type="Control" parent="."]
 margin_left = 501.0
 margin_right = 501.0
-margin_bottom = 24.0
+margin_bottom = 30.0
 
 [node name="TscnDialog" type="FileDialog" parent="FreePos"]
 margin_left = -881.481
@@ -105,6 +131,7 @@ filters = PoolStringArray( "*.tscn" )
 current_dir = "res://game"
 current_file = "scene_links.tres"
 current_path = "res://game/scene_links.tres"
+
 [connection signal="text_changed" from="SceneEdit" to="." method="_on_changed"]
 [connection signal="pressed" from="Choose" to="." method="_on_choose"]
 [connection signal="id_pressed" from="Choose/Menu" to="." method="_on_item"]
