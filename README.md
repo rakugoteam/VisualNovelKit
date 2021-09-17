@@ -81,7 +81,6 @@ This project's dialog functions can do more than Ren'Py equivalents.
 They are only used for development, not needed for Rakugo to work.
 So they are not included in the template release.
 
-- explore-editor-theme
 - godot-plugin-refresher
 
 ## Other Info
