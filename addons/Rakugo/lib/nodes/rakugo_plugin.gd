@@ -9,14 +9,17 @@ func local(path:String):
 	if path.begins_with("res://"):
 		return load(path)
 		
-	return load(get_path_here() + path)
+	return load(get_path_here(path))
 	
-func get_path_here() -> String:
+func get_path_here(path : = "") -> String:
 	var path_here : String = get_script().resource_path
-	return path_here.replace("plugin.gd", "")
+	path_here = path_here.replace("plugin.gd", "")
+	if path != "":
+		path_here += "/" + path
+	return path_here
 	
 func load_cfg():
-	var cfg_path := "res://rakugo.cfg"
+	var cfg_path := get_path_here("rakugo.cfg")
 	if _cfg == null:
 		_cfg.new()
 		if _file.file_exists(cfg_path):
@@ -24,22 +27,16 @@ func load_cfg():
 	return _cfg
 
 func _get_section() -> String:
-	return "plugins/" + _get_plugin_name()
+	return "rakugo-plugin"
 
 func _get_plugin_data(key:String, def_value = null):
 	_cfg = load_cfg() 
 	return _cfg.get_value(_get_section(), key, def_value)
 
 func _save_plugin_data(key:String, new_value):
-	_cfg = load_cfg() 
-	
-	var plugins : Array = _cfg.get_value("project", "plugins", [])
-	if ! (_get_plugin_name() in plugins):
-		plugins.append(_get_plugin_name())
-		_cfg.set_value("project", "plugins", plugins)
-		
+	_cfg = load_cfg() 		
 	_cfg.set_value(_get_section(), key, new_value)
-	_cfg.save("res://rakugo.cfg")
+	_cfg.save(get_path_here("rakugo.cfg"))
 
 func add_type(type_name:String, base_class:String, script_path:String, icon_path:String):
 	add_custom_type(type_name, base_class, local(script_path), local(icon_path))
@@ -49,7 +46,7 @@ func add_type(type_name:String, base_class:String, script_path:String, icon_path
 
 func _get_plugin_name() -> String:
 	var pcfg := ConfigFile.new()
-	var cfg_path := get_path_here() + "/plugin.cfg"
+	var cfg_path := get_path_here("plugin.cfg")
 	if _file.file_exists(cfg_path):
 		pcfg.load(cfg_path)
 		return pcfg.get_value("plugin", "name")
@@ -72,10 +69,6 @@ func _exit_tree():
 		for t in types:
 			remove_custom_type(t)
 	
-	var plugins : Array = _cfg.get_value("project", "plugins", [])
-	if _get_plugin_name() in plugins:
-		plugins.erase(_get_plugin_name())
-		_cfg.set_value("project", "plugins", plugins)
-	
-	_cfg.erase_section(_get_section())
+	if _cfg.has_section(_get_plugin_name()):
+		_cfg.erase_section(_get_section())
 	
