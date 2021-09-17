@@ -60,8 +60,8 @@ func _enter_tree():
 					var method = menu[m].method
 					var arg = menu[m].arg
 					menu_methods.append([control, method, arg])
-					popup.connect("id_pressed", self, "_on_menu_item_pressed")
-	
+					
+	popup.connect("id_pressed", self, "_on_menu_item_pressed")
 	add_control_to_container(CONTAINER_TOOLBAR, tools_menu)
 	var p = tools_menu.get_parent()
 	p.move_child(tools_menu, 0)

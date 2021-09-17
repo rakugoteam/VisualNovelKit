@@ -23,9 +23,10 @@ Soon will be moved to this repository.
 
 <!-- You can download 2.0 for Godot 3.1 [here](https://github.com/rakugoteam/Rakugo/releases). -->
 
-## Included RakugoPlugins (Addons) in this template
+## Included Rakugo/Godot Addons in this template
 
 - Emojis For Rakugo 1.0 
+- Material Icons For Godot 1.3
 
 ## Showcase
 
