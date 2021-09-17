@@ -32,7 +32,7 @@ func _run():
 	var result = scene.pack(grid)
 
 	if result == OK:
-		var path := "res://addons/emojis-for-godot/emojis_panel/EmojiGrid.tscn"
+		var path := "res://addons/emojis-for-rakugo/emojis_panel/EmojiGrid.tscn"
 		var error = ResourceSaver.save(path, scene)
 		
 		if error != OK:

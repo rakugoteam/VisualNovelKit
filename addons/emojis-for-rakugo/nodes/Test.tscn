@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://addons/emojis-for-godot/nodes/EmojiButton.gd" type="Script" id=1]
-[ext_resource path="res://addons/emojis-for-godot/nodes/EmojiIcon.gd" type="Script" id=2]
-[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f60e.tres" type="Texture" id=3]
+[ext_resource path="res://addons/emojis-for-rakugo/nodes/EmojiButton.gd" type="Script" id=1]
+[ext_resource path="res://addons/emojis-for-rakugo/nodes/EmojiIcon.gd" type="Script" id=2]
+[ext_resource path="res://addons/emojis-for-rakugo/emojis/36x36/1f60e.tres" type="Texture" id=3]
 
 [node name="Test" type="HBoxContainer"]
 anchor_right = 0.275
