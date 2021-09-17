@@ -1,6 +1,6 @@
 [gd_resource type="AtlasTexture" load_steps=2 format=2]
 
-[ext_resource path="res://addons/emojis-for-godot/emojis/atlas/36x36.png" type="Texture" id=1]
+[ext_resource path="res://addons/emojis-for-rakugo/emojis/atlas/36x36.png" type="Texture" id=1]
 
 
 

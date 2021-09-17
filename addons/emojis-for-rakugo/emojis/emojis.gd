@@ -1,7 +1,7 @@
 tool
 class_name Emojis, "../icon.png"
 
-var path_here = "res://addons/emojis-for-godot/emojis/"
+var path_here = "res://addons/emojis-for-rakugo/emojis/"
 var json_path = path_here + "emojis.json"
 var emojis_path = path_here + "%dx%d/%s.tres"
 var emojis:Dictionary = {} setget dummy_set
