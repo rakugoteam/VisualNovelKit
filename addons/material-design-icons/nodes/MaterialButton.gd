@@ -9,6 +9,7 @@ var MaterialIcons = preload("../icons/icons.gd").new()
 const font_file := preload("../fonts/material_design_icons.ttf")
 
 func _init():
+	clip_text = false
 	font.font_data = font_file
 	font.size = icon_size
 	font.use_filter = true

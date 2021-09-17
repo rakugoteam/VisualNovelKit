@@ -17,6 +17,19 @@ func _init():
 	set("custom_fonts/font", font)
 	text = MaterialIcons.get_icon_char(icon_name)
 
+func _ready():
+	if Engine.editor_hint:
+		return
+
+	if is_button():
+		var button = get_parent()
+		button.connect("toggled", self, "_on_toggled")
+		button.connect("pressed", self, "_on_button_down")
+		button.connect("button_down", self, "_on_button_down")
+		button.connect("button_up", self, "_on_button_up")
+		button.connect("mouse_entered", self, "_on_hover", [true])
+		button.connect("mouse_exited", self, "_on_hover", [false])
+
 func is_button() -> bool:
 	# using this because: 
 	# 'get_parent() is BaseButton' doesn't work 
@@ -30,19 +43,6 @@ func _get_toggle_mode() -> bool:
 		return get_parent().toggle_mode
 
 	return false
-
-func _ready():
-	if Engine.editor_hint:
-		return
-
-	if is_button():
-		var button = get_parent()
-		button.connect("toggled", self, "_on_toggled")
-		button.connect("pressed", self, "_on_button_down")
-		button.connect("button_down", self, "_on_button_down")
-		button.connect("button_up", self, "_on_button_up")
-		button.connect("mouse_entered", self, "_on_hover", [true])
-		button.connect("mouse_exited", self, "_on_hover", [false])
 
 func _set_icon_name(value: String):
 	icon_name = value
@@ -78,7 +78,6 @@ func _on_button_down():
 func _on_button_up():
 	if !_get_toggle_mode():
 		_on_toggled(false)
-
 
 func _set_button(pressed: bool, color_property: String):
 	var color := _get_idle_color() 
