@@ -90,7 +90,7 @@ func start_thread(_event_stack):
 	thread.start(self, "dialogue_loop")
 
 
-func dialogue_loop(_a):
+func dialogue_loop():
 	self.state = State.RUNNING
 	while is_running() and event_stack:
 		var e = event_stack.pop_front()
@@ -202,7 +202,9 @@ func get_parent_event_name():
 
 ## Version control
 func _get_dialogue_script_hash():
-	return load("res://res://addons/Rakugo/lib/nodes/dialogue.gd")._get_script_hash()
+	var f := File.new()
+	f.open("res://addons/Rakugo/lib/nodes/dialogue.gd", File.READ)
+	return hash(f.get_as_text())
 
 func _get_script_hash(object=self):
 	return object.get_script().source_code.hash()
