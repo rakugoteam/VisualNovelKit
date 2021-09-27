@@ -57,14 +57,15 @@ func replace_connections(new_store):
 	pass
 
 
-func duplicate(_deep:bool=true) -> Resource:##Store duplication should always be deep
-	var output = .duplicate(true)
+func duplicate(_deep:bool=true) -> Resource:
+	## Store duplication should always be deep
+	var output = .duplicate(_deep)
 	output.script = self.script
 	for k in self.properties.keys():
-		if k != "script" and _to_duplicate(self.properties[k]):
-			output.properties[k] = self.properties[k].duplicate(true)
+		if k != "script" and _can_duplicate(self.properties[k]):
+			output.properties[k] = self.properties[k].duplicate(_deep)
 	return output
 
 
-func _to_duplicate(v):
+func _can_duplicate(v):
 	return v is Object and v.has_method('duplicate')

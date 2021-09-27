@@ -49,10 +49,12 @@ func get_save_name(save_name):
 ### Store lifecycle
 
 func call_for_restoring():
-	get_tree().get_root().propagate_call('_restore', [get_current_store()])
+	# this try call is for _restore() on all nodes in scene
+	get_tree().root.propagate_call('_restore', [get_current_store()])
 
 func call_for_storing():
-	get_tree().get_root().propagate_call('_store', [get_current_store()])
+	# this try call is for _store() on all nodes in scene
+	get_tree().root.propagate_call('_store', [get_current_store()])
 
 func get_current_store():
 	return store_stack[current_store_id]
@@ -71,7 +73,11 @@ func change_current_stack_index(index):
 	if current_store_id == 0:
 		self.call_for_storing()
 
+	prints("store stack", store_stack)
+	prints("current store id", current_store_id)
+	prints("index", index)
 	index = clamp(index, 0, store_stack.size()-1)
+	prints("clamped index", index)
 	if index == current_store_id:
 		return
 
@@ -91,21 +97,17 @@ func init_store_stack():
 	new_save.history = []
 	store_stack = [new_save]
 
-
 func next_store_id():
-	var x = current_store_id
-	current_store_id = clamp(x+1, 0, store_stack.size()-1) 
-
+	# this way fixed bug that store stack could't rollforward
+	current_store_id = store_stack.size()-1
 
 func prune_front_stack():
 	if current_store_id > 0:
 		store_stack = store_stack.slice(current_store_id, store_stack.size() - 1)
-		# current_store_id = 0
-
+		current_store_id = 0
 
 func prune_back_stack():
 	store_stack = store_stack.slice(0, store_stack_max_length - 1)
-
 
 func save_store_stack(save_name: String) -> bool:
 	call_for_storing()
@@ -123,7 +125,6 @@ func save_store_stack(save_name: String) -> bool:
 		return false
 
 	return  true
-
 
 func load_store_stack(save_name: String):
 	Rakugo.loading_in_progress = true

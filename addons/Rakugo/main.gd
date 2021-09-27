@@ -53,7 +53,6 @@ func _ready():
 	var title = Settings.get(SettingsList.game_title)
 	OS.set_window_title(title + " " + version)
 
-
 ## Rakugo flow control
 
 # it starts Rakugo
@@ -63,7 +62,6 @@ func start(after_load:bool = false):
 		emit_signal("started")
 	jump("", "", "")# Engage the auto-start
 
-
 func save_game(save_name:String = "quick"):
 	StoreManager.save_persistent_store()
 	debug(["save data to :", save_name])
@@ -72,12 +70,10 @@ func save_game(save_name:String = "quick"):
 func load_game(save_name := "quick"):
 	return StoreManager.load_store_stack(save_name)
 
-
 func rollback(amount:int = 1):
 	var next = self.StoreManager.current_store_id + amount
-	prints("roll to: ", next)
+	# prints("roll to: ", next)
 	self.StoreManager.change_current_stack_index(next)
-
 
 func prepare_quitting():
 	if self.started:
@@ -103,12 +99,12 @@ func story_step(_unblock=false):
 	if _unblock or not StepBlocker.is_blocking():
 		StoreManager.stack_next_store()
 		# print("Emitting _step")
-		get_tree().get_root().propagate_call('_step')
+		get_tree().root.propagate_call('_step')
 		StoreManager.next_store_id()
 
 	else:
 		# print("Emitting _blocked_step")
-		get_tree().get_root().propagate_call('_blocked_step')
+		get_tree().root.propagate_call('_blocked_step')
 
 func exit_dialogue():
 	self.set_current_dialogue(null)
@@ -199,7 +195,6 @@ func debug(some_text = []):
 func say(character, text:String, parameters:Dictionary):
 	Say.exec(character, text, parameters)
 
-
 # statement of type ask
 # with keywords: placeholder
 func ask(default_answer:String, parameters:Dictionary):
@@ -207,27 +202,22 @@ func ask(default_answer:String, parameters:Dictionary):
 func ask_return(result:String):
 	Ask.return(result)
 
-
 # statement of type menu
 func menu(choices:Array, parameters:Dictionary):
 	Menu.exec(choices, parameters)
 func menu_return(result):
 	Menu.return(result)
 
-
 # it show nodes tagged with "showable <space separated tag>" depending of the tagging rules
 func show(showable_tag:String, parameters := {}):
 	ShowableManager.show(showable_tag, parameters)
-
 
 # statement of type hide
 func hide(showable_tag:String):
 	ShowableManager.hide(showable_tag)
 
-
 func notify(text:String, parameters:Dictionary):
 	emit_signal('notify', text, parameters)
-
 
 # use this to change/assign current scene and dialogue
 # id_of_current_scene is id to scene defined in scene_links or full path to scene
@@ -241,8 +231,6 @@ func jump(scene_id:String, dialogue_name:String, event_name:="", force_reload = 
 
 	else:
 		$Statements/Jump.invoke(scene_id, dialogue_name, event_name)
-
-
 
 ## Wrapper getters setters
 

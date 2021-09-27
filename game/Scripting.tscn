@@ -24,10 +24,7 @@ script = ExtResource( 4 )
 default_starting_event = "script_tut"
 auto_start = true
 
-[node name="dialogue" type="TextEdit" parent="." groups=[
-"$ code #",
-"showable",
-]]
+[node name="dialogue" type="TextEdit" parent="." groups=["$ code #", "showable"]]
 visible = false
 anchor_left = 0.5
 anchor_top = 0.5
@@ -57,10 +54,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="say" type="TextEdit" parent="." groups=[
-"$ code #",
-"showable",
-]]
+[node name="say" type="TextEdit" parent="." groups=["$ code #", "showable"]]
 visible = false
 anchor_left = 0.5
 anchor_top = 0.5
@@ -95,19 +89,13 @@ show_line_numbers = true
 draw_tabs = true
 script = ExtResource( 3 )
 
-[node name="screenshots" type="Control" parent="." groups=[
-"$ screenshot *",
-"showable",
-]]
+[node name="screenshots" type="Control" parent="." groups=["$ screenshot *", "showable"]]
 margin_left = 368.0
 margin_top = 128.0
 margin_right = 408.0
 margin_bottom = 168.0
 
-[node name="create_dialogue" type="TextureRect" parent="screenshots" groups=[
-"$ screenshot #",
-"showable",
-]]
+[node name="create_dialogue" type="TextureRect" parent="screenshots" groups=["$ screenshot #", "showable"]]
 visible = false
 anchor_left = 0.5
 anchor_right = 0.5

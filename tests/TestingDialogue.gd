@@ -15,7 +15,7 @@ func tests():
 
 	say(null, "testing [color=red]say()[/color] try go back")
 	step()
-
+	
 	say(null, "testing [color=red]if cond()[/color] 0")
 	step()
 
