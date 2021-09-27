@@ -62,9 +62,12 @@ func get_current_store():
 func stack_next_store():
 	self.call_for_storing()
 	
+	prints("store_stack", store_stack)
 	var previous_store = store_stack[0].duplicate()
 	previous_store.replace_connections(store_stack[0])
-	store_stack.insert(1, previous_store)
+	store_stack.append(previous_store)
+	store_stack.invert()
+	prints("store_stack after changes", store_stack)
 	
 	self.prune_back_stack()
 
@@ -72,10 +75,7 @@ func change_current_stack_index(index):
 	if current_store_id == 0:
 		self.call_for_storing()
 
-	prints("current store id", current_store_id,"index", index)
 	index = clamp(index, 0, store_stack.size()-1)
-	prints("clamped index", index)
-	
 	if index == current_store_id:
 		return
 

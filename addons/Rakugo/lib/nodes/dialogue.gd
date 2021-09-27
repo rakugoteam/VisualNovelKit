@@ -39,7 +39,6 @@ func _restore(save):
 		if _event_stack[0][1] == 0:
 			_event_stack[0][1] = Rakugo.StoreManager.current_store_id
 		start_thread(_event_stack)
-		prints("events_stack:", save.event_stack)
 
 func _step():
 	if Rakugo.current_dialogue == self and is_running():
