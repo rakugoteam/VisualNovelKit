@@ -33,7 +33,11 @@ func _restore(save):
 		if check_for_version_error(save):
 			return
 		var _event_stack = save.event_stack.duplicate(true)
-		_event_stack[0][1] = Rakugo.StoreManager.current_store_id
+		# fix rolling back/forward
+		# this is a bit of a hack, but it works
+		# this if statement is to prevent errors when the game save is loaded
+		if _event_stack[0][1] == 0:
+			_event_stack[0][1] = Rakugo.StoreManager.current_store_id
 		start_thread(_event_stack)
 		prints("events_stack:", save.event_stack)
 
