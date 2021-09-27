@@ -72,7 +72,6 @@ func load_game(save_name := "quick"):
 
 func rollback(amount:int = 1):
 	var next = self.StoreManager.current_store_id + amount
-	# prints("roll to: ", next)
 	self.StoreManager.change_current_stack_index(next)
 
 func prepare_quitting():

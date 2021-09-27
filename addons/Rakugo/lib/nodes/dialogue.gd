@@ -32,7 +32,10 @@ func _restore(save):
 	if save.dialogue == self.name:
 		if check_for_version_error(save):
 			return
-		start_thread(save.event_stack.duplicate(true))
+		var _event_stack = save.event_stack.duplicate(true)
+		_event_stack[0][1] = Rakugo.StoreManager.current_store_id
+		start_thread(_event_stack)
+		prints("events_stack:", save.event_stack)
 
 func _step():
 	if Rakugo.current_dialogue == self and is_running():
