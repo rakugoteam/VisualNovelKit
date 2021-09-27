@@ -61,7 +61,6 @@ func get_current_store():
 
 func stack_next_store():
 	self.call_for_storing()
-	self.prune_front_stack()
 	
 	var previous_store = store_stack[0].duplicate()
 	previous_store.replace_connections(store_stack[0])
@@ -78,6 +77,7 @@ func change_current_stack_index(index):
 	prints("index", index)
 	index = clamp(index, 0, store_stack.size()-1)
 	prints("clamped index", index)
+	
 	if index == current_store_id:
 		return
 
@@ -100,12 +100,7 @@ func init_store_stack():
 func next_store_id():
 	# this way fixed bug that store stack could't rollforward
 	current_store_id = store_stack.size()-1
-
-func prune_front_stack():
-	if current_store_id > 0:
-		store_stack = store_stack.slice(current_store_id, store_stack.size() - 1)
-		current_store_id = 0
-
+	
 func prune_back_stack():
 	store_stack = store_stack.slice(0, store_stack_max_length - 1)
 
