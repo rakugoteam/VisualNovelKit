@@ -57,13 +57,14 @@ icon = SubResource( 2 )
 [node name="ScrollContainer" type="ScrollContainer" parent="SceneLinks"]
 margin_top = 26.0
 margin_right = 606.0
-margin_bottom = 366.0
+margin_bottom = 370.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="SceneLinks/ScrollContainer"]
 margin_right = 606.0
-margin_bottom = 340.0
+margin_bottom = 344.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
 [connection signal="pressed" from="SceneLinks/Add" to="SceneLinks" method="on_add"]

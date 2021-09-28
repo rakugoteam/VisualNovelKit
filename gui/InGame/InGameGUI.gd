@@ -1,12 +1,13 @@
 extends Control
 
 var hide_toggle = false
+var roll_amount := 0.0
 
 func _input(event):
 
 	if visible:
 		if event.is_action_pressed("ui_left_click"):
-			print("left click")
+			# print("left click")
 			Rakugo.story_step()
 
 		if event.is_action_pressed("ui_cancel"):
@@ -25,11 +26,9 @@ func _input(event):
 				Rakugo.activate_skipping()
 		
 		if event.is_action_pressed("rakugo_rollback"):
-			print("rollback")
 			Rakugo.rollback(1)
 		
 		if event.is_action_pressed("rakugo_rollforward"):
-			print("rollforward")
 			Rakugo.rollback(-1)
 		
 		if event.is_action_pressed("rakugo_hide_ui"):

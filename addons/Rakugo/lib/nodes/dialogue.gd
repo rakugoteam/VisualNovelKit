@@ -19,17 +19,26 @@ var step_semaphore:Semaphore
 var return_lock:Semaphore
 
 func _store(save):
+	if save == null:
+		print("[Rakugo] Dialogue: Cannot save, no save object provided")
+		return 
 	if Rakugo.current_dialogue == self:
-		save.current_dialogue = self.name
-		save.current_dialogue_event_stack = self.event_stack.duplicate(true)
-		save.current_dialogue_script_version = _script_version
-		save.dialogue_class_script_version = _class_script_version
+		save.dialogue = self.name
+		save.event_stack = self.event_stack.duplicate(true)
+		save.script_version = _script_version
+		save.class_script_version = _class_script_version
 
 func _restore(save):
-	if save.current_dialogue == self.name:
+	if save.dialogue == self.name:
 		if check_for_version_error(save):
 			return
-		start_thread(save.current_dialogue_event_stack.duplicate(true))
+		var _event_stack = save.event_stack.duplicate(true)
+		# fix rolling back/forward
+		# this is a bit of a hack, but it works
+		# this if statement is to prevent errors when the game save is loaded
+		if _event_stack[0][1] == 0:
+			_event_stack[0][1] = Rakugo.StoreManager.current_store_id
+		start_thread(_event_stack)
 
 func _step():
 	if Rakugo.current_dialogue == self and is_running():
@@ -38,6 +47,7 @@ func _step():
 
 func start(event_name=''):
 	if event_name:
+		# [[event_name, current_step, target, condition_stack]]
 		start_thread([[event_name, 0, 0, []]])
 
 	elif self.has_method(default_starting_event):
@@ -55,7 +65,7 @@ enum State {
 	ENDED,
 	RESTARTING
 }
-var state:int = State.READY  setget ,get_state
+var state:int = State.READY setget ,get_state
 
 func get_state():
 	return state
@@ -75,7 +85,6 @@ func is_ended():
 func is_restarting():
 	return self.state == State.RESTARTING
 
-
 ## Thread life cycle
 
 func start_thread(_event_stack):
@@ -90,7 +99,7 @@ func start_thread(_event_stack):
 	thread.start(self, "dialogue_loop")
 
 
-func dialogue_loop(_a):
+func dialogue_loop():
 	self.state = State.RUNNING
 	while is_running() and event_stack:
 		var e = event_stack.pop_front()
@@ -129,14 +138,14 @@ func call_event(event, _target = 0, _condition_stack = []):
 
 func start_event(event_name):
 	if event_stack:
-		event_stack[0][1] += 1# Disabling step counter in case of saving before returning
+		# Disabling step counter in case of saving before returning
+		event_stack[0][1] += 1
 
 	if not is_active():
 		event_stack.push_front([event_name, 0, INF, self.condition_stack])
 
 	else:
 		event_stack.push_front([event_name, 0, self.target, self.condition_stack])
-		#Should be "get_stack()[1]['function']" instead of passing event_name, if get_stack() worked
 	
 	if is_active():
 		Rakugo.History.log_event(self.name ,event_name)
@@ -202,16 +211,18 @@ func get_parent_event_name():
 
 ## Version control
 func _get_dialogue_script_hash():
-	return load("res://res://addons/Rakugo/lib/nodes/dialogue.gd")._get_script_hash()
+	var f := File.new()
+	f.open("res://addons/Rakugo/lib/nodes/dialogue.gd", File.READ)
+	return hash(f.get_as_text())
 
 func _get_script_hash(object=self):
 	return object.get_script().source_code.hash()
 
 func check_for_version_error(store):
-	if store.dialogue_class_script_version != _class_script_version:
+	if store.class_script_version != _class_script_version:
 		push_warning("Dialogue class script mismatched.")
 
-	if store.current_dialogue_script_version != _script_version:
+	if store.script_version != _script_version:
 
 		if version_control:
 			push_error("The loaded save is not compatible with this version of the game.")

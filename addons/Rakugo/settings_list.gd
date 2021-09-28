@@ -24,7 +24,6 @@ const debug := "rakugo/editor/debug"
 const save_folder := "rakugo/saves/save_folder"
 const save_screen_layout := "rakugo/saves/save_screen_layout"
 const test_mode := "rakugo/saves/test_mode"
-const saved_rollback_steps := "rakugo/saves/saved_rollback_steps"
 
 #Godot
 const game_title := "application/config/name"
@@ -173,11 +172,5 @@ var default_property_list:Dictionary = {
 		true, PropertyInfo.new(
 			"", TYPE_BOOL, PROPERTY_HINT_NONE, 
 			"", PROPERTY_USAGE_EDITOR)
-	],
-
-	saved_rollback_steps : [
-		10, PropertyInfo.new(
-			"", TYPE_INT, PROPERTY_HINT_NONE, 
-			"", PROPERTY_USAGE_DEFAULT)
 	],
 }

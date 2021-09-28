@@ -16,9 +16,17 @@ Unlock the potential of [Godot](https://godotengine.org) 3.x with Rakugo!
 
 Now you can support this project here [itch.io](https://rakugoteam.github.io/donations/).
 
-Trello Project Roadmap: <https://trello.com/b/sx9eofUy>
+## Roadmap
+Trello Project Roadmap: <https://trello.com/b/sx9eofUy> (outdated)
+
+Soon will be moved to this repository. 
 
 <!-- You can download 2.0 for Godot 3.1 [here](https://github.com/rakugoteam/Rakugo/releases). -->
+
+## Included Rakugo/Godot Addons in this template
+
+- Emojis For Rakugo 1.0 
+- Material Icons For Godot 1.3
 
 ## Showcase
 
@@ -29,27 +37,27 @@ Games using Rakugo v 0.9.x :
 
 If your game uses Rakugo write to me on [Discord](https://discord.gg/K9gvjdg).
 
-Games using Rakugo v 2.0.x :
+<!-- Games using Rakugo v 2.0.x :
 
-- [**The Question: Rakugo Editon**](https://github.com/rakugoteam/Rakugo/tree/the-question)
+- [**The Question: Rakugo Editon**](https://github.com/rakugoteam/Rakugo/tree/the-question) -->
 
-## The Question: Rakugo Editon
+<!-- ## The Question: Rakugo Editon
 
 This is game is a demo of VN Rakugo Template.
-This template is port of Ren'Py game [_The Question_](https://games.renpy.org/game/question).
+This template is port of Ren'Py game [_The Question_](https://games.renpy.org/game/question). -->
 
 ## Story driven games
 
 It means games that are for example:
 
-- [Visual Novels](https://github.com/rakugoteam/Rakugo/tree/the-question) ![](https://img.shields.io/badge/VN-100%25-brightgreen.svg)
+- Visual Novels![](https://img.shields.io/badge/VN-100%25-brightgreen.svg)
 - Click & Point Adventures ![](https://img.shields.io/badge/Adv-25%25-yellowgreen.svg)
-- [RPG](https://github.com/rakugoteam/rakugo-open-rpg) ![](https://img.shields.io/badge/RPG-55%25-green.svg)
+- RPG![](https://img.shields.io/badge/RPG-55%25-green.svg)
 
 You can use it with:
 
 - GDScript
-- RakugoScript (ToDo)
+- RakuScript (ToDo)
 
 ## FAQ:
 
@@ -67,7 +75,14 @@ This project's dialog functions can do more than Ren'Py equivalents.
 **A:** For now this project is a singleton and a collection of special nodes. There is also gui include in example project that is connected with the project and has all functions like in a Ren'Py game.
 
 **Q:** Is it easy to use ?</p>
-**A:** For now it is not that easy as I want it to be, but I am working to make it use RakugoScript (this project's own language) and visual script.
+**A:** For now it is not that easy as I want it to be, but I am working to make it use RakuScript (this project's own language) and visual script.
+
+## Included GodotPlugins (Addons) in this template
+
+They are only used for development, not needed for Rakugo to work.
+So they are not included in the template release.
+
+- godot-plugin-refresher
 
 ## Other Info
 
@@ -77,9 +92,6 @@ If you want to help please write to us on our [Discord](https://discord.gg/K9gvj
 - Docs repo here: https://github.com/rakugoteam/Docs
 
 - [Godot icons](https://github.com/godotengine/godot-design/tree/master/engine/icons/optimized)
-- [Linux Pop icon theme](https://github.com/pop-os/icon-theme)
+
 - icons from [game-icons.net](https://game-icons.net)
 
-Emoji mode use [![Creative Commons](https://img.shields.io/badge/license-CC0%201.0-orange.svg)](http://creativecommons.org/publicdomain/zero/1.0/) [Twemoji](https://twemoji.twitter.com/).
-
-<!-- just to push commit -->
