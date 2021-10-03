@@ -9,10 +9,10 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Area2D",
-"class": "AreaButton2D",
+"base": "Polygon2D",
+"class": "Button2D",
 "language": "GDScript",
-"path": "res://addons/Rakugo/lib/nodes/area_button_2d.gd"
+"path": "res://addons/rakugo-adventure/region_2d.gd"
 }, {
 "base": "Resource",
 "class": "Character",
@@ -38,11 +38,6 @@ _global_script_classes=[ {
 "class": "HistoryEntry",
 "language": "GDScript",
 "path": "res://addons/Rakugo/lib/resources/history_entry.gd"
-}, {
-"base": "KinematicBody2D",
-"class": "MouseBody2D",
-"language": "GDScript",
-"path": "res://addons/Rakugo/lib/nodes/mouse_body_2d.gd"
 }, {
 "base": "Reference",
 "class": "ProjectTools",
@@ -95,13 +90,12 @@ _global_script_classes=[ {
 "path": "res://addons/Rakugo/lib/resources/store_stack.gd"
 } ]
 _global_script_class_icons={
-"AreaButton2D": "res://addons/Rakugo/icons/button_2d.svg",
+"Button2D": "res://addons/Rakugo/icons/button_2d.svg",
 "Character": "",
 "CodeEdit": "res://addons/Rakugo/icons/code_edit.svg",
 "Dialogue": "res://addons/Rakugo/icons/dialogue.svg",
 "Emojis": "res://addons/emojis-for-rakugo/icon.png",
 "HistoryEntry": "",
-"MouseBody2D": "res://addons/Rakugo/icons/mouse_button_2d.svg",
 "ProjectTools": "",
 "PropertyInfo": "",
 "RakugoPlugin": "",

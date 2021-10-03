@@ -1,5 +1,5 @@
-extends Area2D
-class_name AreaButton2D, "res://addons/Rakugo/icons/button_2d.svg"
+extends Polygon2D
+class_name Button2D, "res://addons/Rakugo/icons/button_2d.svg"
 
 export var use_global_theme := false
 export var theme: Resource
@@ -15,12 +15,15 @@ var _disabled := false
 
 var idle_color: Color = modulate
 var is_mouse_in := false
+var was_mouse_in := false
 
+signal mouse_entered
+signal mouse_exited
 signal pressed
 
 func _ready() -> void:
 	if use_global_theme:
-		theme = Settings.get(SettingsList.theme)
+		theme = load(Settings.get(SettingsList.theme))
 
 	if theme and theme is RakugoTheme:
 		theme = theme as RakugoTheme
@@ -29,9 +32,6 @@ func _ready() -> void:
 		idle_color = theme.idle_node_color
 		disabled_color = theme.disable_node_color
 		pressed_color = theme.pressed_node_color
-
-	connect("body_entered", self, "_on_body_entered")
-	connect("body_exited", self, "_on_body_exited")
 
 func _set_disabled(value:bool) -> void:
 	_disabled = value
@@ -53,23 +53,21 @@ func _set_pressed(value:bool) -> void:
 func _get_pressed() -> bool:
 	return _pressed
 
-func _on_body_entered(body:PhysicsBody2D) -> void:
-	if _disabled:
-		return
+func _process(delta):
+	if not _disabled:
+		if not _pressed:
+			var mouse_position = get_local_mouse_position()
+			is_mouse_in = Geometry.is_point_in_polygon(mouse_position, polygon)
+			
+			if is_mouse_in:
+				emit_signal("mouse_entered")
+				was_mouse_in = true
+				modulate = hover_color
 
-	if body.name == "MouseBody2D":
-		modulate = hover_color
-		is_mouse_in = true
-		emit_signal("mouse_entered")
-
-func _on_body_exited(body:PhysicsBody2D) -> void:
-	if _disabled:
-		return
-
-	if body.name == "MouseBody2D":
-		modulate = idle_color
-		is_mouse_in = false
-		emit_signal("mouse_exited")
+			elif was_mouse_in:
+				emit_signal("mouse_exited")
+				was_mouse_in = false
+				modulate = idle_color
 
 func _input(event:InputEvent) -> void:
 	if is_mouse_in:
@@ -79,10 +77,11 @@ func _input(event:InputEvent) -> void:
 				if button.button_index == BUTTON_LEFT:
 					_set_pressed(true)
 					emit_signal("pressed")
-					print("pressed")
+				else:
+					pressed = false
 	
 	if Input.is_action_just_pressed("highlight"):
 		modulate = highlight_color
 
-	if Input.is_action_just_released("highlight"):
+	else:
 		modulate = idle_color
