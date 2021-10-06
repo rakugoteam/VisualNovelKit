@@ -94,7 +94,7 @@ _global_script_class_icons={
 "Character": "",
 "CodeEdit": "res://addons/Rakugo/icons/code_edit.svg",
 "Dialogue": "res://addons/Rakugo/icons/dialogue.svg",
-"Emojis": "",
+"Emojis": "res://addons/emojis-for-godot/icon.png",
 "HistoryEntry": "",
 "ProjectTools": "",
 "PropertyInfo": "",
