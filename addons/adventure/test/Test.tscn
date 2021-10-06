@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/adventure/nodes/region_2d.gd" type="Script" id=1]
+
+[node name="Test" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( 653.62, 321.714 )
+offset = Vector2( 29.9753, -20.206 )
+polygon = PoolVector2Array( -36.2116, -43.9387, 35.0604, 3.27893, 15.4606, 75.4417, -58.4841, 76.3326, -98.5745, 21.0969 )
+script = ExtResource( 1 )
