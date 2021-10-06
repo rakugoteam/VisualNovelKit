@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Polygon2D",
 "class": "Button2D",
 "language": "GDScript",
-"path": "res://addons/adventure/region_2d.gd"
+"path": "res://addons/adventure/nodes/region_2d.gd"
 }, {
 "base": "Resource",
 "class": "Character",
@@ -90,7 +90,7 @@ _global_script_classes=[ {
 "path": "res://addons/Rakugo/lib/resources/store_stack.gd"
 } ]
 _global_script_class_icons={
-"Button2D": "res://addons/Rakugo/icons/button_2d.svg",
+"Button2D": "res://addons/adventure/icons/Region2D.svg",
 "Character": "",
 "CodeEdit": "res://addons/Rakugo/icons/code_edit.svg",
 "Dialogue": "res://addons/Rakugo/icons/dialogue.svg",
