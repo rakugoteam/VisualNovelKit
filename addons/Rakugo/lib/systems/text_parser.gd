@@ -1,7 +1,7 @@
 extends Node
 class_name RakugoTextParser, "res://addons/Rakugo/icons/rakugo_text_parser.svg"
 
-var emojis = Emojis.new()
+var emojis = load("res://addons/emojis-for-godot/emojis/emojis.gd").new()
 
 func parse(text:String, _markup:="", editor:=false):
 	if null in [ProjectSettings, SettingsList]:
@@ -27,7 +27,9 @@ func parse(text:String, _markup:="", editor:=false):
 	if !editor:
 		text = replace_variables(text, editor)
 	
-	text = emojis.parse_emojis(text)
+	if emojis:
+		text = emojis.parse_emojis(text)
+		
 	return text
 
 func convert_markdown_markup(text:String):
