@@ -6,6 +6,10 @@ export(String, "16", "36", "72") var emoji_size := "36" setget _set_emoji_size
 
 var emojis = preload("../emojis/emojis.gd").new()
 
+func _init():
+	_set_emoji(emoji_name)
+	_set_emoji_size(emoji_size)
+
 func _set_emoji(value: String) -> void:
 	emoji_name = value
 	var emoji = emojis.get_path_to_emoji(value, int(emoji_size))
