@@ -9,11 +9,6 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Polygon2D",
-"class": "Button2D",
-"language": "GDScript",
-"path": "res://addons/adventure/nodes/region_2d.gd"
-}, {
 "base": "Resource",
 "class": "Character",
 "language": "GDScript",
@@ -28,11 +23,6 @@ _global_script_classes=[ {
 "class": "Dialogue",
 "language": "GDScript",
 "path": "res://addons/Rakugo/lib/nodes/dialogue.gd"
-}, {
-"base": "Reference",
-"class": "Emojis",
-"language": "GDScript",
-"path": "res://addons/emojis-for-godot/emojis/emojis.gd"
 }, {
 "base": "Resource",
 "class": "HistoryEntry",
@@ -90,11 +80,9 @@ _global_script_classes=[ {
 "path": "res://addons/Rakugo/lib/resources/store_stack.gd"
 } ]
 _global_script_class_icons={
-"Button2D": "res://addons/adventure/icons/Region2D.svg",
 "Character": "",
 "CodeEdit": "res://addons/Rakugo/icons/code_edit.svg",
 "Dialogue": "res://addons/Rakugo/icons/dialogue.svg",
-"Emojis": "res://addons/emojis-for-godot/icon.png",
 "HistoryEntry": "",
 "ProjectTools": "",
 "PropertyInfo": "",
@@ -144,7 +132,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/Rakugo/plugin.cfg", "res://addons/adventure/plugin.cfg", "res://addons/emojis-for-godot/plugin.cfg", "res://addons/godot-plugin-refresher/plugin.cfg", "res://addons/material-design-icons/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/Rakugo/plugin.cfg", "res://addons/emojis-for-godot/plugin.cfg", "res://addons/godot-plugin-refresher/plugin.cfg" )
 
 [importer_defaults]
 
