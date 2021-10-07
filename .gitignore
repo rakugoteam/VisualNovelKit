@@ -9,14 +9,9 @@ export_presets.cfg
 mono_crash.*.*.json
 
 # Project specific
-# addons/*
-# !addons/Rakugo
+addons/godot-plugin-refresher
 fontconfig
 refences/
 saves/
 .directory
 .vscode/
-.*.kra
-reference.json
-
-*.ini
