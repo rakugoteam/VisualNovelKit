@@ -1,7 +1,7 @@
 extends Node
 class_name RakugoTextParser, "res://addons/Rakugo/icons/rakugo_text_parser.svg"
 
-var emojis = Emojis.new()
+var emojis = load("res://addons/emojis-for-godot/emojis/emojis.gd").new()
 
 func parse(text:String, _markup:="", editor:=false):
 	if null in [ProjectSettings, SettingsList]:
@@ -27,9 +27,10 @@ func parse(text:String, _markup:="", editor:=false):
 	if !editor:
 		text = replace_variables(text, editor)
 	
-	text = replace_emojis(text)
+	if emojis:
+		text = emojis.parse_emojis(text)
+		
 	return text
-
 
 func convert_markdown_markup(text:String):
 	var re = RegEx.new()
@@ -43,20 +44,18 @@ func convert_markdown_markup(text:String):
 			output = regex_replace(result, output, replacement)
 	text = output
 
-	re.compile("(\\[img\\][^\\[\\]]*\\[\\/img\\])|(?:(?:\\[([^\\]\\)]+)\\]\\(([a-zA-Z]+:\\/\\/[^\\)]+)\\))|([a-zA-Z]+:\\/\\/[^ \\[\\]]*[a-zA-Z0-9_]))")# either plain "prot://url" and "[link](url)" and not "[img]url[\img]"
+	# either plain "prot://url" and "[link](url)" and not "[img]url[\img]"
+	re.compile("(\\[img\\][^\\[\\]]*\\[\\/img\\])|(?:(?:\\[([^\\]\\)]+)\\]\\(([a-zA-Z]+:\\/\\/[^\\)]+)\\))|([a-zA-Z]+:\\/\\/[^ \\[\\]]*[a-zA-Z0-9_]))")
+
 	for result in re.search_all(text):
-		if result.get_string() and not result.get_string(1): # having anything in 1 meant it matched "[img]url[\img]"
+		# having anything in 1 meant it matched "[img]url[\img]"
+		if result.get_string() and not result.get_string(1): 
 			if result.get_string(4):
 				replacement = "[url]" + result.get_string(4) + "[/url]"
 			else:
-				replacement = "[url=" + result.get_string(3) + "]" + result.get_string(2) + "[/url]" #That can can be the user erroneously writing "[b](url)[\b]" need to be pointed in the doc
+				# That can can be the user erroneously writing "[b](url)[\b]" need to be pointed in the doc
+				replacement = "[url=" + result.get_string(3) + "]" + result.get_string(2) + "[/url]"
 			output = regex_replace(result, output, replacement)
-	text = output
-	
-	re.compile("(?<!\\[):[\\w-]+:(?!\\])")# :emoji: not [:emoji:]
-	for result in re.search_all(text):
-		if result.get_string():
-			output = regex_replace(result, output, "[" + result.get_string() + "]")
 	text = output
 
 	re.compile("\\*\\*([^\\*]+)\\*\\*")# **bold**
@@ -73,7 +72,7 @@ func convert_markdown_markup(text:String):
 			output = regex_replace(result, output, replacement)
 	text = output
 
-	re.compile("~~([^~]+)~~")# ~~strikethrough~~
+	re.compile("~~([^~]+)~~")# ~~strike through~~
 	for result in re.search_all(text):
 		if result.get_string():
 			replacement = "[s]" + result.get_string(1) + "[/s]"
@@ -89,52 +88,50 @@ func convert_markdown_markup(text:String):
 
 	return text
 
-
 func convert_renpy_markup(text:String):
 	var re = RegEx.new()
 	var output = "" + text
 	var replacement = ""
 	
-	re.compile("(?<!\\[)\\[([\\w.]+)\\]")#Convert compatible variable inclusion
+	re.compile("(?<!\\[)\\[([\\w.]+)\\]")# Convert compatible variable inclusion
 	for result in re.search_all(text):
 		if result.get_string():
 			output = regex_replace(result, output, "<" + result.get_string(1) + ">")
 	text = output
 	
-	re.compile("(?<!\\{)\\{(\\/{0,1})a(?:(=[^\\}]+)\\}|\\})")#match unescaped "{a=" and "{/a}"
+	re.compile("(?<!\\{)\\{(\\/{0,1})a(?:(=[^\\}]+)\\}|\\})")# match unescaped "{a=" and "{/a}"
 	for result in re.search_all(text):
 		if result.get_string():
 			replacement = "[" + result.get_string(1) + "url" + result.get_string(2) + "]"
 			output = regex_replace(result, output, replacement)
 	text = output
 	
-	re.compile("(?<!\\{)\\{img=([^\\}]+)\\}")#match unescaped "{img=<path>}"
+	re.compile("(?<!\\{)\\{img=([^\\}]+)\\}")# match unescaped "{img=<path>}"
 	for result in re.search_all(text):
 		if result.get_string():
 			replacement = "[img]" + result.get_string(1) + "[/img]"
 			output = regex_replace(result, output, replacement)
 	text = output
 	
-	re.compile("(?:(?<!\\{)\\{[^\\{\\}]+)(\\})")#math "}" part of a valid tag
+	re.compile("(?:(?<!\\{)\\{[^\\{\\}]+)(\\})")# math "}" part of a valid tag
 	for result in re.search_all(text):
 		if result.get_string():
 			output = regex_replace(result, output, "]", 1)
 	text = output
 	
-	re.compile("(?<!\\{)\\{(?!\\{)")#match unescaped "{"
+	re.compile("(?<!\\{)\\{(?!\\{)")# match unescaped "{"
 	for result in re.search_all(text):
 		if result.get_string():
 			output = regex_replace(result, output, "[")
 	text = output
 	
-	re.compile("([\\{]+)")#match escaped braces "{{" transform them into "{"
+	re.compile("([\\{]+)")# match escaped braces "{{" transform them into "{"
 	for result in re.search_all(text):
 		if result.get_string():
 			output = regex_replace(result, output, "{")
 	text = output
 
 	return text
-
 
 func dirty_escaping(text:String):
 	var re = RegEx.new()
@@ -147,11 +144,9 @@ func dirty_escaping(text:String):
 	
 	return output
 
-
 func dirty_escaping_sub(text:String, substring:String):
 	text.replace(substring, "\u200B" + substring + "\u200B")
 	return text
-
 
 func replace_variables(text:String, editor:=false):
 	var re = RegEx.new()
@@ -170,21 +165,6 @@ func replace_variables(text:String, editor:=false):
 			output = regex_replace(result, output, replacement)
 	
 	return output
-
-
-func replace_emojis(text:String):
-	var re = RegEx.new()
-	var output = "" + text
-	var replacement = ""
-	
-	re.compile("\\[\\:([\\w.-]+)\\:\\]")
-	for result in re.search_all(text):
-		if result.get_string():
-			replacement = emojis.get_emoji_bbcode(result.get_string(1))
-			output = regex_replace(result, output, replacement)
-	
-	return output
-
 
 func regex_replace(result:RegExMatch, output:String, replacement:String, string_to_replace=0):
 	var offset = output.length() - result.subject.length()

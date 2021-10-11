@@ -1,11 +1,19 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://addons/adventure/nodes/region_2d.gd" type="Script" id=1]
+[ext_resource path="res://addons/adventure/test/TestRegion2D.gd" type="Script" id=1]
 
 [node name="Test" type="Node2D"]
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
-position = Vector2( 653.62, 321.714 )
-offset = Vector2( 29.9753, -20.206 )
-polygon = PoolVector2Array( -36.2116, -43.9387, 35.0604, 3.27893, 15.4606, 75.4417, -58.4841, 76.3326, -98.5745, 21.0969 )
+[node name="TestRegion2D" type="Polygon2D" parent="."]
+position = Vector2( 469.087, 233.568 )
+polygon = PoolVector2Array( -1.01175, -42.0029, -44.4178, 13.8899, 2.55588, 63.8365, 53.6918, 9.13303 )
 script = ExtResource( 1 )
+hover_color = Color( 0.360784, 0.517647, 0.752941, 1 )
+highlight_color = Color( 0.4606, 0.98, 0.867463, 1 )
+disabled_color = Color( 0.474, 0.5307, 0.6, 1 )
+
+[connection signal="disabled_changed" from="TestRegion2D" to="TestRegion2D" method="_on_disabled_changed"]
+[connection signal="highlighted" from="TestRegion2D" to="TestRegion2D" method="_on_highlighted"]
+[connection signal="mouse_entered" from="TestRegion2D" to="TestRegion2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="TestRegion2D" to="TestRegion2D" method="_on_mouse_exited"]
+[connection signal="pressed" from="TestRegion2D" to="TestRegion2D" method="_on_pressed"]

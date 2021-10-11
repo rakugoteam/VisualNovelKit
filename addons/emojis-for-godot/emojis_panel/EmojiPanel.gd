@@ -7,7 +7,7 @@ export var button_x := 36
 
 onready var grid := get_node(grid_path)
 var file := File.new()
-var emojis = Emojis.new()
+var emojis = preload("../emojis/emojis.gd").new()
 
 signal emoji_selected(emoji_name)
 
