@@ -1,18 +1,17 @@
 extends Node
 
-const rakugo_version := "3.2.1"
+const rakugo_version := "3.3"
 
 var current_scene_name := ""
 var current_scene_path := ""
 var current_scene_node: Node = null
 var current_dialogue:Dialogue = null setget set_current_dialogue
 
-var store = null setget set_current_store, get_current_store
-var persistent = null setget set_persistent_store, get_persistent_store
+var store = null setget , get_current_store
+var persistent = null setget , get_persistent_store
 
 # don't save this
 var scene_anchor:Node
-
 
 var active := false
 var loading_in_progress := false
@@ -235,10 +234,7 @@ func jump(scene_id:String, dialogue_name:String, event_name:="", force_reload = 
 
 func get_current_store():
 	return StoreManager.get_current_store()
-func set_current_store(value):
-	return
 
 func get_persistent_store():
 	return StoreManager.get_persistent_store()
-func set_persistent_store(value):
-	return
+

@@ -15,20 +15,15 @@ func init_project_settings():
 	ProjectSettings.set_order("rakugo/game/info/version", 1)
 
 func init_tools():
-	var theme = get_editor_interface().get_base_control().theme
-
-	rakugo_tools = preload("tools/RakugoTools.tscn").instance()
-	rakugo_tools.theme = theme
-	add_child(rakugo_tools)
-
-	tools_menu = preload("tools/menu/ToolsMenu.tscn").instance()
-	tools_menu.theme = theme
-	tools_menu.plugin = self
-	tools_menu.connect_to_plugin()
-	tm_container = CONTAINER_TOOLBAR
-	add_control_to_container(tm_container, tools_menu)
-	var p = tools_menu.get_parent()
-	p.move_child(tools_menu, 0)
+	# todo rewrite
+	pass
+	# tools_menu = preload("tools/menu/ToolsMenu.tscn").instance()
+	# tools_menu.plugin = self
+	# tools_menu.connect_to_plugin()
+	# tm_container = CONTAINER_TOOLBAR
+	# add_control_to_container(tm_container, tools_menu)
+	# var p = tools_menu.get_parent()
+	# p.move_child(tools_menu, 0)
 
 func _enter_tree():
 	# Initialization of the plugin goes here
