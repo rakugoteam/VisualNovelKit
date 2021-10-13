@@ -144,10 +144,6 @@ func dirty_escaping(text:String):
 	
 	return output
 
-func dirty_escaping_sub(text:String, substring:String):
-	text.replace(substring, "\u200B" + substring + "\u200B")
-	return text
-
 func replace_variables(text:String, editor:=false):
 	var re = RegEx.new()
 	var output = "" + text
