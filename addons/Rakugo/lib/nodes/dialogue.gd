@@ -212,7 +212,7 @@ func get_parent_event_name():
 ## Version control
 func _get_dialogue_script_hash():
 	var f := File.new()
-	f.open("res://addons/Rakugo/lib/nodes/dialogue.gd", File.READ)
+	f.open("res://addons/Rakugo/lib/nodes/Dialogue.gd", File.READ)
 	return hash(f.get_as_text())
 
 func _get_script_hash(object=self):
