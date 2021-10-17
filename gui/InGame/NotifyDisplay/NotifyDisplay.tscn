@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://gui/InGame/NotifyDisplay/NotifyDisplay.gd" type="Script" id=1]
-[ext_resource path="res://addons/Rakugo/lib/nodes/rakugo_text_label.gd" type="Script" id=2]
+[ext_resource path="res://addons/Rakugo/lib/nodes/RakugoTextLabel.gd" type="Script" id=2]
 [ext_resource path="res://themes/Default/default.tres" type="Theme" id=3]
+
 
 [node name="NotifyDisplay" type="PanelContainer"]
 self_modulate = Color( 1, 1, 1, 0.439216 )

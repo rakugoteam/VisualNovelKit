@@ -1,8 +1,11 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://addons/Rakugo/lib/nodes/rakugo_text_label.gd" type="Script" id=1]
-[ext_resource path="res://addons/Rakugo/lib/nodes/code_edit.gd" type="Script" id=2]
-[ext_resource path="res://addons/Rakugo/tools/markup_editor/markup_edit.gd" type="Script" id=3]
+[ext_resource path="res://addons/Rakugo/lib/nodes/RakugoTextLabel.gd" type="Script" id=1]
+[ext_resource path="res://addons/Rakugo/lib/nodes/CodeEdit.gd" type="Script" id=2]
+[ext_resource path="res://addons/Rakugo/tools/markup_editor/MarkupEdit.gd" type="Script" id=3]
+
+
+
 
 [node name="MarkupEdit" type="VBoxContainer"]
 anchor_right = 1.0

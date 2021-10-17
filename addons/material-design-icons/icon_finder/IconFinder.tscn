@@ -1,8 +1,10 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://addons/material-design-icons/icon_finder/icon_finder.gd" type="Script" id=1]
-[ext_resource path="res://addons/material-design-icons/icon_finder/search.gd" type="Script" id=2]
+[ext_resource path="res://addons/material-design-icons/icon_finder/IconFinder.gd" type="Script" id=1]
+[ext_resource path="res://addons/material-design-icons/icon_finder/Search.gd" type="Script" id=2]
 [ext_resource path="res://addons/material-design-icons/icon_finder/IconsGrid.tscn" type="PackedScene" id=3]
+
+
 
 [node name="IconFinder" type="WindowDialog"]
 anchor_right = 1.0

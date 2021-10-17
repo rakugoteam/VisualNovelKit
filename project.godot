@@ -12,79 +12,79 @@ _global_script_classes=[ {
 "base": "Resource",
 "class": "Character",
 "language": "GDScript",
-"path": "res://addons/Rakugo/lib/resources/character.gd"
+"path": "res://addons/Rakugo/lib/resources/Character.gd"
 }, {
 "base": "TextEdit",
 "class": "CodeEdit",
 "language": "GDScript",
-"path": "res://addons/Rakugo/lib/nodes/code_edit.gd"
+"path": "res://addons/Rakugo/lib/nodes/CodeEdit.gd"
 }, {
 "base": "Node",
 "class": "Dialogue",
 "language": "GDScript",
-"path": "res://addons/Rakugo/lib/nodes/dialogue.gd"
+"path": "res://addons/Rakugo/lib/nodes/Dialogue.gd"
 }, {
 "base": "Resource",
 "class": "HistoryEntry",
 "language": "GDScript",
-"path": "res://addons/Rakugo/lib/resources/history_entry.gd"
+"path": "res://addons/Rakugo/lib/resources/HistoryEntry.gd"
 }, {
 "base": "Reference",
 "class": "ProjectTools",
 "language": "GDScript",
-"path": "res://addons/Rakugo/tools/project_settings/project_tools.gd"
+"path": "res://addons/Rakugo/tools/project_settings/ProjectTools.gd"
 }, {
 "base": "Reference",
 "class": "PropertyInfo",
 "language": "GDScript",
-"path": "res://addons/Rakugo/tools/project_settings/property_info.gd"
+"path": "res://addons/Rakugo/tools/project_settings/PropertyInfo.gd"
 }, {
 "base": "RichTextLabel",
 "class": "RakugoTextLabel",
 "language": "GDScript",
-"path": "res://addons/Rakugo/lib/nodes/rakugo_text_label.gd"
+"path": "res://addons/Rakugo/lib/nodes/RakugoTextLabel.gd"
 }, {
 "base": "Node",
 "class": "RakugoTextParser",
 "language": "GDScript",
-"path": "res://addons/Rakugo/lib/systems/text_parser.gd"
+"path": "res://addons/Rakugo/lib/systems/TextParser.gd"
 }, {
 "base": "Theme",
 "class": "RakugoTheme",
 "language": "GDScript",
-"path": "res://addons/Rakugo/lib/resources/rakugo_theme.gd"
+"path": "res://addons/Rakugo/lib/resources/RakugoTheme.gd"
 }, {
 "base": "Resource",
 "class": "SceneLinks",
 "language": "GDScript",
-"path": "res://addons/Rakugo/lib/resources/scene_links.gd"
+"path": "res://addons/Rakugo/lib/resources/SceneLinks.gd"
 }, {
 "base": "Object",
 "class": "SettingsList",
 "language": "GDScript",
-"path": "res://addons/Rakugo/settings_list.gd"
+"path": "res://addons/Rakugo/SettingsList.gd"
 }, {
 "base": "Resource",
 "class": "Store",
 "language": "GDScript",
-"path": "res://addons/Rakugo/lib/resources/store.gd"
+"path": "res://addons/Rakugo/lib/resources/Store.gd"
 }, {
 "base": "Resource",
 "class": "StoreStack",
 "language": "GDScript",
-"path": "res://addons/Rakugo/lib/resources/store_stack.gd"
+"path": "res://addons/Rakugo/lib/resources/StoreStack.gd"
 } ]
 _global_script_class_icons={
 "Character": "",
-"CodeEdit": "res://addons/Rakugo/icons/code_edit.svg",
+"CodeEdit": "",
 "Dialogue": "res://addons/Rakugo/icons/dialogue.svg",
 "HistoryEntry": "",
 "ProjectTools": "",
 "PropertyInfo": "",
-"RakugoTextLabel": "res://addons/Rakugo/icons/rakugo_text_label.svg",
-"RakugoTextParser": "res://addons/Rakugo/icons/rakugo_text_parser.svg",
+"RakugoTextLabel": "",
+"RakugoTextParser": "",
 "RakugoTheme": "",
-"SceneLinks": "res://addons/Rakugo/icons/scene_links.svg",
+"SceneLinks": "",
 "SettingsList": "",
 "Store": "",
 "StoreStack": ""
@@ -126,7 +126,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/Rakugo/plugin.cfg", "res://addons/adventure/plugin.cfg", "res://addons/emojis-for-godot/plugin.cfg", "res://addons/godot-plugin-refresher/plugin.cfg", "res://addons/material-design-icons/plugin.cfg" )
+enabled=PoolStringArray(  )
 
 [importer_defaults]
 
@@ -269,6 +269,7 @@ default/statements/default_menu_parameters={
 "style": "default"
 }
 default/statements/default_show_parameters={
+
 }
 game/text/markup="markdown"
 
@@ -276,6 +277,6 @@ game/text/markup="markdown"
 
 quality/intended_usage/framebuffer_allocation=0
 quality/intended_usage/framebuffer_allocation.mobile=0
-2d/snapping/use_gpu_pixel_snap=true
-environment/default_environment="res://default_env.tres"
 quality/2d/use_pixel_snap=true
+environment/default_environment="res://default_env.tres"
+2d/snapping/use_gpu_pixel_snap=true

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://game/screen_shots/create_dialogue.png" type="Texture" id=1]
 [ext_resource path="res://fonts/JetBrainsMono-Medium.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://addons/Rakugo/lib/nodes/code_edit.gd" type="Script" id=3]
+[ext_resource path="res://addons/Rakugo/lib/nodes/CodeEdit.gd" type="Script" id=3]
 [ext_resource path="res://game/ScriptingDialogue.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
@@ -24,7 +24,10 @@ script = ExtResource( 4 )
 default_starting_event = "script_tut"
 auto_start = true
 
-[node name="dialogue" type="TextEdit" parent="." groups=["$ code #", "showable"]]
+[node name="dialogue" type="TextEdit" parent="." groups=[
+"$ code #",
+"showable",
+]]
 visible = false
 anchor_left = 0.5
 anchor_top = 0.5
@@ -53,8 +56,12 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+jsons = [  ]
 
-[node name="say" type="TextEdit" parent="." groups=["$ code #", "showable"]]
+[node name="say" type="TextEdit" parent="." groups=[
+"$ code #",
+"showable",
+]]
 visible = false
 anchor_left = 0.5
 anchor_top = 0.5
@@ -88,14 +95,21 @@ syntax_highlighting = true
 show_line_numbers = true
 draw_tabs = true
 script = ExtResource( 3 )
+jsons = [  ]
 
-[node name="screenshots" type="Control" parent="." groups=["$ screenshot *", "showable"]]
+[node name="screenshots" type="Control" parent="." groups=[
+"$ screenshot *",
+"showable",
+]]
 margin_left = 368.0
 margin_top = 128.0
 margin_right = 408.0
 margin_bottom = 168.0
 
-[node name="create_dialogue" type="TextureRect" parent="screenshots" groups=["$ screenshot #", "showable"]]
+[node name="create_dialogue" type="TextureRect" parent="screenshots" groups=[
+"$ screenshot #",
+"showable",
+]]
 visible = false
 anchor_left = 0.5
 anchor_right = 0.5
