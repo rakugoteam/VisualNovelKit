@@ -1,0 +1,122 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Game/ScreenShots/create_dialogue.png" type="Texture" id=1]
+[ext_resource path="res://fonts/JetBrainsMono-Medium.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://addons/Rakugo/lib/nodes/CodeEdit.gd" type="Script" id=3]
+[ext_resource path="res://game/ScriptingDialogue.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="Scripting" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogue" type="Node" parent="."]
+script = ExtResource( 4 )
+default_starting_event = "script_tut"
+auto_start = true
+
+[node name="dialogue" type="TextEdit" parent="." groups=[
+"$ code #",
+"showable",
+]]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -384.0
+margin_top = -262.5
+margin_right = 380.0
+margin_bottom = 135.5
+mouse_default_cursor_shape = 0
+custom_fonts/font = SubResource( 1 )
+text = "extends Dialogue
+
+func this_event():
+	start_event(\"this_event\")
+	
+	say(null, \"This is how I say things.\")
+	step()
+	
+	end_event()"
+readonly = true
+syntax_highlighting = true
+show_line_numbers = true
+draw_tabs = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+jsons = [  ]
+
+[node name="say" type="TextEdit" parent="." groups=[
+"$ code #",
+"showable",
+]]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -384.0
+margin_top = -336.0
+margin_right = 380.0
+margin_bottom = 209.0
+mouse_default_cursor_shape = 0
+custom_fonts/font = SubResource( 1 )
+text = "extends Dialogue
+
+func _ready():
+	# define player character
+	define_character(\"Player-kun\", \"player\", Color.blue)
+
+func this_event():
+	start_event(\"this_event\")
+	
+	say(null, \"Text sayed by narrator\")
+	step()
+	
+	say(\"player\", \"Text sayed by player character\")
+	step()
+	
+	end_event()
+	"
+readonly = true
+syntax_highlighting = true
+show_line_numbers = true
+draw_tabs = true
+script = ExtResource( 3 )
+jsons = [  ]
+
+[node name="screenshots" type="Control" parent="." groups=[
+"$ screenshot *",
+"showable",
+]]
+margin_left = 368.0
+margin_top = 128.0
+margin_right = 408.0
+margin_bottom = 168.0
+
+[node name="create_dialogue" type="TextureRect" parent="screenshots" groups=[
+"$ screenshot #",
+"showable",
+]]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -20.0
+margin_right = 514.0
+margin_bottom = 338.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

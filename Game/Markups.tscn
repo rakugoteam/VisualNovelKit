@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://game/Markups.gd" type="Script" id=1]
+[ext_resource path="res://addons/Rakugo/tools/MarkupEditor/MarkupEdit.tscn" type="PackedScene" id=2]
+
+[node name="Markups" type="Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -400.0
+margin_top = 24.0
+margin_right = 400.0
+margin_bottom = 584.0
+rect_min_size = Vector2( 800, 560 )
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogue" type="Node" parent="."]
+script = ExtResource( 1 )
+default_starting_event = "markups"
+auto_start = true
+back_button_nodepath = NodePath("../MarkupEdit/CenterContainer2/BackButton")
+
+[node name="MarkupEdit" parent="." instance=ExtResource( 2 )]
+
+[node name="CenterContainer2" type="CenterContainer" parent="MarkupEdit"]
+margin_top = 528.0
+margin_right = 800.0
+margin_bottom = 560.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="BackButton" type="Button" parent="MarkupEdit/CenterContainer2"]
+margin_left = 368.0
+margin_top = 6.0
+margin_right = 432.0
+margin_bottom = 26.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Go Back"
+flat = true
