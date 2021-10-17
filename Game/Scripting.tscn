@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://game/screen_shots/create_dialogue.png" type="Texture" id=1]
+[ext_resource path="res://Game/ScreenShots/create_dialogue.png" type="Texture" id=1]
 [ext_resource path="res://fonts/JetBrainsMono-Medium.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://addons/Rakugo/lib/nodes/CodeEdit.gd" type="Script" id=3]
 [ext_resource path="res://game/ScriptingDialogue.gd" type="Script" id=4]
