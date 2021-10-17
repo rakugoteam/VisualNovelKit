@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://addons/Rakugo/tools/scene_links/SceneLinksEditor.gd" type="Script" id=1]
-[ext_resource path="res://addons/Rakugo/tools/scene_links/SceneLinkEdit.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/Rakugo/tools/SceneLinks/SceneLinksEditor.gd" type="Script" id=1]
+[ext_resource path="res://addons/Rakugo/tools/SceneLinks/SceneLinkEdit.tscn" type="PackedScene" id=2]
 
 [sub_resource type="Image" id=3]
 data = {

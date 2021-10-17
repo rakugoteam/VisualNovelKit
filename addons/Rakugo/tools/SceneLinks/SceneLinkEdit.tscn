@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://addons/Rakugo/tools/scene_links/SceneLinkEdit.gd" type="Script" id=1]
+[ext_resource path="res://addons/Rakugo/tools/SceneLinks/SceneLinkEdit.gd" type="Script" id=1]
 [ext_resource path="res://addons/material-design-icons/fonts/material_design_icons.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://addons/material-design-icons/nodes/MaterialButton.gd" type="Script" id=3]
 [ext_resource path="res://addons/material-design-icons/nodes/MaterialIcon.gd" type="Script" id=4]

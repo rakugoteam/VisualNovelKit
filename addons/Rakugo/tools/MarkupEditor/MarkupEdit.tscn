@@ -2,7 +2,7 @@
 
 [ext_resource path="res://addons/Rakugo/lib/nodes/RakugoTextLabel.gd" type="Script" id=1]
 [ext_resource path="res://addons/Rakugo/lib/nodes/CodeEdit.gd" type="Script" id=2]
-[ext_resource path="res://addons/Rakugo/tools/markup_editor/MarkupEdit.gd" type="Script" id=3]
+[ext_resource path="res://addons/Rakugo/tools/MarkupEditor/MarkupEdit.gd" type="Script" id=3]
 
 
 
