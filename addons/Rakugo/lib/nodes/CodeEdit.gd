@@ -1,6 +1,6 @@
 tool
 extends TextEdit
-class_name CodeEdit, "res://addons/Rakugo/icons/code_edit.svg"
+class_name CodeEdit, "res://addons/Rakugo/icons/CodeEdit.svg"
 
 export(Array, String, FILE, "*.json") var jsons
 

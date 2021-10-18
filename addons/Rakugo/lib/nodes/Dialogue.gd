@@ -1,5 +1,5 @@
 extends Node
-class_name Dialogue, "res://addons/Rakugo/icons/dialogue.svg"
+class_name Dialogue, "res://addons/Rakugo/icons/Dialogue.svg"
 
 onready var _class_script_version = _get_dialogue_script_hash()
 onready var _script_version = _get_script_hash()
