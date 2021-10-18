@@ -21,7 +21,7 @@ script/source = "extends Label
 
 
 func _ready():
-	self.text =  Settings.get(\"rakugo/game/info/version\")
+	self.text =  Settings.get(\"rakugo/Game/info/version\")
 "
 
 [node name="TitleScreen" type="Control"]

@@ -123,7 +123,7 @@ mode = 0
 filters = PoolStringArray( "*.tscn" )
 current_dir = "res://game"
 current_file = "scene_links.tres"
-current_path = "res://game/scene_links.tres"
+current_path = "res://Game/scene_links.tres"
 
 [connection signal="text_changed" from="SceneEdit" to="." method="_on_changed"]
 [connection signal="pressed" from="Choose" to="." method="_on_choose"]

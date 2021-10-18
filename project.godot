@@ -76,15 +76,15 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Character": "",
-"CodeEdit": "res://addons/Rakugo/icons/code_edit.svg",
-"Dialogue": "res://addons/Rakugo/icons/dialogue.svg",
+"CodeEdit": "res://addons/Rakugo/icons/CodeEdit.svg",
+"Dialogue": "res://addons/Rakugo/icons/Dialogue.svg",
 "HistoryEntry": "",
 "ProjectTools": "",
 "PropertyInfo": "",
-"RakugoTextLabel": "res://addons/Rakugo/icons/rakugo_text_label.svg",
-"RakugoTextParser": "res://addons/Rakugo/icons/rakugo_text_parser.svg",
+"RakugoTextLabel": "res://addons/Rakugo/icons/RakugoTextLabel.svg",
+"RakugoTextParser": "res://addons/Rakugo/icons/RakugoTextParser.svg",
 "RakugoTheme": "",
-"SceneLinks": "res://addons/Rakugo/icons/scene_links.svg",
+"SceneLinks": "",
 "SettingsList": "",
 "Store": "",
 "StoreStack": ""
@@ -126,7 +126,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray(  )
+enabled=PoolStringArray( "res://addons/Iconify/plugin.cfg", "res://addons/Rakugo/plugin.cfg", "res://addons/emojis-for-godot/plugin.cfg", "res://addons/godot-plugin-refresher/plugin.cfg", "res://addons/material-design-icons/plugin.cfg" )
 
 [importer_defaults]
 
