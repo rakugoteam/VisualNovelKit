@@ -82,7 +82,7 @@ _global_script_class_icons={
 "ProjectTools": "",
 "PropertyInfo": "",
 "RakugoTextLabel": "res://addons/Rakugo/icons/RakugoTextLabel.svg",
-"RakugoTextParser": "res://addons/Rakugo/icons/RakugoTextParser.svg",
+"RakugoTextParser": "",
 "RakugoTheme": "",
 "SceneLinks": "",
 "SettingsList": "",
@@ -126,7 +126,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/Iconify/plugin.cfg", "res://addons/Rakugo/plugin.cfg", "res://addons/emojis-for-godot/plugin.cfg", "res://addons/godot-plugin-refresher/plugin.cfg", "res://addons/material-design-icons/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/Iconify/plugin.cfg", "res://addons/Rakugo/plugin.cfg", "res://addons/emojis-for-godot/plugin.cfg", "res://addons/godot-plugin-refresher/plugin.cfg" )
 
 [importer_defaults]
 
