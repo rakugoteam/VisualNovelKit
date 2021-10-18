@@ -93,7 +93,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Rakugo Template"
-run/main_scene="res://tests/Testing.tscn"
+run/main_scene="res://Test/Testing.tscn"
 boot_splash/image="res://graphics/Splash.png"
 boot_splash/fullsize=false
 boot_splash/bg_color=Color( 0, 0, 0, 1 )

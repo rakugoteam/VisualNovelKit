@@ -1,26 +1,10 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://addons/Rakugo/tools/SceneLinks/SceneLinkEdit.gd" type="Script" id=1]
-[ext_resource path="res://addons/material-design-icons/fonts/material_design_icons.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://addons/Rakugo/tools/SceneLinks/choose_icon.tres" type="Texture" id=3]
 [ext_resource path="res://addons/Rakugo/tools/SceneLinks/scene_icon.tres" type="Texture" id=4]
 [ext_resource path="res://addons/Rakugo/tools/SceneLinks/browse_icon.tres" type="Texture" id=5]
 [ext_resource path="res://addons/Rakugo/tools/SceneLinks/remove_icon.tres" type="Texture" id=6]
-
-[sub_resource type="DynamicFont" id=1]
-size = 24
-use_filter = true
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 24
-use_filter = true
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 24
-use_filter = true
-font_data = ExtResource( 2 )
 
 [node name="SceneLinkEdit" type="HBoxContainer"]
 margin_right = 501.0
