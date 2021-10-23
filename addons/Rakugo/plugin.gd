@@ -27,6 +27,9 @@ func init_tools():
 
 func _enter_tree():
 	# Initialization of the plugin goes here
+	add_autoload_singleton("Rakugo", "res://addons/Rakugo/Rakugo.tscn")
+	add_autoload_singleton("Settings", "res://addons/Rakugo/Settings.gd")
+	
 	init_project_settings()
 	init_tools()
 
