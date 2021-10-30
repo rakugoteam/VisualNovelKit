@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://addons/emojis-for-godot/emojis_panel/NotificationLabel.gd" type="Script" id=1]
-[ext_resource path="res://addons/emojis-for-godot/emojis_panel/EmojiPanel.gd" type="Script" id=2]
-[ext_resource path="res://addons/emojis-for-godot/emojis_panel/EmojiGrid.tscn" type="PackedScene" id=3]
-[ext_resource path="res://addons/emojis-for-godot/emojis_panel/Filter.gd" type="Script" id=4]
+[ext_resource path="res://addons/emojis-for-godot/EmojiPanel/Filter.gd" type="Script" id=1]
+[ext_resource path="res://addons/emojis-for-godot/EmojiPanel/EmojiGrid.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/emojis-for-godot/EmojiPanel/EmojiPanel.gd" type="Script" id=3]
+[ext_resource path="res://addons/emojis-for-godot/EmojiPanel/NotificationLabel.gd" type="Script" id=4]
 
 [node name="PopupDialog" type="WindowDialog"]
 visible = true
@@ -25,7 +25,7 @@ margin_bottom = -8.0
 rect_min_size = Vector2( 100, 100 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -39,7 +39,7 @@ placeholder_text = "Filter"
 placeholder_alpha = 0.3
 caret_blink = true
 caret_blink_speed = 0.5
-script = ExtResource( 4 )
+script = ExtResource( 1 )
 grid_node_path = NodePath("../ScrollContainer/GridContainer")
 
 [node name="HSeparator2" type="HSeparator" parent="Emoji"]
@@ -61,7 +61,7 @@ align = 1
 valign = 1
 clip_text = true
 max_lines_visible = 2
-script = ExtResource( 1 )
+script = ExtResource( 4 )
 
 [node name="Timer" type="Timer" parent="Emoji/NotificationLabel"]
 one_shot = true
@@ -76,7 +76,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="GridContainer" parent="Emoji/ScrollContainer" instance=ExtResource( 3 )]
+[node name="GridContainer" parent="Emoji/ScrollContainer" instance=ExtResource( 2 )]
 margin_right = 412.0
 margin_bottom = 4918.0
 columns = 8

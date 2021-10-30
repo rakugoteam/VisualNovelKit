@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://game/Markups.gd" type="Script" id=1]
+[ext_resource path="res://Game/Markups.gd" type="Script" id=1]
 [ext_resource path="res://addons/Rakugo/tools/MarkupEditor/MarkupEdit.tscn" type="PackedScene" id=2]
 
 [node name="Markups" type="Panel"]

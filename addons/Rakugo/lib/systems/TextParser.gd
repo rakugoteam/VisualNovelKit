@@ -1,5 +1,5 @@
 extends Node
-class_name RakugoTextParser, "res://addons/Rakugo/icons/rakugo_text_parser.svg"
+class_name RakugoTextParser
 
 var emojis = load("res://addons/emojis-for-godot/emojis/emojis.gd").new()
 
