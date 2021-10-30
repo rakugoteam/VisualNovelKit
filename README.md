@@ -1,4 +1,4 @@
-# ![Logo](graphics/window_icon.png) Rakugo
+# ![Logo](graphics/WindowIcon.png) Rakugo
 
 [![Documentation Status](https://readthedocs.org/projects/rakugodocs/badge/?version=latest)](https://rakugodocs.readthedocs.io/en/latest/?badge=latest)
 ![MIT License](https://img.shields.io/static/v1.svg?label=📜%20License&message=MIT&color=informational)
