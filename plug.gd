@@ -6,4 +6,4 @@ func _plugging():
     plug("rakugoteam/Emojis-For-Godot")
     plug("rakugoteam/Godot-Material-Icons")
     plug("rakugoteam/AdvancedText")
-    plug("/rakugoteam/Rakugo")
+    plug("rakugoteam/Rakugo")
