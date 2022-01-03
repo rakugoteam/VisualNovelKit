@@ -3,4 +3,4 @@
 /.mono/
 mono_crash.*.json
 /.plugged/
-# /addons/
+/addons/
