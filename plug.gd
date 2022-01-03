@@ -6,4 +6,8 @@ func _plugging():
     plug("rakugoteam/Emojis-For-Godot")
     plug("rakugoteam/Godot-Material-Icons")
     plug("rakugoteam/AdvancedText")
-    plug("rakugoteam/Rakugo")
+
+    # change to this when Rakugo 1.0 is released
+    # plug("rakugoteam/Rakugo")
+    # for now, use the dev version
+    plug("jeremi360/Rakugo")
