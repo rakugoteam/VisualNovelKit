@@ -10,7 +10,7 @@ config_version=4
 
 [application]
 
-config/name="Rakugo Template"
+config/name="Rakugo Visual Novel Kit"
 run/main_scene="res://Test/Testing.tscn"
 boot_splash/image="res://graphics/Splash.png"
 boot_splash/fullsize=false
@@ -18,12 +18,6 @@ boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://graphics/WindowIcon.png"
 config/auto_accept_quit=false
 config/quit_on_go_back=false
-
-[autoload]
-
-Rakugo="*res://addons/Rakugo/Rakugo.tscn"
-Settings="*res://addons/Rakugo/Settings.gd"
-Window="*res://gui/Window/Window.tscn"
 
 [debug]
 
@@ -173,22 +167,6 @@ highlight={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777244,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
-
-[rakugo]
-
-game/info/version="3.2.1"
-default/statements/default_say_parameters={
-"style": "default"
-}
-default/statements/default_ask_parameters={
-"style": "default"
-}
-default/statements/default_menu_parameters={
-"style": "default"
-}
-default/statements/default_show_parameters={
-}
-game/text/markup="markdown"
 
 [rendering]
 
