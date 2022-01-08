@@ -1,17 +1,27 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://addons/advanced-text/nodes/AdvancedTextLabel.gd" type="Script" id=1]
-[ext_resource path="res://ui/Fonts/AdvancedTextTheme.tres" type="Theme" id=2]
-[ext_resource path="res://ui/Fonts/NamesFont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://ui/themes/flat_drak_theme.tres" type="Theme" id=2]
+[ext_resource path="res://ui/fonts/NamesFont.tres" type="DynamicFont" id=3]
 [ext_resource path="res://ui/DialogueContainer.gd" type="Script" id=4]
+[ext_resource path="res://addons/advanced-text/examples/AdvancedTextButton/AdvancedTextButton.gd" type="Script" id=5]
 
 [node name="DialogueUI" type="CanvasLayer"]
+
+[node name="TestBG" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.631373, 0.121569, 0.121569, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Panel" type="Panel" parent="."]
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -214.0
+theme = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -26,16 +36,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="NameLabel" type="RichTextLabel" parent="Panel/DialogueContainer"]
+[node name="DialogLabel" type="RichTextLabel" parent="Panel/DialogueContainer"]
 margin_right = 1280.0
-margin_bottom = 50.0
+margin_bottom = 160.0
 rect_min_size = Vector2( 0, 50 )
 size_flags_horizontal = 3
-theme = ExtResource( 2 )
+size_flags_vertical = 3
 bbcode_enabled = true
-bbcode_text = "[font=res://ui/Fonts/NamesFont.tres]Character Name[/font]
+bbcode_text = "[font=res://ui/fonts/NamesFont.tres]Character Name[/font]
+Character is saying somethings here.
 "
 text = "Character Name
+Character is saying somethings here.
 "
 scroll_active = false
 script = ExtResource( 1 )
@@ -44,48 +56,54 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 markup_text = "# Character Name
+Character is saying somethings here.
 "
 markup = "markdown"
 headers_fonts = [ ExtResource( 3 ) ]
 
-[node name="SayLabel" type="RichTextLabel" parent="Panel/DialogueContainer"]
-margin_top = 54.0
-margin_right = 1280.0
-margin_bottom = 160.0
-rect_min_size = Vector2( 0, 50 )
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme = ExtResource( 2 )
-bbcode_enabled = true
-bbcode_text = "Character say this.
-
-
-
-"
-text = "Character say this.
-
-
-
-"
-scroll_active = false
-script = ExtResource( 1 )
-__meta__ = {
-"_default_markup": "markdown",
-"_edit_use_anchors_": false
-}
-markup_text = "Character say this.
-
-
-
-"
-markup = "markdown"
-headers_fonts = [ ExtResource( 3 ) ]
-
-[node name="LineEdit" type="LineEdit" parent="Panel/DialogueContainer"]
+[node name="AnswerEdit" type="LineEdit" parent="Panel/DialogueContainer"]
 margin_top = 164.0
 margin_right = 1280.0
 margin_bottom = 214.0
 rect_min_size = Vector2( 0, 50 )
 size_flags_horizontal = 3
-theme = ExtResource( 2 )
 text = "Player anwsers this"
+
+[node name="MenuContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonsBox" type="VBoxContainer" parent="MenuContainer"]
+margin_left = 390.0
+margin_top = 210.0
+margin_right = 890.0
+margin_bottom = 510.0
+rect_min_size = Vector2( 500, 300 )
+custom_constants/separation = 20
+
+[node name="AdvancedTextButton" type="Button" parent="MenuContainer/ButtonsBox"]
+margin_right = 500.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AdvancedTextLabel" type="RichTextLabel" parent="MenuContainer/ButtonsBox/AdvancedTextButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+bbcode_enabled = true
+bbcode_text = "[center][shake rate=5 level=10][b]Advanced Text Button[/b][/shake][/center]"
+text = "Advanced Text Button"
+scroll_active = false
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+markup_text = "[center][shake rate=5 level=10]**Advanced Text Button**[/shake][/center]"

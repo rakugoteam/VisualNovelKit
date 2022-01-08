@@ -6,16 +6,18 @@ func _ready():
 	Rakugo.connect("ask", self, "_on_ask")
 
 func _on_say(character, text, parameters):
-	$NameLabel.markup_text = character.name
-	$TextLabel.markup_text = text
+	# todo make line below work
+	# $DialogLabel.variables = Rakugo.variables
+	$DialogLabel.markup_text = "# %s \n" % character.name  
+	$DialogLabel.markup_text += text
 
 func _on_step():
 	printt("\nPress 'Enter' to continue...\n")
 
 func _on_ask(default_answer, parameters):
-	$LineEdit.show()
-	$LineEdit.grab_focus()
-	$LineEdit.placeholder_text = default_answer
+	$AnswerEdit.show()
+	$AnswerEdit.grab_focus()
+	$AnswerEdit.placeholder_text = default_answer
 
 func _process(delta):
 	if Rakugo.is_waiting_step and Input.is_action_just_pressed("ui_accept"):
