@@ -8,6 +8,6 @@ func _plugging():
     plug("rakugoteam/AdvancedText")
 
     # change to this when Rakugo 1.0 is released
-    # plug("rakugoteam/Rakugo")
+    plug("rakugoteam/Rakugo")
     # for now, use the dev version
-    plug("jeremi360/Rakugo")
+    # plug("jeremi360/Rakugo")
