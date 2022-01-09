@@ -2,8 +2,8 @@ extends VBoxContainer
 
 func _ready():
 	Rakugo.connect("say", self, "_on_say")
-	Rakugo.connect("step", self, "_on_step")
 	Rakugo.connect("ask", self, "_on_ask")
+	Rakugo.connect("step", self, "_on_step")
 
 func _on_say(character, text, parameters):
 	# todo make line below work
