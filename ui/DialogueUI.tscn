@@ -1,0 +1,133 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://addons/advanced-text/nodes/AdvancedTextLabel.gd" type="Script" id=1]
+[ext_resource path="res://ui/themes/flat_drak_theme.tres" type="Theme" id=2]
+[ext_resource path="res://ui/fonts/NamesFont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://ui/DialogueContainer.gd" type="Script" id=4]
+[ext_resource path="res://ui/ChoiceButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ui/MenuContainer.gd" type="Script" id=6]
+[ext_resource path="res://ui/Notification.gd" type="Script" id=7]
+
+[node name="DialogueUI" type="CanvasLayer"]
+
+[node name="TestBG" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.631373, 0.121569, 0.121569, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DialogueControl" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+
+[node name="DialoguePanel" type="Panel" parent="DialogueControl"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -163.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DialogueContainer" type="VBoxContainer" parent="DialogueControl/DialoguePanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DialogLabel" type="RichTextLabel" parent="DialogueControl/DialoguePanel/DialogueContainer"]
+margin_right = 1280.0
+margin_bottom = 109.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "[font=res://ui/fonts/NamesFont.tres]Character Name[/font]
+Character is saying somethings here.
+"
+text = "Character Name
+Character is saying somethings here.
+"
+scroll_active = false
+script = ExtResource( 1 )
+__meta__ = {
+"_default_markup": "markdown",
+"_edit_use_anchors_": false
+}
+markup_text = "# Character Name
+Character is saying somethings here.
+"
+headers_fonts = [ ExtResource( 3 ) ]
+
+[node name="AnswerEdit" type="LineEdit" parent="DialogueControl/DialoguePanel/DialogueContainer"]
+margin_top = 113.0
+margin_right = 1280.0
+margin_bottom = 163.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "Player anwsers this"
+
+[node name="MenuContainer" type="ScrollContainer" parent="DialogueControl"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -390.0
+margin_top = -260.0
+margin_right = 410.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 800, 400 )
+rect_clip_content = false
+mouse_filter = 1
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="ChoicesBox" type="VBoxContainer" parent="DialogueControl/MenuContainer"]
+margin_right = 800.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 500, 300 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="ChoiceButton" parent="DialogueControl/MenuContainer/ChoicesBox" instance=ExtResource( 5 )]
+margin_top = 175.0
+margin_right = 800.0
+margin_bottom = 225.0
+size_flags_horizontal = 3
+
+[node name="Notification" type="Popup" parent="DialogueControl"]
+visible = true
+margin_right = 476.0
+margin_bottom = 40.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="DialogueControl/Notification"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="RichTextLabel" parent="DialogueControl/Notification/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+bbcode_enabled = true
+bbcode_text = "Notification"
+text = "Notification"
+script = ExtResource( 1 )
+__meta__ = {
+"_default_markup": "markdown",
+"_edit_use_anchors_": false
+}
+markup_text = "Notification"

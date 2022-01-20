@@ -1,18 +1,7 @@
-# Godot-specific ignores
-.import/
-*.import
-export.cfg
-export_presets.cfg
-
-# Mono-specific ignores
-.mono/
-mono_crash.*.*.json
-
-# Project specific
-addons/godot-plugin-refresher
-addons/Iconify
-fontconfig
-refences/
-saves/
-.directory
-.vscode/
+/.import/
+/.vscode/
+/.mono/
+mono_crash.*.json
+/.plugged/
+/addons/
+/saves/
