@@ -3,10 +3,10 @@
 [ext_resource path="res://addons/advanced-text/nodes/AdvancedTextLabel.gd" type="Script" id=1]
 [ext_resource path="res://ui/themes/flat_drak_theme.tres" type="Theme" id=2]
 [ext_resource path="res://ui/fonts/NamesFont.tres" type="DynamicFont" id=3]
-[ext_resource path="res://ui/DialogueContainer.gd" type="Script" id=4]
-[ext_resource path="res://ui/ChoiceButton.tscn" type="PackedScene" id=5]
-[ext_resource path="res://ui/MenuContainer.gd" type="Script" id=6]
-[ext_resource path="res://ui/Notification.gd" type="Script" id=7]
+[ext_resource path="res://ui/DialogueUI/DialogueContainer.gd" type="Script" id=4]
+[ext_resource path="res://ui/DialogueUI/ChoiceButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ui/DialogueUI/MenuContainer.gd" type="Script" id=6]
+[ext_resource path="res://ui/DialogueUI/Notification.gd" type="Script" id=7]
 
 [node name="DialogueUI" type="CanvasLayer"]
 
@@ -114,6 +114,9 @@ script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Timer" type="Timer" parent="DialogueControl/Notification"]
+one_shot = true
 
 [node name="Panel" type="Panel" parent="DialogueControl/Notification"]
 anchor_right = 1.0
