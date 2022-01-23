@@ -1,28 +1,37 @@
 extends VBoxContainer
 
+onready var dialog_label : AdvancedTextLabel = $DialogLabel
+onready var answer_edit : LineEdit = $AnswerEdit
+
 func _ready():
 	Rakugo.connect("say", self, "_on_say")
 	Rakugo.connect("ask", self, "_on_ask")
+	answer_edit.connect("text_entered", self, "_on_answer_entered")
 	Rakugo.connect("step", self, "_on_step")
 
 func _on_say(character, text, parameters):
+	show()
 	# todo make line below work
 	# $DialogLabel.variables = Rakugo.variables
-	$DialogLabel.markup_text = "# %s \n" % character.name  
-	$DialogLabel.markup_text += text
+	dialog_label.markup_text = "# %s \n" % character.name  
+	dialog_label.markup_text += text
 
 func _on_step():
-	printt("\nPress 'Enter' to continue...\n")
+	hide()
 
 func _on_ask(default_answer, parameters):
-	$AnswerEdit.show()
-	$AnswerEdit.grab_focus()
-	$AnswerEdit.placeholder_text = default_answer
+	answer_edit.show()
+	answer_edit.grab_focus()
+	answer_edit.placeholder_text = default_answer
+
+func _on_ask_entered(answer):
+	answer_edit.hide()
+	answer_edit.placeholder_text = ""
+	answer_edit.text = ""
+	Rakugo.ask_return(answer)
 
 func _process(delta):
 	if Rakugo.is_waiting_step and Input.is_action_just_pressed("ui_accept"):
 		Rakugo.do_step()
 		
-	if Rakugo.is_waiting_ask_return and Input.is_action_just_pressed("ui_down"):
-		Rakugo.ask_return("Bob")
 
