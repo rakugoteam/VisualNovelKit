@@ -117,7 +117,6 @@ _global_script_class_icons={
 [application]
 
 config/name="Rakugo Visual Novel Kit"
-run/main_scene="res://Test/Testing.tscn"
 boot_splash/fullsize=false
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://graphics/WindowIcon.png"

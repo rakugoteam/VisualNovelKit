@@ -6,7 +6,6 @@
 [ext_resource path="res://ui/Screens/SavesScreen/ScrollContainer.gd" type="Script" id=4]
 [ext_resource path="res://ui/Screens/SavesScreen/SavesScreen.gd" type="Script" id=5]
 [ext_resource path="res://ui/Screens/SavesScreen/page_buttons.tres" type="ButtonGroup" id=7]
-[ext_resource path="res://themes/Default/default.tres" type="Theme" id=8]
 [ext_resource path="res://ui/Screens/SavesScreen/ConfirmationDialog.gd" type="Script" id=9]
 [ext_resource path="res://ui/Screens/SavesScreen/DummySlot.tscn" type="PackedScene" id=10]
 [ext_resource path="res://ui/Screens/SavesScreen/PageNavBar.gd" type="Script" id=11]
@@ -87,7 +86,7 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_vertical = 3
-theme = ExtResource( 8 )
+
 follow_focus = true
 scroll_horizontal_enabled = false
 scroll_vertical_enabled = false
@@ -151,7 +150,7 @@ margin_left = 120.0
 margin_right = 147.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
-theme = ExtResource( 8 )
+
 custom_styles/focus = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 text = "<"
@@ -163,7 +162,7 @@ margin_left = 167.0
 margin_right = 186.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
-theme = ExtResource( 8 )
+
 custom_styles/focus = SubResource( 8 )
 toggle_mode = true
 group = ExtResource( 7 )
@@ -176,7 +175,7 @@ margin_left = 206.0
 margin_right = 221.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
-theme = ExtResource( 8 )
+
 custom_styles/focus = SubResource( 6 )
 toggle_mode = true
 pressed = true
@@ -190,7 +189,7 @@ margin_left = 241.0
 margin_right = 256.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
-theme = ExtResource( 8 )
+
 custom_styles/focus = SubResource( 6 )
 toggle_mode = true
 group = ExtResource( 7 )
@@ -203,7 +202,7 @@ margin_left = 276.0
 margin_right = 291.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
-theme = ExtResource( 8 )
+
 custom_styles/focus = SubResource( 6 )
 toggle_mode = true
 group = ExtResource( 7 )
@@ -216,7 +215,7 @@ margin_left = 311.0
 margin_right = 326.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
-theme = ExtResource( 8 )
+
 custom_styles/focus = SubResource( 6 )
 toggle_mode = true
 group = ExtResource( 7 )
@@ -229,7 +228,7 @@ margin_left = 346.0
 margin_right = 361.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
-theme = ExtResource( 8 )
+
 custom_styles/focus = SubResource( 6 )
 toggle_mode = true
 group = ExtResource( 7 )
@@ -242,7 +241,7 @@ margin_left = 381.0
 margin_right = 396.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
-theme = ExtResource( 8 )
+
 custom_styles/focus = SubResource( 6 )
 toggle_mode = true
 group = ExtResource( 7 )
@@ -255,7 +254,7 @@ margin_left = 416.0
 margin_right = 431.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
-theme = ExtResource( 8 )
+
 custom_styles/focus = SubResource( 6 )
 toggle_mode = true
 group = ExtResource( 7 )
@@ -268,7 +267,7 @@ margin_left = 451.0
 margin_right = 466.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
-theme = ExtResource( 8 )
+
 custom_styles/focus = SubResource( 6 )
 toggle_mode = true
 group = ExtResource( 7 )
@@ -281,7 +280,7 @@ margin_left = 486.0
 margin_right = 501.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
-theme = ExtResource( 8 )
+
 custom_styles/focus = SubResource( 6 )
 toggle_mode = true
 group = ExtResource( 7 )
@@ -294,7 +293,7 @@ margin_left = 521.0
 margin_right = 551.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
-theme = ExtResource( 8 )
+
 custom_styles/focus = SubResource( 6 )
 toggle_mode = true
 group = ExtResource( 7 )
@@ -307,7 +306,7 @@ margin_left = 571.0
 margin_right = 601.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
-theme = ExtResource( 8 )
+
 custom_styles/focus = SubResource( 6 )
 toggle_mode = true
 group = ExtResource( 7 )
@@ -320,7 +319,7 @@ margin_left = 621.0
 margin_right = 648.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
-theme = ExtResource( 8 )
+
 custom_styles/focus = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 text = ">"
@@ -332,7 +331,7 @@ anchor_left = 0.8
 anchor_top = 0.9
 anchor_right = 0.9
 anchor_bottom = 0.95
-theme = ExtResource( 8 )
+
 text = "Skip Naming"
 script = ExtResource( 2 )
 __meta__ = {
@@ -347,7 +346,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource( 8 )
+
 window_title = ""
 dialog_text = "Are you sure you want to overwrite your save?"
 dialog_hide_on_ok = false
@@ -363,7 +362,7 @@ margin_left = -45.1
 margin_top = 35.0
 margin_right = 45.1
 margin_bottom = 62.0
-theme = ExtResource( 8 )
+
 align = 1
 caret_blink = true
 __meta__ = {
