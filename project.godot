@@ -131,6 +131,7 @@ MarkdownParser="*res://addons/advanced-text/parsers/MarkdownParser.gd"
 RenpyParser="*res://addons/advanced-text/parsers/RenpyParser.gd"
 Rakugo="*res://addons/Rakugo/Rakugo.tscn"
 Settings="*res://addons/Rakugo/Settings.gd"
+Window="*res://ui/Window/Window.tscn"
 
 [debug]
 
