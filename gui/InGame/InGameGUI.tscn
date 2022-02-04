@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://gui/InGame/ChoiceMenu/ChoiceMenu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://gui/InGame/InGameGUI.gd" type="Script" id=3]
+[ext_resource path="res://gui/InGame/NotifyDisplay/NotifyDisplay.tscn" type="PackedScene" id=4]
+[ext_resource path="res://gui/InGame/DialoguePanel/DialoguePanel.tscn" type="PackedScene" id=5]
+[ext_resource path="res://gui/QuickMenu/QuickMenu.tscn" type="PackedScene" id=6]
+
+[node name="InGameGUI" type="Control" groups=[
+"$ dialogue",
+"showable",
+]]
+pause_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -301.0
+margin_top = -359.0
+margin_right = 302.0
+margin_bottom = 145.0
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="ChoiceMenu" parent="ScrollContainer" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 603.0
+margin_bottom = 504.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="DialoguePanel" parent="." instance=ExtResource( 5 )]
+
+[node name="QuickMenu" parent="." instance=ExtResource( 6 )]
+
+[node name="NotifyDisplay" parent="." instance=ExtResource( 4 )]
+
+[connection signal="quick_button_press" from="QuickMenu" to="." method="_on_quick_button_press"]

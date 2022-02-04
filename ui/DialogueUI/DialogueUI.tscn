@@ -7,7 +7,7 @@
 [ext_resource path="res://ui/DialogueUI/ChoiceButton.tscn" type="PackedScene" id=5]
 [ext_resource path="res://ui/DialogueUI/MenuContainer.gd" type="Script" id=6]
 [ext_resource path="res://ui/DialogueUI/Notification.gd" type="Script" id=7]
-[ext_resource path="res://ui/QuickMenu/QuickMenu.tscn" type="PackedScene" id=8]
+[ext_resource path="res://gui/QuickMenu/QuickMenu.tscn" type="PackedScene" id=8]
 
 [node name="DialogueUI" type="CanvasLayer"]
 
