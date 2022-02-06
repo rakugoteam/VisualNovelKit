@@ -1,13 +1,13 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://ui/Window/Window.gd" type="Script" id=1]
-[ext_resource path="res://ui/DialogueUI/DialogueUI.tscn" type="PackedScene" id=2]
-[ext_resource path="res://ui/Screens/Screens.tscn" type="PackedScene" id=4]
-[ext_resource path="res://ui/themes/flat_drak_theme.tres" type="Theme" id=6]
-[ext_resource path="res://ui/Window/Loading.gd" type="Script" id=7]
-[ext_resource path="res://ui/Window/LoadingProgressBar.gd" type="Script" id=8]
-[ext_resource path="res://ui/QuitScreen/QuitScreen.tscn" type="PackedScene" id=9]
-[ext_resource path="res://ui/Window/SceneAnchor.gd" type="Script" id=10]
+[ext_resource path="res://addons/vnkit/Window/Window.gd" type="Script" id=1]
+[ext_resource path="res://addons/vnkit/DialogueUI/DialogueUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/vnkit/Screens/Screens.tscn" type="PackedScene" id=4]
+[ext_resource path="res://addons/vnkit/themes/flat_drak_theme.tres" type="Theme" id=6]
+[ext_resource path="res://addons/vnkit/Window/Loading.gd" type="Script" id=7]
+[ext_resource path="res://addons/vnkit/Window/LoadingProgressBar.gd" type="Script" id=8]
+[ext_resource path="res://addons/vnkit/QuitScreen/QuitScreen.tscn" type="PackedScene" id=9]
+[ext_resource path="res://addons/vnkit/Window/SceneAnchor.gd" type="Script" id=10]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 

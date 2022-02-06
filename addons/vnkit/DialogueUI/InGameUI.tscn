@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://addons/advanced-text/nodes/AdvancedTextLabel.gd" type="Script" id=1]
-[ext_resource path="res://ui/DialogueUI/Notification.gd" type="Script" id=2]
-[ext_resource path="res://ui/DialogueUI/MenuContainer.gd" type="Script" id=3]
-[ext_resource path="res://ui/themes/flat_drak_theme.tres" type="Theme" id=4]
-[ext_resource path="res://ui/DialogueUI/DialogueUI.tscn" type="PackedScene" id=5]
-[ext_resource path="res://ui/QuickMenu/QuickMenu.tscn" type="PackedScene" id=7]
-[ext_resource path="res://ui/DialogueUI/ChoiceButton.tscn" type="PackedScene" id=8]
+[ext_resource path="res://addons/vnkit/DialogueUI/Notification.gd" type="Script" id=2]
+[ext_resource path="res://addons/vnkit/DialogueUI/MenuContainer.gd" type="Script" id=3]
+[ext_resource path="res://addons/vnkit/themes/flat_drak_theme.tres" type="Theme" id=4]
+[ext_resource path="res://addons/vnkit/DialogueUI/DialogueUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://addons/vnkit/QuickMenu/QuickMenu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://addons/vnkit/DialogueUI/ChoiceButton.tscn" type="PackedScene" id=8]
 
 [node name="InGameUI" type="Control"]
 anchor_right = 1.0

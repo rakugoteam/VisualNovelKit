@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://ui/Screens/MenuBar/MenuBar.gd" type="Script" id=1]
+[ext_resource path="res://addons/vnkit/Screens/MenuBar/MenuBar.gd" type="Script" id=1]
 [ext_resource path="res://fonts/DejaVu/DejaVuSans.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://ui/Screens/MenuBar/SubMenu.gd" type="Script" id=4]
-[ext_resource path="res://ui/Screens/MenuBar/MainMenu.gd" type="Script" id=5]
-[ext_resource path="res://ui/Screens/MenuBar/NavMenuButton.tscn" type="PackedScene" id=6]
-[ext_resource path="res://ui/Screens/MenuBar/menu_buttons.tres" type="ButtonGroup" id=7]
+[ext_resource path="res://addons/vnkit/Screens/MenuBar/SubMenu.gd" type="Script" id=4]
+[ext_resource path="res://addons/vnkit/Screens/MenuBar/MainMenu.gd" type="Script" id=5]
+[ext_resource path="res://addons/vnkit/Screens/MenuBar/NavMenuButton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://addons/vnkit/Screens/MenuBar/menu_buttons.tres" type="ButtonGroup" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 44

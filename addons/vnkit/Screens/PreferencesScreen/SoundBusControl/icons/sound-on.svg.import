@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sound-on.svg-7eb2185b7e4192569b1707eb1ea3fb1f.stex"
+path="res://.import/sound-on.svg-c3b1cdb3a1cad146b2b60c20601a0fcd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/Screens/PreferencesScreen/SoundBusControl/icons/sound-on.svg"
-dest_files=[ "res://.import/sound-on.svg-7eb2185b7e4192569b1707eb1ea3fb1f.stex" ]
+source_file="res://addons/vnkit/Screens/PreferencesScreen/SoundBusControl/icons/sound-on.svg"
+dest_files=[ "res://.import/sound-on.svg-c3b1cdb3a1cad146b2b60c20601a0fcd.stex" ]
 
 [params]
 

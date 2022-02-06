@@ -1,11 +1,11 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://ui/Screens/SavesScreen/SlotButton.gd" type="Script" id=2]
-[ext_resource path="res://ui/Screens/SavesScreen/ScreenshotRect.gd" type="Script" id=3]
-[ext_resource path="res://ui/Screens/SavesScreen/Slot.gd" type="Script" id=4]
-[ext_resource path="res://ui/Screens/SavesScreen/DateLabel.gd" type="Script" id=5]
-[ext_resource path="res://ui/Screens/SavesScreen/SaveNameLabel.gd" type="Script" id=6]
-[ext_resource path="res://ui/Screens/SavesScreen/DeleteButton.gd" type="Script" id=7]
+[ext_resource path="res://addons/vnkit/Screens/SavesScreen/SlotButton.gd" type="Script" id=2]
+[ext_resource path="res://addons/vnkit/Screens/SavesScreen/ScreenshotRect.gd" type="Script" id=3]
+[ext_resource path="res://addons/vnkit/Screens/SavesScreen/Slot.gd" type="Script" id=4]
+[ext_resource path="res://addons/vnkit/Screens/SavesScreen/DateLabel.gd" type="Script" id=5]
+[ext_resource path="res://addons/vnkit/Screens/SavesScreen/SaveNameLabel.gd" type="Script" id=6]
+[ext_resource path="res://addons/vnkit/Screens/SavesScreen/DeleteButton.gd" type="Script" id=7]
 [ext_resource path="res://fonts/DejaVu/DejaVuSans.ttf" type="DynamicFontData" id=8]
 
 [sub_resource type="StyleBoxLine" id=1]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://ui/Screens/HistoryScreen/HistoryItem.gd" type="Script" id=1]
+[ext_resource path="res://addons/vnkit/Screens/HistoryScreen/HistoryItem.gd" type="Script" id=1]
 [ext_resource path="res://fonts/DejaVu/DejaVuSans-Oblique.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://fonts/DejaVu/DejaVuSans-BoldOblique.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://fonts/DejaVu/DejaVuSans-Bold.ttf" type="DynamicFontData" id=4]
