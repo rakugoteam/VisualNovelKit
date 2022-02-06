@@ -1,0 +1,339 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://fonts/DejaVu/DejaVuSans.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://fonts/DejaVu/DejaVuSans-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://addons/vnkit/Screens/HistoryScreen/HistoryItem.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/vnkit/Screens/HistoryScreen/ScrollContainer.gd" type="Script" id=4]
+[ext_resource path="res://addons/vnkit/Screens/HistoryScreen/History.gd" type="Script" id=5]
+[ext_resource path="res://addons/vnkit/Screens/Screens.tscn" type="PackedScene" id=6]
+[ext_resource path="res://addons/vnkit/Screens/MenuBar/SubMenu.gd" type="Script" id=8]
+[ext_resource path="res://addons/vnkit/Screens/MenuBar/MainMenu.gd" type="Script" id=9]
+[ext_resource path="res://addons/vnkit/Screens/MenuBar/NavMenuButton.tscn" type="PackedScene" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+size = 26
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends Label
+
+
+func _ready():
+	self.text = Settings.get(\"application/config/name\")
+"
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends Label
+
+
+func _ready():
+	self.text =  Settings.get(\"rakugo/Game/info/version\")
+"
+
+[sub_resource type="DynamicFont" id=4]
+size = 42
+font_data = ExtResource( 1 )
+
+[sub_resource type="GDScript" id=5]
+script/source = "extends Label
+
+
+func _ready():
+	self.text = Settings.get(\"application/config/name\")
+"
+
+[sub_resource type="GDScript" id=6]
+script/source = "extends Label
+
+
+func _ready():
+	self.text = Settings.get(\"rakugo/Game/info/version\")
+"
+
+[sub_resource type="DynamicFont" id=7]
+size = 44
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+content_margin_left = 40.0
+content_margin_right = 10.0
+draw_center = false
+border_width_right = 4
+border_color = Color( 0.756863, 0.878431, 1, 1 )
+
+[sub_resource type="ButtonGroup" id=9]
+
+[node name="Screens" instance=ExtResource( 6 )]
+
+[node name="GameTitle" type="VBoxContainer" parent="SubMenus/TitleScreen" index="0"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -40.0
+margin_bottom = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="SubMenus/TitleScreen/GameTitle" index="0"]
+margin_right = 13.0
+margin_bottom = 2.0
+size_flags_vertical = 1
+custom_colors/font_color = Color( 0.6, 0.8, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Your new game"
+align = 2
+script = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Version" type="Label" parent="SubMenus/TitleScreen/GameTitle" index="1"]
+margin_top = 6.0
+margin_right = 13.0
+margin_bottom = 8.0
+size_flags_vertical = 1
+custom_colors/font_color = Color( 0.6, 0.8, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "2.0.0"
+align = 2
+script = SubResource( 3 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SubMenus/AboutScreen" index="0"]
+anchor_left = 0.1
+anchor_right = 0.9
+anchor_bottom = 1.0
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="About" type="VBoxContainer" parent="SubMenus/AboutScreen/ScrollContainer" index="0"]
+margin_right = 650.0
+margin_bottom = 262.0
+rect_min_size = Vector2( 650, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameTitle" type="Label" parent="SubMenus/AboutScreen/ScrollContainer/About" index="0"]
+margin_right = 650.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 0, 200 )
+custom_colors/font_color = Color( 0.6, 0.8, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+valign = 2
+script = SubResource( 5 )
+
+[node name="GameVersion" type="Label" parent="SubMenus/AboutScreen/ScrollContainer/About" index="1"]
+margin_top = 204.0
+margin_right = 650.0
+margin_bottom = 231.0
+script = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RakugoTextLabel" type="RichTextLabel" parent="SubMenus/AboutScreen/ScrollContainer/About" index="2"]
+margin_top = 235.0
+margin_right = 650.0
+margin_bottom = 275.0
+rect_min_size = Vector2( 100, 40 )
+rect_clip_content = false
+focus_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/selection_color = Color( 0, 0.6, 0.8, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+scroll_active = false
+selection_enabled = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SubMenus/HistoryScreen" index="0"]
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+follow_focus = true
+scroll_horizontal_enabled = false
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="History" type="VBoxContainer" parent="SubMenus/HistoryScreen/ScrollContainer" index="0"]
+margin_right = 798.72
+margin_bottom = 576.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 10
+alignment = 1
+script = ExtResource( 5 )
+HistoryItemTemplate = ExtResource( 3 )
+
+[node name="MenuBar" parent="." index="2"]
+margin_left = 994.0
+margin_top = 1.0
+margin_right = 994.0
+margin_bottom = 1.0
+
+[node name="SubMenu" type="Control" parent="MenuBar" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CurrentSubMenu" type="Label" parent="MenuBar/SubMenu" index="0"]
+anchor_right = 1.0
+anchor_bottom = 0.25
+margin_left = 50.0
+margin_top = 50.0
+custom_colors/font_color = Color( 0.756863, 0.878431, 1, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Preferences"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="MenuBar/SubMenu" index="1"]
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 0.95
+custom_styles/panel = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainMenu" type="Control" parent="MenuBar" index="1"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="MenuBar/MainMenu" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NavList" type="VBoxContainer" parent="MenuBar" index="2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 40.0
+custom_constants/separation = 12
+alignment = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Start" parent="MenuBar/NavList" index="0" groups=["nav_button", "nav_button_main_menu"] instance=ExtResource( 10 )]
+margin_top = 236.0
+margin_right = 241.0
+margin_bottom = 250.0
+text = "Start"
+nav_action = "start"
+
+[node name="Continue" parent="MenuBar/NavList" index="1" groups=["nav_button", "nav_button_continue", "nav_button_main_menu"] instance=ExtResource( 10 )]
+margin_top = 262.0
+margin_right = 241.0
+margin_bottom = 276.0
+disabled = true
+text = "Continue"
+nav_action = "continue"
+
+[node name="History" parent="MenuBar/NavList" index="2" groups=["nav_button", "nav_button_game"] instance=ExtResource( 10 )]
+margin_top = 288.0
+margin_right = 241.0
+margin_bottom = 302.0
+toggle_mode = true
+group = SubResource( 9 )
+text = "History"
+nav_action = "history"
+
+[node name="Save" parent="MenuBar/NavList" index="3" groups=["nav_button", "nav_button_game"] instance=ExtResource( 10 )]
+margin_top = 314.0
+margin_right = 241.0
+margin_bottom = 328.0
+toggle_mode = true
+group = SubResource( 9 )
+text = "Save"
+nav_action = "save"
+
+[node name="Load" parent="MenuBar/NavList" index="4" groups=["nav_button"] instance=ExtResource( 10 )]
+margin_top = 340.0
+margin_right = 241.0
+margin_bottom = 354.0
+toggle_mode = true
+group = SubResource( 9 )
+text = "Load"
+nav_action = "load"
+
+[node name="Preferences" parent="MenuBar/NavList" index="5" groups=["nav_button"] instance=ExtResource( 10 )]
+margin_top = 366.0
+margin_right = 241.0
+margin_bottom = 380.0
+toggle_mode = true
+group = SubResource( 9 )
+text = "Preferences"
+nav_action = "preferences"
+
+[node name="MainMenu" parent="MenuBar/NavList" index="6" groups=["nav_button", "nav_button_game"] instance=ExtResource( 10 )]
+margin_top = 392.0
+margin_right = 241.0
+margin_bottom = 406.0
+text = "Main Menu"
+nav_action = "main_menu"
+
+[node name="About" parent="MenuBar/NavList" index="7" groups=["nav_button"] instance=ExtResource( 10 )]
+margin_top = 418.0
+margin_right = 241.0
+margin_bottom = 432.0
+toggle_mode = true
+group = SubResource( 9 )
+text = "About"
+nav_action = "about"
+
+[node name="Help" parent="MenuBar/NavList" index="8" groups=["nav_button"] instance=ExtResource( 10 )]
+margin_top = 444.0
+margin_right = 241.0
+margin_bottom = 458.0
+toggle_mode = true
+group = SubResource( 9 )
+text = "Help"
+nav_action = "help"
+
+[node name="Quit" parent="MenuBar/NavList" index="9" groups=["nav_button"] instance=ExtResource( 10 )]
+margin_top = 470.0
+margin_right = 241.0
+margin_bottom = 484.0
+text = "Quit"
+nav_action = "quit"
+
+[node name="ReturnButton" parent="MenuBar" index="3" groups=["nav_button"] instance=ExtResource( 10 )]
+anchor_top = 0.85
+anchor_bottom = 0.85
+margin_left = 40.0
+margin_right = 133.0
+margin_bottom = 35.0
+text = "Return"
+nav_action = "return"

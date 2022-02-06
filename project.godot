@@ -117,6 +117,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Rakugo Visual Novel Kit"
+run/main_scene="res://game/Example.tscn"
 boot_splash/fullsize=false
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://graphics/WindowIcon.png"
@@ -130,7 +131,7 @@ MarkdownParser="*res://addons/advanced-text/parsers/MarkdownParser.gd"
 RenpyParser="*res://addons/advanced-text/parsers/RenpyParser.gd"
 Rakugo="*res://addons/Rakugo/Rakugo.tscn"
 Settings="*res://addons/Rakugo/Settings.gd"
-Window="res://addons/vnkit/Window/Window.tscn"
+Window="*res://ui/Window.tscn"
 
 [debug]
 
@@ -284,6 +285,10 @@ highlight={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777244,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
+
+[rakugo]
+
+default/gui/theme="res://addons/vnkit/themes/flat_drak_theme.tres"
 
 [rendering]
 

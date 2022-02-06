@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://addons/advanced-text/nodes/AdvancedTextLabel.gd" type="Script" id=1]
-[ext_resource path="res://addons/vnkit/DialogueUI/Notification.gd" type="Script" id=2]
-[ext_resource path="res://addons/vnkit/DialogueUI/MenuContainer.gd" type="Script" id=3]
+[ext_resource path="res://addons/vnkit/InGameUI/Notification.gd" type="Script" id=2]
+[ext_resource path="res://addons/vnkit/InGameUI/DialogueUI/MenuContainer.gd" type="Script" id=3]
 [ext_resource path="res://addons/vnkit/themes/flat_drak_theme.tres" type="Theme" id=4]
-[ext_resource path="res://addons/vnkit/DialogueUI/DialogueUI.tscn" type="PackedScene" id=5]
-[ext_resource path="res://addons/vnkit/QuickMenu/QuickMenu.tscn" type="PackedScene" id=7]
-[ext_resource path="res://addons/vnkit/DialogueUI/ChoiceButton.tscn" type="PackedScene" id=8]
+[ext_resource path="res://addons/vnkit/InGameUI/DialogueUI/DialogueUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://addons/vnkit/InGameUI/DialogueUI.gd" type="Script" id=6]
+[ext_resource path="res://addons/vnkit/InGameUI/QuickMenu/QuickMenu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://addons/vnkit/InGameUI/DialogueUI/ChoiceButton.tscn" type="PackedScene" id=8]
 
 [node name="InGameUI" type="Control"]
 anchor_right = 1.0
@@ -64,6 +65,7 @@ margin_bottom = 720.0
 [node name="DialogueUI" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -1,6 +1,7 @@
 extends Control
 
-onready var Screens := $Panel/TabContainer/Screens
+onready var Tabs := $Panel/Tabs
+onready var Screens := $Panel/Tabs/Screens
 onready var QuitScreen := $Panel/QuitScreen
 
 var fullscreen : bool setget _set_fullscreen, _get_fullscreen
@@ -59,7 +60,7 @@ func _on_window_resized():
 		Settings.set(SettingsList.height, OS.window_size.y)
 
 func select_ui_tab(tab:int):
-	$Panel/TabContainer.current_tab = tab
+	Tabs.current_tab = tab
 
 func get_current_ui():
-	return $Panel/TabContainer.get_current_tab_control()
+	return Tabs.get_current_tab_control()

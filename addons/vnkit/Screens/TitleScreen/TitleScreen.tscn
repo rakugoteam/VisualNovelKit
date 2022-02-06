@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://fonts/DejaVu/DejaVuSans-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://addons/advanced-text/font/DejaVuSans-Bold.tres" type="DynamicFontData" id=1]
 
 [sub_resource type="DynamicFont" id=1]
 size = 26
@@ -21,7 +21,7 @@ script/source = "extends Label
 
 
 func _ready():
-	self.text =  Settings.get(\"rakugo/Game/info/version\")
+	self.text = Settings.get(\"rakugo/Game/info/version\")
 "
 
 [node name="TitleScreen" type="Control"]
@@ -45,11 +45,11 @@ __meta__ = {
 }
 
 [node name="Title" type="Label" parent="GameTitle"]
-margin_right = 230.0
-margin_bottom = 32.0
+margin_right = 13.0
+margin_bottom = 2.0
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.6, 0.8, 1, 1 )
+custom_fonts/font = SubResource( 1 )
 text = "Your new game"
 align = 2
 script = SubResource( 2 )
@@ -58,12 +58,12 @@ __meta__ = {
 }
 
 [node name="Version" type="Label" parent="GameTitle"]
-margin_top = 36.0
-margin_right = 230.0
-margin_bottom = 68.0
+margin_top = 6.0
+margin_right = 13.0
+margin_bottom = 8.0
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.6, 0.8, 1, 1 )
+custom_fonts/font = SubResource( 1 )
 text = "2.0.0"
 align = 2
 script = SubResource( 3 )

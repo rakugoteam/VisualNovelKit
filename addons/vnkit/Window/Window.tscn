@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://addons/vnkit/Window/Window.gd" type="Script" id=1]
-[ext_resource path="res://addons/vnkit/DialogueUI/DialogueUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/vnkit/InGameUI/InGameUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/vnkit/Window/Tabs.gd" type="Script" id=3]
 [ext_resource path="res://addons/vnkit/Screens/Screens.tscn" type="PackedScene" id=4]
 [ext_resource path="res://addons/vnkit/themes/flat_drak_theme.tres" type="Theme" id=6]
 [ext_resource path="res://addons/vnkit/Window/Loading.gd" type="Script" id=7]
@@ -58,7 +59,7 @@ audio_listener_enable_2d = true
 audio_listener_enable_3d = true
 script = ExtResource( 10 )
 
-[node name="TabContainer" type="TabContainer" parent="Panel"]
+[node name="Tabs" type="TabContainer" parent="Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -1.0
@@ -70,25 +71,24 @@ custom_styles/tab_disabled = SubResource( 2 )
 custom_styles/tab_bg = SubResource( 3 )
 custom_styles/panel = SubResource( 4 )
 tabs_visible = false
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Screens" parent="Panel/TabContainer" instance=ExtResource( 4 )]
+[node name="Screens" parent="Panel/Tabs" instance=ExtResource( 4 )]
 
-[node name="InGameGUI" parent="Panel/TabContainer" instance=ExtResource( 2 )]
+[node name="InGameUI" parent="Panel/Tabs" instance=ExtResource( 2 )]
 visible = false
-anchor_top = 0.0
-margin_top = 0.0
 
-[node name="Loading" type="Control" parent="Panel/TabContainer"]
+[node name="Loading" type="Control" parent="Panel/Tabs"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 script = ExtResource( 7 )
 
-[node name="Panel" type="Panel" parent="Panel/TabContainer/Loading"]
+[node name="Panel" type="Panel" parent="Panel/Tabs/Loading"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_min_size = Vector2( 1024, 600 )
@@ -96,7 +96,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/TabContainer/Loading/Panel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Tabs/Loading/Panel"]
 anchor_left = 0.2
 anchor_right = 0.8
 anchor_bottom = 0.9
@@ -106,7 +106,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Panel/TabContainer/Loading/Panel/VBoxContainer"]
+[node name="Label" type="Label" parent="Panel/Tabs/Loading/Panel/VBoxContainer"]
 margin_top = 295.0
 margin_right = 768.0
 margin_bottom = 322.0
@@ -115,7 +115,7 @@ size_flags_vertical = 1
 text = "Loading"
 align = 1
 
-[node name="LoadingProgressBar" type="ProgressBar" parent="Panel/TabContainer/Loading/Panel/VBoxContainer"]
+[node name="LoadingProgressBar" type="ProgressBar" parent="Panel/Tabs/Loading/Panel/VBoxContainer"]
 margin_top = 326.0
 margin_right = 768.0
 margin_bottom = 353.0

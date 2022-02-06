@@ -2,7 +2,7 @@
 
 [ext_resource path="res://addons/advanced-text/nodes/AdvancedTextLabel.gd" type="Script" id=1]
 [ext_resource path="res://addons/vnkit/fonts/NamesFont.tres" type="DynamicFont" id=3]
-[ext_resource path="res://addons/vnkit/DialogueUI/DialogueContainer.gd" type="Script" id=4]
+[ext_resource path="res://addons/vnkit/InGameUI/DialogueUI/DialogueContainer.gd" type="Script" id=4]
 
 [node name="DialoguePanel" type="Panel"]
 anchor_top = 1.0
@@ -30,7 +30,7 @@ rect_min_size = Vector2( 0, 50 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 bbcode_enabled = true
-bbcode_text = "[font=res://ui/fonts/NamesFont.tres]Character Name[/font]
+bbcode_text = "[font=res://addons/vnkit/fonts/NamesFont.tres]Character Name[/font]
 Character is saying somethings here.
 "
 text = "Character Name
