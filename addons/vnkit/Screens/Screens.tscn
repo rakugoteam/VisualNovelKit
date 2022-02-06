@@ -1,6 +1,5 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://addons/vnkit/themes/flat_drak_theme.tres" type="Theme" id=1]
 [ext_resource path="res://addons/vnkit/Screens/Screens.gd" type="Script" id=2]
 [ext_resource path="res://addons/vnkit/Screens/TitleScreen/TitleScreen.tscn" type="PackedScene" id=3]
 [ext_resource path="res://addons/vnkit/Screens/MainMenuReturnConfirm.gd" type="Script" id=4]
@@ -20,7 +19,6 @@ grow_horizontal = 0
 grow_vertical = 0
 size_flags_horizontal = 0
 size_flags_vertical = 0
-theme = ExtResource( 1 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true,
@@ -95,10 +93,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="show_main_menu_confirm" from="." to="MainMenuReturnConfirmPanel" method="_on_show_main_menu_confirm"]
-[connection signal="show_main_menu_confirm" from="." to="MainMenuReturnConfirmPanel/MainMenuReturnConfirm" method="_on_show_main_menu_confirm"]
-[connection signal="show_menu" from="." to="MenuBar" method="_show_menu"]
-[connection signal="mode_changed" from="SubMenus/SavesSlotScreen" to="." method="_on_SavesSlotScreen_mode_changed"]
+
 [connection signal="nav_button_press" from="MenuBar" to="." method="_on_nav_button_press"]
 [connection signal="confirmed" from="MainMenuReturnConfirmPanel/MainMenuReturnConfirm" to="MainMenuReturnConfirmPanel/MainMenuReturnConfirm" method="_on_confirmed"]
 [connection signal="popup_hide" from="MainMenuReturnConfirmPanel/MainMenuReturnConfirm" to="MainMenuReturnConfirmPanel" method="_on_popup_hide"]

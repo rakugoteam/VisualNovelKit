@@ -153,6 +153,10 @@ window/stretch/aspect="keep"
 
 enabled=PoolStringArray( "res://addons/Rakugo/plugin.cfg", "res://addons/advanced-text/plugin.cfg", "res://addons/emojis-for-godot/plugin.cfg", "res://addons/material-design-icons/plugin.cfg", "res://addons/vnkit/plugin.cfg" )
 
+[gui]
+
+theme/custom="res://addons/vnkit/themes/flat_drak_theme.tres"
+
 [importer_defaults]
 
 texture={

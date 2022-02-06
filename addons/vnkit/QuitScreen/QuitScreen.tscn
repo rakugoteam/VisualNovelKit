@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://themes/Default/default.tres" type="Theme" id=1]
+[ext_resource path="res://addons/vnkit/themes/flat_drak_theme.tres" type="Theme" id=1]
 [ext_resource path="res://addons/vnkit/QuitScreen/QuitConfirmDialog.gd" type="Script" id=2]
 [ext_resource path="res://addons/vnkit/QuitScreen/QuitScreen.gd" type="Script" id=3]
 
