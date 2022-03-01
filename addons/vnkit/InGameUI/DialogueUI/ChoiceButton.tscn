@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/advanced-text/nodes/AdvancedTextLabel.gd" type="Script" id=1]
+[ext_resource path="res://addons/advanced-text/examples/AdvancedTextButton/AdvancedTextButton.gd" type="Script" id=2]
+
+[node name="ChoiceButton" type="Button"]
+margin_top = 125.0
+margin_right = 500.0
+margin_bottom = 175.0
+rect_min_size = Vector2( 0, 50 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AdvancedTextLabel" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+bbcode_enabled = true
+bbcode_text = "[center]First Choice[/center]"
+text = "First Choice"
+scroll_active = false
+script = ExtResource( 1 )
+__meta__ = {
+"_default_markup": "markdown",
+"_edit_use_anchors_": false
+}
+markup_text = "[center]First Choice[/center]"
