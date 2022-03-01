@@ -6,7 +6,6 @@
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/DateLabel.gd" type="Script" id=5]
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/SaveNameLabel.gd" type="Script" id=6]
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/DeleteButton.gd" type="Script" id=7]
-[ext_resource path="res://fonts/DejaVu/DejaVuSans.ttf" type="DynamicFontData" id=8]
 
 [sub_resource type="StyleBoxLine" id=1]
 content_margin_left = 5.0
@@ -24,10 +23,6 @@ content_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.376471, 0.505882, 0.631373, 1 )
-
-[sub_resource type="DynamicFont" id=4]
-size = 14
-font_data = ExtResource( 8 )
 
 [node name="Slot" type="Control"]
 anchor_right = 1.0
@@ -107,7 +102,6 @@ margin_top = 682.0
 margin_right = 1270.0
 margin_bottom = 699.0
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.768627, 0.768627, 0.768627, 1 )
 text = "Wednesday, September 30 2020, 00:00"
 align = 1
@@ -121,7 +115,6 @@ margin_top = 703.0
 margin_right = 1270.0
 margin_bottom = 720.0
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.768627, 0.768627, 0.768627, 1 )
 text = "save_filename"
 align = 1

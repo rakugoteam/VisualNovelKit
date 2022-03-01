@@ -1,3 +1,9 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
 
-[node name="Exmaple" type="Node2D"]
+[ext_resource path="res://addons/Rakugo/lib/nodes/RakuScriptDialogue.gd" type="Script" id=1]
+
+[node name="Example" type="Node2D"]
+
+[node name="RakuScriptDialogue" type="Node" parent="."]
+script = ExtResource( 1 )
+raku_script = "res://game/TEST.rk"

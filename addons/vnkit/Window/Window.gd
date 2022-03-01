@@ -13,15 +13,16 @@ func _get_fullscreen() -> bool:
 	return Settings.get(SettingsList.fullscreen)
 
 func _ready():
-	Rakugo.current_scene_node = self
+	Rakugo.current_scene_node
 	
-	OS.window_fullscreen = fullscreen
-	OS.window_maximized = Settings.get(SettingsList.maximized, false)
-	if not OS.window_fullscreen and not OS.window_maximized:
-		init_window_size()
-		center_window()
+	# TODO: FIX THIS - probably is wrote is such way that is keep resizing window at start
+#	OS.window_fullscreen = fullscreen
+#	OS.window_maximized = Settings.get(SettingsList.maximized, false)
+#	if not OS.window_fullscreen and not OS.window_maximized:
+#		init_window_size()
+#		center_window()
 	
-	get_tree().get_root().connect("size_changed", self, "_on_window_resized")
+#	get_tree().get_root().connect("size_changed", self, "_on_window_resized")
 
 func get_window_setting(setting:String) -> float:
 	return Settings.get(setting, null, false, true) * 1.0

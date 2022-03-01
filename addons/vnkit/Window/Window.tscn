@@ -27,9 +27,6 @@ margin_bottom = -720.0
 mouse_filter = 2
 theme = ExtResource( 6 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel" type="Control" parent="."]
 margin_top = -1.0

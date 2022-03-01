@@ -1,12 +1,9 @@
-[gd_scene load_steps=5 format=2]
-
-[ext_resource path="res://addons/advanced-text/font/DejaVuSans-Bold.tres" type="DynamicFontData" id=1]
+[gd_scene load_steps=4 format=2]
 
 [sub_resource type="DynamicFont" id=1]
 size = 26
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 1 )
 
 [sub_resource type="GDScript" id=2]
 script/source = "extends Label
@@ -20,16 +17,13 @@ func _ready():
 script/source = "extends Label
 
 
-func _ready():
-	self.text = Settings.get(\"rakugo/Game/info/version\")
+#func _ready():
+#	self.text = Settings.get(\"rakugo/Game/info/version\")
 "
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="GameTitle" type="VBoxContainer" parent="."]
 anchor_left = 1.0
@@ -46,7 +40,7 @@ __meta__ = {
 
 [node name="Title" type="Label" parent="GameTitle"]
 margin_right = 13.0
-margin_bottom = 2.0
+margin_bottom = 1.0
 size_flags_vertical = 1
 custom_colors/font_color = Color( 0.6, 0.8, 1, 1 )
 custom_fonts/font = SubResource( 1 )
@@ -58,9 +52,9 @@ __meta__ = {
 }
 
 [node name="Version" type="Label" parent="GameTitle"]
-margin_top = 6.0
+margin_top = 5.0
 margin_right = 13.0
-margin_bottom = 8.0
+margin_bottom = 6.0
 size_flags_vertical = 1
 custom_colors/font_color = Color( 0.6, 0.8, 1, 1 )
 custom_fonts/font = SubResource( 1 )

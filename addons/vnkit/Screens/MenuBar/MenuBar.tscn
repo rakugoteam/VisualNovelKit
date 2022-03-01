@@ -1,15 +1,10 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://addons/vnkit/Screens/MenuBar/MenuBar.gd" type="Script" id=1]
-[ext_resource path="res://fonts/DejaVu/DejaVuSans.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://addons/vnkit/Screens/MenuBar/SubMenu.gd" type="Script" id=4]
 [ext_resource path="res://addons/vnkit/Screens/MenuBar/MainMenu.gd" type="Script" id=5]
 [ext_resource path="res://addons/vnkit/Screens/MenuBar/NavMenuButton.tscn" type="PackedScene" id=6]
 [ext_resource path="res://addons/vnkit/Screens/MenuBar/menu_buttons.tres" type="ButtonGroup" id=7]
-
-[sub_resource type="DynamicFont" id=1]
-size = 44
-font_data = ExtResource( 3 )
 
 [sub_resource type="StyleBoxFlat" id=2]
 content_margin_left = 40.0
@@ -42,7 +37,6 @@ anchor_bottom = 0.25
 margin_left = 50.0
 margin_top = 50.0
 custom_colors/font_color = Color( 0.756863, 0.878431, 1, 1 )
-custom_fonts/font = SubResource( 1 )
 text = "Preferences"
 __meta__ = {
 "_edit_use_anchors_": false
