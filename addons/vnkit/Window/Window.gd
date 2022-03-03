@@ -13,41 +13,15 @@ func _get_fullscreen() -> bool:
 	return Settings.get(SettingsList.fullscreen)
 
 func _ready():
-	Rakugo.current_scene_node
+	OS.window_fullscreen = fullscreen
+	OS.window_maximized = Settings.get(SettingsList.maximized, false)
+	if not OS.window_fullscreen and not OS.window_maximized:
+		center_window()
 	
-	# TODO: FIX THIS - probably is wrote is such way that is keep resizing window at start
-#	OS.window_fullscreen = fullscreen
-#	OS.window_maximized = Settings.get(SettingsList.maximized, false)
-#	if not OS.window_fullscreen and not OS.window_maximized:
-#		init_window_size()
-#		center_window()
-	
-#	get_tree().get_root().connect("size_changed", self, "_on_window_resized")
+	get_tree().get_root().connect("size_changed", self, "_on_window_resized")
 
 func get_window_setting(setting:String) -> float:
 	return Settings.get(setting, null, false, true) * 1.0
-
-func init_window_size():
-	var h = SettingsList.height
-	var w = SettingsList.width
-
-	if Settings.get(h) == 0:
-		Settings.set(h, get_window_setting(h))
-	
-	if Settings.get(w) == 0:
-		Settings.set(w, get_window_setting(w))
-	
-	var current_ratio = Settings.get(w) / Settings.get(h)
-	var default_ratio = get_window_setting(w) / get_window_setting(h)
-	
-	if current_ratio < default_ratio:
-		Settings.set(w, int(Settings.get(w) / default_ratio))
-
-	elif current_ratio > default_ratio:
-		Settings.set(w, int(default_ratio * Settings.get(h)))
-
-	OS.window_size.x = Settings.get(w)
-	OS.window_size.y = Settings.get(h)
 
 func center_window():
 	var size = OS.get_screen_size(OS.current_screen)

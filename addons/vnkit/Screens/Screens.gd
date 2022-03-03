@@ -10,12 +10,11 @@ func _ready():
 	Rakugo.connect("game_ended", self, "_on_game_end")
 	connect("visibility_changed", self, "_on_visibility_changed")
 
-
 func _on_nav_button_press(nav):
 	match nav:
 		"start":
 			Window.select_ui_tab(1)
-			Rakugo.start()
+			# Rakugo.start()
 
 		"continue":
 			if !Rakugo.loadfile("auto"):
@@ -29,12 +28,6 @@ func _on_nav_button_press(nav):
 		"load":
 			load_menu()
 
-		"history":
-			show_page(nav)
-		"preferences":
-			show_page(nav)
-		"about":
-			show_page(nav)
 		"main_menu":
 			if Rakugo.started:
 				emit_signal("show_main_menu_confirm")
@@ -49,6 +42,9 @@ func _on_nav_button_press(nav):
 
 		"quit":
 			Window.QuitScreen.show()
+
+		_:
+			show_page(nav)
 
 
 const page_action_index:Dictionary = {
