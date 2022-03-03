@@ -1,10 +1,11 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/Slot.tscn" type="PackedScene" id=1]
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/SkipNamingButton.gd" type="Script" id=2]
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/GridContainer.gd" type="Script" id=3]
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/ScrollContainer.gd" type="Script" id=4]
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/SavesScreen.gd" type="Script" id=5]
+[ext_resource path="res://addons/vnkit/themes/flat_drak_theme.tres" type="Theme" id=6]
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/page_buttons.tres" type="ButtonGroup" id=7]
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/ConfirmationDialog.gd" type="Script" id=9]
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/DummySlot.tscn" type="PackedScene" id=10]
@@ -40,6 +41,7 @@ font_data = ExtResource( 14 )
 [node name="SavesScreen" type="Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 6 )
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -91,7 +93,7 @@ __meta__ = {
 }
 
 [node name="GridContainer" type="GridContainer" parent="SavePage/ScrollContainer"]
-margin_right = 1177.6
+margin_right = 942.08
 margin_bottom = 50.0
 size_flags_horizontal = 3
 custom_constants/vseparation = 50
@@ -105,25 +107,25 @@ __meta__ = {
 [node name="Slot" parent="SavePage/ScrollContainer/GridContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 387.0
+margin_right = 309.0
 
 [node name="Slot2" parent="SavePage/ScrollContainer/GridContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 394.0
-margin_right = 781.0
+margin_left = 316.0
+margin_right = 625.0
 
 [node name="Slot3" parent="SavePage/ScrollContainer/GridContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 788.0
-margin_right = 1175.0
+margin_left = 632.0
+margin_right = 941.0
 
 [node name="Slot4" parent="SavePage/ScrollContainer/GridContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 50.0
-margin_right = 387.0
+margin_right = 309.0
 margin_bottom = 50.0
 
 [node name="PageNavBar" type="HBoxContainer" parent="." groups=["save_screen_page_ui_element"]]
@@ -139,9 +141,9 @@ __meta__ = {
 }
 
 [node name="PreviousPage" type="Button" parent="PageNavBar"]
-margin_left = 111.0
-margin_right = 124.0
-margin_bottom = 36.0
+margin_left = 64.0
+margin_right = 95.0
+margin_bottom = 42.0
 rect_min_size = Vector2( 0, 30 )
 custom_fonts/font = SubResource( 7 )
 custom_styles/focus = SubResource( 6 )
@@ -150,9 +152,9 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="QuisavePage" type="Button" parent="PageNavBar"]
-margin_left = 144.0
-margin_right = 167.0
-margin_bottom = 36.0
+margin_left = 115.0
+margin_right = 130.0
+margin_bottom = 42.0
 rect_min_size = Vector2( 0, 30 )
 custom_styles/focus = SubResource( 8 )
 toggle_mode = true
@@ -162,9 +164,9 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="Page1" type="Button" parent="PageNavBar"]
-margin_left = 187.0
-margin_right = 207.0
-margin_bottom = 36.0
+margin_left = 150.0
+margin_right = 162.0
+margin_bottom = 42.0
 rect_min_size = Vector2( 0, 30 )
 custom_styles/focus = SubResource( 6 )
 toggle_mode = true
@@ -175,9 +177,9 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="Page2" type="Button" parent="PageNavBar"]
-margin_left = 227.0
-margin_right = 247.0
-margin_bottom = 36.0
+margin_left = 182.0
+margin_right = 194.0
+margin_bottom = 42.0
 rect_min_size = Vector2( 0, 30 )
 custom_styles/focus = SubResource( 6 )
 toggle_mode = true
@@ -187,9 +189,9 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="Page3" type="Button" parent="PageNavBar"]
-margin_left = 267.0
-margin_right = 287.0
-margin_bottom = 36.0
+margin_left = 214.0
+margin_right = 226.0
+margin_bottom = 42.0
 rect_min_size = Vector2( 0, 30 )
 custom_styles/focus = SubResource( 6 )
 toggle_mode = true
@@ -199,9 +201,9 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="Page4" type="Button" parent="PageNavBar"]
-margin_left = 307.0
-margin_right = 327.0
-margin_bottom = 36.0
+margin_left = 246.0
+margin_right = 258.0
+margin_bottom = 42.0
 rect_min_size = Vector2( 0, 30 )
 custom_styles/focus = SubResource( 6 )
 toggle_mode = true
@@ -211,9 +213,9 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="Page5" type="Button" parent="PageNavBar"]
-margin_left = 347.0
-margin_right = 367.0
-margin_bottom = 36.0
+margin_left = 278.0
+margin_right = 290.0
+margin_bottom = 42.0
 rect_min_size = Vector2( 0, 30 )
 custom_styles/focus = SubResource( 6 )
 toggle_mode = true
@@ -223,9 +225,9 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="Page6" type="Button" parent="PageNavBar"]
-margin_left = 387.0
-margin_right = 407.0
-margin_bottom = 36.0
+margin_left = 310.0
+margin_right = 322.0
+margin_bottom = 42.0
 rect_min_size = Vector2( 0, 30 )
 custom_styles/focus = SubResource( 6 )
 toggle_mode = true
@@ -235,9 +237,9 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="Page7" type="Button" parent="PageNavBar"]
-margin_left = 427.0
-margin_right = 447.0
-margin_bottom = 36.0
+margin_left = 342.0
+margin_right = 354.0
+margin_bottom = 42.0
 rect_min_size = Vector2( 0, 30 )
 custom_styles/focus = SubResource( 6 )
 toggle_mode = true
@@ -247,9 +249,9 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="Page8" type="Button" parent="PageNavBar"]
-margin_left = 467.0
-margin_right = 487.0
-margin_bottom = 36.0
+margin_left = 374.0
+margin_right = 386.0
+margin_bottom = 42.0
 rect_min_size = Vector2( 0, 30 )
 custom_styles/focus = SubResource( 6 )
 toggle_mode = true
@@ -259,9 +261,9 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="Page9" type="Button" parent="PageNavBar"]
-margin_left = 507.0
-margin_right = 527.0
-margin_bottom = 36.0
+margin_left = 406.0
+margin_right = 418.0
+margin_bottom = 42.0
 rect_min_size = Vector2( 0, 30 )
 custom_styles/focus = SubResource( 6 )
 toggle_mode = true
@@ -271,9 +273,9 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="Page10" type="Button" parent="PageNavBar"]
-margin_left = 547.0
-margin_right = 575.0
-margin_bottom = 36.0
+margin_left = 438.0
+margin_right = 458.0
+margin_bottom = 42.0
 rect_min_size = Vector2( 0, 30 )
 custom_styles/focus = SubResource( 6 )
 toggle_mode = true
@@ -283,9 +285,9 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="Page11" type="Button" parent="PageNavBar"]
-margin_left = 595.0
-margin_right = 623.0
-margin_bottom = 36.0
+margin_left = 478.0
+margin_right = 498.0
+margin_bottom = 42.0
 rect_min_size = Vector2( 0, 30 )
 custom_styles/focus = SubResource( 6 )
 toggle_mode = true
@@ -295,9 +297,9 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="NextPage" type="Button" parent="PageNavBar"]
-margin_left = 643.0
-margin_right = 656.0
-margin_bottom = 36.0
+margin_left = 518.0
+margin_right = 549.0
+margin_bottom = 42.0
 rect_min_size = Vector2( 0, 30 )
 custom_fonts/font = SubResource( 7 )
 custom_styles/focus = SubResource( 6 )
@@ -338,7 +340,7 @@ anchor_right = 0.9
 margin_left = -23.0
 margin_top = 22.0
 margin_right = 23.0
-margin_bottom = 46.0
+margin_bottom = 60.0
 align = 1
 caret_blink = true
 __meta__ = {
