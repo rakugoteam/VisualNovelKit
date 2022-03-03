@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=20 format=2]
+[gd_resource type="Theme" load_steps=22 format=2]
 
 [ext_resource path="res://addons/advanced-text/font/DejaVuSans-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://addons/advanced-text/font/DejaVuSans-Oblique.ttf" type="DynamicFontData" id=2]
@@ -8,17 +8,44 @@
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.72, 0.72, 0.72, 0.635294 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
 
 [sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0.321569, 0.580392, 0.890196, 0.494118 )
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.321569, 0.635294, 0.890196, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
 
 [sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0.156863, 0.156863, 0.156863, 0.635294 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.321569, 0.580392, 0.890196, 1 )
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
 
 [sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0.321569, 0.580392, 0.890196, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
 
 [sub_resource type="DynamicFont" id=6]
 size = 32
@@ -37,6 +64,9 @@ border_color = Color( 0.321569, 0.580392, 0.890196, 1 )
 bg_color = Color( 0.156863, 0.156863, 0.156863, 0.635294 )
 
 [sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.156863, 0.156863, 0.156863, 0.635294 )
+
+[sub_resource type="StyleBoxFlat" id=15]
 bg_color = Color( 0.156863, 0.156863, 0.156863, 0.635294 )
 
 [sub_resource type="DynamicFont" id=1]
@@ -64,6 +94,9 @@ size = 32
 use_filter = true
 font_data = ExtResource( 5 )
 
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0.156863, 0.156863, 0.156863, 0.635294 )
+
 [resource]
 Button/styles/disabled = SubResource( 7 )
 Button/styles/focus = SubResource( 8 )
@@ -74,6 +107,7 @@ LineEdit/fonts/font = SubResource( 6 )
 LineEdit/styles/focus = SubResource( 12 )
 LineEdit/styles/normal = SubResource( 13 )
 Panel/styles/panel = SubResource( 14 )
+PopupDialog/styles/panel = SubResource( 15 )
 RichTextLabel/colors/default_color = Color( 1, 1, 1, 1 )
 RichTextLabel/colors/font_color_selected = Color( 0.49, 0.49, 0.49, 1 )
 RichTextLabel/colors/font_color_shadow = Color( 0, 0, 0, 0 )
@@ -91,3 +125,4 @@ RichTextLabel/fonts/mono_font = SubResource( 4 )
 RichTextLabel/fonts/normal_font = SubResource( 5 )
 RichTextLabel/styles/focus = null
 RichTextLabel/styles/normal = null
+WindowDialog/styles/panel = SubResource( 16 )
