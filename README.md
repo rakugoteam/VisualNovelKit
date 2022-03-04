@@ -12,6 +12,7 @@ Support this project here [itch.io](https://rakugoteam.github.io/donations/).
 [Showcase](#Showcase) -
 [Installation](#Installation) -
 [Rakugo Addons](#Rakugo-Addons) -
+[Rakugo Kits](#Rakugo-Kits) -
 [Roadmap](#Roadmap) -
 [FAQ](#faq) -
 [Infos](#Infos)
@@ -39,10 +40,11 @@ Clone or download this repo and open it with [Godot](https://godotengine.org).
 
 ## Rakugo Addons
 - [Advanced Text](https://github.com/rakugoteam/AdvancedText)
-- [Click & Point Adventures](https://github.com/rakugoteam/Adventure)
-- [RPG](https://github.com/rakugoteam/rakugo-open-rpg)
 - [Core](https://github.com/rakugoteam/Rakugo)
 
+## Rakugo Kits
+- [Click & Point Adventures](https://github.com/rakugoteam/Adventure)
+- [RPG](https://github.com/rakugoteam/rakugo-open-rpg)
 
 ## FAQ:
 
