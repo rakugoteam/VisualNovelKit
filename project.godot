@@ -121,8 +121,6 @@ run/main_scene="res://game/Example.tscn"
 boot_splash/fullsize=false
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
-config/auto_accept_quit=false
-config/quit_on_go_back=false
 
 [autoload]
 
@@ -131,7 +129,6 @@ MarkdownParser="*res://addons/advanced-text/parsers/MarkdownParser.gd"
 RenpyParser="*res://addons/advanced-text/parsers/RenpyParser.gd"
 Rakugo="*res://addons/Rakugo/Rakugo.tscn"
 Settings="*res://addons/Rakugo/Settings.gd"
-Window="*res://ui/Window.tscn"
 
 [debug]
 

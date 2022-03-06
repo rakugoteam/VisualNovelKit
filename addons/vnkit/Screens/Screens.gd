@@ -3,9 +3,11 @@ extends Control
 signal show_menu(menu, game_started)
 signal show_main_menu_confirm()
 
+onready var window = $"/root/Window"
+
 func _ready():
-	get_tree().paused = true
-	get_tree().set_auto_accept_quit(false)
+#	get_tree().paused = true
+#	get_tree().set_auto_accept_quit(false)
 	#qno_button.connect("pressed", self, "_on_Return_pressed")
 	Rakugo.connect("game_ended", self, "_on_game_end")
 	connect("visibility_changed", self, "_on_visibility_changed")
@@ -14,14 +16,14 @@ func _ready():
 func _on_nav_button_press(nav):
 	match nav:
 		"start":
-			Window.select_ui_tab(1)
+			window.select_ui_tab(1)
 			Rakugo.start()
 
 		"continue":
 			if !Rakugo.loadfile("auto"):
 				return
 			else:
-				Window.select_ui_tab(1)
+				window.select_ui_tab(1)
 
 		"save":
 			save_menu(get_screenshot())
@@ -43,12 +45,12 @@ func _on_nav_button_press(nav):
 
 		"return":
 			if Rakugo.started:
-				Window.select_ui_tab(1)
+				window.select_ui_tab(1)
 			else:
 				show_page(nav)
 
 		"quit":
-			Window.QuitScreen.show()
+			window.QuitScreen.show()
 
 
 const page_action_index:Dictionary = {
@@ -65,7 +67,7 @@ const page_action_index:Dictionary = {
 func show_page(action):
 	emit_signal("show_menu", action, Rakugo.started)
 	$SubMenus.current_tab = page_action_index[action]
-	Window.select_ui_tab(0)
+	window.select_ui_tab(0)
 
 
 func save_menu(screenshot):
@@ -80,7 +82,7 @@ func load_menu():
 
 
 func _on_game_end():
-	Window.select_ui_tab(0)
+	window.select_ui_tab(0)
 
 func get_screenshot():
 	var screenshot:Image = get_tree().get_root().get_texture().get_data()

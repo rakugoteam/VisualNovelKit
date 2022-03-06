@@ -28,6 +28,8 @@ signal clear_save_slots()
 signal add_save_slot(save_slot)
 signal page_changed()
 
+onready var screens = get_parent()
+
 func _ready() -> void:
 	use_pages = Settings.get('rakugo/saves/save_screen_layout') == "save_pages"
 	
@@ -268,7 +270,7 @@ func get_next_iterative_name(file_name):
 func load_save(caller: String) -> void:
 	if Rakugo.load_game(caller):
 		emit_signal("load_file")
-		Window.select_ui_tab(1)
+		screens.window.select_ui_tab(1)
 
 
 func _on_visibility_changed():
