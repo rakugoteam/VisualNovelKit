@@ -27,6 +27,9 @@ margin_bottom = -720.0
 mouse_filter = 2
 theme = ExtResource( 6 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Panel" type="Control" parent="."]
 margin_top = -1.0
@@ -104,7 +107,7 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Panel/Tabs/Loading/Panel/VBoxContainer"]
-margin_top = 295.0
+margin_top = 308.0
 margin_right = 768.0
 margin_bottom = 322.0
 size_flags_horizontal = 3
@@ -115,7 +118,7 @@ align = 1
 [node name="LoadingProgressBar" type="ProgressBar" parent="Panel/Tabs/Loading/Panel/VBoxContainer"]
 margin_top = 326.0
 margin_right = 768.0
-margin_bottom = 353.0
+margin_bottom = 340.0
 size_flags_vertical = 1
 script = ExtResource( 8 )
 

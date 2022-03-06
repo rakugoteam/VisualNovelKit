@@ -29,21 +29,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/advanced-text/nodes/CodeEdit.gd"
 }, {
-"base": "Reference",
-"class": "CommandData",
-"language": "GDScript",
-"path": "res://addons/TwitchChat/util/cmd_data.gd"
-}, {
-"base": "Reference",
-"class": "CommandInfo",
-"language": "GDScript",
-"path": "res://addons/TwitchChat/util/cmd_info.gd"
-}, {
-"base": "Node",
-"class": "Dialogue",
-"language": "GDScript",
-"path": "res://addons/Rakugo/lib/nodes/Dialogue.gd"
-}, {
 "base": "Button",
 "class": "EmojiButton",
 "language": "GDScript",
@@ -59,20 +44,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/emojis-for-godot/emojis/emojis.gd"
 }, {
-"base": "Node",
-"class": "Gift",
-"language": "GDScript",
-"path": "res://addons/TwitchChat/gift_node.gd"
-}, {
 "base": "Resource",
 "class": "HistoryEntry",
 "language": "GDScript",
 "path": "res://addons/Rakugo/lib/resources/HistoryEntry.gd"
-}, {
-"base": "Resource",
-"class": "ImageCache",
-"language": "GDScript",
-"path": "res://addons/TwitchChat/util/image_cache.gd"
 }, {
 "base": "Button",
 "class": "MaterialButton",
@@ -104,11 +79,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/Rakugo/lib/nodes/RakuScriptDialogue.gd"
 }, {
-"base": "Reference",
-"class": "SenderData",
-"language": "GDScript",
-"path": "res://addons/TwitchChat/util/sender_data.gd"
-}, {
 "base": "Object",
 "class": "SettingsList",
 "language": "GDScript",
@@ -129,22 +99,16 @@ _global_script_class_icons={
 "AdvancedTextLabel": "res://addons/advanced-text/icons/AdvancedTextLabel.svg",
 "Character": "",
 "CodeEdit": "res://addons/advanced-text/icons/CodeEdit.svg",
-"CommandData": "",
-"CommandInfo": "",
-"Dialogue": "res://addons/Rakugo/icons/Dialogue.svg",
 "EmojiButton": "res://addons/emojis-for-godot/icons/EmojiButton.svg",
 "EmojiIcon": "res://addons/emojis-for-godot/icons/EmojiIcon.svg",
 "Emojis": "",
-"Gift": "",
 "HistoryEntry": "",
-"ImageCache": "",
 "MaterialButton": "res://addons/material-design-icons/nodes/MaterialButton.svg",
 "MaterialIcon": "res://addons/material-design-icons/nodes/MaterialIcon.svg",
 "Parser": "",
 "ProjectTools": "",
 "PropertyInfo": "",
 "RakuScriptDialogue": "",
-"SenderData": "",
 "SettingsList": "",
 "Store": "",
 "StoreStack": ""
@@ -186,7 +150,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/Rakugo/plugin.cfg", "res://addons/advanced-text/plugin.cfg", "res://addons/emojis-for-godot/plugin.cfg", "res://addons/material-design-icons/plugin.cfg", "res://addons/vnkit/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/vnkit/plugin.cfg" )
 
 [gui]
 
