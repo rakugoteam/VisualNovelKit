@@ -24,13 +24,13 @@ __meta__ = {
 }
 
 [node name="DialogLabel" type="RichTextLabel" parent="DialogueContainer"]
-margin_right = 1280.0
+margin_right = 1024.0
 margin_bottom = 163.0
 rect_min_size = Vector2( 0, 50 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 bbcode_enabled = true
-bbcode_text = "[font=res://addons/vnkit/fonts/NamesFont.tres]Character Name[/font]
+bbcode_text = "[font=res://fonts/NamesFont.tres]Character Name[/font]
 Character is saying somethings here.
 "
 text = "Character Name
