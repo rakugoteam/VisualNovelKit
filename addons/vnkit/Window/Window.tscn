@@ -1,14 +1,14 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Window/Window.gd" type="Script" id=1]
-[ext_resource path="res://InGameUI/InGameUI.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Window/Tabs.gd" type="Script" id=3]
-[ext_resource path="res://Screens/Screens.tscn" type="PackedScene" id=4]
-[ext_resource path="res://themes/flat_drak_theme.tres" type="Theme" id=6]
-[ext_resource path="res://Window/Loading.gd" type="Script" id=7]
-[ext_resource path="res://Window/LoadingProgressBar.gd" type="Script" id=8]
-[ext_resource path="res://QuitScreen/QuitScreen.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Window/SceneAnchor.gd" type="Script" id=10]
+[ext_resource path="res://addons/vnkit/Window/Window.gd" type="Script" id=1]
+[ext_resource path="res://addons/vnkit/InGameUI/InGameUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/vnkit/Window/Tabs.gd" type="Script" id=3]
+[ext_resource path="res://addons/vnkit/Screens/Screens.tscn" type="PackedScene" id=4]
+[ext_resource path="res://addons/vnkit/themes/flat_drak_theme.tres" type="Theme" id=6]
+[ext_resource path="res://addons/vnkit/Window/Loading.gd" type="Script" id=7]
+[ext_resource path="res://addons/vnkit/Window/LoadingProgressBar.gd" type="Script" id=8]
+[ext_resource path="res://addons/vnkit/QuitScreen/QuitScreen.tscn" type="PackedScene" id=9]
+[ext_resource path="res://addons/vnkit/Window/SceneAnchor.gd" type="Script" id=10]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -27,9 +27,6 @@ margin_bottom = -720.0
 mouse_filter = 2
 theme = ExtResource( 6 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel" type="Control" parent="."]
 margin_top = -1.0
@@ -101,18 +98,18 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Panel/Tabs/Loading/Panel/VBoxContainer"]
-margin_top = 308.0
-margin_right = 768.0
-margin_bottom = 322.0
+margin_top = 254.0
+margin_right = 614.0
+margin_bottom = 268.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
 text = "Loading"
 align = 1
 
 [node name="LoadingProgressBar" type="ProgressBar" parent="Panel/Tabs/Loading/Panel/VBoxContainer"]
-margin_top = 326.0
-margin_right = 768.0
-margin_bottom = 340.0
+margin_top = 272.0
+margin_right = 614.0
+margin_bottom = 286.0
 size_flags_vertical = 1
 script = ExtResource( 8 )
 
