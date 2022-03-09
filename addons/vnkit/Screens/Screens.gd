@@ -14,7 +14,8 @@ func _on_nav_button_press(nav):
 	match nav:
 		"start":
 			Window.select_ui_tab(1)
-			# Rakugo.start()
+			get_tree().paused = false
+			Rakugo.start()
 
 		"continue":
 			if !Rakugo.loadfile("auto"):

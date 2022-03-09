@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 onready var Tabs := $Panel/Tabs
 onready var Screens := $Panel/Tabs/Screens
