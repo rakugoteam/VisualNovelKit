@@ -3,9 +3,7 @@
 /.mono/
 mono_crash.*.json
 /.plugged/
-/addons/advanced-text/
-/addons/emojis-for-godot/
-/addons/material-design-icons/
-/addons/project-settings-helpers/
-/addons/Rakugo/
 /saves/
+/addons/*
+!addons/gd-plug
+!addons/vnkit
