@@ -14,7 +14,10 @@ func _on_say(character, text):
 	show()
 	# TODO: make line below work
 	# $DialogLabel.variables = Rakugo.variables
-	dialog_label.markup_text = "# %s \n" % character.name  
+	if character == null:
+		character = Rakugo.Say.get_narrator()
+
+	dialog_label.markup_text = "# %s \n" % character.name 
 	dialog_label.markup_text += text
 
 func _on_step():
