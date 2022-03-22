@@ -67,12 +67,12 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "ProjectTools",
 "language": "GDScript",
-"path": "res://project-settings-helpers/ProjectTools.gd"
+"path": "res://addons/project-settings-helpers/ProjectTools.gd"
 }, {
 "base": "Reference",
 "class": "PropertyInfo",
 "language": "GDScript",
-"path": "res://project-settings-helpers/PropertyInfo.gd"
+"path": "res://addons/project-settings-helpers/PropertyInfo.gd"
 }, {
 "base": "Node",
 "class": "RakuScriptDialogue",
@@ -121,6 +121,8 @@ run/main_scene="res://game/Example.tscn"
 boot_splash/fullsize=false
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
+config/auto_accept_quit=false
+config/quit_on_go_back=false
 
 [autoload]
 
@@ -129,6 +131,7 @@ MarkdownParser="*res://addons/advanced-text/parsers/MarkdownParser.gd"
 RenpyParser="*res://addons/advanced-text/parsers/RenpyParser.gd"
 Rakugo="*res://addons/Rakugo/Rakugo.tscn"
 Settings="*res://addons/Rakugo/Settings.gd"
+Window="*res://addons/vnkit/Window/Window.tscn"
 
 [debug]
 
@@ -147,11 +150,11 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray(  )
+enabled=PoolStringArray( "res://addons/Rakugo/plugin.cfg", "res://addons/advanced-text/plugin.cfg", "res://addons/emojis-for-godot/plugin.cfg", "res://addons/material-design-icons/plugin.cfg", "res://addons/vnkit/plugin.cfg" )
 
 [gui]
 
-theme/custom="res://themes/flat_drak_theme.tres"
+theme/custom="res://addons/vnkit/themes/flat_drak_theme.tres"
 
 [importer_defaults]
 
