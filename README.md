@@ -36,7 +36,20 @@ Support this project here [itch.io](https://rakugoteam.github.io/donations/).
 If your game uses Rakugo, tell us on [Discord](https://discord.gg/K9gvjdg).
 
 ## Installation
-Clone or download this repo and open it with [Godot](https://godotengine.org).
+
+### If you want use it for your own project
+- Download the last [release](https://github.com/rakugoteam/VisualNovelKit/releases/latest)
+- Unzip the archive
+- Open is as [Godot](https://godotengine.org) project 
+
+### If you want contribute to the project
+- Fork the repository and clone the fork
+- In Terminal, cd to the folder: `cd VisualNovelKit`
+- Run `godot --no-window -s plug.gd install` to install the dependencies
+- Remove the `.plugged/` folder
+- Open it as [Godot](https://godotengine.org) project
+- make your changes and commit them to the repository
+- make a pull request to this repository
 
 ## Rakugo Addons
 - [Advanced Text](https://github.com/rakugoteam/AdvancedText)
