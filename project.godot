@@ -64,25 +64,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/Rakugo/lib/systems/Parser.gd"
 }, {
-"base": "Reference",
-"class": "ProjectTools",
-"language": "GDScript",
-"path": "res://addons/project-settings-helpers/ProjectTools.gd"
-}, {
-"base": "Reference",
-"class": "PropertyInfo",
-"language": "GDScript",
-"path": "res://addons/project-settings-helpers/PropertyInfo.gd"
-}, {
 "base": "Node",
 "class": "RakuScriptDialogue",
 "language": "GDScript",
 "path": "res://addons/Rakugo/lib/nodes/RakuScriptDialogue.gd"
-}, {
-"base": "Object",
-"class": "SettingsList",
-"language": "GDScript",
-"path": "res://addons/Rakugo/SettingsList.gd"
 }, {
 "base": "Resource",
 "class": "Store",
@@ -106,13 +91,26 @@ _global_script_class_icons={
 "MaterialButton": "res://addons/material-design-icons/nodes/MaterialButton.svg",
 "MaterialIcon": "res://addons/material-design-icons/nodes/MaterialIcon.svg",
 "Parser": "",
-"ProjectTools": "",
-"PropertyInfo": "",
 "RakuScriptDialogue": "",
-"SettingsList": "",
 "Store": "",
 "StoreStack": ""
 }
+
+[addons]
+
+rakugo/game_version="xxx"
+vnkit/auto_mode_delay=3
+rakugo/force_reload=false
+rakugo/auto_mode_delay=3
+rakugo/skip_delay=0.5
+rakugo/rollback_steps=10
+rakugo/history_length=30
+rakugo/narrator/name="narrator"
+rakugo/debug=false
+rakugo/save_folder="res://saves"
+rakugo/test_mode=false
+vnkit/skip_delay=0.5
+rakugo/typing_effect_delay=0.05
 
 [application]
 
@@ -132,6 +130,7 @@ RenpyParser="*res://addons/advanced-text/parsers/RenpyParser.gd"
 Rakugo="*res://addons/Rakugo/Rakugo.tscn"
 Settings="*res://addons/Rakugo/Settings.gd"
 Window="*res://addons/vnkit/Window/Window.tscn"
+VNKit="*res://addons/vnkit/VNKit.gd"
 
 [debug]
 
@@ -150,7 +149,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/Rakugo/plugin.cfg", "res://addons/advanced-text/plugin.cfg", "res://addons/emojis-for-godot/plugin.cfg", "res://addons/material-design-icons/plugin.cfg", "res://addons/vnkit/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/Rakugo/plugin.cfg", "res://addons/emojis-for-godot/plugin.cfg", "res://addons/material-design-icons/plugin.cfg", "res://addons/vnkit/plugin.cfg" )
 
 [gui]
 
@@ -283,10 +282,6 @@ highlight={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777244,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
-
-[rakugo]
-
-default/gui/theme="res://addons/vnkit/themes/flat_drak_theme.tres"
 
 [rendering]
 
