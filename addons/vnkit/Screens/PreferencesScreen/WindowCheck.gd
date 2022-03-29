@@ -7,8 +7,8 @@ func _ready():
 func _on_toggled(value):
 	if value:
 		OS.window_fullscreen = false
-		OS.window_size.x = Settings.get(SettingsList.width, null, false, true)
-		OS.window_size.y = Settings.get(SettingsList.height, null, false, true)
+		OS.window_size.x = ProjectSettings.get_setting(VNKit.width)
+		OS.window_size.y = ProjectSettings.get_setting(VNKit.height)
 
 
 func _on_visibility_changed():
@@ -20,7 +20,7 @@ func _on_window_resized():
 
 func is_window_default_size():
 	if !OS.window_fullscreen:
-		if OS.window_size.x == Settings.get(SettingsList.width, null, false, true):
-			if OS.window_size.y == Settings.get(SettingsList.height, null, false, true):
+		if OS.window_size.x ==  ProjectSettings.get_setting(VNKit.width):
+			if OS.window_size.y == ProjectSettings.get_setting(VNKit.height):
 				return true
 	return false
