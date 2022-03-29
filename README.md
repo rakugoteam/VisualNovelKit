@@ -45,7 +45,7 @@ If your game uses Rakugo, tell us on [Discord](https://discord.gg/K9gvjdg).
 ### If you want contribute to the project
 - Fork the repository and clone the fork
 - In Terminal, cd to the folder: `cd VisualNovelKit`
-- Run `godot --no-window -s plug.gd install` to install the dependencies
+- Run `godot --no-window -s plug.gd install force` to install the dependencies
 - Remove the `.plugged/` folder
 - Open it as [Godot](https://godotengine.org) project
 - make your changes and commit them to the repository
