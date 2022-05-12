@@ -98,8 +98,9 @@ _global_script_class_icons={
 
 [addons]
 
-rakugo/game_version="xxx"
+advanced_text/markup="markdown"
 vnkit/auto_mode_delay=3
+rakugo/game_version="1.0.0"
 rakugo/force_reload=false
 rakugo/auto_mode_delay=3
 rakugo/skip_delay=0.5
@@ -111,6 +112,14 @@ rakugo/save_folder="res://saves"
 rakugo/test_mode=false
 vnkit/skip_delay=0.5
 rakugo/typing_effect_delay=0.05
+vnkit/saves/current_page=0
+vnkit/saves/page_names=[  ]
+vnkit/saves/layout="pages"
+vnkit/saves/current_scroll=0
+vnkit/saves/skip_naming=true
+advanced_text/default_vars="{
+	\"test_setting\": \"variable from project settings\"
+}"
 
 [application]
 
@@ -149,7 +158,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/Rakugo/plugin.cfg", "res://addons/emojis-for-godot/plugin.cfg", "res://addons/material-design-icons/plugin.cfg", "res://addons/vnkit/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/Rakugo/plugin.cfg", "res://addons/advanced-text/plugin.cfg", "res://addons/emojis-for-godot/plugin.cfg", "res://addons/material-design-icons/plugin.cfg", "res://addons/vnkit/plugin.cfg" )
 
 [gui]
 

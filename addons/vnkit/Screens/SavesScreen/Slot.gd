@@ -16,7 +16,7 @@ var save_page_index:Vector2 = Vector2.ZERO
 var screenshot:ImageTexture = null
 
 func init(name:String, page_index:Vector2, hide_delete:bool = false):
-	save_name = Rakugo.StoreManager.get_save_name(name)
+	save_name = Rakugo.store_manager.get_save_name(name)
 	save_page_index = page_index
 	
 	var filename = save_name
@@ -24,7 +24,7 @@ func init(name:String, page_index:Vector2, hide_delete:bool = false):
 		filename = "%s_%s_%s" % [str(save_page_index.x), str(save_page_index.y), save_name]
 	
 	if not hide_delete:
-		var png_path = Rakugo.StoreManager.get_save_path(filename + ".png", true)
+		var png_path = Rakugo.store_manager.get_save_path(filename + ".png", true)
 		if file.file_exists(png_path):
 			Rakugo.debug("slot exist, loading image")
 			set_screenshot(load_screenshot_texture(png_path))
@@ -37,7 +37,7 @@ func init(name:String, page_index:Vector2, hide_delete:bool = false):
 	if save_name == "empty":
 		set_datetime(0)
 	else:
-		set_datetime(file.get_modified_time(Rakugo.StoreManager.get_save_path(filename)))
+		set_datetime(file.get_modified_time(Rakugo.store_manager.get_save_path(filename)))
 	
 
 

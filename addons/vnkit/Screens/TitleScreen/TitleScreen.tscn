@@ -10,7 +10,7 @@ script/source = "extends Label
 
 
 func _ready():
-	self.text = Settings.get(\"application/config/name\")
+	self.text = ProjectSettings.get_setting(\"application/config/name\")
 "
 
 [sub_resource type="GDScript" id=3]
