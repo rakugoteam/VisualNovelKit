@@ -61,7 +61,7 @@ func update_save_pages():
 
 func update_save_list(ignores = [""]):
 	var contents = []
-	if dir.open(Rakugo.StoreManager.get_save_folder_path()) == OK:
+	if dir.open(Rakugo.store_manager.get_save_folder_path()) == OK:
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 
@@ -148,12 +148,12 @@ func _on_delete_save(save_filename):
 	if not yield(popup, "return_output"):
 		return false
 
-	var png_path = Rakugo.StoreManager.get_save_path(save_filename, true)+".png"
+	var png_path = Rakugo.store_manager.get_save_path(save_filename, true)+".png"
 	if file.file_exists(png_path):
 		Rakugo.debug("remove image")
 		dir.remove(png_path)
 
-	var save_path = Rakugo.StoreManager.get_save_path(save_filename)
+	var save_path = Rakugo.store_manager.get_save_path(save_filename)
 	if file.file_exists(save_path):
 		Rakugo.debug("remove save")
 		dir.remove(save_path)
@@ -208,7 +208,7 @@ func save_save(caller: String) -> bool:
 		return false
 
 	#screenshot.flip_y()
-	var png_path = Rakugo.StoreManager.get_save_path(caller, true) + '.png'
+	var png_path = Rakugo.store_manager.get_save_path(caller, true) + '.png'
 	screenshot.save_png(png_path)
 
 	Rakugo.debug(["caller:", caller])
@@ -243,7 +243,7 @@ func save_page_save(caller: String, page_index:Vector2) -> bool:
 		return false
 
 	#screenshot.flip_y()
-	var png_path = Rakugo.StoreManager.get_save_path(caller, true) + '.png'
+	var png_path = Rakugo.store_manager.get_save_path(caller, true) + '.png'
 	screenshot.save_png(png_path)
 
 	Rakugo.debug(["caller:", caller])

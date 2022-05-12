@@ -14,8 +14,10 @@ func _get_fullscreen() -> bool:
 
 func _ready():
 	OS.window_fullscreen = fullscreen
-	OS.window_maximized = ProjectSettings.get_setting(VNKit.maximized)
-	if not OS.window_fullscreen and not OS.window_maximized:
+	if ProjectSettings.has_setting(VNKit.maximized):
+		OS.window_maximized = ProjectSettings.get_setting(VNKit.maximized)
+
+	if not(true in [OS.window_fullscreen, OS.window_maximized]):
 		center_window()
 	
 	get_tree().get_root().connect("size_changed", self, "_on_window_resized")
