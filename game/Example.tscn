@@ -7,3 +7,4 @@
 [node name="RakuScriptDialogue" type="Node" parent="."]
 script = ExtResource( 1 )
 raku_script = "res://game/TEST.rk"
+auto_start = true

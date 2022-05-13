@@ -45,6 +45,7 @@ __meta__ = {
 markup_text = "# Character Name
 Character is saying somethings here.
 "
+markup = "markdown"
 headers_fonts = [ ExtResource( 3 ) ]
 
 [node name="AnswerEdit" type="LineEdit" parent="DialogueContainer"]

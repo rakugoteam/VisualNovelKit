@@ -1,24 +1,31 @@
 extends ScrollContainer
 
 export var choice_button_scene : PackedScene
-var style := "vertical"
+onready var choices_box := $ChoicesBox
 
 func _ready():
 	Rakugo.connect("menu", self, "_on_menu")
 
-func on_choice_button_pressed(_choice_button):
-	var return_value = _choice_button.get_meta('return_value')
-	purge_children()
-	Rakugo.menu_return(return_value)
+func on_choice_button_pressed(button:Button):
+	Rakugo.menu_return(button.get_index())
+	hide()
 
 func _on_menu(choices:Array):
 	purge_children()
-	for i in choices.size():
-		var button:Button = choice_button_scene.instance()
-		button.rakugo_text = choices[i][0]
-		self.add_child(button)
-		button.connect("choice_button_pressed", self, "on_choice_button_pressed", i)
+	for choice in choices:
+		var button : AdvancedTextButton
+		button = choice_button_scene.instance()
+		button.hide()
+		# adding to container must be first
+		choices_box.add_child(button)
+		# or else the text won't be set
+		button.set_markup("markdown")
+		button.set_markup_text("@center{" + choice + "}")
+		button.connect("pressed", self, "on_choice_button_pressed", [button])
+		button.show()
+	
+	show()
 
 func purge_children():
-	for c in self.get_children():
-		self.call_deferred('remove_child', c)
+	for c in choices_box.get_children():
+		choices_box.call_deferred('remove_child', c)
