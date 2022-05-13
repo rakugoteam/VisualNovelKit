@@ -1,14 +1,13 @@
 extends VBoxContainer
 
-onready var dialog_label : AdvancedTextLabel = $DialogLabel
-onready var answer_edit : LineEdit = $AnswerEdit
-var is_waiting_step := false
+onready var dialog_label := $DialogLabel
+onready var answer_edit := $AnswerEdit
 
 func _ready():
 	Rakugo.connect("say", self, "_on_say")
 	Rakugo.connect("ask", self, "_on_ask")
-	answer_edit.connect("text_entered", self, "_on_answer_entered")
 	Rakugo.connect("step", self, "_on_step")
+	answer_edit.connect("text_entered", self, "_on_answer_entered")
 
 func _on_say(character, text):
 	show()
@@ -17,14 +16,16 @@ func _on_say(character, text):
 	if character == null:
 		character = Rakugo.get_narrator()
 
-	dialog_label.markup_text = "# %s \n" % character.name 
-	dialog_label.markup_text += text
+	text = "# " +  character.name + "\n" + text
+	dialog_label.markup_text = text
+	# prints("dialog_label:", dialog_label.bbcode_text)
 
 func _on_step():
-	hide()
-	is_waiting_step = true
+	dialog_label.markup_text += "\n@shake 5, 10 {Press 'Enter' to continue...}"
+	# hide()
 
-func _on_ask(default_answer):
+func _on_ask(character:Character, question:String, default_answer:String):
+	_on_say(character, question)
 	answer_edit.show()
 	answer_edit.grab_focus()
 	answer_edit.placeholder_text = default_answer
@@ -36,9 +37,9 @@ func _on_ask_entered(answer):
 	Rakugo.ask_return(answer)
 
 func _process(delta):
-	if is_waiting_step and Input.is_action_just_pressed("ui_accept"):
-		is_waiting_step = false
-		Rakugo.current_parser.step_semaphore.post()
+	var ui_accept := Input.is_action_just_pressed("ui_accept")
+	if Rakugo.is_waiting_step() and ui_accept:
+		Rakugo.do_step()
 		
 		
 
