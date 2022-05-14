@@ -73,7 +73,7 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="Panel/Tabs/Loading/Panel/VBoxContainer"]
 margin_top = 254.0
-margin_right = 614.0
+margin_right = 615.0
 margin_bottom = 268.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -82,7 +82,7 @@ align = 1
 
 [node name="LoadingProgressBar" type="ProgressBar" parent="Panel/Tabs/Loading/Panel/VBoxContainer"]
 margin_top = 272.0
-margin_right = 614.0
+margin_right = 615.0
 margin_bottom = 286.0
 size_flags_vertical = 1
 script = ExtResource( 8 )
