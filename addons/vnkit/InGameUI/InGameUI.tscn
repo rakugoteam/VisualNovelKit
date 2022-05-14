@@ -85,5 +85,5 @@ size_flags_vertical = 3
 alignment = 1
 
 [node name="QuickMenu" parent="." instance=ExtResource( 7 )]
-visible = false
-margin_top = -40.0
+margin_top = 436.0
+margin_bottom = 488.0
