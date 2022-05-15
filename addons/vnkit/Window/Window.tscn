@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://addons/vnkit/Window/Window.gd" type="Script" id=1]
 [ext_resource path="res://addons/vnkit/InGameUI/InGameUI.tscn" type="PackedScene" id=2]
-[ext_resource path="res://addons/vnkit/Window/Tabs.gd" type="Script" id=3]
 [ext_resource path="res://addons/vnkit/Screens/Screens.tscn" type="PackedScene" id=4]
 [ext_resource path="res://addons/vnkit/Window/Loading.gd" type="Script" id=7]
 [ext_resource path="res://addons/vnkit/Window/LoadingProgressBar.gd" type="Script" id=8]
@@ -36,10 +35,6 @@ custom_styles/tab_disabled = SubResource( 2 )
 custom_styles/tab_bg = SubResource( 3 )
 custom_styles/panel = SubResource( 4 )
 tabs_visible = false
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Screens" parent="Panel/Tabs" instance=ExtResource( 4 )]
 
