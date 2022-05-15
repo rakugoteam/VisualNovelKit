@@ -9,4 +9,5 @@ func _on_scroll():
 	ProjectSettings.set_setting(VNKit.saves_ui_scroll, self.scroll_vertical)
 
 func _on_visibility_changed():
-	self.scroll_vertical = ProjectSettings.get_setting(VNKit.saves_ui_scroll)
+	if ProjectSettings.has_setting(VNKit.saves_ui_scroll):
+		self.scroll_vertical = ProjectSettings.get_setting(VNKit.saves_ui_scroll)

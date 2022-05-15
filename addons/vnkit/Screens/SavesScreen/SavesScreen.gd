@@ -61,7 +61,7 @@ func update_save_pages():
 
 func update_save_list(ignores = [""]):
 	var contents = []
-	if dir.open(Rakugo.store_manager.get_save_folder_path()) == OK:
+	if dir.open(Rakugo.store_manager.save_folder_path) == OK:
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 
