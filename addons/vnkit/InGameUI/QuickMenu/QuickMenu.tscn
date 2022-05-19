@@ -1,129 +1,111 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://addons/vnkit/InGameUI/QuickMenu/QuickMenu.gd" type="Script" id=1]
-[ext_resource path="res://addons/vnkit/InGameUI/QuickMenu/QuickMenuButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/material-design-icons/fonts/48.tres" type="DynamicFont" id=2]
+[ext_resource path="res://addons/material-design-icons/nodes/MaterialButton.gd" type="Script" id=3]
 
-[node name="QuickMenu" type="MarginContainer"]
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="QuickMenu" type="HBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 52.0
 grow_vertical = 0
 mouse_filter = 2
-custom_constants/margin_right = 200
-custom_constants/margin_left = 200
+alignment = 2
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="ButtonList" type="HBoxContainer" parent="."]
-margin_left = 200.0
-margin_right = 1080.0
-margin_bottom = 40.0
-grow_horizontal = 2
-rect_min_size = Vector2( 0, 40 )
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-alignment = 1
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
+[node name="Hide" type="Button" parent="."]
+margin_left = 636.0
+margin_right = 688.0
+margin_bottom = 52.0
+hint_tooltip = "Hide"
+custom_fonts/font = ExtResource( 2 )
+text = "󰨻"
+script = ExtResource( 3 )
+icon_name = "comment-eye-outline"
+icon_size = "48"
 
-[node name="Hide" parent="ButtonList" instance=ExtResource( 2 )]
-margin_right = 217.0
-margin_bottom = 40.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-toggle_mode = true
-text = "Hide"
-quick_action = "hide"
-
-[node name="History" parent="ButtonList" instance=ExtResource( 2 )]
+[node name="History" type="Button" parent="."]
 visible = false
-margin_left = 142.0
-margin_right = 281.0
-margin_bottom = 144.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "History"
-quick_action = "history"
+margin_left = 916.0
+margin_right = 968.0
+margin_bottom = 52.0
+hint_tooltip = "History"
+custom_fonts/font = ExtResource( 2 )
+text = "󱓷"
+script = ExtResource( 3 )
+icon_name = "book-open-variant"
+icon_size = "48"
 
-[node name="Back" parent="ButtonList" instance=ExtResource( 2 )]
-visible = false
-margin_left = 256.0
-margin_right = 509.0
-margin_bottom = 144.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Back"
-quick_action = "back"
+[node name="Back" type="Button" parent="."]
+margin_left = 692.0
+margin_right = 744.0
+margin_bottom = 52.0
+hint_tooltip = "RollBack"
+custom_fonts/font = ExtResource( 2 )
+text = "󰓕"
+script = ExtResource( 3 )
+icon_name = "step-backward"
+icon_size = "48"
 
-[node name="Save" parent="ButtonList" instance=ExtResource( 2 )]
-margin_left = 221.0
-margin_right = 438.0
-margin_bottom = 40.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Save"
-quick_action = "save"
+[node name="Skip" type="Button" parent="."]
+margin_left = 748.0
+margin_right = 800.0
+margin_bottom = 52.0
+hint_tooltip = "Toggle Skip"
+custom_fonts/font = ExtResource( 2 )
+text = "󰒬"
+script = ExtResource( 3 )
+icon_name = "skip-forward"
+icon_size = "48"
 
-[node name="Load" parent="ButtonList" instance=ExtResource( 2 )]
-margin_left = 442.0
-margin_right = 659.0
-margin_bottom = 40.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Load"
-quick_action = "load"
+[node name="Save" type="Button" parent="."]
+margin_left = 804.0
+margin_right = 856.0
+margin_bottom = 52.0
+hint_tooltip = "Save"
+custom_fonts/font = ExtResource( 2 )
+text = "󰳻"
+script = ExtResource( 3 )
+icon_name = "content-save-edit"
+icon_size = "48"
 
-[node name="Skip" parent="ButtonList" instance=ExtResource( 2 )]
-margin_left = 663.0
-margin_right = 880.0
-margin_bottom = 40.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-toggle_mode = true
-text = "Skip"
-quick_action = "skip"
+[node name="Load" type="Button" parent="."]
+margin_left = 860.0
+margin_right = 912.0
+margin_bottom = 52.0
+hint_tooltip = "Load"
+custom_fonts/font = ExtResource( 2 )
+text = "󰕒"
+script = ExtResource( 3 )
+icon_name = "upload"
+icon_size = "48"
 
-[node name="QSave" parent="ButtonList" instance=ExtResource( 2 )]
-visible = false
-margin_left = 898.0
-margin_right = 1023.0
-margin_bottom = 144.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Q. Save"
-quick_action = "quicksave"
+[node name="Preferences" type="Button" parent="."]
+margin_left = 916.0
+margin_right = 968.0
+margin_bottom = 52.0
+hint_tooltip = "Preferences"
+custom_fonts/font = ExtResource( 2 )
+text = "󰘮"
+script = ExtResource( 3 )
+icon_name = "tune"
+icon_size = "48"
 
-[node name="QLoad" parent="ButtonList" instance=ExtResource( 2 )]
-visible = false
-margin_left = 933.0
-margin_right = 1046.0
-margin_bottom = 144.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Q. Load"
-quick_action = "quickload"
+[node name="Quit" type="Button" parent="."]
+margin_left = 972.0
+margin_right = 1024.0
+margin_bottom = 52.0
+hint_tooltip = "Quit"
+custom_fonts/font = ExtResource( 2 )
+text = "󰩈"
+script = ExtResource( 3 )
+icon_name = "exit-run"
+icon_size = "48"
 
-[node name="Preferences" parent="ButtonList" instance=ExtResource( 2 )]
-visible = false
-margin_left = 1070.0
-margin_right = 1280.0
-margin_bottom = 144.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Pref."
-quick_action = "preferences"
-
-[node name="Quit" parent="ButtonList" instance=ExtResource( 2 )]
-visible = false
-margin_left = 1100.0
-margin_right = 1280.0
-margin_bottom = 144.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Quit"
-quick_action = "quit"
+[connection signal="pressed" from="Hide" to="." method="_on_Hide_pressed"]
+[connection signal="pressed" from="History" to="." method="_on_History_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="Skip" to="." method="_on_Skip_pressed"]
+[connection signal="pressed" from="Save" to="." method="_on_Save_pressed"]
+[connection signal="pressed" from="Load" to="." method="_on_Load_pressed"]
+[connection signal="pressed" from="Preferences" to="." method="_on_Preferences_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

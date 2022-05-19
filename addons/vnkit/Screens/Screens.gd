@@ -59,20 +59,18 @@ const page_action_index:Dictionary = {
 
 func show_page(action):
 	emit_signal("show_menu", action, Rakugo.started)
-	$SubMenus.current_tab = page_action_index[action]
-	Window.select_ui_tab(0)
-
+	if action in page_action_index:
+		$SubMenus.current_tab = page_action_index[action]
+		Window.select_ui_tab(0)
 
 func save_menu(screenshot):
 	$SubMenus/SavesSlotScreen.save_mode = true
 	$SubMenus/SavesSlotScreen.screenshot = screenshot
 	show_page("save")
 
-
 func load_menu():
 	$SubMenus/SavesSlotScreen.save_mode = false
 	show_page("load")
-
 
 func _on_game_end():
 	Window.select_ui_tab(0)
