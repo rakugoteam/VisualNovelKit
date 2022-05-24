@@ -131,7 +131,6 @@ func populate_grid_page():
 	for x in saves:
 		emit_signal("add_save_slot", x)
 
-		
 func new_slot_instance(filename: String, page_index:Vector2, hide_dl_btn:bool) -> Node:
 	var s = slot.instance()
 	s.init(filename, page_index, hide_dl_btn)

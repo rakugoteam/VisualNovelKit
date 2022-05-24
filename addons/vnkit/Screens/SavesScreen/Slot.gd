@@ -2,8 +2,6 @@ extends Control
 
 signal delete_save(name)
 signal select_save(name, page_index)
-
-
 signal set_screenshot(screenshot)
 signal set_datetime(datetime)
 signal set_save_name(save_name)
