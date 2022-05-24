@@ -19,10 +19,5 @@ func _on_visibility_changed():# Using self connected signal to also handle exter
 
 func _on_popup_hide():
 	visible = false
-	_delayed_unblock_stepping()
-
-func _delayed_unblock_stepping():
 	# prevent the input that cancelled quitting to trigger the step
 	yield(get_tree().create_timer(0.1), "timeout")
-	Rakugo.StepBlocker.unblock('quit_screen')
-	
