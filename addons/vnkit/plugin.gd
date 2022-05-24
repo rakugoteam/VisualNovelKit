@@ -10,8 +10,8 @@ func _enter_tree():
 	if !ProjectSettings.has_setting("addons/vnkit/skip_delay"):
 		ProjectSettings.set_setting("addons/vnkit/skip_delay", 0.5)
 
-	if !ProjectSettings.has_setting("addons/rakugo/typing_effect_delay"):
-		ProjectSettings.set_setting("addons/rakugo/typing_effect_delay", 0.05)
+	if !ProjectSettings.has_setting("addons/vnkit/typing_effect_delay"):
+		ProjectSettings.set_setting("addons/vnkit/typing_effect_delay", 0.05)
 
 	if !ProjectSettings.has_setting("addons/vnkit/saves/current_page"):
 		ProjectSettings.set_setting("addons/vnkit/saves/current_page", 0)
@@ -41,7 +41,7 @@ func _enter_tree():
 func _exit_tree():
 	ProjectSettings.set_setting("addons/vnkit/auto_mode_delay", null)
 	ProjectSettings.set_setting("addons/vnkit/skip_delay", null)
-	ProjectSettings.set_setting("addons/rakugo/typing_effect_delay", null)
+	ProjectSettings.set_setting("addons/vnkit/typing_effect_delay", null)
 	ProjectSettings.set_setting("addons/vnkit/saves/current_page", null)
 	ProjectSettings.set_setting("addons/vnkit/saves/page_names", null)
 	ProjectSettings.remove_property_info("addons/vnkit/saves/layout")
