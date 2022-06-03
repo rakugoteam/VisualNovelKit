@@ -29,15 +29,12 @@ func init(name:String, page_index:Vector2, hide_delete:bool = false):
 	else:
 		hide_delete_button()
 	
-	
 	set_save_name(save_name)
 
 	if save_name == "empty":
 		set_datetime(0)
 	else:
 		set_datetime(file.get_modified_time(Rakugo.store_manager.get_save_path(filename)))
-	
-
 
 func load_screenshot_texture(path):
 	var image_file = File.new()
@@ -53,7 +50,6 @@ func load_screenshot_texture(path):
 	output.create_from_image(image)
 	return output
 
-
 func _on_save_select():
 	emit_signal("select_save", save_name, save_page_index)
 	
@@ -62,7 +58,6 @@ func _on_save_delete():
 		emit_signal("delete_save", "%s_%s_%s" % [str(save_page_index.x), str(save_page_index.y), save_name])
 	else:
 		emit_signal("delete_save", save_name)
-
 
 func set_screenshot(texture):
 	self.screenshot = texture

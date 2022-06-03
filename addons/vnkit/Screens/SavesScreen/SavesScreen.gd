@@ -18,11 +18,9 @@ var save_mode = true setget set_mode
 var save_list:Array = []
 var save_pages:Dictionary = {}
 
-
 var use_pages:bool = false
 
 signal load_file
-
 signal mode_changed(save_mode)
 signal clear_save_slots()
 signal add_save_slot(save_slot)
@@ -87,7 +85,7 @@ func update_save_list(ignores = [""]):
 	return contents
 	
 func update_grid(_save_mode = null):
-	if not _save_mode == null:
+	if _save_mode != null:
 		save_mode = _save_mode
 
 	var saves:Array
@@ -282,11 +280,13 @@ func _on_visibility_changed():
 		return
 
 	if use_pages:
-		_on_change_page(ProjectSettings.get_setting(VNKit.saves_ui_page), 0)
-		return
-	
-	# use_list
-	update_grid()
+		var page = ProjectSettings.get_setting(VNKit.saves_ui_page)
+		_on_change_page(page, 0)
+
+	else:
+		# use_list
+		update_grid()
+
 
 func _on_change_page(page, incremental_change):
 	match page:
