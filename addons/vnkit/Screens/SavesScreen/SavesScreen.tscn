@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/Slot.tscn" type="PackedScene" id=1]
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/SkipNamingButton.gd" type="Script" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://addons/vnkit/themes/flat_drak_theme.tres" type="Theme" id=6]
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/page_buttons.tres" type="ButtonGroup" id=7]
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/ConfirmationDialog.gd" type="Script" id=9]
-[ext_resource path="res://addons/vnkit/Screens/SavesScreen/DummySlot.tscn" type="PackedScene" id=10]
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/PageNavBar.gd" type="Script" id=11]
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/SavesScreenPageButton.gd" type="Script" id=12]
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/PageLabel.gd" type="Script" id=13]
@@ -44,7 +43,6 @@ anchor_bottom = 1.0
 theme = ExtResource( 6 )
 script = ExtResource( 5 )
 slot = ExtResource( 1 )
-dummy_slot = ExtResource( 10 )
 
 [node name="PageLabel" type="LineEdit" parent="." groups=["save_screen_page_ui_element"]]
 anchor_right = 1.0

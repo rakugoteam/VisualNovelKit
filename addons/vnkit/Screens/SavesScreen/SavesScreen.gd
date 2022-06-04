@@ -1,7 +1,7 @@
 extends Panel
 
 export var slot: PackedScene
-export var dummy_slot: PackedScene
+# export var dummy_slot: PackedScene
 
 export var popup_path:NodePath = 'ConfirmationPopup'
 onready var popup := get_node(popup_path)
@@ -9,7 +9,6 @@ onready var popup := get_node(popup_path)
 var screenshot := Image.new()
 var dir := Directory.new()
 var file = File.new()
-
 
 export var default_save_name := "save"
 var file_ext := "res"
@@ -55,6 +54,7 @@ func update_save_pages():
 			var x = int(result.group(1))
 			var y = int(result.group(2))
 			save_pages[Vector2(x, y)] = result.get_string(3)
+			prints("found save page:", x, y, result.get_string(3))
 	pass
 
 func update_save_list(ignores = [""]):
@@ -75,6 +75,7 @@ func update_save_list(ignores = [""]):
 
 					if not i:
 						contents.append(file_name.replace("." + file_ext, ""))
+				prints("found save:", file_name)
 
 			file_name = dir.get_next()
 
@@ -94,13 +95,15 @@ func update_grid(_save_mode = null):
 		saves.append("empty")
 	else:
 		saves = update_save_list(["history"])
-	
+
 	if use_pages:
 		update_save_pages()
 		populate_grid_page()
+		print("Displaying saves as pages")
 	else:
 		populate_grid(saves)
-
+		print("Displaying saves as list")
+	
 	
 func populate_grid(saves):
 	emit_signal("clear_save_slots")
@@ -118,16 +121,19 @@ func populate_grid_page():
 		
 		if save_pages.has(index):
 			saves.append(new_slot_instance(save_pages[index], index, false))
+			prints("found save page:", index, save_pages[index])
 			continue
 
 		if save_mode:
 			saves.append(new_slot_instance("empty", index, true))
+			prints("creating empty save slot:", index)
 			continue
-
-		saves.append(dummy_slot.instance())
+		
+		# saves.append(dummy_slot.instance())
 	
 	for x in saves:
 		emit_signal("add_save_slot", x)
+		$SavePage/ScrollContainer/GridContainer.add_child(x)
 
 func new_slot_instance(filename: String, page_index:Vector2, hide_dl_btn:bool) -> Node:
 	var s = slot.instance()
@@ -283,9 +289,7 @@ func _on_visibility_changed():
 		var page = ProjectSettings.get_setting(VNKit.saves_ui_page)
 		_on_change_page(page, 0)
 
-	else:
-		# use_list
-		update_grid()
+	update_grid()
 
 
 func _on_change_page(page, incremental_change):
@@ -307,7 +311,6 @@ func _on_change_page(page, incremental_change):
 			ProjectSettings.set_setting(VNKit.saves_ui_page, int(page))
 
 	emit_signal("page_changed")
-	update_grid()
 
 func split_paged_savename(savename):
 	var page_re = RegEx.new()

@@ -63,6 +63,7 @@ mouse_filter = 2
 [node name="SavesSlotScreen" parent="SubMenus" instance=ExtResource( 7 )]
 visible = false
 mouse_filter = 2
+dummy_slot = null
 
 [node name="MenuBar" parent="." instance=ExtResource( 16 )]
 anchor_right = 0.22

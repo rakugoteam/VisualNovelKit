@@ -3,7 +3,7 @@ extends Control
 signal delete_save(name)
 signal select_save(name, page_index)
 signal set_screenshot(screenshot)
-signal set_datetime(datetime)
+signal set_data_time(data_time)
 signal set_save_name(save_name)
 signal set_delete_button(visibility)
 
@@ -32,9 +32,9 @@ func init(name:String, page_index:Vector2, hide_delete:bool = false):
 	set_save_name(save_name)
 
 	if save_name == "empty":
-		set_datetime(0)
+		set_data_time(0)
 	else:
-		set_datetime(file.get_modified_time(Rakugo.store_manager.get_save_path(filename)))
+		set_data_time(file.get_modified_time(Rakugo.store_manager.get_save_path(filename)))
 
 func load_screenshot_texture(path):
 	var image_file = File.new()
@@ -63,8 +63,8 @@ func set_screenshot(texture):
 	self.screenshot = texture
 	emit_signal("set_screenshot", texture)
 
-func set_datetime(datetime):
-	emit_signal("set_datetime", datetime)
+func set_data_time(data_time):
+	emit_signal("set_data_time", data_time)
 	
 func set_save_name(savename):
 	emit_signal("set_save_name", savename)
