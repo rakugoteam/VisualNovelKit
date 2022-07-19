@@ -26,7 +26,7 @@ signal add_save_slot(save_slot)
 signal page_changed()
 
 func _ready() -> void:
-	use_pages = ProjectSettings.get_setting(VNKit.saves_ui_layout) == "pages"
+	use_pages = ProjectSettings.get_setting(Kit.saves_ui_layout) == "pages"
 	
 	for e in get_tree().get_nodes_in_group("save_screen_page_ui_element"):
 		e.visible = use_pages
@@ -35,7 +35,7 @@ func _ready() -> void:
 		e.scroll_vertical_enabled = not use_pages
 		
 	if use_pages:
-		ProjectSettings.set_setting(VNKit.saves_ui_page, 1)
+		ProjectSettings.set_setting(Kit.saves_ui_page, 1)
 	return
 
 func set_mode(mode):
@@ -115,7 +115,7 @@ func populate_grid_page():
 	emit_signal("clear_save_slots")
 	
 	var saves = []
-	var current_page = ProjectSettings.get_setting(VNKit.saves_ui_page) 
+	var current_page = ProjectSettings.get_setting(Kit.saves_ui_page) 
 	for i in range(6):
 		var index = Vector2(current_page, i)
 		
@@ -182,7 +182,7 @@ func _on_save_select(save_filename, page_index):
 func save_save(caller: String) -> bool:
 	var new_save = false
 	if caller == "empty":
-		if ProjectSettings.get_setting(VNKit.saves_ui_skip_naming):
+		if ProjectSettings.get_setting(Kit.saves_ui_skip_naming):
 			caller = get_next_iterative_name(default_save_name)
 		else:
 			new_save = true
@@ -226,7 +226,7 @@ func save_page_save(caller: String, page_index:Vector2) -> bool:
 		if not yield(popup, "return_output"):
 			return false
 
-	if ProjectSettings.get_setting(VNKit.saves_ui_skip_naming):
+	if ProjectSettings.get_setting(Kit.saves_ui_skip_naming):
 		caller = default_save_name
 	else:
 		popup.name_save_confirm()
@@ -286,7 +286,7 @@ func _on_visibility_changed():
 		return
 
 	if use_pages:
-		var page = ProjectSettings.get_setting(VNKit.saves_ui_page)
+		var page = ProjectSettings.get_setting(Kit.saves_ui_page)
 		_on_change_page(page, 0)
 
 	update_grid()
@@ -301,14 +301,14 @@ func _on_change_page(page, incremental_change):
 
 	match page:
 		0:
-			var value = clamp(ProjectSettings.get_setting(VNKit.saves_ui_page) + incremental_change, -2, 1000)
-			ProjectSettings.set_setting(VNKit.saves_ui_page, value)
+			var value = clamp(ProjectSettings.get_setting(Kit.saves_ui_page) + incremental_change, -2, 1000)
+			ProjectSettings.set_setting(Kit.saves_ui_page, value)
 		"Q":
-			ProjectSettings.set_setting(VNKit.saves_ui_page, -1)
+			ProjectSettings.set_setting(Kit.saves_ui_page, -1)
 		"A":
-			ProjectSettings.set_setting(VNKit.saves_ui_page, -2)
+			ProjectSettings.set_setting(Kit.saves_ui_page, -2)
 		_:
-			ProjectSettings.set_setting(VNKit.saves_ui_page, int(page))
+			ProjectSettings.set_setting(Kit.saves_ui_page, int(page))
 
 	emit_signal("page_changed")
 
