@@ -22,7 +22,7 @@ func _on_page_button_pressed(action):
 
 
 func _on_page_changed():
-	var page = ProjectSettings.get_setting(VNKit.saves_ui_page)
+	var page = ProjectSettings.get_setting(Kit.saves_ui_page)
 	for b in get_children():
 		if b.text == str(page):
 			b.pressed = true

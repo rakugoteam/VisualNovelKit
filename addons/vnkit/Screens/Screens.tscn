@@ -63,6 +63,7 @@ mouse_filter = 2
 [node name="SavesSlotScreen" parent="SubMenus" instance=ExtResource( 7 )]
 visible = false
 mouse_filter = 2
+dummy_slot = null
 
 [node name="MenuBar" parent="." instance=ExtResource( 16 )]
 anchor_right = 0.22
@@ -87,6 +88,7 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 popup_exclusive = true
+window_title = "Alarm!"
 dialog_text = "Are you sure you want to return to the main menu?
 This will lose unsaved progress."
 script = ExtResource( 4 )

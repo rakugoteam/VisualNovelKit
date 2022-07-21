@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/Slot.tscn" type="PackedScene" id=1]
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/SkipNamingButton.gd" type="Script" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://addons/vnkit/themes/flat_drak_theme.tres" type="Theme" id=6]
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/page_buttons.tres" type="ButtonGroup" id=7]
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/ConfirmationDialog.gd" type="Script" id=9]
-[ext_resource path="res://addons/vnkit/Screens/SavesScreen/DummySlot.tscn" type="PackedScene" id=10]
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/PageNavBar.gd" type="Script" id=11]
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/SavesScreenPageButton.gd" type="Script" id=12]
 [ext_resource path="res://addons/vnkit/Screens/SavesScreen/PageLabel.gd" type="Script" id=13]
@@ -43,17 +42,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 6 )
 script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 slot = ExtResource( 1 )
-dummy_slot = ExtResource( 10 )
 
 [node name="PageLabel" type="LineEdit" parent="." groups=["save_screen_page_ui_element"]]
-anchor_left = 0.5
-anchor_top = 0.15
-anchor_right = 0.5
-anchor_bottom = 0.15
+anchor_right = 1.0
+margin_bottom = 33.0
 grow_horizontal = 2
 size_flags_horizontal = 3
 custom_colors/font_color = Color( 0.6, 0.8, 1, 1 )
@@ -75,10 +68,11 @@ anchor_left = 0.04
 anchor_top = 0.25
 anchor_right = 0.96
 anchor_bottom = 0.87
+margin_left = 0.0400009
+margin_top = -111.0
+margin_right = -0.039978
+margin_bottom = 11.0
 custom_styles/panel = SubResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ScrollContainer" type="ScrollContainer" parent="SavePage" groups=["save_screen_scroll_ui_element"]]
 anchor_right = 1.0
@@ -88,13 +82,9 @@ follow_focus = true
 scroll_horizontal_enabled = false
 scroll_vertical_enabled = false
 script = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="GridContainer" type="GridContainer" parent="SavePage/ScrollContainer"]
-margin_right = 942.08
-margin_bottom = 50.0
+margin_right = 942.0
 size_flags_horizontal = 3
 custom_constants/vseparation = 50
 custom_constants/hseparation = 7
@@ -103,30 +93,6 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Slot" parent="SavePage/ScrollContainer/GridContainer" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 309.0
-
-[node name="Slot2" parent="SavePage/ScrollContainer/GridContainer" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 316.0
-margin_right = 625.0
-
-[node name="Slot3" parent="SavePage/ScrollContainer/GridContainer" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 632.0
-margin_right = 941.0
-
-[node name="Slot4" parent="SavePage/ScrollContainer/GridContainer" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 50.0
-margin_right = 309.0
-margin_bottom = 50.0
 
 [node name="PageNavBar" type="HBoxContainer" parent="." groups=["save_screen_page_ui_element"]]
 anchor_left = 0.2

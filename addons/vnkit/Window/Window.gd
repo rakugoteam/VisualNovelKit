@@ -7,15 +7,15 @@ onready var QuitScreen := $Panel/QuitScreen
 var fullscreen : bool setget _set_fullscreen, _get_fullscreen
 
 func _set_fullscreen(value:bool):
-	ProjectSettings.set_setting(VNKit.fullscreen, value)
+	ProjectSettings.set_setting(Kit.fullscreen, value)
 
 func _get_fullscreen() -> bool:
-	return ProjectSettings.get_setting(VNKit.fullscreen)
+	return ProjectSettings.get_setting(Kit.fullscreen)
 
 func _ready():
 	OS.window_fullscreen = fullscreen
-	if ProjectSettings.has_setting(VNKit.maximized):
-		OS.window_maximized = ProjectSettings.get_setting(VNKit.maximized)
+	if ProjectSettings.has_setting(Kit.maximized):
+		OS.window_maximized = ProjectSettings.get_setting(Kit.maximized)
 
 	if not(true in [OS.window_fullscreen, OS.window_maximized]):
 		center_window()
@@ -31,10 +31,10 @@ func center_window():
 
 func _on_window_resized():
 	fullscreen = OS.window_fullscreen
-	ProjectSettings.set_setting(VNKit.maximized, OS.window_maximized)
+	ProjectSettings.set_setting(Kit.maximized, OS.window_maximized)
 	if not OS.window_fullscreen and not OS.window_maximized:
-		ProjectSettings.set_setting(VNKit.width, OS.window_size.x)
-		ProjectSettings.set_setting(VNKit.height, OS.window_size.y)
+		ProjectSettings.set_setting(Kit.width, OS.window_size.x)
+		ProjectSettings.set_setting(Kit.height, OS.window_size.y)
 
 func select_ui_tab(tab:int):
 	Tabs.current_tab = tab

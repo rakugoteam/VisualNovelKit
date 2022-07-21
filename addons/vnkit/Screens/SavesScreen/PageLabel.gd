@@ -3,8 +3,8 @@ extends LineEdit
 var current_page = 0
 
 func _on_page_changed():
-	current_page = ProjectSettings.get_setting(VNKit.saves_ui_page)
-	var saves_page_names = ProjectSettings.get_setting(VNKit.saves_ui_pages)
+	current_page = ProjectSettings.get_setting(Kit.saves_ui_page)
+	var saves_page_names = ProjectSettings.get_setting(Kit.saves_ui_pages)
 	if current_page in saves_page_names:
 		text = saves_page_names[current_page]
 	else:
@@ -20,5 +20,5 @@ func _on_page_changed():
 
 
 func _on_text_changed(new_text):
-	var saves_page_names = ProjectSettings.get_setting(VNKit.saves_ui_pages)
+	var saves_page_names = ProjectSettings.get_setting(Kit.saves_ui_pages)
 	saves_page_names[current_page] = new_text
