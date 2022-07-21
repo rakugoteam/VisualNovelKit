@@ -105,6 +105,7 @@ _global_script_class_icons={
 [addons]
 
 advanced_text/markup="markdown"
+kit/auto_mode_delay=3
 vnkit/auto_mode_delay=3
 vnkit/skip_delay=0.5
 vnkit/saves/current_page=0
@@ -126,6 +127,13 @@ rakugo/save_folder="res://saves"
 rakugo/test_mode=false
 rakugo/skip_delay=0.5
 vnkit/typing_effect_delay=0.05
+kit/skip_delay=0.5
+kit/typing_effect_delay=0.05
+kit/saves/current_page=0
+kit/saves/page_names=[  ]
+kit/saves/layout="pages"
+kit/saves/current_scroll=0
+kit/saves/skip_naming=true
 
 [application]
 
