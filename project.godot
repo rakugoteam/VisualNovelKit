@@ -39,16 +39,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/emojis-for-godot/emojis/emojis.gd"
 }, {
-"base": "Reference",
-"class": "GutHookScript",
-"language": "GDScript",
-"path": "res://addons/gut/hook_script.gd"
-}, {
-"base": "Node",
-"class": "GutTest",
-"language": "GDScript",
-"path": "res://addons/gut/test.gd"
-}, {
 "base": "Resource",
 "class": "HistoryEntry",
 "language": "GDScript",
@@ -91,8 +81,6 @@ _global_script_class_icons={
 "EmojiButton": "res://addons/emojis-for-godot/icons/EmojiButton.svg",
 "EmojiIcon": "res://addons/emojis-for-godot/icons/EmojiIcon.svg",
 "Emojis": "",
-"GutHookScript": "",
-"GutTest": "",
 "HistoryEntry": "",
 "MaterialButton": "res://addons/material-design-icons/nodes/MaterialButton.svg",
 "MaterialIcon": "res://addons/material-design-icons/nodes/MaterialIcon.svg",
