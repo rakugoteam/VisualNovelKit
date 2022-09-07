@@ -1,0 +1,4 @@
+[submodule "addons/vnkit"]
+	path = addons/vnkit
+	url = https://github.com/rakugoteam/Kits
+	branch = visual-novel
