@@ -6,6 +6,7 @@ func _plugging():
 	# By default, only "addons/" directory will be installed
 	plug("rakugoteam/Emojis-For-Godot", {"include": ["addons", ".import/"]})
 	plug("rakugoteam/Godot-Material-Icons", {"include": ["addons", ".import/"]})
+	plug("rakugoteam/AdvancedText")
 	plug("rakugoteam/Rakugo", {"include": ["addons/rakugo", ".import/"]})
 
 	## comment-out if of you don't want to update kit itself
