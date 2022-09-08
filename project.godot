@@ -139,7 +139,6 @@ EBBCodeParser="*res://addons/advanced-text/parsers/EBBCodeParser.gd"
 MarkdownParser="*res://addons/advanced-text/parsers/MarkdownParser.gd"
 RenpyParser="*res://addons/advanced-text/parsers/RenpyParser.gd"
 Rakugo="*res://addons/Rakugo/Rakugo.tscn"
-Settings="*res://addons/Rakugo/Settings.gd"
 Window="*res://addons/vnkit/Window/Window.tscn"
 Kit="*res://addons/vnkit/kit.gd"
 
@@ -157,6 +156,9 @@ gdscript/warnings/return_value_discarded=false
 
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+window/size/maximized=false
+window/size=false
+window=false
 
 [editor_plugins]
 
