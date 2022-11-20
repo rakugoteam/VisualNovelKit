@@ -158,7 +158,7 @@ enabled=PoolStringArray( "res://addons/Rakugo/plugin.cfg", "res://addons/advance
 
 [gui]
 
-theme/custom="res://addons/vnkit/themes/flat_drak_theme.tres"
+theme/custom="res://addons/vnkit/themes/dark_flat_theme.tres"
 
 [importer_defaults]
 
