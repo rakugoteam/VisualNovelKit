@@ -22,7 +22,6 @@ scale = Vector2( 0.12, 0.12 )
 script = ExtResource( 2 )
 
 [node name="Casual" type="Node2D" parent="Miho"]
-visible = false
 
 [node name="Frown" type="Sprite" parent="Miho/Casual"]
 visible = false
