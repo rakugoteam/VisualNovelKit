@@ -39,11 +39,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/emojis-for-godot/emojis/emojis.gd"
 }, {
-"base": "Resource",
-"class": "HistoryEntry",
-"language": "GDScript",
-"path": "res://addons/Rakugo/lib/resources/HistoryEntry.gd"
-}, {
 "base": "Button",
 "class": "MaterialButton",
 "language": "GDScript",
@@ -64,15 +59,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/Rakugo/lib/nodes/RakuScriptDialogue.gd"
 }, {
-"base": "Resource",
-"class": "Store",
+"base": "Node2D",
+"class": "Screen2D",
 "language": "GDScript",
-"path": "res://addons/Rakugo/lib/resources/Store.gd"
-}, {
-"base": "Resource",
-"class": "StoreStack",
-"language": "GDScript",
-"path": "res://addons/Rakugo/lib/resources/StoreStack.gd"
+"path": "res://addons/vnkit/nodes/Screen2D.gd"
 } ]
 _global_script_class_icons={
 "AdvancedTextButton": "",
@@ -81,13 +71,11 @@ _global_script_class_icons={
 "EmojiButton": "res://addons/emojis-for-godot/icons/EmojiButton.svg",
 "EmojiIcon": "res://addons/emojis-for-godot/icons/EmojiIcon.svg",
 "Emojis": "",
-"HistoryEntry": "",
 "MaterialButton": "res://addons/material-design-icons/nodes/MaterialButton.svg",
 "MaterialIcon": "res://addons/material-design-icons/nodes/MaterialIcon.svg",
 "Parser": "",
 "RakuScriptDialogue": "",
-"Store": "",
-"StoreStack": ""
+"Screen2D": "res://addons/vnkit/icons/Screen2D.svg"
 }
 
 [addons]
@@ -104,20 +92,20 @@ rakugo/rollback_steps=10
 rakugo/history_length=30
 rakugo/narrator/name="narrator"
 rakugo/debug=false
-rakugo/save_folder="res://saves"
+rakugo/save_folder="user://saves"
 rakugo/test_mode=false
 rakugo/skip_delay=0.5
-kit/saves/layout="pages"
-kit/saves/current_scroll=0
-kit/saves/skip_naming=true
 kit/skip_delay=0.5
 kit/typing_effect_delay=0.05
 kit/saves/current_page=0
 kit/saves/page_names=[  ]
+kit/saves/layout="pages"
+kit/saves/current_scroll=0
+kit/saves/skip_naming=true
 
 [application]
 
-config/name="Rakugo Visual Novel Kit"
+config/name="Visual Novel Kit"
 run/main_scene="res://game/Example.tscn"
 boot_splash/fullsize=false
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
@@ -131,8 +119,9 @@ EBBCodeParser="*res://addons/advanced-text/parsers/EBBCodeParser.gd"
 MarkdownParser="*res://addons/advanced-text/parsers/MarkdownParser.gd"
 RenpyParser="*res://addons/advanced-text/parsers/RenpyParser.gd"
 Rakugo="*res://addons/Rakugo/Rakugo.tscn"
-Kit="*res://addons/vnkit/kit.gd"
+Kit="*res://addons/vnkit/kit.tscn"
 Window="*res://addons/vnkit/Window/Window.tscn"
+Screens="*res://addons/vnkit/rks_addons/screens.gd"
 
 [debug]
 
@@ -148,13 +137,12 @@ gdscript/warnings/return_value_discarded=false
 
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
-window/size/maximized=false
 window/size=false
 window=false
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/Rakugo/plugin.cfg", "res://addons/advanced-text/plugin.cfg", "res://addons/emojis-for-godot/plugin.cfg", "res://addons/material-design-icons/plugin.cfg", "res://addons/vnkit/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/Rakugo/plugin.cfg", "res://addons/advanced-text/plugin.cfg", "res://addons/editor_icon_previewer/plugin.cfg", "res://addons/emojis-for-godot/plugin.cfg", "res://addons/godot-plugin-refresher/plugin.cfg", "res://addons/material-design-icons/plugin.cfg", "res://addons/vnkit/plugin.cfg" )
 
 [gui]
 
