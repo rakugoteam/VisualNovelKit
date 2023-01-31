@@ -1,4 +1,3 @@
-hello_world
 character test_ch "Test Character"
 first_dialogue:
 	"Hello, world !"
