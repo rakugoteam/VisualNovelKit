@@ -1,0 +1,89 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://addons/advanced-text/nodes/AdvancedTextLabel.gd" type="Script" id=1]
+[ext_resource path="res://addons/vnkit/InGameUI/Notification.gd" type="Script" id=2]
+[ext_resource path="res://addons/vnkit/InGameUI/DialogueUI/MenuContainer.gd" type="Script" id=3]
+[ext_resource path="res://addons/vnkit/themes/flat_drak_theme.tres" type="Theme" id=4]
+[ext_resource path="res://addons/vnkit/InGameUI/DialogueUI/DialogueUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://addons/vnkit/InGameUI/QuickMenu/QuickMenu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://addons/vnkit/InGameUI/DialogueUI/ChoiceButton.tscn" type="PackedScene" id=8]
+
+[node name="InGameUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 4 )
+
+[node name="TestBG" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.631373, 0.121569, 0.121569, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Notification" type="Popup" parent="."]
+margin_right = 476.0
+margin_bottom = 40.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="Notification"]
+one_shot = true
+
+[node name="Panel" type="Panel" parent="Notification"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="RichTextLabel" parent="Notification/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+bbcode_enabled = true
+bbcode_text = "Notification"
+text = "Notification"
+script = ExtResource( 1 )
+__meta__ = {
+"_default_markup": "markdown",
+"_edit_use_anchors_": false
+}
+markup_text = "Notification"
+
+[node name="DialogueUI" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="DialogueUI" parent="DialogueUI" instance=ExtResource( 5 )]
+
+[node name="MenuContainer" type="ScrollContainer" parent="DialogueUI"]
+anchor_left = 0.119
+anchor_top = 0.067
+anchor_right = 0.9
+anchor_bottom = 0.733
+margin_left = 0.143997
+margin_top = -0.200001
+margin_right = 0.399963
+margin_bottom = 0.199982
+rect_min_size = Vector2( 800, 400 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+choice_button_scene = ExtResource( 8 )
+
+[node name="ChoicesBox" type="VBoxContainer" parent="DialogueUI/MenuContainer"]
+margin_right = 800.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 500, 300 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="QuickMenu" parent="." instance=ExtResource( 7 )]
+margin_top = 436.0
+margin_bottom = 488.0

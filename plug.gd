@@ -8,7 +8,6 @@ func _plugging():
 	plug("rakugoteam/Godot-Material-Icons", {"include": ["addons", ".import/"]})
 	plug("rakugoteam/AdvancedText")
 	plug("rakugoteam/Rakugo", {"include": ["addons/rakugo", ".import/"]})
-	plug("rakugoteam/Kits", {"include": ["."], "branch": "visual-novel", "install_root": "addons/adventure-kit"})
 
 	## comment-out if of you don't want to update kit itself
 	# plug("rakugoteam/VisualNovelKit", {"include": ["addons", "plug.gd"]})
