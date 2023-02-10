@@ -1,0 +1,49 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://addons/Rakugo/lib/nodes/RakuScriptDialogue.gd" type="Script" id=1]
+[ext_resource path="res://addons/vnkit/nodes/Screen2D.gd" type="Script" id=2]
+[ext_resource path="res://game/assets/Miho Base Pack/Miho Casual/Miho_Casual_Open_Blush.png" type="Texture" id=3]
+[ext_resource path="res://game/assets/Miho Base Pack/Miho Casual/Miho_Casual_Frown_Blush.png" type="Texture" id=4]
+[ext_resource path="res://game/assets/Miho Base Pack/Miho Casual/Miho_Casual_Smile.png" type="Texture" id=5]
+[ext_resource path="res://game/assets/Miho Base Pack/Miho Casual/Miho_Casual_Smile_Blush.png" type="Texture" id=6]
+[ext_resource path="res://game/assets/Miho Base Pack/Miho Casual/Miho_Casual_Open.png" type="Texture" id=7]
+[ext_resource path="res://game/assets/Miho Base Pack/Miho Casual/Miho_Casual_Frown.png" type="Texture" id=13]
+
+[node name="ScreenExample" type="Node2D"]
+
+[node name="RakuScriptDialogue" type="Node" parent="."]
+script = ExtResource( 1 )
+raku_script = "res://game/screens_example.rk"
+auto_start = true
+
+[node name="Miho" type="Node2D" parent="."]
+position = Vector2( 439, 359 )
+scale = Vector2( 0.12, 0.12 )
+script = ExtResource( 2 )
+
+[node name="Casual" type="Node2D" parent="Miho"]
+
+[node name="Frown" type="Sprite" parent="Miho/Casual"]
+visible = false
+texture = ExtResource( 13 )
+
+[node name="Open" type="Sprite" parent="Miho/Casual"]
+visible = false
+texture = ExtResource( 7 )
+
+[node name="Smile" type="Sprite" parent="Miho/Casual"]
+texture = ExtResource( 5 )
+
+[node name="Blush" type="Node2D" parent="Miho/Casual"]
+visible = false
+
+[node name="Frown" type="Sprite" parent="Miho/Casual/Blush"]
+texture = ExtResource( 4 )
+
+[node name="Open" type="Sprite" parent="Miho/Casual/Blush"]
+visible = false
+texture = ExtResource( 3 )
+
+[node name="Smile" type="Sprite" parent="Miho/Casual/Blush"]
+visible = false
+texture = ExtResource( 6 )

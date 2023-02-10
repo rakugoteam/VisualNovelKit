@@ -88,4 +88,4 @@ If you want to help please write to us on our [Discord](https://discord.gg/K9gvj
 
 - [Godot icons](https://github.com/godotengine/godot-design/tree/master/engine/icons/optimized)
 
-- icons from [game-icons.net](https://game-icons.net)
+- icons from [game-icons.net](https://game-icons.net) and [godot engine](https://github.com/godotengine/godot/tree/master/editor/icons)

@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/material-design-icons/nodes/MaterialButton.gd" type="Script" id=1]
+[ext_resource path="res://addons/material-design-icons/fonts/128.tres" type="DynamicFont" id=2]
+
+[node name="DummySlot" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -434, -34 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.168627, 0.709804, 0.737255, 1 )
+
+[node name="Save" type="Button" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 2 )
+text = "󰳻"
+script = ExtResource( 1 )
+icon_name = "content-save-edit"
+icon_size = "128"

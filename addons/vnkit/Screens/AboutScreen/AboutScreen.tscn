@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/advanced-text/nodes/AdvancedTextLabel.gd" type="Script" id=1]
+[ext_resource path="res://addons/vnkit/fonts/AdvancedTextTheme.tres" type="Theme" id=3]
+
+[node name="AboutScreen" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchor_left = 0.1
+anchor_right = 0.9
+anchor_bottom = 1.0
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DialogLabel" type="RichTextLabel" parent="ScrollContainer"]
+margin_right = 819.2
+margin_bottom = 600.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+bbcode_enabled = true
+bbcode_text = "[b]My Awesome Game[/b]
+[i]version 0.1[/i]
+[i]by me and team[/i]
+
+[b]About this game[/b]
+This is awesome game powered by Rakugo and Godot
+"
+text = "My Awesome Game
+version 0.1
+by me and team
+
+About this game
+This is awesome game powered by Rakugo and Godot
+"
+scroll_active = false
+script = ExtResource( 1 )
+__meta__ = {
+"_default_markup": "markdown"
+}
+markup_text = "**My Awesome Game**
+*version 0.1*
+*by me and team*
+
+**About this game**
+This is awesome game powered by Rakugo and Godot
+"
+markup = "markdown"
