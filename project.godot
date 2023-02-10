@@ -75,7 +75,7 @@ _global_script_class_icons={
 "MaterialIcon": "res://addons/material-design-icons/nodes/MaterialIcon.svg",
 "Parser": "",
 "RakuScriptDialogue": "",
-"Screen2D": "res://addons/vnkit/icons/Screen2D.svg"
+"Screen2D": ""
 }
 
 [addons]
@@ -119,7 +119,7 @@ EBBCodeParser="*res://addons/advanced-text/parsers/EBBCodeParser.gd"
 MarkdownParser="*res://addons/advanced-text/parsers/MarkdownParser.gd"
 RenpyParser="*res://addons/advanced-text/parsers/RenpyParser.gd"
 Rakugo="*res://addons/Rakugo/Rakugo.tscn"
-Kit="*res://addons/vnkit/kit.tscn"
+Kit="*res://addons/vnkit/kit.gd"
 Window="*res://addons/vnkit/Window/Window.tscn"
 Screens="*res://addons/vnkit/rks_addons/screens.gd"
 
