@@ -8,7 +8,6 @@ func _ready() -> void:
 	Rakugo.connect("say", self, "_on_say")
 	Rakugo.connect("ask", self, "_on_ask")
 	Rakugo.connect("step", self, "_on_step")
-	Rakugo.connect("menu", self, "_on_menu")
 	answer_edit.connect("text_entered", self, "_on_answer_entered")
 
 func _on_say(character:Dictionary, text:String) -> void:
@@ -20,11 +19,11 @@ func _on_say(character:Dictionary, text:String) -> void:
 	text = "# %s \n%s" % [ch_name, text]
 	dialog_label.markup_text = text
 	# prints("dialog_label:", dialog_label.bbcode_text)
-	disabled = false
+	# disabled = false
 
 func _on_step():
 	dialog_label.markup_text += "\n@shake 5, 10 {Click LMB or press 'Enter' to continue...}"
-	disabled = true
+	# disabled = true
 	# hide()
 
 func _on_ask(character:Dictionary, question:String, default_answer:String) -> void:

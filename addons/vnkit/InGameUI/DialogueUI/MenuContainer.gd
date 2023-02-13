@@ -19,8 +19,8 @@ func _on_menu(choices:Array):
 		# adding to container must be first
 		choices_box.add_child(button)
 		# or else the text won't be set
-		button.set_markup("markdown")
-		button.set_markup_text("@center{" + choice + "}")
+		button.markup = "markdown"
+		button.markup_text = "@center{%s}" % choice
 		button.connect("pressed", self, "_on_choice_pressed", [button])
 		button.show()
 	

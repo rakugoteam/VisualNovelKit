@@ -11,6 +11,7 @@
 [node name="InGameUI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 1
 theme = ExtResource( 4 )
 
 [node name="TestBG" type="ColorRect" parent="."]
@@ -53,6 +54,7 @@ markup_text = "Notification"
 [node name="DialogueUI" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 1
 
 [node name="DialogueUI" parent="DialogueUI" instance=ExtResource( 5 )]
 
@@ -87,3 +89,4 @@ alignment = 1
 [node name="QuickMenu" parent="." instance=ExtResource( 7 )]
 margin_top = 436.0
 margin_bottom = 488.0
+mouse_filter = 1
