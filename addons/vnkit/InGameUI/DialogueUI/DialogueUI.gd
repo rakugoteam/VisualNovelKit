@@ -1,12 +1,14 @@
-extends VBoxContainer
+extends Button
 
-onready var dialog_label := $DialogLabel
-onready var answer_edit := $AnswerEdit
+onready var dialog_label := $"%DialogLabel"
+onready var answer_edit := $"%AnswerEdit"
 
 func _ready() -> void:
+	connect("pressed", self, "_on_pressed")
 	Rakugo.connect("say", self, "_on_say")
 	Rakugo.connect("ask", self, "_on_ask")
 	Rakugo.connect("step", self, "_on_step")
+	Rakugo.connect("menu", self, "_on_menu")
 	answer_edit.connect("text_entered", self, "_on_answer_entered")
 
 func _on_say(character:Dictionary, text:String) -> void:
@@ -18,9 +20,11 @@ func _on_say(character:Dictionary, text:String) -> void:
 	text = "# %s \n%s" % [ch_name, text]
 	dialog_label.markup_text = text
 	# prints("dialog_label:", dialog_label.bbcode_text)
+	disabled = false
 
 func _on_step():
-	dialog_label.markup_text += "\n@shake 5, 10 {Press 'Enter' to continue...}"
+	dialog_label.markup_text += "\n@shake 5, 10 {Click LMB or press 'Enter' to continue...}"
+	disabled = true
 	# hide()
 
 func _on_ask(character:Dictionary, question:String, default_answer:String) -> void:
@@ -39,7 +43,7 @@ func _process(delta) -> void:
 	var ui_accept := Input.is_action_just_pressed("ui_accept")
 	if Rakugo.is_waiting_step() and ui_accept:
 		Rakugo.do_step()
-		
-		
 
-
+func _on_pressed():
+	if Rakugo.is_waiting_step():
+		Rakugo.do_step()
