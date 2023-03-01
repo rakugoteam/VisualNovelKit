@@ -158,7 +158,7 @@ margin_bottom = 564.0
 text = "Quit"
 nav_action = "quit"
 
-[node name="ReturnButton" parent="." groups=["nav_button"] instance=ExtResource( 6 )]
+[node name="Return" parent="." groups=["nav_button"] instance=ExtResource( 6 )]
 anchor_left = 0.0390625
 anchor_top = 1.0
 anchor_right = 1.0
