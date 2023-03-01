@@ -5,6 +5,11 @@ var kit_settings := {
 	auto_mode_delay = "addons/kit/auto_mode_delay",
 	typing_effect_delay = "addons/kit/typing_effect_delay",
 	skip_delay = "addons/kit/skip_delay",
+	saves_ui_page = "addons/kit/saves/current_page",
+	saves_ui_pages = "addons/kit/saves/page_names",
+	saves_ui_layout = "addons/kit/saves/layout",
+	saves_ui_scroll = "addons/kit/saves/scroll",
+	saves_ui_skip_naming = "addons/kit/saves/skip_naming",
 }
 
 var godot_settings := {
@@ -20,64 +25,6 @@ var audio_bus := [
 	"SFX",
 	"Dialogs"
 ]
-
-var game_started = false
-var auto_mode_delay = 0.0 setget set_auto_mode_delay, get_auto_mode_delay
-var typing_effect_delay = 0.0 setget set_typing_effect_delay, get_typing_effect_delay
-var skip_delay = 0.0 setget set_skip_delay, get_skip_delay
-var width = 0 setget set_width, get_width
-var height = 0 setget set_height, get_height
-var fullscreen = false setget set_fullscreen, get_fullscreen
-var maximized = false setget set_maximized, get_maximized
-
-func set_auto_mode_delay(value:float):
-	auto_mode_delay = value
-	ProjectSettings.set_setting(kit_settings.auto_mode_delay, value)
-
-func get_auto_mode_delay() -> float:
-	return auto_mode_delay
-
-func set_typing_effect_delay(value:float):
-	typing_effect_delay = value
-	ProjectSettings.set_setting(kit_settings.typing_effect_delay, value)
-
-func get_typing_effect_delay() -> float:
-	return typing_effect_delay
-
-func set_skip_delay(value:float):
-	skip_delay = value
-	ProjectSettings.set_setting(kit_settings.skip_delay, value)
-
-func get_skip_delay() -> float:
-	return skip_delay
-
-func set_width(value:int):
-	width = value
-	ProjectSettings.set_setting(godot_settings.width, value)
-
-func get_width() -> int:
-	return width
-
-func set_height(value:int):
-	height = value
-	ProjectSettings.set_setting(godot_settings.height, value)
-
-func get_height() -> int:
-	return height
-
-func set_fullscreen(value:bool):
-	fullscreen = value
-	ProjectSettings.set_setting(godot_settings.fullscreen, value)
-
-func get_fullscreen() -> bool:
-	return fullscreen
-
-func set_maximized(value:bool):
-	maximized = value
-	ProjectSettings.set_setting(godot_settings.maximized, value)
-
-func get_maximized() -> bool:
-	return maximized
 
 func _ready():
 	pause_mode = PAUSE_MODE_PROCESS
@@ -95,6 +42,41 @@ func get_audio_bus(bus_name:String):
 	var mute = AudioServer.is_bus_mute(bus_id)
 	var volume = AudioServer.get_bus_volume_db(bus_id)
 	return {"mute":mute, "volume": volume}
+
+func has(property:String) -> bool:
+	if property in kit_settings:
+		return ProjectSettings.has_setting(kit_settings[property])
+	
+	if property in godot_settings:
+		return ProjectSettings.has_setting(godot_settings[property])
+	
+	return false
+
+func _set(property:String, value) -> bool:
+	if property in kit_settings:
+		ProjectSettings.set_setting(kit_settings[property], value)
+		return true
+	
+	if property in godot_settings:
+		ProjectSettings.set_setting(godot_settings[property], value)
+		return true
+	
+	return false
+
+func _get_property_list():
+	var list = []
+	list.append_array(kit_settings.keys())
+	list.append_array(godot_settings.keys())
+	return list
+
+func _get(property : String):
+	if property in kit_settings:
+		return ProjectSettings.get_setting(kit_settings[property])
+	
+	if property in godot_settings:
+		return ProjectSettings.get_setting(godot_settings[property])
+	
+	return null
 
 func save_conf() -> void:
 	var config := ConfigFile.new()

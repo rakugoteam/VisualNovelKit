@@ -3,8 +3,8 @@ extends EditorPlugin
 
 
 func _enter_tree():
-	
-	
+	add_autoload_singleton("Kit", "res://addons/vnkit/kit.gd")
+	add_autoload_singleton("Window", "res://addons/vnkit/Window/Window.tscn")
 	if !ProjectSettings.has_setting("addons/kit/auto_mode_delay"):
 		ProjectSettings.set_setting("addons/kit/auto_mode_delay", 3)
 
@@ -13,6 +13,15 @@ func _enter_tree():
 
 	if !ProjectSettings.has_setting("addons/kit/typing_effect_delay"):
 		ProjectSettings.set_setting("addons/kit/typing_effect_delay", 0.05)
+
+	if !ProjectSettings.has_setting("addons/kit/saves/current_page"):
+		ProjectSettings.set_setting("addons/kit/saves/current_page", 0)
+
+	if !ProjectSettings.has_setting("addons/kit/saves/page_names"):
+		ProjectSettings.set_setting("addons/kit/saves/page_names", [])
+
+	if !ProjectSettings.has_setting("addons/kit/saves/layout"):
+		ProjectSettings.set_setting("addons/kit/saves/layout", "pages")
 
 	if ProjectSettings.has_setting("display/window/size/maximized"):
 		ProjectSettings.set_setting("display/window/size/maximized", false)
@@ -26,10 +35,13 @@ func _enter_tree():
 		}
 	)
 
-	ProjectSettings.set_order("addons/kit/auto_mode_delay", 0)
+	if !ProjectSettings.has_setting("addons/kit/saves/current_scroll"):
+		ProjectSettings.set_setting("addons/kit/saves/current_scroll", 0)
 
-	add_autoload_singleton("Kit", "res://addons/vnkit/kit.gd")
-	add_autoload_singleton("Window", "res://addons/vnkit/Window/Window.tscn")
+	if !ProjectSettings.has_setting("addons/kit/saves/skip_naming"):
+		ProjectSettings.set_setting("addons/kit/saves/skip_naming", true)
+
+	ProjectSettings.set_order("addons/kit/auto_mode_delay", 0)
 
 
 func _exit_tree():
@@ -38,5 +50,10 @@ func _exit_tree():
 	ProjectSettings.set_setting("addons/kit/auto_mode_delay", null)
 	ProjectSettings.set_setting("addons/kit/skip_delay", null)
 	ProjectSettings.set_setting("addons/kit/typing_effect_delay", null)
-
+	ProjectSettings.set_setting("addons/kit/saves/current_page", null)
+	ProjectSettings.set_setting("addons/kit/saves/page_names", null)
+	ProjectSettings.remove_property_info("addons/kit/saves/layout")
+	ProjectSettings.set_setting("addons/kit/saves/layout", null)
+	ProjectSettings.set_setting("addons/kit/saves/current_scroll", null)
+	ProjectSettings.set_setting("addons/kit/saves/skip_naming", null)
 	ProjectSettings.set_setting("display/window/size/maximized", null)

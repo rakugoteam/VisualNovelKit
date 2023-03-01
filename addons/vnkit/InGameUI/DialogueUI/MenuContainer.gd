@@ -6,7 +6,7 @@ onready var choices_box := $ChoicesBox
 func _ready():
 	Rakugo.connect("menu", self, "_on_menu")
 
-func _on_choice_pressed(button:Button):
+func on_choice_button_pressed(button:Button):
 	Rakugo.menu_return(button.get_index())
 	hide()
 
@@ -19,9 +19,9 @@ func _on_menu(choices:Array):
 		# adding to container must be first
 		choices_box.add_child(button)
 		# or else the text won't be set
-		button.markup = "markdown"
-		button.markup_text = "@center{%s}" % choice
-		button.connect("pressed", self, "_on_choice_pressed", [button])
+		button.set_markup("markdown")
+		button.set_markup_text("@center{" + choice + "}")
+		button.connect("pressed", self, "on_choice_button_pressed", [button])
 		button.show()
 	
 	show()

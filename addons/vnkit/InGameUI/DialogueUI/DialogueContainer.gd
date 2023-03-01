@@ -1,7 +1,7 @@
-extends Panel
+extends VBoxContainer
 
-onready var dialog_label := $"%DialogLabel"
-onready var answer_edit := $"%AnswerEdit"
+onready var dialog_label := $DialogLabel
+onready var answer_edit := $AnswerEdit
 
 func _ready() -> void:
 	Rakugo.connect("say", self, "_on_say")
@@ -20,7 +20,8 @@ func _on_say(character:Dictionary, text:String) -> void:
 	# prints("dialog_label:", dialog_label.bbcode_text)
 
 func _on_step():
-	dialog_label.markup_text += "\n@shake 5, 10 {Click press 'Enter' to continue...}"
+	dialog_label.markup_text += "\n@shake 5, 10 {Press 'Enter' to continue...}"
+	# hide()
 
 func _on_ask(character:Dictionary, question:String, default_answer:String) -> void:
 	_on_say(character, question)
@@ -36,6 +37,9 @@ func _on_ask_entered(answer:String) -> void:
 
 func _process(delta) -> void:
 	var ui_accept := Input.is_action_just_pressed("ui_accept")
-	if Rakugo.is_waiting_step():
-		if ui_accept:
-			Rakugo.do_step()
+	if Rakugo.is_waiting_step() and ui_accept:
+		Rakugo.do_step()
+		
+		
+
+
