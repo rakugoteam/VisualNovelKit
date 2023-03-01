@@ -85,8 +85,6 @@ func _ready():
 	if f.file_exists("user://kit_config.cfg"):
 		load_conf()
 
-
-
 func set_audio_bus(bus_name:String, volume:float, mute := false):
 	var bus_id = AudioServer.get_bus_index(bus_name)
 	AudioServer.set_bus_mute(bus_id, mute)
