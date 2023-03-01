@@ -8,6 +8,7 @@ func _ready():
 	get_tree().set_auto_accept_quit(false)
 	# Rakugo.connect("game_ended", self, "_on_game_end")
 	connect("visibility_changed", self, "_on_visibility_changed")
+	$MenuBar/Return.visible = false
 
 func _on_nav_button_press(nav):
 	match nav:
