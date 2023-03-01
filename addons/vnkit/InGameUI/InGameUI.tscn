@@ -79,8 +79,8 @@ __meta__ = {
 choice_button_scene = ExtResource( 8 )
 
 [node name="ChoicesBox" type="VBoxContainer" parent="DialogueUI/MenuContainer"]
-margin_right = 800.0
-margin_bottom = 400.0
+margin_right = 500.0
+margin_bottom = 300.0
 rect_min_size = Vector2( 500, 300 )
 size_flags_horizontal = 3
 size_flags_vertical = 3

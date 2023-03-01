@@ -2,8 +2,6 @@ extends Panel
 
 func _notification(what):
 	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
-		if visible:
-			get_tree().quit()
 		visible = true
 
 func _on_visibility_changed():
