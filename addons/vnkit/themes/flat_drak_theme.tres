@@ -6,19 +6,28 @@
 [ext_resource path="res://addons/advanced-text/font/DejaVuSansMono.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://addons/advanced-text/font/DejaVuSans.ttf" type="DynamicFontData" id=5]
 
+[sub_resource type="DynamicFont" id=6]
+size = 32
+use_filter = true
+font_data = ExtResource( 5 )
+
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.72, 0.72, 0.72, 0.635294 )
 corner_radius_top_left = 2
 corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
+expand_margin_left = 6.0
+expand_margin_right = 6.0
+expand_margin_top = 4.0
+expand_margin_bottom = 4.0
 
 [sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0.321569, 0.580392, 0.890196, 0.494118 )
-expand_margin_left = 2.0
-expand_margin_right = 2.0
-expand_margin_top = 2.0
-expand_margin_bottom = 2.0
+expand_margin_left = 6.0
+expand_margin_right = 6.0
+expand_margin_top = 4.0
+expand_margin_bottom = 4.0
 
 [sub_resource type="StyleBoxFlat" id=9]
 bg_color = Color( 0.321569, 0.635294, 0.890196, 1 )
@@ -26,6 +35,10 @@ corner_radius_top_left = 2
 corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
+expand_margin_left = 6.0
+expand_margin_right = 6.0
+expand_margin_top = 4.0
+expand_margin_bottom = 4.0
 
 [sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0.156863, 0.156863, 0.156863, 0.635294 )
@@ -39,6 +52,10 @@ corner_radius_top_left = 2
 corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
+expand_margin_left = 6.0
+expand_margin_right = 6.0
+expand_margin_top = 4.0
+expand_margin_bottom = 4.0
 
 [sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0.321569, 0.580392, 0.890196, 1 )
@@ -46,11 +63,10 @@ corner_radius_top_left = 2
 corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
-
-[sub_resource type="DynamicFont" id=6]
-size = 32
-use_filter = true
-font_data = ExtResource( 5 )
+expand_margin_left = 6.0
+expand_margin_right = 6.0
+expand_margin_top = 4.0
+expand_margin_bottom = 4.0
 
 [sub_resource type="StyleBoxFlat" id=12]
 bg_color = Color( 0.156863, 0.156863, 0.156863, 0.635294 )
@@ -104,6 +120,7 @@ border_color = Color( 0.360784, 0.647059, 1, 1 )
 expand_margin_top = 20.0
 
 [resource]
+Button/fonts/font = SubResource( 6 )
 Button/styles/disabled = SubResource( 7 )
 Button/styles/focus = SubResource( 8 )
 Button/styles/hover = SubResource( 9 )
