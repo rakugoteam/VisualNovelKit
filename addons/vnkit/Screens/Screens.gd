@@ -8,13 +8,17 @@ func _ready():
 	get_tree().set_auto_accept_quit(false)
 	# Rakugo.connect("game_ended", self, "_on_game_end")
 	connect("visibility_changed", self, "_on_visibility_changed")
+	# this is a temporary solution
 	$MenuBar/Return.visible = false
 	$MenuBar/NavList/History.visible = false
+
 func _on_nav_button_press(nav):
 	match nav:
 		"start":
 			Window.select_ui_tab(1)
 			Kit.game_started = true
+
+			# this is a temporary solution
 			$MenuBar/NavList/Start.visible = false
 			$MenuBar/NavList/Continue.visible = false
 			$MenuBar/NavList/History.visible = true
@@ -47,6 +51,9 @@ func _on_nav_button_press(nav):
 
 		"quit":
 			Window.QuitScreen.show()
+
+		"history":
+			pass # just for now
 
 		_:
 			show_page(nav)
