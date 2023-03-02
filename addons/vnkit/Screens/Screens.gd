@@ -9,7 +9,7 @@ func _ready():
 	# Rakugo.connect("game_ended", self, "_on_game_end")
 	connect("visibility_changed", self, "_on_visibility_changed")
 	$MenuBar/Return.visible = false
-
+	$MenuBar/NavList/History.visible = false
 func _on_nav_button_press(nav):
 	match nav:
 		"start":
@@ -17,6 +17,7 @@ func _on_nav_button_press(nav):
 			Kit.game_started = true
 			$MenuBar/NavList/Start.visible = false
 			$MenuBar/NavList/Continue.visible = false
+			$MenuBar/NavList/History.visible = true
 			$MenuBar/Return.visible = true
 			# Rakugo.start()
 
