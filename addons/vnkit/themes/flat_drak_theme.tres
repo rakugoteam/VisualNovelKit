@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=178 format=2]
+[gd_resource type="Theme" load_steps=174 format=2]
 
 [ext_resource path="res://addons/advanced-text/font/DejaVuSans-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://addons/advanced-text/font/DejaVuSans-Oblique.ttf" type="DynamicFontData" id=2]
@@ -443,7 +443,7 @@ flags = 0
 image = SubResource( 1692 )
 size = Vector2( 12, 12 )
 
-[sub_resource type="StyleBoxTexture" id=1627]
+[sub_resource type="StyleBoxTexture" id=1666]
 content_margin_left = 2.0
 content_margin_right = 2.0
 content_margin_top = 2.0
@@ -454,6 +454,7 @@ margin_left = 6.0
 margin_right = 6.0
 margin_top = 6.0
 margin_bottom = 6.0
+modulate_color = Color( 0.6734, 0.76804, 0.91, 1 )
 
 [sub_resource type="Image" id=1693]
 data = {
@@ -470,7 +471,7 @@ flags = 0
 image = SubResource( 1693 )
 size = Vector2( 12, 12 )
 
-[sub_resource type="StyleBoxTexture" id=1628]
+[sub_resource type="StyleBoxTexture" id=1667]
 content_margin_left = 2.0
 content_margin_right = 2.0
 content_margin_top = 2.0
@@ -481,6 +482,7 @@ margin_left = 5.0
 margin_right = 5.0
 margin_top = 5.0
 margin_bottom = 5.0
+modulate_color = Color( 0.407843, 0.611765, 0.909804, 1 )
 
 [sub_resource type="Image" id=1694]
 data = {
@@ -497,7 +499,7 @@ flags = 0
 image = SubResource( 1694 )
 size = Vector2( 12, 12 )
 
-[sub_resource type="StyleBoxTexture" id=1629]
+[sub_resource type="StyleBoxTexture" id=1668]
 content_margin_left = 2.0
 content_margin_right = 2.0
 content_margin_top = 2.0
@@ -508,6 +510,7 @@ margin_left = 6.0
 margin_right = 6.0
 margin_top = 6.0
 margin_bottom = 6.0
+modulate_color = Color( 0.137255, 0.447059, 0.909804, 1 )
 
 [sub_resource type="Image" id=1695]
 data = {
@@ -524,7 +527,7 @@ flags = 0
 image = SubResource( 1695 )
 size = Vector2( 12, 12 )
 
-[sub_resource type="StyleBoxTexture" id=1630]
+[sub_resource type="StyleBoxTexture" id=1669]
 content_margin_left = 0.0
 content_margin_right = 0.0
 content_margin_top = 0.0
@@ -535,6 +538,7 @@ margin_left = 5.0
 margin_right = 5.0
 margin_top = 5.0
 margin_bottom = 5.0
+modulate_color = Color( 0.137255, 0.447059, 0.909804, 1 )
 
 [sub_resource type="StyleBoxTexture" id=1631]
 content_margin_left = 0.0
@@ -1301,54 +1305,6 @@ content_margin_bottom = 4.0
 bg_color = Color( 0.0941178, 0.0941178, 0.0941178, 0.781176 )
 border_color = Color( 0.156863, 0.156863, 0.156863, 0.635294 )
 
-[sub_resource type="StyleBoxTexture" id=1666]
-content_margin_left = 2.0
-content_margin_right = 2.0
-content_margin_top = 2.0
-content_margin_bottom = 2.0
-texture = SubResource( 661 )
-region_rect = Rect2( 0, 0, 12, 12 )
-margin_left = 6.0
-margin_right = 6.0
-margin_top = 6.0
-margin_bottom = 6.0
-
-[sub_resource type="StyleBoxTexture" id=1667]
-content_margin_left = 2.0
-content_margin_right = 2.0
-content_margin_top = 2.0
-content_margin_bottom = 2.0
-texture = SubResource( 663 )
-region_rect = Rect2( 0, 0, 12, 12 )
-margin_left = 5.0
-margin_right = 5.0
-margin_top = 5.0
-margin_bottom = 5.0
-
-[sub_resource type="StyleBoxTexture" id=1668]
-content_margin_left = 2.0
-content_margin_right = 2.0
-content_margin_top = 2.0
-content_margin_bottom = 2.0
-texture = SubResource( 665 )
-region_rect = Rect2( 0, 0, 12, 12 )
-margin_left = 6.0
-margin_right = 6.0
-margin_top = 6.0
-margin_bottom = 6.0
-
-[sub_resource type="StyleBoxTexture" id=1669]
-content_margin_left = 0.0
-content_margin_right = 0.0
-content_margin_top = 0.0
-content_margin_bottom = 0.0
-texture = SubResource( 659 )
-region_rect = Rect2( 0, 0, 12, 12 )
-margin_left = 5.0
-margin_right = 5.0
-margin_top = 5.0
-margin_bottom = 5.0
-
 [sub_resource type="StyleBoxTexture" id=1670]
 content_margin_left = 0.0
 content_margin_right = 0.0
@@ -1360,6 +1316,7 @@ margin_left = 5.0
 margin_right = 5.0
 margin_top = 5.0
 margin_bottom = 5.0
+modulate_color = Color( 0.407843, 0.611765, 0.909804, 1 )
 
 [sub_resource type="StyleBoxLine" id=1671]
 color = Color( 1, 1, 1, 0.1 )
@@ -1498,10 +1455,10 @@ HScrollBar/icons/decrement_pressed = SubResource( 1626 )
 HScrollBar/icons/increment = SubResource( 1626 )
 HScrollBar/icons/increment_highlight = SubResource( 1626 )
 HScrollBar/icons/increment_pressed = SubResource( 1626 )
-HScrollBar/styles/grabber = SubResource( 1627 )
-HScrollBar/styles/grabber_highlight = SubResource( 1628 )
-HScrollBar/styles/grabber_pressed = SubResource( 1629 )
-HScrollBar/styles/scroll = SubResource( 1630 )
+HScrollBar/styles/grabber = SubResource( 1666 )
+HScrollBar/styles/grabber_highlight = SubResource( 1667 )
+HScrollBar/styles/grabber_pressed = SubResource( 1668 )
+HScrollBar/styles/scroll = SubResource( 1669 )
 HScrollBar/styles/scroll_focus = SubResource( 1631 )
 HSeparator/styles/separator = SubResource( 1632 )
 HSlider/icons/grabber = SubResource( 667 )
