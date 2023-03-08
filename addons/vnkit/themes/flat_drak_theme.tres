@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=174 format=2]
+[gd_resource type="Theme" load_steps=173 format=2]
 
 [ext_resource path="res://addons/advanced-text/font/DejaVuSans-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://addons/advanced-text/font/DejaVuSans-Oblique.ttf" type="DynamicFontData" id=2]
@@ -552,8 +552,11 @@ margin_right = 5.0
 margin_top = 5.0
 margin_bottom = 5.0
 
-[sub_resource type="StyleBoxLine" id=1632]
-color = Color( 1, 1, 1, 0.1 )
+[sub_resource type="StyleBoxLine" id=1671]
+color = Color( 0.1683, 0.30498, 0.51, 1 )
+grow_begin = 0.0
+grow_end = 0.0
+vertical = true
 
 [sub_resource type="Image" id=1696]
 data = {
@@ -1318,12 +1321,6 @@ margin_top = 5.0
 margin_bottom = 5.0
 modulate_color = Color( 0.407843, 0.611765, 0.909804, 1 )
 
-[sub_resource type="StyleBoxLine" id=1671]
-color = Color( 1, 1, 1, 0.1 )
-grow_begin = 0.0
-grow_end = 0.0
-vertical = true
-
 [sub_resource type="StyleBoxFlat" id=1672]
 content_margin_left = 2.0
 content_margin_right = 2.0
@@ -1460,7 +1457,7 @@ HScrollBar/styles/grabber_highlight = SubResource( 1667 )
 HScrollBar/styles/grabber_pressed = SubResource( 1668 )
 HScrollBar/styles/scroll = SubResource( 1669 )
 HScrollBar/styles/scroll_focus = SubResource( 1631 )
-HSeparator/styles/separator = SubResource( 1632 )
+HSeparator/styles/separator = SubResource( 1671 )
 HSlider/icons/grabber = SubResource( 667 )
 HSlider/icons/grabber_highlight = SubResource( 669 )
 HSlider/styles/grabber_area = SubResource( 1633 )
