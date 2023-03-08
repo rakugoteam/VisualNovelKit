@@ -896,6 +896,7 @@ margin_left = 4.0
 margin_right = 4.0
 margin_top = 4.0
 margin_bottom = 4.0
+modulate_color = Color( 0.407843, 0.611765, 0.909804, 1 )
 
 [sub_resource type="Image" id=1708]
 data = {
@@ -923,6 +924,7 @@ margin_left = 6.0
 margin_right = 6.0
 margin_top = 6.0
 margin_bottom = 6.0
+modulate_color = Color( 0.137255, 0.447059, 0.909804, 1 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
