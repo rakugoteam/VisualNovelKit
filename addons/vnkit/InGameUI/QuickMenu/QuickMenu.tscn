@@ -13,8 +13,8 @@ alignment = 2
 script = ExtResource( 1 )
 
 [node name="Hide" type="Button" parent="."]
-margin_left = 636.0
-margin_right = 688.0
+margin_left = 564.0
+margin_right = 616.0
 margin_bottom = 52.0
 hint_tooltip = "Hide"
 custom_fonts/font = ExtResource( 2 )
@@ -36,8 +36,8 @@ icon_name = "book-open-variant"
 icon_size = "48"
 
 [node name="Back" type="Button" parent="."]
-margin_left = 692.0
-margin_right = 744.0
+margin_left = 632.0
+margin_right = 684.0
 margin_bottom = 52.0
 hint_tooltip = "RollBack"
 custom_fonts/font = ExtResource( 2 )
@@ -47,8 +47,8 @@ icon_name = "step-backward"
 icon_size = "48"
 
 [node name="Skip" type="Button" parent="."]
-margin_left = 748.0
-margin_right = 800.0
+margin_left = 700.0
+margin_right = 752.0
 margin_bottom = 52.0
 hint_tooltip = "Toggle Skip"
 custom_fonts/font = ExtResource( 2 )
@@ -58,8 +58,8 @@ icon_name = "skip-forward"
 icon_size = "48"
 
 [node name="Save" type="Button" parent="."]
-margin_left = 804.0
-margin_right = 856.0
+margin_left = 768.0
+margin_right = 820.0
 margin_bottom = 52.0
 hint_tooltip = "Save"
 custom_fonts/font = ExtResource( 2 )
@@ -69,8 +69,8 @@ icon_name = "content-save-edit"
 icon_size = "48"
 
 [node name="Load" type="Button" parent="."]
-margin_left = 860.0
-margin_right = 912.0
+margin_left = 836.0
+margin_right = 888.0
 margin_bottom = 52.0
 hint_tooltip = "Load"
 custom_fonts/font = ExtResource( 2 )
@@ -80,8 +80,8 @@ icon_name = "upload"
 icon_size = "48"
 
 [node name="Preferences" type="Button" parent="."]
-margin_left = 916.0
-margin_right = 968.0
+margin_left = 904.0
+margin_right = 956.0
 margin_bottom = 52.0
 hint_tooltip = "Preferences"
 custom_fonts/font = ExtResource( 2 )

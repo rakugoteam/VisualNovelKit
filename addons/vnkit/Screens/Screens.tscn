@@ -61,6 +61,7 @@ mouse_filter = 2
 
 [node name="MenuBar" parent="." instance=ExtResource( 16 )]
 anchor_right = 0.22
+margin_right = 28.72
 mouse_filter = 2
 
 [node name="MainMenuReturnConfirmPanel" type="Panel" parent="."]

@@ -7,7 +7,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 0.0
 margin_bottom = 0.0
-size_flags_horizontal = 1
+theme = null
 
 [node name="AdvancedTextLabel" parent="." index="0"]
 anchor_right = 1.0

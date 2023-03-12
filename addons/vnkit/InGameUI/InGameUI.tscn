@@ -88,5 +88,6 @@ alignment = 1
 
 [node name="QuickMenu" parent="." instance=ExtResource( 7 )]
 margin_top = 436.0
+margin_right = 1011.0
 margin_bottom = 488.0
 mouse_filter = 1
