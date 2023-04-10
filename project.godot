@@ -49,20 +49,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/material-design-icons/nodes/MaterialIcon.gd"
 }, {
-"base": "Object",
-"class": "Parser",
-"language": "GDScript",
-"path": "res://addons/Rakugo/lib/systems/Parser.gd"
-}, {
 "base": "Node",
 "class": "RakuScriptDialogue",
 "language": "GDScript",
 "path": "res://addons/Rakugo/lib/nodes/RakuScriptDialogue.gd"
-}, {
-"base": "Node2D",
-"class": "Screen2D",
-"language": "GDScript",
-"path": "res://addons/vnkit/nodes/Screen2D.gd"
 } ]
 _global_script_class_icons={
 "AdvancedTextButton": "",
@@ -73,9 +63,7 @@ _global_script_class_icons={
 "Emojis": "",
 "MaterialButton": "res://addons/material-design-icons/nodes/MaterialButton.svg",
 "MaterialIcon": "res://addons/material-design-icons/nodes/MaterialIcon.svg",
-"Parser": "",
-"RakuScriptDialogue": "",
-"Screen2D": "res://addons/vnkit/icons/Screen2D.svg"
+"RakuScriptDialogue": ""
 }
 
 [addons]
@@ -95,13 +83,11 @@ rakugo/debug=false
 rakugo/save_folder="user://saves"
 rakugo/test_mode=false
 rakugo/skip_delay=0.5
-kit/skip_delay=0.5
-kit/typing_effect_delay=0.05
-kit/saves/current_page=0
-kit/saves/page_names=[  ]
 kit/saves/layout="pages"
 kit/saves/current_scroll=0
 kit/saves/skip_naming=true
+kit/skip_delay=0.5
+kit/typing_effect_delay=0.05
 
 [application]
 
@@ -118,10 +104,9 @@ config/quit_on_go_back=false
 EBBCodeParser="*res://addons/advanced-text/parsers/EBBCodeParser.gd"
 MarkdownParser="*res://addons/advanced-text/parsers/MarkdownParser.gd"
 RenpyParser="*res://addons/advanced-text/parsers/RenpyParser.gd"
-Rakugo="*res://addons/Rakugo/Rakugo.tscn"
-Kit="*res://addons/vnkit/kit.tscn"
+Rakugo="*res://addons/Rakugo/Rakugo.gd"
+Kit="*res://addons/vnkit/kit.gd"
 Window="*res://addons/vnkit/Window/Window.tscn"
-Screens="*res://addons/vnkit/rks_addons/screens.gd"
 
 [debug]
 
@@ -146,7 +131,7 @@ enabled=PoolStringArray( "res://addons/Rakugo/plugin.cfg", "res://addons/advance
 
 [gui]
 
-theme/custom="res://addons/vnkit/themes/dark_flat_theme.tres"
+theme/custom="res://addons/vnkit/themes/flat_drak_theme.tres"
 
 [importer_defaults]
 

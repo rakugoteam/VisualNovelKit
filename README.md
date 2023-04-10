@@ -11,10 +11,8 @@ Support this project here [itch.io](https://rakugoteam.github.io/donations/).
 
 [Showcase](#Showcase) -
 [Installation](#Installation) -
-[Rakugo Addons](#Rakugo-Addons) -
-[Rakugo Kits](#Rakugo-Kits) -
-[Roadmap](#Roadmap) -
-[FAQ](#faq) -
+[Used Addons](#Used-Addons) -
+[FAQ](#faq)
 [Infos](#Infos)
 
 ---
@@ -38,28 +36,30 @@ If your game uses Rakugo, tell us on [Discord](https://discord.gg/K9gvjdg).
 ## Installation
 
 ### If you want use it for your own project
+
 - Download the last [release](https://github.com/rakugoteam/VisualNovelKit/releases/latest)
 - Unzip the archive
-- Open is as [Godot](https://godotengine.org) project 
+- Open is as [Godot](https://godotengine.org) project
 
 ### If you want contribute to the project
+
 - Fork the repository and clone the fork
-- In Terminal, cd to the folder: `cd VisualNovelKit`
+- In Terminal/Command Prompt go to the project folder
 - Run `godot --no-window -s plug.gd install force` to install the dependencies
-- Remove the `.plugged/` folder
+- Remove the `.plugged/` folder from the project folder
 - Open it as [Godot](https://godotengine.org) project
 - make your changes and commit them to the repository
 - make a pull request to this repository
 
-## Rakugo Addons
-- [Advanced Text](https://github.com/rakugoteam/AdvancedText)
-- [Core](https://github.com/rakugoteam/Rakugo)
+## Used Addons
 
-## Rakugo Kits
-- [Click & Point Adventures](https://github.com/rakugoteam/Adventure)
-- [RPG](https://github.com/rakugoteam/rakugo-open-rpg)
+- Rakugo Dialogue System
+- AdvancedText
+- Emojis-For-Godot
+- Material Icons for Godot
+- Plug-Gd
 
-## FAQ:
+## FAQ
 
 **Q:** So it's about adding a refined writing and dialogue system to the engine? </p>
 **A:** Yes, and more - nodes, objects and funcs to make easy to provide mechanics like in point&click and rpgs.

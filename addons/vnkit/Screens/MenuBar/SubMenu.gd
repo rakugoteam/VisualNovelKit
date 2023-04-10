@@ -15,7 +15,7 @@ func _on_show_menu(menu, game_started):
 		return
 
 	visible = true
-	$"../ReturnButton".visible = true
+	$"../Return".visible = true
 
 	for nb in get_tree().get_nodes_in_group("nav_button"):
 		if nb.text == menu_names[menu]:
