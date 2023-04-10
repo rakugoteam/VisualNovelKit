@@ -1,10 +1,9 @@
 extends Control
 
-
+# move it to Screens script
 func _on_show_menu(menu, game_started):
 	if not game_started and (menu in ["main_menu", "return"]):
 		visible = true
-		$"../ReturnButton".visible = false
 			
 		if get_tree():
 			for nb in get_tree().get_nodes_in_group("nav_button"):
