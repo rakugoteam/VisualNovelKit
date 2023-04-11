@@ -26,9 +26,9 @@ func _enter_tree():
 
 	ProjectSettings.set_order("addons/kit/auto_mode_delay", 0)
 
-    add_autoload_singleton("Screens", "res://addons/vnkit/rks_addons/screens.gd")
-    add_autoload_singleton("Kit", "res://addons/vnkit/kit.gd")
-    add_autoload_singleton("Window", "res://addons/vnkit/Window/Window.tscn")
+	add_autoload_singleton("Screens", "res://addons/vnkit/rks_addons/screens.gd")
+	add_autoload_singleton("Kit", "res://addons/vnkit/kit.gd")
+	add_autoload_singleton("Window", "res://addons/vnkit/Window/Window.tscn")
 
 func _exit_tree():
 	remove_autoload_singleton("Kit")
