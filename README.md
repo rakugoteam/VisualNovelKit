@@ -5,12 +5,14 @@
 [![GitHub](https://img.shields.io/github/issues/rakugoteam/VisualNovelKit)](https://github.com/rakugoteam/VisualNovelKit)
 [![GitHub](https://img.shields.io/github/issues-closed/rakugoteam/VisualNovelKit)](https://github.com/rakugoteam/VisualNovelKit)
 
-Inspired by [Ren'Py](https://www.renpy.org), Rakugo-VNKit is a [Godot](https://godotengine.org)'s project aiming to provide a way to make visual novel games easily. 
+Inspired by [Ren'Py](https://www.renpy.org), Rakugo VNKit is a [Godot](https://godotengine.org)
+project aiming to provide a way to make visual novel games easily.
 
 Support this project here [itch.io](https://rakugoteam.github.io/donations/).
 
 [Showcase](#Showcase) -
 [Installation](#Installation) -
+[Contribute](#If-you-want-contribute-to-the-project) -
 [Used Addons](#Used-Addons) -
 [FAQ](#faq)
 [Infos](#Infos)
