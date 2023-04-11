@@ -63,7 +63,7 @@ _global_script_class_icons={
 "Emojis": "",
 "MaterialButton": "res://addons/material-design-icons/nodes/MaterialButton.svg",
 "MaterialIcon": "res://addons/material-design-icons/nodes/MaterialIcon.svg",
-"RakuScriptDialogue": ""
+"RakuScriptDialogue": "",
 "Screen2D": ""
 }
 
