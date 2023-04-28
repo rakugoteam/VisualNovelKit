@@ -26,9 +26,7 @@ func _ready():
 func _on_parser_unhandled_regex(key:String, result:RegExMatch):
 	if key in ["show", "hide", "pos", "scale", "rot"]:
 		var screens = result.get_string("screen").split(" ")
-		prints("screen command:", key,
-			"on path:", result.get_string("screen"),
-			"->", screens)
+		# prints("screen command:", key, "on path:", result.get_string("screen"), "->", screens)
 
 		match(key):
 			"show","hide":

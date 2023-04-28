@@ -21,7 +21,7 @@ func _on_show(screen_path:Array, shown:bool):
 
 func _on_pos(screen_path:Array, pos):
 	if screen_path[0] in [name, screen_name]:
-		_base.pos_node_at(screen_path, self, pos)
+		_base.pos_node(screen_path, self, pos)
 
 func _on_scale(screen_path:Array, value):
 	if screen_path[0] in [name, screen_name]:

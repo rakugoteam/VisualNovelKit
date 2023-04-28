@@ -33,7 +33,7 @@ func calculate_pos(any:String):
 		for arg in args:
 			if not arg.is_valid_float():
 				# return keywords_to_pos(args)
-				return
+				push_error("Invalid position value: " + any)
 		
 		var pos = array_to_vector(args)
 		if pos == null:
@@ -96,7 +96,7 @@ func any_to_args(op_type: String, any:String):
 
 func get_nodes_from_path(screen_path:Array, node:Node) -> Array:
 	# returns an array of nodes from the screen_path
-	prints("get_nodes_from_path", screen_path, node)
+	# prints("get_nodes_from_path", screen_path, node)
 	
 	var nodes = [node]
 	screen_path.pop_front()
@@ -115,7 +115,7 @@ func show_node(screen_path:Array, node:Node, shown:bool):
 	# show all nodes in the screen_path if shown is true
 	# but if shown is false, hide only last node in the screen_path
 	var nodes = get_nodes_from_path(screen_path, node)
-	prints("show_node", shown, nodes)
+	# prints("show_node", shown, nodes)
 
 	if not shown:
 		nodes[-1].hide()
@@ -127,20 +127,25 @@ func show_node(screen_path:Array, node:Node, shown:bool):
 	for n in nodes:
 		n.show()
 
-func pos_node_at(screen_path:Array, node:Node, pos:String):
+func pos_node(screen_path:Array, node:Node, pos:String):
 	# position all nodes in the screen_path at pos
-	prints("pos_node_at", screen_path, node, pos)
+	prints("pos_node", screen_path, node, pos)
 	var nodes = get_nodes_from_path(screen_path, node)
 	var _pos = calculate_pos(pos)
 	nodes.back().position = _pos
 
-func scale_node_at(screen_path:Array, node:Node, scale:String):
+func scale_node(screen_path:Array, node:Node, scale:String):
 	# scale all nodes in the screen_path at scale
 	var nodes = get_nodes_from_path(screen_path, node)
 	var _scale = calculate_scale(scale)
+
+	if _scale is float:
+		nodes.back().scale = Vector2(_scale, _scale)
+		return
+	
 	nodes.back().scale = _scale
 
-func rot_node_at(screen_path:Array, node:Node, rot:String):
+func rotate_node(screen_path:Array, node:Node, rot:String):
 	# rotate all nodes in the screen_path at rot
 	var nodes = get_nodes_from_path(screen_path, node)
 	var _rot = calculate_rot(rot)
