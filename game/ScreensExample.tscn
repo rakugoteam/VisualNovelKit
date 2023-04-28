@@ -20,6 +20,7 @@ auto_start = true
 position = Vector2( 439, 359 )
 scale = Vector2( 0.12, 0.12 )
 script = ExtResource( 2 )
+hide_on_start = true
 
 [node name="Casual" type="Node2D" parent="Miho"]
 

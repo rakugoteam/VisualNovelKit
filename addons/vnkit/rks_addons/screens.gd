@@ -1,42 +1,44 @@
-# this script adds "show", "hide", "at" and "with" keywords to RKScript
+# this script adds "show", "hide", "pos", "scale", "rot" keywords to RakuScript
 extends Node
 
 signal show(screen, show)
-signal at(screen, pos)
-signal with(screen, with_type, value)
+signal pos(screen, pos)
+signal scale(screen, scale)
+signal rot(screen, rot)
 
 func _ready():
 	# regex for screen names with spaces
-	var screen_regex = "([a-zA-Z0-9_]+ ?)+"
-	Rakugo.parser_add_regex_at_runtime("show", "^show (?<screen>%s)" % screen_regex)
-	Rakugo.parser_add_regex_at_runtime("hide", "^hide (?<screen>%s)" % screen_regex)
+	var screen_regex = "([a-zA-Z0-9]+ ?)+"
+	Rakugo.parser_add_regex_at_runtime("show", "^show (?<screen>%s)$" % screen_regex)
+	Rakugo.parser_add_regex_at_runtime("hide", "^hide (?<screen>%s)$" % screen_regex)
 
-	# pos can be vector2, vector3 or keyword
-	var pos_regex = "((?<x>[0-9]+) (?<y>[0-9]+)( (?<z>[0-9]+))?)|(?<pos>[a-zA-Z_]+)"
-	Rakugo.parser_add_regex_at_runtime("at", "^at (?<screen>%s) (?<pos>%s)" % [screen_regex, pos_regex])
+	var any_regex = "(?<any>.+)"
 
-	# scale can be vector2 or vector3
-	var scale_regex = "(?<x>[0-9]+) (?<y>[0-9]+)( (?<z>[0-9]+))?"
-	# rotation can be one float or vector3
-	var rotation_regex = "(?<x>[0-9]+)( (?<y>[0-9]+)( (?<z>[0-9]+))?)?"
-	# "with" keyword can be used with "scale" or "rotation"
-	var with_regex = "(scale (?<scale>%s))|(rotation (?<rotation>%s))" % [scale_regex, rotation_regex]
-	Rakugo.parser_add_regex_at_runtime("with", "^with (?<screen>%s) (?<with>%s)" % [screen_regex, with_regex])
+	Rakugo.parser_add_regex_at_runtime("pos", "^(?<screen>%s) pos %s$" % [screen_regex, any_regex])
+
+	Rakugo.parser_add_regex_at_runtime("scale", "^(?<screen>%s) scale %s$" % [screen_regex, any_regex])
+
+	Rakugo.parser_add_regex_at_runtime("rot", "^(?<screen>%s) rot %s$" % [screen_regex, any_regex])
+
+	Rakugo.connect("parser_unhandled_regex", self, "_on_parser_unhandled_regex")
+
 
 func _on_parser_unhandled_regex(key:String, result:RegExMatch):
-	if key in ["show", "hide", "at", "with"]:
-		var screen = result.get_string("screen").split(" ")
+	if key in ["show", "hide", "pos", "scale", "rot"]:
+		var screens = result.get_string("screen").split(" ")
+		prints("screen command:", key,
+			"on path:", result.get_string("screen"),
+			"->", screens)
 
 		match(key):
 			"show","hide":
-				emit_signal("show", screen , key == "show")
+				emit_signal("show", screens , key == "show")
 
-			"at":
-				emit_signal("at", screen, result.get_string("pos"))
+			"pos":
+				emit_signal("pos", screens, result.get_string("any"))
 
-			"with":
-				if result.get_string("with") == "scale":
-					emit_signal("with", screen, "scale", result.get_string("scale"))
+			"scale":
+					emit_signal("scale", screens, result.get_string("any"))
 
-				if result.get_string("with") == "rotation":
-					emit_signal("with", screen, "rotation", result.get_string("rotation"))
+			"rot":
+					emit_signal("rot", screens, result.get_string("any"))

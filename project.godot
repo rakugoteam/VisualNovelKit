@@ -58,6 +58,11 @@ _global_script_classes=[ {
 "class": "Screen2D",
 "language": "GDScript",
 "path": "res://addons/vnkit/nodes/Screen2D.gd"
+}, {
+"base": "Object",
+"class": "ScreenBase",
+"language": "GDScript",
+"path": "res://addons/vnkit/scripts/ScreenBase.gd"
 } ]
 _global_script_class_icons={
 "AdvancedTextButton": "",
@@ -69,7 +74,8 @@ _global_script_class_icons={
 "MaterialButton": "res://addons/material-design-icons/nodes/MaterialButton.svg",
 "MaterialIcon": "res://addons/material-design-icons/nodes/MaterialIcon.svg",
 "RakuScriptDialogue": "",
-"Screen2D": ""
+"Screen2D": "",
+"ScreenBase": ""
 }
 
 [addons]

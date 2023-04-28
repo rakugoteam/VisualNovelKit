@@ -1,13 +1,13 @@
 layers_example:
 	"This is example of using [color=aqua]*show*[/color] and [color=aqua]*hide*[/color] keywords in RakuScript"
 	"Is using free graphics assets form [Noraneko Games](https://noranekogames.itch.io/miho)"
-	
-	# show screenshot
 	"To use [color=aqua]*show*[/color] and [color=aqua]*hide*[/color] keywords you need to add [color=green]**Screen**[/color], [color=blue]**Screen2D**[/color] or [color=red]**Screen3D**[/color] as a parent of your nodes, like on this screenshot."
-	# hide screenshot
-	
 	show Miho Casual Smile
 	"I showed this sprite using command [color=aqua]*show Miho Casual Smile*[/color], our solution is casesensitive"
-
-	at left
+	Miho pos left
 	"I can even move Miho to the left side of the screen using [color=aqua]*at left*[/color] command"
+	Miho scale 0.5
+	"I can also scale her Sprite using [color=aqua]*with scale 0.5*[/color] command"
+	Miho rot 20
+	"I can also rotate her Sprite using [color=aqua]*with rotation 20*[/color] command"
+
