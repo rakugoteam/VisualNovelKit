@@ -5,9 +5,15 @@ class_name ScreenBase
 # is not a Node itself, but a collection of methods used by all Screens Nodes.
 
 var s2d_script = load("res://addons/vnkit/nodes/Screen2D.gd")
-
+var s_script = load("res://addons/vnkit/nodes/Screen.gd")
 
 func get_type(node : Node) -> String:
+	if node is Control:
+		if node.get_script() == s_script:
+			return "Screen"
+
+		return "Control"
+
 	if node is Node2D:
 		if node.get_script() == s2d_script:
 			return "Screen2D"
@@ -132,21 +138,41 @@ func pos_node(screen_path:Array, node:Node, pos:String):
 	prints("pos_node", screen_path, node, pos)
 	var nodes = get_nodes_from_path(screen_path, node)
 	var _pos = calculate_pos(pos)
-	nodes.back().position = _pos
+
+	var type = get_type(nodes.back())
+	if type in ["Screen", "Control"]:
+		nodes.back().rect_position = _pos
+		return
+	
+	if type in ["Screen2D", "Node2D"]:
+		nodes.back().position = _pos
+		return
 
 func scale_node(screen_path:Array, node:Node, scale:String):
 	# scale all nodes in the screen_path at scale
 	var nodes = get_nodes_from_path(screen_path, node)
 	var _scale = calculate_scale(scale)
+	var type = get_type(nodes.back())
 
 	if _scale is float:
-		nodes.back().scale = Vector2(_scale, _scale)
-		return
+		if type in ["Screen", "Control"]:
+			nodes.back().rect_scale = Vector2(_scale, _scale)
+			return
 	
+	if type in ["Screen", "Control"]:
+		nodes.back().rect_scale = _scale
+		return
+
 	nodes.back().scale = _scale
 
 func rotate_node(screen_path:Array, node:Node, rot:String):
 	# rotate all nodes in the screen_path at rot
 	var nodes = get_nodes_from_path(screen_path, node)
 	var _rot = calculate_rot(rot)
+
+	var type = get_type(nodes.back())
+	if type in ["Screen", "Control"]:
+		nodes.back().rect_rotation = _rot
+		return
+	
 	nodes.back().rotation = _rot

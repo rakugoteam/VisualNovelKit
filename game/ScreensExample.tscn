@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://addons/Rakugo/lib/nodes/RakuScriptDialogue.gd" type="Script" id=1]
 [ext_resource path="res://addons/vnkit/nodes/Screen2D.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://game/assets/Miho Base Pack/Miho Casual/Miho_Casual_Smile.png" type="Texture" id=5]
 [ext_resource path="res://game/assets/Miho Base Pack/Miho Casual/Miho_Casual_Smile_Blush.png" type="Texture" id=6]
 [ext_resource path="res://game/assets/Miho Base Pack/Miho Casual/Miho_Casual_Open.png" type="Texture" id=7]
+[ext_resource path="res://addons/vnkit/nodes/Screen.gd" type="Script" id=8]
 [ext_resource path="res://game/assets/Miho Base Pack/Miho Casual/Miho_Casual_Frown.png" type="Texture" id=13]
 
 [node name="ScreenExample" type="Node2D"]
@@ -48,3 +49,21 @@ texture = ExtResource( 3 )
 [node name="Smile" type="Sprite" parent="Miho/Casual/Blush"]
 visible = false
 texture = ExtResource( 6 )
+
+[node name="MihoLabel" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 8 )
+hide_on_start = true
+
+[node name="Label" type="Label" parent="MihoLabel"]
+modulate = Color( 0.713726, 0.294118, 0.294118, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 419.0
+margin_top = 211.0
+margin_right = 506.0
+margin_bottom = 249.0
+text = "Miho"
