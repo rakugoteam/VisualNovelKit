@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/emojis-for-godot/nodes/EmojiIcon.gd" type="Script" id=1]
+[ext_resource path="res://addons/emojis-for-godot/nodes/EmojiButton.gd" type="Script" id=2]
+[ext_resource path="res://addons/emojis-for-godot/emojis/72x72/1f60e.tres" type="Texture" id=3]
+[ext_resource path="res://addons/emojis-for-godot/examples/LabelWithEmojis.gd" type="Script" id=4]
+
+[node name="Examples" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="EmojiButton" type="Button" parent="."]
+margin_left = 49.1369
+margin_top = 194.028
+margin_right = 133.137
+margin_bottom = 272.028
+icon = ExtResource( 3 )
+script = ExtResource( 2 )
+emoji_size = "72"
+
+[node name="EmojiIcon" type="TextureRect" parent="."]
+margin_left = 168.118
+margin_top = 196.273
+margin_right = 240.118
+margin_bottom = 268.273
+texture = ExtResource( 3 )
+script = ExtResource( 1 )
+emoji_size = "72"
+
+[node name="LabelWithEmojis" type="RichTextLabel" parent="."]
+margin_left = 318.137
+margin_top = 210.028
+margin_right = 825.137
+margin_bottom = 293.028
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

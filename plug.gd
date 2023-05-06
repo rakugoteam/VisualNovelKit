@@ -7,4 +7,4 @@ func _plugging():
 	plug("rakugoteam/Emojis-For-Godot", {"include": ["addons", ".import/"]})
 	plug("rakugoteam/Godot-Material-Icons", {"include": ["addons", ".import/"]})
 	plug("rakugoteam/AdvancedText")
-	plug("rakugoteam/Rakugo", {"include": ["addons/rakugo", ".import/"], "branch": "godot3.x"})
+	plug("rakugoteam/Rakugo-Dialogue-System", {"include": ["addons/rakugo", ".import/"], "branch": "godot3.x"})

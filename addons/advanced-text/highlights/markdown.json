@@ -1,0 +1,81 @@
+{
+  "bold": {
+    "color": "#ffff44",
+    "region": [
+      "**",
+      "**"
+    ]
+  },
+  "italic": {
+    "region": [
+      "*",
+      "*"
+    ],
+    "color": "#ffff6d"
+  },
+  "strike": {
+    "color": "#E06C75",
+    "region": [
+      "~~",
+      "~~"
+    ]
+  },
+  "effects": {
+    "color": "#98C379",
+    "keywords": [
+      "wave",
+      "tornado",
+      "shake",
+      "fade",
+      "rainbow"
+    ]
+  },
+  "effects-args": {
+    "color": "#D19A66",
+    "keywords": [
+      "amp",
+      "freq",
+      "radius",
+      "rate",
+      "level",
+      "start",
+      "length",
+      "sat",
+      "val"
+    ]
+  },
+  "font-style": {
+    "color": "#528BFF",
+    "keywords": [
+      "b",
+      "i",
+      "u",
+      "s",
+      "code",
+      "font",
+      "color"
+    ]
+  },
+  "text-aliment": {
+    "color": "#6087CF",
+    "keywords": [
+      "right",
+      "center",
+      "fill",
+      "indent"
+    ]
+  },
+  "table": {
+    "color": "#56B6C2",
+    "keywords": [
+      "table",
+      "cell"
+    ]
+  },
+  "emojis": {
+    "color": "#56B6C2"
+  },
+  "icons": {
+    "color": "#5606C2"
+  }
+}
