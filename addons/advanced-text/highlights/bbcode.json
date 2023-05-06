@@ -1,0 +1,36 @@
+{
+  "brackets-1": {
+    "color": "#98C379",
+    "region": [
+      "(",
+      ")"
+    ]
+  },
+  "brackets-2": {
+    "color": "#98C379",
+    "region": [
+      "{",
+      "}"
+    ]
+  },
+  "brackets-3": {
+    "color": "#61AFEF",
+    "region": [
+      "[",
+      "]"
+    ]
+  },
+  "variable": {
+    "color": "#D19A66",
+    "region": [
+      "<",
+      ">"
+    ]
+  },
+  "emojis": {
+    "color": "#56B6C2"
+  },
+  "icons": {
+    "color": "#5606C2"
+  }
+}
