@@ -1,0 +1,3412 @@
+[gd_scene load_steps=853 format=2]
+
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f625.tres" type="Texture" id=1]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f61d.tres" type="Texture" id=2]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f601.tres" type="Texture" id=3]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f63b.tres" type="Texture" id=4]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f47f.tres" type="Texture" id=5]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f622.tres" type="Texture" id=6]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4e3.tres" type="Texture" id=7]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f413.tres" type="Texture" id=8]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f604.tres" type="Texture" id=9]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2197.tres" type="Texture" id=10]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6b0.tres" type="Texture" id=11]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/21aa.tres" type="Texture" id=12]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2199.tres" type="Texture" id=13]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f603.tres" type="Texture" id=14]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f60f.tres" type="Texture" id=15]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f605.tres" type="Texture" id=16]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f46e.tres" type="Texture" id=17]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2b05.tres" type="Texture" id=18]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4f2.tres" type="Texture" id=19]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/27a1.tres" type="Texture" id=20]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f611.tres" type="Texture" id=21]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f602.tres" type="Texture" id=22]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f48f.tres" type="Texture" id=23]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4c2.tres" type="Texture" id=24]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4a7.tres" type="Texture" id=25]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3a7.tres" type="Texture" id=26]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f45a.tres" type="Texture" id=27]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f50c.tres" type="Texture" id=28]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f448.tres" type="Texture" id=29]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f64c.tres" type="Texture" id=30]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f478.tres" type="Texture" id=31]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f648.tres" type="Texture" id=32]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f600.tres" type="Texture" id=33]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f485.tres" type="Texture" id=34]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f638.tres" type="Texture" id=35]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f60a.tres" type="Texture" id=36]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f633.tres" type="Texture" id=37]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6b9.tres" type="Texture" id=38]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f62c.tres" type="Texture" id=39]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f630.tres" type="Texture" id=40]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f621.tres" type="Texture" id=41]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f63e.tres" type="Texture" id=42]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f609.tres" type="Texture" id=43]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/263a.tres" type="Texture" id=44]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f632.tres" type="Texture" id=45]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f624.tres" type="Texture" id=46]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2935.tres" type="Texture" id=47]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f623.tres" type="Texture" id=48]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f503.tres" type="Texture" id=49]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/21a9.tres" type="Texture" id=50]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f504.tres" type="Texture" id=51]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4c5.tres" type="Texture" id=52]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f61a.tres" type="Texture" id=53]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2195.tres" type="Texture" id=54]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6c5.tres" type="Texture" id=55]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2b06.tres" type="Texture" id=56]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4bd.tres" type="Texture" id=57]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2934.tres" type="Texture" id=58]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6be.tres" type="Texture" id=59]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4eb.tres" type="Texture" id=60]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f475.tres" type="Texture" id=61]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f494.tres" type="Texture" id=62]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f63f.tres" type="Texture" id=63]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f508.tres" type="Texture" id=64]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4e6.tres" type="Texture" id=65]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f60b.tres" type="Texture" id=66]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4f1.tres" type="Texture" id=67]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f406.tres" type="Texture" id=68]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4e5.tres" type="Texture" id=69]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f48d.tres" type="Texture" id=70]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f438.tres" type="Texture" id=71]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4b9.tres" type="Texture" id=72]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f529.tres" type="Texture" id=73]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6bb.tres" type="Texture" id=74]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f455.tres" type="Texture" id=75]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6bc.tres" type="Texture" id=76]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4e2.tres" type="Texture" id=77]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f645.tres" type="Texture" id=78]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f527.tres" type="Texture" id=79]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f476.tres" type="Texture" id=80]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f519.tres" type="Texture" id=81]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4d7.tres" type="Texture" id=82]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4bb.tres" type="Texture" id=83]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f442.tres" type="Texture" id=84]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f47c.tres" type="Texture" id=85]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/26d4.tres" type="Texture" id=86]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f694.tres" type="Texture" id=87]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f692.tres" type="Texture" id=88]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f405.tres" type="Texture" id=89]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f64d.tres" type="Texture" id=90]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/26f3.tres" type="Texture" id=91]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f482.tres" type="Texture" id=92]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f52b.tres" type="Texture" id=93]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f40e.tres" type="Texture" id=94]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f31d.tres" type="Texture" id=95]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4e4.tres" type="Texture" id=96]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f491.tres" type="Texture" id=97]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f45b.tres" type="Texture" id=98]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f55f.tres" type="Texture" id=99]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f528.tres" type="Texture" id=100]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3af.tres" type="Texture" id=101]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3ee.tres" type="Texture" id=102]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4e9.tres" type="Texture" id=103]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f554.tres" type="Texture" id=104]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4e8.tres" type="Texture" id=105]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4fb.tres" type="Texture" id=106]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1fb.tres" type="Texture" id=107]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4ef.tres" type="Texture" id=108]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3ba.tres" type="Texture" id=109]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f50b.tres" type="Texture" id=110]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3bc.tres" type="Texture" id=111]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f557.tres" type="Texture" id=112]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6b6.tres" type="Texture" id=113]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f507.tres" type="Texture" id=114]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/270f.tres" type="Texture" id=115]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f381.tres" type="Texture" id=116]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f552.tres" type="Texture" id=117]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f483.tres" type="Texture" id=118]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2665.tres" type="Texture" id=119]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/274e.tres" type="Texture" id=120]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f509.tres" type="Texture" id=121]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2666.tres" type="Texture" id=122]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f407.tres" type="Texture" id=123]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f43e.tres" type="Texture" id=124]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f453.tres" type="Texture" id=125]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f454.tres" type="Texture" id=126]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4e0.tres" type="Texture" id=127]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4e7.tres" type="Texture" id=128]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2660.tres" type="Texture" id=129]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f693.tres" type="Texture" id=130]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3b3.tres" type="Texture" id=131]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4ee.tres" type="Texture" id=132]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f450.tres" type="Texture" id=133]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f428.tres" type="Texture" id=134]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f432.tres" type="Texture" id=135]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f439.tres" type="Texture" id=136]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f484.tres" type="Texture" id=137]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f380.tres" type="Texture" id=138]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f430.tres" type="Texture" id=139]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f44e.tres" type="Texture" id=140]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2601.tres" type="Texture" id=141]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f526.tres" type="Texture" id=142]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4a5.tres" type="Texture" id=143]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f408.tres" type="Texture" id=144]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2709.tres" type="Texture" id=145]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f474.tres" type="Texture" id=146]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f606.tres" type="Texture" id=147]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f60e.tres" type="Texture" id=148]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f627.tres" type="Texture" id=149]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f620.tres" type="Texture" id=150]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f47d.tres" type="Texture" id=151]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f628.tres" type="Texture" id=152]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f612.tres" type="Texture" id=153]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f629.tres" type="Texture" id=154]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f62d.tres" type="Texture" id=155]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f414.tres" type="Texture" id=156]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/270b.tres" type="Texture" id=157]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f60c.tres" type="Texture" id=158]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f613.tres" type="Texture" id=159]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f637.tres" type="Texture" id=160]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f515.tres" type="Texture" id=161]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f61b.tres" type="Texture" id=162]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f619.tres" type="Texture" id=163]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f614.tres" type="Texture" id=164]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f631.tres" type="Texture" id=165]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f61c.tres" type="Texture" id=166]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f47a.tres" type="Texture" id=167]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f62e.tres" type="Texture" id=168]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f62f.tres" type="Texture" id=169]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f626.tres" type="Texture" id=170]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f61e.tres" type="Texture" id=171]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f617.tres" type="Texture" id=172]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f618.tres" type="Texture" id=173]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f63a.tres" type="Texture" id=174]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f615.tres" type="Texture" id=175]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f62a.tres" type="Texture" id=176]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6ab.tres" type="Texture" id=177]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f616.tres" type="Texture" id=178]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f63d.tres" type="Texture" id=179]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f636.tres" type="Texture" id=180]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6ad.tres" type="Texture" id=181]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2194.tres" type="Texture" id=182]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f61f.tres" type="Texture" id=183]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f634.tres" type="Texture" id=184]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f647.tres" type="Texture" id=185]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f385.tres" type="Texture" id=186]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f60d.tres" type="Texture" id=187]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f610.tres" type="Texture" id=188]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4a9.tres" type="Texture" id=189]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f351.tres" type="Texture" id=190]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f635.tres" type="Texture" id=191]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f349.tres" type="Texture" id=192]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f34a.tres" type="Texture" id=193]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f62b.tres" type="Texture" id=194]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f34d.tres" type="Texture" id=195]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f34c.tres" type="Texture" id=196]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f348.tres" type="Texture" id=197]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f34f.tres" type="Texture" id=198]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f350.tres" type="Texture" id=199]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f34b.tres" type="Texture" id=200]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f356.tres" type="Texture" id=201]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f354.tres" type="Texture" id=202]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f34e.tres" type="Texture" id=203]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f33d.tres" type="Texture" id=204]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f345.tres" type="Texture" id=205]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f352.tres" type="Texture" id=206]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f353.tres" type="Texture" id=207]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f35e.tres" type="Texture" id=208]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f346.tres" type="Texture" id=209]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f35f.tres" type="Texture" id=210]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f355.tres" type="Texture" id=211]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f357.tres" type="Texture" id=212]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f359.tres" type="Texture" id=213]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f371.tres" type="Texture" id=214]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f373.tres" type="Texture" id=215]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f35b.tres" type="Texture" id=216]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f372.tres" type="Texture" id=217]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f358.tres" type="Texture" id=218]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1e8-1f1f3.tres" type="Texture" id=219]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f378.tres" type="Texture" id=220]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f35d.tres" type="Texture" id=221]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f501.tres" type="Texture" id=222]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1fd.tres" type="Texture" id=223]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/26ce.tres" type="Texture" id=224]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/23e9.tres" type="Texture" id=225]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f502.tres" type="Texture" id=226]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/25b6.tres" type="Texture" id=227]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/23eb.tres" type="Texture" id=228]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f53c.tres" type="Texture" id=229]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/23ea.tres" type="Texture" id=230]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/23ec.tres" type="Texture" id=231]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3a6.tres" type="Texture" id=232]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/25c0.tres" type="Texture" id=233]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f506.tres" type="Texture" id=234]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4f6.tres" type="Texture" id=235]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f53d.tres" type="Texture" id=236]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4f4.tres" type="Texture" id=237]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/267b.tres" type="Texture" id=238]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f505.tres" type="Texture" id=239]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f530.tres" type="Texture" id=240]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f531.tres" type="Texture" id=241]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4f3.tres" type="Texture" id=242]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4db.tres" type="Texture" id=243]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2611.tres" type="Texture" id=244]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1f4.tres" type="Texture" id=245]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2705.tres" type="Texture" id=246]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2795.tres" type="Texture" id=247]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2714.tres" type="Texture" id=248]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2716.tres" type="Texture" id=249]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2796.tres" type="Texture" id=250]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/27bf.tres" type="Texture" id=251]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/27b0.tres" type="Texture" id=252]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2797.tres" type="Texture" id=253]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2733.tres" type="Texture" id=254]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/303d.tres" type="Texture" id=255]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2122.tres" type="Texture" id=256]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2734.tres" type="Texture" id=257]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2747.tres" type="Texture" id=258]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2753.tres" type="Texture" id=259]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2754.tres" type="Texture" id=260]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/203c.tres" type="Texture" id=261]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2757.tres" type="Texture" id=262]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/3030.tres" type="Texture" id=263]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2049.tres" type="Texture" id=264]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2755.tres" type="Texture" id=265]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4af.tres" type="Texture" id=266]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f51f.tres" type="Texture" id=267]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f522.tres" type="Texture" id=268]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f521.tres" type="Texture" id=269]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f520.tres" type="Texture" id=270]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1e7.tres" type="Texture" id=271]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1e6.tres" type="Texture" id=272]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f523.tres" type="Texture" id=273]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f524.tres" type="Texture" id=274]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2139.tres" type="Texture" id=275]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f18e.tres" type="Texture" id=276]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f192.tres" type="Texture" id=277]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f195.tres" type="Texture" id=278]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f191.tres" type="Texture" id=279]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f202.tres" type="Texture" id=280]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1f2.tres" type="Texture" id=281]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f193.tres" type="Texture" id=282]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f17e.tres" type="Texture" id=283]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f194.tres" type="Texture" id=284]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f196.tres" type="Texture" id=285]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f198.tres" type="Texture" id=286]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f197.tres" type="Texture" id=287]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f17f.tres" type="Texture" id=288]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f239.tres" type="Texture" id=289]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f201.tres" type="Texture" id=290]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f19a.tres" type="Texture" id=291]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f236.tres" type="Texture" id=292]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f22f.tres" type="Texture" id=293]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f199.tres" type="Texture" id=294]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f250.tres" type="Texture" id=295]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f251.tres" type="Texture" id=296]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f237.tres" type="Texture" id=297]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f232.tres" type="Texture" id=298]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f234.tres" type="Texture" id=299]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f238.tres" type="Texture" id=300]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/3297.tres" type="Texture" id=301]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f233.tres" type="Texture" id=302]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f21a.tres" type="Texture" id=303]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f235.tres" type="Texture" id=304]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/3299.tres" type="Texture" id=305]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/25ab.tres" type="Texture" id=306]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/25fb.tres" type="Texture" id=307]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/25aa.tres" type="Texture" id=308]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f23a.tres" type="Texture" id=309]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/25fe.tres" type="Texture" id=310]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f536.tres" type="Texture" id=311]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/25fc.tres" type="Texture" id=312]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/25fd.tres" type="Texture" id=313]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2b1c.tres" type="Texture" id=314]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f538.tres" type="Texture" id=315]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f518.tres" type="Texture" id=316]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2b1b.tres" type="Texture" id=317]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f537.tres" type="Texture" id=318]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f539.tres" type="Texture" id=319]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f53a.tres" type="Texture" id=320]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f53b.tres" type="Texture" id=321]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f535.tres" type="Texture" id=322]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4a0.tres" type="Texture" id=323]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f533.tres" type="Texture" id=324]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/26aa.tres" type="Texture" id=325]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f532.tres" type="Texture" id=326]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f534.tres" type="Texture" id=327]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f35a.tres" type="Texture" id=328]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f364.tres" type="Texture" id=329]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f347.tres" type="Texture" id=330]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f35c.tres" type="Texture" id=331]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f367.tres" type="Texture" id=332]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/26ab.tres" type="Texture" id=333]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f363.tres" type="Texture" id=334]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f365.tres" type="Texture" id=335]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f360.tres" type="Texture" id=336]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f366.tres" type="Texture" id=337]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2615.tres" type="Texture" id=338]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f362.tres" type="Texture" id=339]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f368.tres" type="Texture" id=340]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f369.tres" type="Texture" id=341]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f361.tres" type="Texture" id=342]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f36a.tres" type="Texture" id=343]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f370.tres" type="Texture" id=344]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f37c.tres" type="Texture" id=345]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f382.tres" type="Texture" id=346]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f36b.tres" type="Texture" id=347]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f36c.tres" type="Texture" id=348]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f36e.tres" type="Texture" id=349]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f36f.tres" type="Texture" id=350]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f379.tres" type="Texture" id=351]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f36d.tres" type="Texture" id=352]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f377.tres" type="Texture" id=353]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f375.tres" type="Texture" id=354]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f37b.tres" type="Texture" id=355]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f376.tres" type="Texture" id=356]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f37a.tres" type="Texture" id=357]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1e9-1f1ea.tres" type="Texture" id=358]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1eb-1f1f7.tres" type="Texture" id=359]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f374.tres" type="Texture" id=360]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1f7-1f1fa.tres" type="Texture" id=361]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1ea-1f1f8.tres" type="Texture" id=362]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1e8.tres" type="Texture" id=363]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1f0-1f1f7.tres" type="Texture" id=364]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1fa-1f1f8.tres" type="Texture" id=365]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1ee-1f1f9.tres" type="Texture" id=366]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1ef-1f1f5.tres" type="Texture" id=367]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1ec-1f1e7.tres" type="Texture" id=368]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1ea.tres" type="Texture" id=369]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1eb.tres" type="Texture" id=370]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1ec.tres" type="Texture" id=371]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1e9.tres" type="Texture" id=372]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1ee.tres" type="Texture" id=373]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1ed.tres" type="Texture" id=374]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1f5.tres" type="Texture" id=375]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1f1.tres" type="Texture" id=376]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1ef.tres" type="Texture" id=377]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1f0.tres" type="Texture" id=378]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1f6.tres" type="Texture" id=379]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1f9.tres" type="Texture" id=380]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1f3.tres" type="Texture" id=381]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1fa.tres" type="Texture" id=382]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1f7.tres" type="Texture" id=383]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1f8.tres" type="Texture" id=384]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1ff.tres" type="Texture" id=385]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1fc.tres" type="Texture" id=386]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f1fe.tres" type="Texture" id=387]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3be.tres" type="Texture" id=388]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4a1.tres" type="Texture" id=389]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f510.tres" type="Texture" id=390]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2648.tres" type="Texture" id=391]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f511.tres" type="Texture" id=392]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4d6.tres" type="Texture" id=393]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f550.tres" type="Texture" id=394]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2653.tres" type="Texture" id=395]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f471.tres" type="Texture" id=396]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f48a.tres" type="Texture" id=397]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2649.tres" type="Texture" id=398]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6ba.tres" type="Texture" id=399]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3b1.tres" type="Texture" id=400]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f5ff.tres" type="Texture" id=401]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f45d.tres" type="Texture" id=402]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6b7.tres" type="Texture" id=403]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f68e.tres" type="Texture" id=404]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f691.tres" type="Texture" id=405]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f459.tres" type="Texture" id=406]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f31e.tres" type="Texture" id=407]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/26c5.tres" type="Texture" id=408]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f696.tres" type="Texture" id=409]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f390.tres" type="Texture" id=410]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6ae.tres" type="Texture" id=411]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f52f.tres" type="Texture" id=412]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f400.tres" type="Texture" id=413]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3c9.tres" type="Texture" id=414]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f401.tres" type="Texture" id=415]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3b2.tres" type="Texture" id=416]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f562.tres" type="Texture" id=417]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f49f.tres" type="Texture" id=418]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f487.tres" type="Texture" id=419]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f44f.tres" type="Texture" id=420]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f431.tres" type="Texture" id=421]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4ab.tres" type="Texture" id=422]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f403.tres" type="Texture" id=423]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3c0.tres" type="Texture" id=424]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3c8.tres" type="Texture" id=425]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f447.tres" type="Texture" id=426]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f51d.tres" type="Texture" id=427]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4a4.tres" type="Texture" id=428]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f69f.tres" type="Texture" id=429]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f49d.tres" type="Texture" id=430]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f51b.tres" type="Texture" id=431]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f48e.tres" type="Texture" id=432]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f42d.tres" type="Texture" id=433]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f38f.tres" type="Texture" id=434]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f472.tres" type="Texture" id=435]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f393.tres" type="Texture" id=436]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f47b.tres" type="Texture" id=437]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2600.tres" type="Texture" id=438]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f64b.tres" type="Texture" id=439]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4f9.tres" type="Texture" id=440]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/26be.tres" type="Texture" id=441]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4b3.tres" type="Texture" id=442]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f646.tres" type="Texture" id=443]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4df.tres" type="Texture" id=444]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f46c.tres" type="Texture" id=445]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4d8.tres" type="Texture" id=446]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f473.tres" type="Texture" id=447]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f513.tres" type="Texture" id=448]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f607.tres" type="Texture" id=449]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f50f.tres" type="Texture" id=450]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/26bd.tres" type="Texture" id=451]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f48b.tres" type="Texture" id=452]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f452.tres" type="Texture" id=453]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f695.tres" type="Texture" id=454]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4e1.tres" type="Texture" id=455]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3ac.tres" type="Texture" id=456]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4b7.tres" type="Texture" id=457]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f38e.tres" type="Texture" id=458]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3c6.tres" type="Texture" id=459]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f640.tres" type="Texture" id=460]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f608.tres" type="Texture" id=461]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3ab.tres" type="Texture" id=462]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f446.tres" type="Texture" id=463]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f64e.tres" type="Texture" id=464]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4b8.tres" type="Texture" id=465]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f68f.tres" type="Texture" id=466]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f443.tres" type="Texture" id=467]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/264a.tres" type="Texture" id=468]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f699.tres" type="Texture" id=469]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f514.tres" type="Texture" id=470]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f31c.tres" type="Texture" id=471]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f38a.tres" type="Texture" id=472]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4ed.tres" type="Texture" id=473]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f43a.tres" type="Texture" id=474]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2702.tres" type="Texture" id=475]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f42b.tres" type="Texture" id=476]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4b6.tres" type="Texture" id=477]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f682.tres" type="Texture" id=478]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f341.tres" type="Texture" id=479]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4d9.tres" type="Texture" id=480]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f310.tres" type="Texture" id=481]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f687.tres" type="Texture" id=482]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3b9.tres" type="Texture" id=483]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f31b.tres" type="Texture" id=484]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3b4.tres" type="Texture" id=485]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4ac.tres" type="Texture" id=486]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f51a.tres" type="Texture" id=487]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4f5.tres" type="Texture" id=488]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6b3.tres" type="Texture" id=489]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f402.tres" type="Texture" id=490]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6b8.tres" type="Texture" id=491]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f564.tres" type="Texture" id=492]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f553.tres" type="Texture" id=493]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f685.tres" type="Texture" id=494]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6c4.tres" type="Texture" id=495]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f51c.tres" type="Texture" id=496]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f512.tres" type="Texture" id=497]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4b5.tres" type="Texture" id=498]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3e7.tres" type="Texture" id=499]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2b07.tres" type="Texture" id=500]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f31a.tres" type="Texture" id=501]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6b1.tres" type="Texture" id=502]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f300.tres" type="Texture" id=503]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f004.tres" type="Texture" id=504]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f52c.tres" type="Texture" id=505]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f418.tres" type="Texture" id=506]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2708.tres" type="Texture" id=507]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4b4.tres" type="Texture" id=508]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3b6.tres" type="Texture" id=509]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f444.tres" type="Texture" id=510]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f451.tres" type="Texture" id=511]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/26f5.tres" type="Texture" id=512]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f68d.tres" type="Texture" id=513]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2196.tres" type="Texture" id=514]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4d0.tres" type="Texture" id=515]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f42a.tres" type="Texture" id=516]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f560.tres" type="Texture" id=517]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f51e.tres" type="Texture" id=518]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2663.tres" type="Texture" id=519]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6c0.tres" type="Texture" id=520]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3b5.tres" type="Texture" id=521]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/267f.tres" type="Texture" id=522]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f52a.tres" type="Texture" id=523]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4cf.tres" type="Texture" id=524]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3ae.tres" type="Texture" id=525]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2668.tres" type="Texture" id=526]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f50e.tres" type="Texture" id=527]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6a5.tres" type="Texture" id=528]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2693.tres" type="Texture" id=529]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f50d.tres" type="Texture" id=530]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f392.tres" type="Texture" id=531]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f410.tres" type="Texture" id=532]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f45c.tres" type="Texture" id=533]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4a3.tres" type="Texture" id=534]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f389.tres" type="Texture" id=535]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4c1.tres" type="Texture" id=536]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4da.tres" type="Texture" id=537]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2712.tres" type="Texture" id=538]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4d3.tres" type="Texture" id=539]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3b7.tres" type="Texture" id=540]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f698.tres" type="Texture" id=541]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f69a.tres" type="Texture" id=542]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f388.tres" type="Texture" id=543]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f319.tres" type="Texture" id=544]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f479.tres" type="Texture" id=545]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4ce.tres" type="Texture" id=546]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f477.tres" type="Texture" id=547]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3a9.tres" type="Texture" id=548]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f556.tres" type="Texture" id=549]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4cd.tres" type="Texture" id=550]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f46b.tres" type="Texture" id=551]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f411.tres" type="Texture" id=552]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f50a.tres" type="Texture" id=553]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4b2.tres" type="Texture" id=554]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f42f.tres" type="Texture" id=555]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4b1.tres" type="Texture" id=556]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3c3.tres" type="Texture" id=557]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3b8.tres" type="Texture" id=558]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f429.tres" type="Texture" id=559]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f489.tres" type="Texture" id=560]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/23f0.tres" type="Texture" id=561]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/264e.tres" type="Texture" id=562]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4de.tres" type="Texture" id=563]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/231a.tres" type="Texture" id=564]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3b0.tres" type="Texture" id=565]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6af.tres" type="Texture" id=566]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f469.tres" type="Texture" id=567]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f55d.tres" type="Texture" id=568]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4cc.tres" type="Texture" id=569]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4cb.tres" type="Texture" id=570]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f40f.tres" type="Texture" id=571]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2198.tres" type="Texture" id=572]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4ca.tres" type="Texture" id=573]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f445.tres" type="Texture" id=574]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/23f3.tres" type="Texture" id=575]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4d5.tres" type="Texture" id=576]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f458.tres" type="Texture" id=577]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f43d.tres" type="Texture" id=578]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4fc.tres" type="Texture" id=579]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4b0.tres" type="Texture" id=580]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4d1.tres" type="Texture" id=581]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f516.tres" type="Texture" id=582]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f52d.tres" type="Texture" id=583]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4f0.tres" type="Texture" id=584]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4f7.tres" type="Texture" id=585]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4fa.tres" type="Texture" id=586]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f416.tres" type="Texture" id=587]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f457.tres" type="Texture" id=588]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f417.tres" type="Texture" id=589]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3ad.tres" type="Texture" id=590]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f462.tres" type="Texture" id=591]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3a8.tres" type="Texture" id=592]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f68c.tres" type="Texture" id=593]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/231b.tres" type="Texture" id=594]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4ec.tres" type="Texture" id=595]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4d4.tres" type="Texture" id=596]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4c4.tres" type="Texture" id=597]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/261d.tres" type="Texture" id=598]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f44d.tres" type="Texture" id=599]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4a6.tres" type="Texture" id=600]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f46f.tres" type="Texture" id=601]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f415.tres" type="Texture" id=602]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f44c.tres" type="Texture" id=603]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f461.tres" type="Texture" id=604]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f440.tres" type="Texture" id=605]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f470.tres" type="Texture" id=606]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f46d.tres" type="Texture" id=607]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6a8.tres" type="Texture" id=608]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f464.tres" type="Texture" id=609]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f566.tres" type="Texture" id=610]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f412.tres" type="Texture" id=611]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f436.tres" type="Texture" id=612]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f68b.tres" type="Texture" id=613]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f561.tres" type="Texture" id=614]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f69e.tres" type="Texture" id=615]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f69d.tres" type="Texture" id=616]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f49e.tres" type="Texture" id=617]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6c1.tres" type="Texture" id=618]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4a2.tres" type="Texture" id=619]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3aa.tres" type="Texture" id=620]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f48c.tres" type="Texture" id=621]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f49b.tres" type="Texture" id=622]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f465.tres" type="Texture" id=623]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f435.tres" type="Texture" id=624]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6ac.tres" type="Texture" id=625]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/26a0.tres" type="Texture" id=626]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6bf.tres" type="Texture" id=627]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6a7.tres" type="Texture" id=628]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f317.tres" type="Texture" id=629]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4dc.tres" type="Texture" id=630]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/260e.tres" type="Texture" id=631]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6a4.tres" type="Texture" id=632]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f460.tres" type="Texture" id=633]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4c3.tres" type="Texture" id=634]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/26fd.tres" type="Texture" id=635]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f434.tres" type="Texture" id=636]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f318.tres" type="Texture" id=637]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f555.tres" type="Texture" id=638]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6b5.tres" type="Texture" id=639]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f316.tres" type="Texture" id=640]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4d2.tres" type="Texture" id=641]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4a8.tres" type="Texture" id=642]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f517.tres" type="Texture" id=643]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2650.tres" type="Texture" id=644]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f500.tres" type="Texture" id=645]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2651.tres" type="Texture" id=646]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f437.tres" type="Texture" id=647]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f559.tres" type="Texture" id=648]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/264d.tres" type="Texture" id=649]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f649.tres" type="Texture" id=650]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3bb.tres" type="Texture" id=651]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f44b.tres" type="Texture" id=652]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4ad.tres" type="Texture" id=653]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f314.tres" type="Texture" id=654]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f64a.tres" type="Texture" id=655]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f30c.tres" type="Texture" id=656]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f306.tres" type="Texture" id=657]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f463.tres" type="Texture" id=658]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f315.tres" type="Texture" id=659]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f301.tres" type="Texture" id=660]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f304.tres" type="Texture" id=661]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6b2.tres" type="Texture" id=662]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4aa.tres" type="Texture" id=663]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f303.tres" type="Texture" id=664]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/26fa.tres" type="Texture" id=665]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f486.tres" type="Texture" id=666]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/264b.tres" type="Texture" id=667]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/264f.tres" type="Texture" id=668]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/264c.tres" type="Texture" id=669]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3bf.tres" type="Texture" id=670]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4c9.tres" type="Texture" id=671]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f481.tres" type="Texture" id=672]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f488.tres" type="Texture" id=673]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4c8.tres" type="Texture" id=674]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6bd.tres" type="Texture" id=675]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f44a.tres" type="Texture" id=676]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6b4.tres" type="Texture" id=677]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f64f.tres" type="Texture" id=678]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f55a.tres" type="Texture" id=679]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f499.tres" type="Texture" id=680]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f497.tres" type="Texture" id=681]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f312.tres" type="Texture" id=682]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f404.tres" type="Texture" id=683]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f43b.tres" type="Texture" id=684]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f49a.tres" type="Texture" id=685]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f567.tres" type="Texture" id=686]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3bd.tres" type="Texture" id=687]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4c7.tres" type="Texture" id=688]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f688.tres" type="Texture" id=689]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f302.tres" type="Texture" id=690]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4c0.tres" type="Texture" id=691]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3a5.tres" type="Texture" id=692]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3ca.tres" type="Texture" id=693]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f480.tres" type="Texture" id=694]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6a0.tres" type="Texture" id=695]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f449.tres" type="Texture" id=696]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f0cf.tres" type="Texture" id=697]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f456.tres" type="Texture" id=698]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f45e.tres" type="Texture" id=699]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f468.tres" type="Texture" id=700]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f68a.tres" type="Texture" id=701]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4ea.tres" type="Texture" id=702]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4c6.tres" type="Texture" id=703]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f467.tres" type="Texture" id=704]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f43c.tres" type="Texture" id=705]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f63c.tres" type="Texture" id=706]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6a2.tres" type="Texture" id=707]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f466.tres" type="Texture" id=708]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6aa.tres" type="Texture" id=709]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/270a.tres" type="Texture" id=710]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4bf.tres" type="Texture" id=711]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6a3.tres" type="Texture" id=712]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f46a.tres" type="Texture" id=713]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4be.tres" type="Texture" id=714]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f639.tres" type="Texture" id=715]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3c4.tres" type="Texture" id=716]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4ae.tres" type="Texture" id=717]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f45f.tres" type="Texture" id=718]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f563.tres" type="Texture" id=719]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f55e.tres" type="Texture" id=720]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f55b.tres" type="Texture" id=721]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4dd.tres" type="Texture" id=722]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f551.tres" type="Texture" id=723]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f690.tres" type="Texture" id=724]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/26f2.tres" type="Texture" id=725]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4bc.tres" type="Texture" id=726]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f340.tres" type="Texture" id=727]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f683.tres" type="Texture" id=728]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6c3.tres" type="Texture" id=729]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f311.tres" type="Texture" id=730]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f5fc.tres" type="Texture" id=731]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/26ea.tres" type="Texture" id=732]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f33f.tres" type="Texture" id=733]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f30e.tres" type="Texture" id=734]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f33e.tres" type="Texture" id=735]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2764.tres" type="Texture" id=736]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f498.tres" type="Texture" id=737]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2b50.tres" type="Texture" id=738]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f493.tres" type="Texture" id=739]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f558.tres" type="Texture" id=740]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f391.tres" type="Texture" id=741]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f313.tres" type="Texture" id=742]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f492.tres" type="Texture" id=743]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3f0.tres" type="Texture" id=744]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f334.tres" type="Texture" id=745]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f335.tres" type="Texture" id=746]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f386.tres" type="Texture" id=747]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3c1.tres" type="Texture" id=748]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3ef.tres" type="Texture" id=749]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f308.tres" type="Texture" id=750]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f342.tres" type="Texture" id=751]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3ed.tres" type="Texture" id=752]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f331.tres" type="Texture" id=753]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f332.tres" type="Texture" id=754]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f337.tres" type="Texture" id=755]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f686.tres" type="Texture" id=756]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3ec.tres" type="Texture" id=757]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f30f.tres" type="Texture" id=758]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f5fd.tres" type="Texture" id=759]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f330.tres" type="Texture" id=760]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3e9.tres" type="Texture" id=761]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f309.tres" type="Texture" id=762]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3eb.tres" type="Texture" id=763]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3ea.tres" type="Texture" id=764]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f320.tres" type="Texture" id=765]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f344.tres" type="Texture" id=766]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f305.tres" type="Texture" id=767]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3e5.tres" type="Texture" id=768]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3a0.tres" type="Texture" id=769]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f33c.tres" type="Texture" id=770]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3e4.tres" type="Texture" id=771]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f333.tres" type="Texture" id=772]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f41d.tres" type="Texture" id=773]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f41c.tres" type="Texture" id=774]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3e6.tres" type="Texture" id=775]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f69b.tres" type="Texture" id=776]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f41e.tres" type="Texture" id=777]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f697.tres" type="Texture" id=778]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f338.tres" type="Texture" id=779]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f684.tres" type="Texture" id=780]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f490.tres" type="Texture" id=781]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6a6.tres" type="Texture" id=782]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3e3.tres" type="Texture" id=783]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f680.tres" type="Texture" id=784]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f33a.tres" type="Texture" id=785]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f33b.tres" type="Texture" id=786]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f419.tres" type="Texture" id=787]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f40c.tres" type="Texture" id=788]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3a1.tres" type="Texture" id=789]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3e2.tres" type="Texture" id=790]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f421.tres" type="Texture" id=791]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f5fe.tres" type="Texture" id=792]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3e8.tres" type="Texture" id=793]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3e1.tres" type="Texture" id=794]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f689.tres" type="Texture" id=795]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3e0.tres" type="Texture" id=796]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f38b.tres" type="Texture" id=797]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f5fb.tres" type="Texture" id=798]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f41a.tres" type="Texture" id=799]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f420.tres" type="Texture" id=800]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f30b.tres" type="Texture" id=801]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2652.tres" type="Texture" id=802]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f40b.tres" type="Texture" id=803]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f41f.tres" type="Texture" id=804]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3a2.tres" type="Texture" id=805]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2728.tres" type="Texture" id=806]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6a1.tres" type="Texture" id=807]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f307.tres" type="Texture" id=808]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3c2.tres" type="Texture" id=809]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f384.tres" type="Texture" id=810]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f49c.tres" type="Texture" id=811]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f339.tres" type="Texture" id=812]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f41b.tres" type="Texture" id=813]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f383.tres" type="Texture" id=814]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f409.tres" type="Texture" id=815]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f343.tres" type="Texture" id=816]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f433.tres" type="Texture" id=817]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f55c.tres" type="Texture" id=818]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f422.tres" type="Texture" id=819]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f40d.tres" type="Texture" id=820]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f30d.tres" type="Texture" id=821]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f30a.tres" type="Texture" id=822]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f40a.tres" type="Texture" id=823]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f496.tres" type="Texture" id=824]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f525.tres" type="Texture" id=825]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f38d.tres" type="Texture" id=826]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f427.tres" type="Texture" id=827]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f426.tres" type="Texture" id=828]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/26a1.tres" type="Texture" id=829]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f69c.tres" type="Texture" id=830]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2744.tres" type="Texture" id=831]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f425.tres" type="Texture" id=832]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f4ba.tres" type="Texture" id=833]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f424.tres" type="Texture" id=834]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f681.tres" type="Texture" id=835]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/26c4.tres" type="Texture" id=836]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f565.tres" type="Texture" id=837]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/2614.tres" type="Texture" id=838]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f495.tres" type="Texture" id=839]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f42e.tres" type="Texture" id=840]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f423.tres" type="Texture" id=841]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f42c.tres" type="Texture" id=842]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f47e.tres" type="Texture" id=843]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3c7.tres" type="Texture" id=844]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f38c.tres" type="Texture" id=845]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f387.tres" type="Texture" id=846]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3a4.tres" type="Texture" id=847]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f52e.tres" type="Texture" id=848]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6a9.tres" type="Texture" id=849]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f3a3.tres" type="Texture" id=850]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f6c2.tres" type="Texture" id=851]
+[ext_resource path="res://addons/emojis-for-godot/emojis/36x36/1f31f.tres" type="Texture" id=852]
+
+[node name="EmojisGrid" type="GridContainer"]
+
+[node name="grinning" type="Button" parent="."]
+icon = ExtResource( 33 )
+
+[node name="grin" type="Button" parent="."]
+icon = ExtResource( 3 )
+
+[node name="joy" type="Button" parent="."]
+icon = ExtResource( 22 )
+
+[node name="smiley" type="Button" parent="."]
+icon = ExtResource( 14 )
+
+[node name="smile" type="Button" parent="."]
+icon = ExtResource( 9 )
+
+[node name="sweat_smile" type="Button" parent="."]
+icon = ExtResource( 16 )
+
+[node name="laughing" type="Button" parent="."]
+icon = ExtResource( 147 )
+
+[node name="wink" type="Button" parent="."]
+icon = ExtResource( 43 )
+
+[node name="blush" type="Button" parent="."]
+icon = ExtResource( 36 )
+
+[node name="yum" type="Button" parent="."]
+icon = ExtResource( 66 )
+
+[node name="sunglasses" type="Button" parent="."]
+icon = ExtResource( 148 )
+
+[node name="heart_eyes" type="Button" parent="."]
+icon = ExtResource( 187 )
+
+[node name="kissing_heart" type="Button" parent="."]
+icon = ExtResource( 173 )
+
+[node name="kissing" type="Button" parent="."]
+icon = ExtResource( 172 )
+
+[node name="kissing_smiling_eyes" type="Button" parent="."]
+icon = ExtResource( 163 )
+
+[node name="kissing_closed_eyes" type="Button" parent="."]
+icon = ExtResource( 53 )
+
+[node name="relaxed" type="Button" parent="."]
+icon = ExtResource( 44 )
+
+[node name="neutral_face" type="Button" parent="."]
+icon = ExtResource( 188 )
+
+[node name="expressionless" type="Button" parent="."]
+icon = ExtResource( 21 )
+
+[node name="no_mouth" type="Button" parent="."]
+icon = ExtResource( 180 )
+
+[node name="smirk" type="Button" parent="."]
+icon = ExtResource( 15 )
+
+[node name="persevere" type="Button" parent="."]
+icon = ExtResource( 48 )
+
+[node name="disappointed_relieved" type="Button" parent="."]
+icon = ExtResource( 1 )
+
+[node name="open_mouth" type="Button" parent="."]
+icon = ExtResource( 168 )
+
+[node name="hushed" type="Button" parent="."]
+icon = ExtResource( 169 )
+
+[node name="sleepy" type="Button" parent="."]
+icon = ExtResource( 176 )
+
+[node name="tired_face" type="Button" parent="."]
+icon = ExtResource( 194 )
+
+[node name="sleeping" type="Button" parent="."]
+icon = ExtResource( 184 )
+
+[node name="relieved" type="Button" parent="."]
+icon = ExtResource( 158 )
+
+[node name="stuck_out_tongue" type="Button" parent="."]
+icon = ExtResource( 162 )
+
+[node name="stuck_out_tongue_winking_eye" type="Button" parent="."]
+icon = ExtResource( 166 )
+
+[node name="stuck_out_tongue_closed_eyes" type="Button" parent="."]
+icon = ExtResource( 2 )
+
+[node name="unamused" type="Button" parent="."]
+icon = ExtResource( 153 )
+
+[node name="sweat" type="Button" parent="."]
+icon = ExtResource( 159 )
+
+[node name="pensive" type="Button" parent="."]
+icon = ExtResource( 164 )
+
+[node name="confused" type="Button" parent="."]
+icon = ExtResource( 175 )
+
+[node name="astonished" type="Button" parent="."]
+icon = ExtResource( 45 )
+
+[node name="confounded" type="Button" parent="."]
+icon = ExtResource( 178 )
+
+[node name="disappointed" type="Button" parent="."]
+icon = ExtResource( 171 )
+
+[node name="worried" type="Button" parent="."]
+icon = ExtResource( 183 )
+
+[node name="triumph" type="Button" parent="."]
+icon = ExtResource( 46 )
+
+[node name="cry" type="Button" parent="."]
+icon = ExtResource( 6 )
+
+[node name="sob" type="Button" parent="."]
+icon = ExtResource( 155 )
+
+[node name="frowning" type="Button" parent="."]
+icon = ExtResource( 170 )
+
+[node name="anguished" type="Button" parent="."]
+icon = ExtResource( 149 )
+
+[node name="fearful" type="Button" parent="."]
+icon = ExtResource( 152 )
+
+[node name="weary" type="Button" parent="."]
+icon = ExtResource( 154 )
+
+[node name="grimacing" type="Button" parent="."]
+icon = ExtResource( 39 )
+
+[node name="cold_sweat" type="Button" parent="."]
+icon = ExtResource( 40 )
+
+[node name="scream" type="Button" parent="."]
+icon = ExtResource( 165 )
+
+[node name="flushed" type="Button" parent="."]
+icon = ExtResource( 37 )
+
+[node name="dizzy_face" type="Button" parent="."]
+icon = ExtResource( 191 )
+
+[node name="rage" type="Button" parent="."]
+icon = ExtResource( 41 )
+
+[node name="angry" type="Button" parent="."]
+icon = ExtResource( 150 )
+
+[node name="innocent" type="Button" parent="."]
+icon = ExtResource( 449 )
+
+[node name="mask" type="Button" parent="."]
+icon = ExtResource( 160 )
+
+[node name="smiling_imp" type="Button" parent="."]
+icon = ExtResource( 461 )
+
+[node name="imp" type="Button" parent="."]
+icon = ExtResource( 5 )
+
+[node name="japanese_ogre" type="Button" parent="."]
+icon = ExtResource( 545 )
+
+[node name="japanese_goblin" type="Button" parent="."]
+icon = ExtResource( 167 )
+
+[node name="skull" type="Button" parent="."]
+icon = ExtResource( 694 )
+
+[node name="ghost" type="Button" parent="."]
+icon = ExtResource( 437 )
+
+[node name="alien" type="Button" parent="."]
+icon = ExtResource( 151 )
+
+[node name="poop" type="Button" parent="."]
+icon = ExtResource( 189 )
+
+[node name="smiley_cat" type="Button" parent="."]
+icon = ExtResource( 174 )
+
+[node name="smile_cat" type="Button" parent="."]
+icon = ExtResource( 35 )
+
+[node name="joy_cat" type="Button" parent="."]
+icon = ExtResource( 715 )
+
+[node name="heart_eyes_cat" type="Button" parent="."]
+icon = ExtResource( 4 )
+
+[node name="smirk_cat" type="Button" parent="."]
+icon = ExtResource( 706 )
+
+[node name="kissing_cat" type="Button" parent="."]
+icon = ExtResource( 179 )
+
+[node name="scream_cat" type="Button" parent="."]
+icon = ExtResource( 460 )
+
+[node name="crying_cat_face" type="Button" parent="."]
+icon = ExtResource( 63 )
+
+[node name="pouting_cat" type="Button" parent="."]
+icon = ExtResource( 42 )
+
+[node name="boy" type="Button" parent="."]
+icon = ExtResource( 708 )
+
+[node name="girl" type="Button" parent="."]
+icon = ExtResource( 704 )
+
+[node name="man" type="Button" parent="."]
+icon = ExtResource( 700 )
+
+[node name="woman" type="Button" parent="."]
+icon = ExtResource( 567 )
+
+[node name="older_man" type="Button" parent="."]
+icon = ExtResource( 146 )
+
+[node name="older_woman" type="Button" parent="."]
+icon = ExtResource( 61 )
+
+[node name="baby" type="Button" parent="."]
+icon = ExtResource( 80 )
+
+[node name="angel" type="Button" parent="."]
+icon = ExtResource( 85 )
+
+[node name="cop" type="Button" parent="."]
+icon = ExtResource( 17 )
+
+[node name="guardsman" type="Button" parent="."]
+icon = ExtResource( 92 )
+
+[node name="construction_worker" type="Button" parent="."]
+icon = ExtResource( 547 )
+
+[node name="man_with_turban" type="Button" parent="."]
+icon = ExtResource( 447 )
+
+[node name="person_with_blond_hair" type="Button" parent="."]
+icon = ExtResource( 396 )
+
+[node name="santa" type="Button" parent="."]
+icon = ExtResource( 186 )
+
+[node name="princess" type="Button" parent="."]
+icon = ExtResource( 31 )
+
+[node name="bride_with_veil" type="Button" parent="."]
+icon = ExtResource( 606 )
+
+[node name="man_with_gua_pi_mao" type="Button" parent="."]
+icon = ExtResource( 435 )
+
+[node name="person_frowning" type="Button" parent="."]
+icon = ExtResource( 90 )
+
+[node name="person_with_pouting_face" type="Button" parent="."]
+icon = ExtResource( 464 )
+
+[node name="no_good" type="Button" parent="."]
+icon = ExtResource( 78 )
+
+[node name="ok_woman" type="Button" parent="."]
+icon = ExtResource( 443 )
+
+[node name="information_desk_person" type="Button" parent="."]
+icon = ExtResource( 672 )
+
+[node name="raising_hand" type="Button" parent="."]
+icon = ExtResource( 439 )
+
+[node name="bow" type="Button" parent="."]
+icon = ExtResource( 185 )
+
+[node name="massage" type="Button" parent="."]
+icon = ExtResource( 666 )
+
+[node name="haircut" type="Button" parent="."]
+icon = ExtResource( 419 )
+
+[node name="walking" type="Button" parent="."]
+icon = ExtResource( 113 )
+
+[node name="runner" type="Button" parent="."]
+icon = ExtResource( 557 )
+
+[node name="dancer" type="Button" parent="."]
+icon = ExtResource( 118 )
+
+[node name="dancers" type="Button" parent="."]
+icon = ExtResource( 601 )
+
+[node name="bust_in_silhouette" type="Button" parent="."]
+icon = ExtResource( 609 )
+
+[node name="busts_in_silhouette" type="Button" parent="."]
+icon = ExtResource( 623 )
+
+[node name="couple" type="Button" parent="."]
+icon = ExtResource( 551 )
+
+[node name="two_men_holding_hands" type="Button" parent="."]
+icon = ExtResource( 445 )
+
+[node name="two_women_holding_hands" type="Button" parent="."]
+icon = ExtResource( 607 )
+
+[node name="couplekiss" type="Button" parent="."]
+icon = ExtResource( 23 )
+
+[node name="couple_with_heart" type="Button" parent="."]
+icon = ExtResource( 97 )
+
+[node name="family" type="Button" parent="."]
+icon = ExtResource( 713 )
+
+[node name="muscle" type="Button" parent="."]
+icon = ExtResource( 663 )
+
+[node name="point_left" type="Button" parent="."]
+icon = ExtResource( 29 )
+
+[node name="point_right" type="Button" parent="."]
+icon = ExtResource( 696 )
+
+[node name="point_up" type="Button" parent="."]
+icon = ExtResource( 598 )
+
+[node name="point_up_2" type="Button" parent="."]
+icon = ExtResource( 463 )
+
+[node name="point_down" type="Button" parent="."]
+icon = ExtResource( 426 )
+
+[node name="v" type="Button" parent="."]
+icon = ExtResource( 107 )
+
+[node name="raised_hand" type="Button" parent="."]
+icon = ExtResource( 157 )
+
+[node name="ok_hand" type="Button" parent="."]
+icon = ExtResource( 603 )
+
+[node name="thumbsup" type="Button" parent="."]
+icon = ExtResource( 599 )
+
+[node name="thumbsdown" type="Button" parent="."]
+icon = ExtResource( 140 )
+
+[node name="fist" type="Button" parent="."]
+icon = ExtResource( 710 )
+
+[node name="punch" type="Button" parent="."]
+icon = ExtResource( 676 )
+
+[node name="wave" type="Button" parent="."]
+icon = ExtResource( 652 )
+
+[node name="clap" type="Button" parent="."]
+icon = ExtResource( 420 )
+
+[node name="open_hands" type="Button" parent="."]
+icon = ExtResource( 133 )
+
+[node name="raised_hands" type="Button" parent="."]
+icon = ExtResource( 30 )
+
+[node name="pray" type="Button" parent="."]
+icon = ExtResource( 678 )
+
+[node name="nail_care" type="Button" parent="."]
+icon = ExtResource( 34 )
+
+[node name="ear" type="Button" parent="."]
+icon = ExtResource( 84 )
+
+[node name="nose" type="Button" parent="."]
+icon = ExtResource( 467 )
+
+[node name="footprints" type="Button" parent="."]
+icon = ExtResource( 658 )
+
+[node name="eyes" type="Button" parent="."]
+icon = ExtResource( 605 )
+
+[node name="tongue" type="Button" parent="."]
+icon = ExtResource( 574 )
+
+[node name="lips" type="Button" parent="."]
+icon = ExtResource( 510 )
+
+[node name="kiss" type="Button" parent="."]
+icon = ExtResource( 452 )
+
+[node name="zzz" type="Button" parent="."]
+icon = ExtResource( 428 )
+
+[node name="eyeglasses" type="Button" parent="."]
+icon = ExtResource( 125 )
+
+[node name="necktie" type="Button" parent="."]
+icon = ExtResource( 126 )
+
+[node name="shirt" type="Button" parent="."]
+icon = ExtResource( 75 )
+
+[node name="jeans" type="Button" parent="."]
+icon = ExtResource( 698 )
+
+[node name="dress" type="Button" parent="."]
+icon = ExtResource( 588 )
+
+[node name="kimono" type="Button" parent="."]
+icon = ExtResource( 577 )
+
+[node name="bikini" type="Button" parent="."]
+icon = ExtResource( 406 )
+
+[node name="womans_clothes" type="Button" parent="."]
+icon = ExtResource( 27 )
+
+[node name="purse" type="Button" parent="."]
+icon = ExtResource( 98 )
+
+[node name="handbag" type="Button" parent="."]
+icon = ExtResource( 533 )
+
+[node name="pouch" type="Button" parent="."]
+icon = ExtResource( 402 )
+
+[node name="school_satchel" type="Button" parent="."]
+icon = ExtResource( 531 )
+
+[node name="mans_shoe" type="Button" parent="."]
+icon = ExtResource( 699 )
+
+[node name="athletic_shoe" type="Button" parent="."]
+icon = ExtResource( 718 )
+
+[node name="high_heel" type="Button" parent="."]
+icon = ExtResource( 633 )
+
+[node name="sandal" type="Button" parent="."]
+icon = ExtResource( 604 )
+
+[node name="boot" type="Button" parent="."]
+icon = ExtResource( 591 )
+
+[node name="crown" type="Button" parent="."]
+icon = ExtResource( 511 )
+
+[node name="womans_hat" type="Button" parent="."]
+icon = ExtResource( 453 )
+
+[node name="tophat" type="Button" parent="."]
+icon = ExtResource( 548 )
+
+[node name="mortar_board" type="Button" parent="."]
+icon = ExtResource( 436 )
+
+[node name="lipstick" type="Button" parent="."]
+icon = ExtResource( 137 )
+
+[node name="ring" type="Button" parent="."]
+icon = ExtResource( 70 )
+
+[node name="closed_umbrella" type="Button" parent="."]
+icon = ExtResource( 690 )
+
+[node name="briefcase" type="Button" parent="."]
+icon = ExtResource( 726 )
+
+[node name="love_letter" type="Button" parent="."]
+icon = ExtResource( 621 )
+
+[node name="bomb" type="Button" parent="."]
+icon = ExtResource( 534 )
+
+[node name="gem" type="Button" parent="."]
+icon = ExtResource( 432 )
+
+[node name="knife" type="Button" parent="."]
+icon = ExtResource( 523 )
+
+[node name="barber" type="Button" parent="."]
+icon = ExtResource( 673 )
+
+[node name="door" type="Button" parent="."]
+icon = ExtResource( 709 )
+
+[node name="toilet" type="Button" parent="."]
+icon = ExtResource( 675 )
+
+[node name="shower" type="Button" parent="."]
+icon = ExtResource( 627 )
+
+[node name="bathtub" type="Button" parent="."]
+icon = ExtResource( 618 )
+
+[node name="hourglass" type="Button" parent="."]
+icon = ExtResource( 594 )
+
+[node name="hourglass_flowing_sand" type="Button" parent="."]
+icon = ExtResource( 575 )
+
+[node name="watch" type="Button" parent="."]
+icon = ExtResource( 564 )
+
+[node name="alarm_clock" type="Button" parent="."]
+icon = ExtResource( 561 )
+
+[node name="balloon" type="Button" parent="."]
+icon = ExtResource( 543 )
+
+[node name="tada" type="Button" parent="."]
+icon = ExtResource( 535 )
+
+[node name="confetti_ball" type="Button" parent="."]
+icon = ExtResource( 472 )
+
+[node name="dolls" type="Button" parent="."]
+icon = ExtResource( 458 )
+
+[node name="flags" type="Button" parent="."]
+icon = ExtResource( 434 )
+
+[node name="wind_chime" type="Button" parent="."]
+icon = ExtResource( 410 )
+
+[node name="ribbon" type="Button" parent="."]
+icon = ExtResource( 138 )
+
+[node name="gift" type="Button" parent="."]
+icon = ExtResource( 116 )
+
+[node name="postal_horn" type="Button" parent="."]
+icon = ExtResource( 108 )
+
+[node name="radio" type="Button" parent="."]
+icon = ExtResource( 106 )
+
+[node name="iphone" type="Button" parent="."]
+icon = ExtResource( 67 )
+
+[node name="calling" type="Button" parent="."]
+icon = ExtResource( 19 )
+
+[node name="telephone" type="Button" parent="."]
+icon = ExtResource( 631 )
+
+[node name="telephone_receiver" type="Button" parent="."]
+icon = ExtResource( 563 )
+
+[node name="pager" type="Button" parent="."]
+icon = ExtResource( 444 )
+
+[node name="fax" type="Button" parent="."]
+icon = ExtResource( 127 )
+
+[node name="battery" type="Button" parent="."]
+icon = ExtResource( 110 )
+
+[node name="electric_plug" type="Button" parent="."]
+icon = ExtResource( 28 )
+
+[node name="computer" type="Button" parent="."]
+icon = ExtResource( 83 )
+
+[node name="minidisc" type="Button" parent="."]
+icon = ExtResource( 57 )
+
+[node name="floppy_disk" type="Button" parent="."]
+icon = ExtResource( 714 )
+
+[node name="cd" type="Button" parent="."]
+icon = ExtResource( 711 )
+
+[node name="dvd" type="Button" parent="."]
+icon = ExtResource( 691 )
+
+[node name="movie_camera" type="Button" parent="."]
+icon = ExtResource( 692 )
+
+[node name="tv" type="Button" parent="."]
+icon = ExtResource( 586 )
+
+[node name="camera" type="Button" parent="."]
+icon = ExtResource( 585 )
+
+[node name="video_camera" type="Button" parent="."]
+icon = ExtResource( 440 )
+
+[node name="vhs" type="Button" parent="."]
+icon = ExtResource( 579 )
+
+[node name="mag" type="Button" parent="."]
+icon = ExtResource( 530 )
+
+[node name="mag_right" type="Button" parent="."]
+icon = ExtResource( 527 )
+
+[node name="microscope" type="Button" parent="."]
+icon = ExtResource( 505 )
+
+[node name="telescope" type="Button" parent="."]
+icon = ExtResource( 583 )
+
+[node name="satellite" type="Button" parent="."]
+icon = ExtResource( 455 )
+
+[node name="bulb" type="Button" parent="."]
+icon = ExtResource( 389 )
+
+[node name="flashlight" type="Button" parent="."]
+icon = ExtResource( 142 )
+
+[node name="izakaya_lantern" type="Button" parent="."]
+icon = ExtResource( 102 )
+
+[node name="notebook_with_decorative_cover" type="Button" parent="."]
+icon = ExtResource( 596 )
+
+[node name="closed_book" type="Button" parent="."]
+icon = ExtResource( 576 )
+
+[node name="book" type="Button" parent="."]
+icon = ExtResource( 393 )
+
+[node name="green_book" type="Button" parent="."]
+icon = ExtResource( 82 )
+
+[node name="blue_book" type="Button" parent="."]
+icon = ExtResource( 446 )
+
+[node name="orange_book" type="Button" parent="."]
+icon = ExtResource( 480 )
+
+[node name="books" type="Button" parent="."]
+icon = ExtResource( 537 )
+
+[node name="notebook" type="Button" parent="."]
+icon = ExtResource( 539 )
+
+[node name="ledger" type="Button" parent="."]
+icon = ExtResource( 641 )
+
+[node name="page_with_curl" type="Button" parent="."]
+icon = ExtResource( 634 )
+
+[node name="scroll" type="Button" parent="."]
+icon = ExtResource( 630 )
+
+[node name="page_facing_up" type="Button" parent="."]
+icon = ExtResource( 597 )
+
+[node name="newspaper" type="Button" parent="."]
+icon = ExtResource( 584 )
+
+[node name="bookmark_tabs" type="Button" parent="."]
+icon = ExtResource( 581 )
+
+[node name="bookmark" type="Button" parent="."]
+icon = ExtResource( 582 )
+
+[node name="moneybag" type="Button" parent="."]
+icon = ExtResource( 580 )
+
+[node name="yen" type="Button" parent="."]
+icon = ExtResource( 508 )
+
+[node name="dollar" type="Button" parent="."]
+icon = ExtResource( 498 )
+
+[node name="euro" type="Button" parent="."]
+icon = ExtResource( 477 )
+
+[node name="pound" type="Button" parent="."]
+icon = ExtResource( 457 )
+
+[node name="money_with_wings" type="Button" parent="."]
+icon = ExtResource( 465 )
+
+[node name="credit_card" type="Button" parent="."]
+icon = ExtResource( 442 )
+
+[node name="envelope" type="Button" parent="."]
+icon = ExtResource( 145 )
+
+[node name="e-mail" type="Button" parent="."]
+icon = ExtResource( 128 )
+
+[node name="incoming_envelope" type="Button" parent="."]
+icon = ExtResource( 105 )
+
+[node name="envelope_with_arrow" type="Button" parent="."]
+icon = ExtResource( 103 )
+
+[node name="outbox_tray" type="Button" parent="."]
+icon = ExtResource( 96 )
+
+[node name="inbox_tray" type="Button" parent="."]
+icon = ExtResource( 69 )
+
+[node name="package" type="Button" parent="."]
+icon = ExtResource( 65 )
+
+[node name="mailbox" type="Button" parent="."]
+icon = ExtResource( 60 )
+
+[node name="mailbox_closed" type="Button" parent="."]
+icon = ExtResource( 702 )
+
+[node name="mailbox_with_mail" type="Button" parent="."]
+icon = ExtResource( 595 )
+
+[node name="mailbox_with_no_mail" type="Button" parent="."]
+icon = ExtResource( 473 )
+
+[node name="postbox" type="Button" parent="."]
+icon = ExtResource( 132 )
+
+[node name="pencil2" type="Button" parent="."]
+icon = ExtResource( 115 )
+
+[node name="black_nib" type="Button" parent="."]
+icon = ExtResource( 538 )
+
+[node name="pencil" type="Button" parent="."]
+icon = ExtResource( 722 )
+
+[node name="file_folder" type="Button" parent="."]
+icon = ExtResource( 536 )
+
+[node name="open_file_folder" type="Button" parent="."]
+icon = ExtResource( 24 )
+
+[node name="date" type="Button" parent="."]
+icon = ExtResource( 52 )
+
+[node name="calendar" type="Button" parent="."]
+icon = ExtResource( 703 )
+
+[node name="card_index" type="Button" parent="."]
+icon = ExtResource( 688 )
+
+[node name="chart_with_upwards_trend" type="Button" parent="."]
+icon = ExtResource( 674 )
+
+[node name="chart_with_downwards_trend" type="Button" parent="."]
+icon = ExtResource( 671 )
+
+[node name="bar_chart" type="Button" parent="."]
+icon = ExtResource( 573 )
+
+[node name="clipboard" type="Button" parent="."]
+icon = ExtResource( 570 )
+
+[node name="pushpin" type="Button" parent="."]
+icon = ExtResource( 569 )
+
+[node name="round_pushpin" type="Button" parent="."]
+icon = ExtResource( 550 )
+
+[node name="paperclip" type="Button" parent="."]
+icon = ExtResource( 546 )
+
+[node name="straight_ruler" type="Button" parent="."]
+icon = ExtResource( 524 )
+
+[node name="triangular_ruler" type="Button" parent="."]
+icon = ExtResource( 515 )
+
+[node name="scissors" type="Button" parent="."]
+icon = ExtResource( 475 )
+
+[node name="lock" type="Button" parent="."]
+icon = ExtResource( 497 )
+
+[node name="unlock" type="Button" parent="."]
+icon = ExtResource( 448 )
+
+[node name="lock_with_ink_pen" type="Button" parent="."]
+icon = ExtResource( 450 )
+
+[node name="closed_lock_with_key" type="Button" parent="."]
+icon = ExtResource( 390 )
+
+[node name="key" type="Button" parent="."]
+icon = ExtResource( 392 )
+
+[node name="hammer" type="Button" parent="."]
+icon = ExtResource( 100 )
+
+[node name="gun" type="Button" parent="."]
+icon = ExtResource( 93 )
+
+[node name="wrench" type="Button" parent="."]
+icon = ExtResource( 79 )
+
+[node name="nut_and_bolt" type="Button" parent="."]
+icon = ExtResource( 73 )
+
+[node name="link" type="Button" parent="."]
+icon = ExtResource( 643 )
+
+[node name="syringe" type="Button" parent="."]
+icon = ExtResource( 560 )
+
+[node name="pill" type="Button" parent="."]
+icon = ExtResource( 397 )
+
+[node name="smoking" type="Button" parent="."]
+icon = ExtResource( 625 )
+
+[node name="moyai" type="Button" parent="."]
+icon = ExtResource( 401 )
+
+[node name="crystal_ball" type="Button" parent="."]
+icon = ExtResource( 848 )
+
+[node name="triangular_flag_on_post" type="Button" parent="."]
+icon = ExtResource( 849 )
+
+[node name="crossed_flags" type="Button" parent="."]
+icon = ExtResource( 845 )
+
+[node name="space_invader" type="Button" parent="."]
+icon = ExtResource( 843 )
+
+[node name="horse_racing" type="Button" parent="."]
+icon = ExtResource( 844 )
+
+[node name="snowboarder" type="Button" parent="."]
+icon = ExtResource( 809 )
+
+[node name="surfer" type="Button" parent="."]
+icon = ExtResource( 716 )
+
+[node name="rowboat" type="Button" parent="."]
+icon = ExtResource( 712 )
+
+[node name="swimmer" type="Button" parent="."]
+icon = ExtResource( 693 )
+
+[node name="bicyclist" type="Button" parent="."]
+icon = ExtResource( 677 )
+
+[node name="mountain_bicyclist" type="Button" parent="."]
+icon = ExtResource( 639 )
+
+[node name="circus_tent" type="Button" parent="."]
+icon = ExtResource( 620 )
+
+[node name="performing_arts" type="Button" parent="."]
+icon = ExtResource( 590 )
+
+[node name="art" type="Button" parent="."]
+icon = ExtResource( 592 )
+
+[node name="slot_machine" type="Button" parent="."]
+icon = ExtResource( 565 )
+
+[node name="bath" type="Button" parent="."]
+icon = ExtResource( 520 )
+
+[node name="ticket" type="Button" parent="."]
+icon = ExtResource( 462 )
+
+[node name="trophy" type="Button" parent="."]
+icon = ExtResource( 459 )
+
+[node name="soccer" type="Button" parent="."]
+icon = ExtResource( 451 )
+
+[node name="baseball" type="Button" parent="."]
+icon = ExtResource( 441 )
+
+[node name="basketball" type="Button" parent="."]
+icon = ExtResource( 424 )
+
+[node name="football" type="Button" parent="."]
+icon = ExtResource( 425 )
+
+[node name="rugby_football" type="Button" parent="."]
+icon = ExtResource( 414 )
+
+[node name="tennis" type="Button" parent="."]
+icon = ExtResource( 388 )
+
+[node name="8ball" type="Button" parent="."]
+icon = ExtResource( 400 )
+
+[node name="bowling" type="Button" parent="."]
+icon = ExtResource( 131 )
+
+[node name="dart" type="Button" parent="."]
+icon = ExtResource( 101 )
+
+[node name="golf" type="Button" parent="."]
+icon = ExtResource( 91 )
+
+[node name="fishing_pole_and_fish" type="Button" parent="."]
+icon = ExtResource( 850 )
+
+[node name="running_shirt_with_sash" type="Button" parent="."]
+icon = ExtResource( 687 )
+
+[node name="ski" type="Button" parent="."]
+icon = ExtResource( 670 )
+
+[node name="video_game" type="Button" parent="."]
+icon = ExtResource( 525 )
+
+[node name="game_die" type="Button" parent="."]
+icon = ExtResource( 416 )
+
+[node name="musical_score" type="Button" parent="."]
+icon = ExtResource( 111 )
+
+[node name="microphone" type="Button" parent="."]
+icon = ExtResource( 847 )
+
+[node name="headphones" type="Button" parent="."]
+icon = ExtResource( 26 )
+
+[node name="saxophone" type="Button" parent="."]
+icon = ExtResource( 540 )
+
+[node name="guitar" type="Button" parent="."]
+icon = ExtResource( 558 )
+
+[node name="musical_keyboard" type="Button" parent="."]
+icon = ExtResource( 483 )
+
+[node name="trumpet" type="Button" parent="."]
+icon = ExtResource( 109 )
+
+[node name="violin" type="Button" parent="."]
+icon = ExtResource( 651 )
+
+[node name="clapper" type="Button" parent="."]
+icon = ExtResource( 456 )
+
+[node name="see_no_evil" type="Button" parent="."]
+icon = ExtResource( 32 )
+
+[node name="hear_no_evil" type="Button" parent="."]
+icon = ExtResource( 650 )
+
+[node name="speak_no_evil" type="Button" parent="."]
+icon = ExtResource( 655 )
+
+[node name="sweat_drops" type="Button" parent="."]
+icon = ExtResource( 600 )
+
+[node name="dash" type="Button" parent="."]
+icon = ExtResource( 642 )
+
+[node name="monkey_face" type="Button" parent="."]
+icon = ExtResource( 624 )
+
+[node name="monkey" type="Button" parent="."]
+icon = ExtResource( 611 )
+
+[node name="dog" type="Button" parent="."]
+icon = ExtResource( 612 )
+
+[node name="dog2" type="Button" parent="."]
+icon = ExtResource( 602 )
+
+[node name="poodle" type="Button" parent="."]
+icon = ExtResource( 559 )
+
+[node name="wolf" type="Button" parent="."]
+icon = ExtResource( 474 )
+
+[node name="cat" type="Button" parent="."]
+icon = ExtResource( 421 )
+
+[node name="cat2" type="Button" parent="."]
+icon = ExtResource( 144 )
+
+[node name="tiger" type="Button" parent="."]
+icon = ExtResource( 555 )
+
+[node name="tiger2" type="Button" parent="."]
+icon = ExtResource( 89 )
+
+[node name="leopard" type="Button" parent="."]
+icon = ExtResource( 68 )
+
+[node name="horse" type="Button" parent="."]
+icon = ExtResource( 636 )
+
+[node name="racehorse" type="Button" parent="."]
+icon = ExtResource( 94 )
+
+[node name="cow" type="Button" parent="."]
+icon = ExtResource( 840 )
+
+[node name="ox" type="Button" parent="."]
+icon = ExtResource( 490 )
+
+[node name="water_buffalo" type="Button" parent="."]
+icon = ExtResource( 423 )
+
+[node name="cow2" type="Button" parent="."]
+icon = ExtResource( 683 )
+
+[node name="pig" type="Button" parent="."]
+icon = ExtResource( 647 )
+
+[node name="pig2" type="Button" parent="."]
+icon = ExtResource( 587 )
+
+[node name="boar" type="Button" parent="."]
+icon = ExtResource( 589 )
+
+[node name="pig_nose" type="Button" parent="."]
+icon = ExtResource( 578 )
+
+[node name="ram" type="Button" parent="."]
+icon = ExtResource( 571 )
+
+[node name="sheep" type="Button" parent="."]
+icon = ExtResource( 552 )
+
+[node name="goat" type="Button" parent="."]
+icon = ExtResource( 532 )
+
+[node name="dromedary_camel" type="Button" parent="."]
+icon = ExtResource( 516 )
+
+[node name="camel" type="Button" parent="."]
+icon = ExtResource( 476 )
+
+[node name="elephant" type="Button" parent="."]
+icon = ExtResource( 506 )
+
+[node name="mouse" type="Button" parent="."]
+icon = ExtResource( 433 )
+
+[node name="mouse2" type="Button" parent="."]
+icon = ExtResource( 415 )
+
+[node name="rat" type="Button" parent="."]
+icon = ExtResource( 413 )
+
+[node name="hamster" type="Button" parent="."]
+icon = ExtResource( 136 )
+
+[node name="rabbit" type="Button" parent="."]
+icon = ExtResource( 139 )
+
+[node name="rabbit2" type="Button" parent="."]
+icon = ExtResource( 123 )
+
+[node name="bear" type="Button" parent="."]
+icon = ExtResource( 684 )
+
+[node name="koala" type="Button" parent="."]
+icon = ExtResource( 134 )
+
+[node name="panda_face" type="Button" parent="."]
+icon = ExtResource( 705 )
+
+[node name="feet" type="Button" parent="."]
+icon = ExtResource( 124 )
+
+[node name="chicken" type="Button" parent="."]
+icon = ExtResource( 156 )
+
+[node name="rooster" type="Button" parent="."]
+icon = ExtResource( 8 )
+
+[node name="hatching_chick" type="Button" parent="."]
+icon = ExtResource( 841 )
+
+[node name="baby_chick" type="Button" parent="."]
+icon = ExtResource( 834 )
+
+[node name="hatched_chick" type="Button" parent="."]
+icon = ExtResource( 832 )
+
+[node name="bird" type="Button" parent="."]
+icon = ExtResource( 828 )
+
+[node name="penguin" type="Button" parent="."]
+icon = ExtResource( 827 )
+
+[node name="frog" type="Button" parent="."]
+icon = ExtResource( 71 )
+
+[node name="crocodile" type="Button" parent="."]
+icon = ExtResource( 823 )
+
+[node name="turtle" type="Button" parent="."]
+icon = ExtResource( 819 )
+
+[node name="snake" type="Button" parent="."]
+icon = ExtResource( 820 )
+
+[node name="dragon_face" type="Button" parent="."]
+icon = ExtResource( 135 )
+
+[node name="dragon" type="Button" parent="."]
+icon = ExtResource( 815 )
+
+[node name="whale" type="Button" parent="."]
+icon = ExtResource( 817 )
+
+[node name="whale2" type="Button" parent="."]
+icon = ExtResource( 803 )
+
+[node name="dolphin" type="Button" parent="."]
+icon = ExtResource( 842 )
+
+[node name="fish" type="Button" parent="."]
+icon = ExtResource( 804 )
+
+[node name="tropical_fish" type="Button" parent="."]
+icon = ExtResource( 800 )
+
+[node name="blowfish" type="Button" parent="."]
+icon = ExtResource( 791 )
+
+[node name="octopus" type="Button" parent="."]
+icon = ExtResource( 787 )
+
+[node name="shell" type="Button" parent="."]
+icon = ExtResource( 799 )
+
+[node name="snail" type="Button" parent="."]
+icon = ExtResource( 788 )
+
+[node name="bug" type="Button" parent="."]
+icon = ExtResource( 813 )
+
+[node name="ant" type="Button" parent="."]
+icon = ExtResource( 774 )
+
+[node name="bee" type="Button" parent="."]
+icon = ExtResource( 773 )
+
+[node name="beetle" type="Button" parent="."]
+icon = ExtResource( 777 )
+
+[node name="bouquet" type="Button" parent="."]
+icon = ExtResource( 781 )
+
+[node name="cherry_blossom" type="Button" parent="."]
+icon = ExtResource( 779 )
+
+[node name="rose" type="Button" parent="."]
+icon = ExtResource( 812 )
+
+[node name="hibiscus" type="Button" parent="."]
+icon = ExtResource( 785 )
+
+[node name="sunflower" type="Button" parent="."]
+icon = ExtResource( 786 )
+
+[node name="blossom" type="Button" parent="."]
+icon = ExtResource( 770 )
+
+[node name="tulip" type="Button" parent="."]
+icon = ExtResource( 755 )
+
+[node name="seedling" type="Button" parent="."]
+icon = ExtResource( 753 )
+
+[node name="evergreen_tree" type="Button" parent="."]
+icon = ExtResource( 754 )
+
+[node name="deciduous_tree" type="Button" parent="."]
+icon = ExtResource( 772 )
+
+[node name="palm_tree" type="Button" parent="."]
+icon = ExtResource( 745 )
+
+[node name="cactus" type="Button" parent="."]
+icon = ExtResource( 746 )
+
+[node name="ear_of_rice" type="Button" parent="."]
+icon = ExtResource( 735 )
+
+[node name="herb" type="Button" parent="."]
+icon = ExtResource( 733 )
+
+[node name="four_leaf_clover" type="Button" parent="."]
+icon = ExtResource( 727 )
+
+[node name="maple_leaf" type="Button" parent="."]
+icon = ExtResource( 479 )
+
+[node name="fallen_leaf" type="Button" parent="."]
+icon = ExtResource( 751 )
+
+[node name="leaves" type="Button" parent="."]
+icon = ExtResource( 816 )
+
+[node name="mushroom" type="Button" parent="."]
+icon = ExtResource( 766 )
+
+[node name="chestnut" type="Button" parent="."]
+icon = ExtResource( 760 )
+
+[node name="earth_africa" type="Button" parent="."]
+icon = ExtResource( 821 )
+
+[node name="earth_americas" type="Button" parent="."]
+icon = ExtResource( 734 )
+
+[node name="earth_asia" type="Button" parent="."]
+icon = ExtResource( 758 )
+
+[node name="new_moon" type="Button" parent="."]
+icon = ExtResource( 730 )
+
+[node name="waxing_crescent_moon" type="Button" parent="."]
+icon = ExtResource( 682 )
+
+[node name="first_quarter_moon" type="Button" parent="."]
+icon = ExtResource( 742 )
+
+[node name="waxing_gibbous_moon" type="Button" parent="."]
+icon = ExtResource( 654 )
+
+[node name="full_moon" type="Button" parent="."]
+icon = ExtResource( 659 )
+
+[node name="waning_gibbous_moon" type="Button" parent="."]
+icon = ExtResource( 640 )
+
+[node name="last_quarter_moon" type="Button" parent="."]
+icon = ExtResource( 629 )
+
+[node name="waning_crescent_moon" type="Button" parent="."]
+icon = ExtResource( 637 )
+
+[node name="crescent_moon" type="Button" parent="."]
+icon = ExtResource( 544 )
+
+[node name="new_moon_with_face" type="Button" parent="."]
+icon = ExtResource( 501 )
+
+[node name="first_quarter_moon_with_face" type="Button" parent="."]
+icon = ExtResource( 484 )
+
+[node name="last_quarter_moon_with_face" type="Button" parent="."]
+icon = ExtResource( 471 )
+
+[node name="sunny" type="Button" parent="."]
+icon = ExtResource( 438 )
+
+[node name="full_moon_with_face" type="Button" parent="."]
+icon = ExtResource( 95 )
+
+[node name="sun_with_face" type="Button" parent="."]
+icon = ExtResource( 407 )
+
+[node name="star" type="Button" parent="."]
+icon = ExtResource( 738 )
+
+[node name="star2" type="Button" parent="."]
+icon = ExtResource( 852 )
+
+[node name="cloud" type="Button" parent="."]
+icon = ExtResource( 141 )
+
+[node name="partly_sunny" type="Button" parent="."]
+icon = ExtResource( 408 )
+
+[node name="umbrella" type="Button" parent="."]
+icon = ExtResource( 838 )
+
+[node name="zap" type="Button" parent="."]
+icon = ExtResource( 829 )
+
+[node name="snowflake" type="Button" parent="."]
+icon = ExtResource( 831 )
+
+[node name="snowman" type="Button" parent="."]
+icon = ExtResource( 836 )
+
+[node name="fire" type="Button" parent="."]
+icon = ExtResource( 825 )
+
+[node name="droplet" type="Button" parent="."]
+icon = ExtResource( 25 )
+
+[node name="ocean" type="Button" parent="."]
+icon = ExtResource( 822 )
+
+[node name="jack_o_lantern" type="Button" parent="."]
+icon = ExtResource( 814 )
+
+[node name="christmas_tree" type="Button" parent="."]
+icon = ExtResource( 810 )
+
+[node name="sparkles" type="Button" parent="."]
+icon = ExtResource( 806 )
+
+[node name="tanabata_tree" type="Button" parent="."]
+icon = ExtResource( 797 )
+
+[node name="bamboo" type="Button" parent="."]
+icon = ExtResource( 826 )
+
+[node name="japan" type="Button" parent="."]
+icon = ExtResource( 792 )
+
+[node name="volcano" type="Button" parent="."]
+icon = ExtResource( 801 )
+
+[node name="mount_fuji" type="Button" parent="."]
+icon = ExtResource( 798 )
+
+[node name="house" type="Button" parent="."]
+icon = ExtResource( 796 )
+
+[node name="house_with_garden" type="Button" parent="."]
+icon = ExtResource( 794 )
+
+[node name="office" type="Button" parent="."]
+icon = ExtResource( 790 )
+
+[node name="post_office" type="Button" parent="."]
+icon = ExtResource( 783 )
+
+[node name="european_post_office" type="Button" parent="."]
+icon = ExtResource( 771 )
+
+[node name="hospital" type="Button" parent="."]
+icon = ExtResource( 768 )
+
+[node name="bank" type="Button" parent="."]
+icon = ExtResource( 775 )
+
+[node name="hotel" type="Button" parent="."]
+icon = ExtResource( 793 )
+
+[node name="love_hotel" type="Button" parent="."]
+icon = ExtResource( 761 )
+
+[node name="convenience_store" type="Button" parent="."]
+icon = ExtResource( 764 )
+
+[node name="school" type="Button" parent="."]
+icon = ExtResource( 763 )
+
+[node name="department_store" type="Button" parent="."]
+icon = ExtResource( 757 )
+
+[node name="factory" type="Button" parent="."]
+icon = ExtResource( 752 )
+
+[node name="japanese_castle" type="Button" parent="."]
+icon = ExtResource( 749 )
+
+[node name="european_castle" type="Button" parent="."]
+icon = ExtResource( 744 )
+
+[node name="wedding" type="Button" parent="."]
+icon = ExtResource( 743 )
+
+[node name="tokyo_tower" type="Button" parent="."]
+icon = ExtResource( 731 )
+
+[node name="statue_of_liberty" type="Button" parent="."]
+icon = ExtResource( 759 )
+
+[node name="church" type="Button" parent="."]
+icon = ExtResource( 732 )
+
+[node name="fountain" type="Button" parent="."]
+icon = ExtResource( 725 )
+
+[node name="tent" type="Button" parent="."]
+icon = ExtResource( 665 )
+
+[node name="foggy" type="Button" parent="."]
+icon = ExtResource( 660 )
+
+[node name="night_with_stars" type="Button" parent="."]
+icon = ExtResource( 664 )
+
+[node name="sunrise_over_mountains" type="Button" parent="."]
+icon = ExtResource( 661 )
+
+[node name="sunrise" type="Button" parent="."]
+icon = ExtResource( 767 )
+
+[node name="city_dusk" type="Button" parent="."]
+icon = ExtResource( 657 )
+
+[node name="city_sunset" type="Button" parent="."]
+icon = ExtResource( 808 )
+
+[node name="bridge_at_night" type="Button" parent="."]
+icon = ExtResource( 762 )
+
+[node name="milky_way" type="Button" parent="."]
+icon = ExtResource( 656 )
+
+[node name="carousel_horse" type="Button" parent="."]
+icon = ExtResource( 769 )
+
+[node name="ferris_wheel" type="Button" parent="."]
+icon = ExtResource( 789 )
+
+[node name="roller_coaster" type="Button" parent="."]
+icon = ExtResource( 805 )
+
+[node name="steam_locomotive" type="Button" parent="."]
+icon = ExtResource( 478 )
+
+[node name="railway_car" type="Button" parent="."]
+icon = ExtResource( 728 )
+
+[node name="bullettrain_side" type="Button" parent="."]
+icon = ExtResource( 780 )
+
+[node name="bullettrain_front" type="Button" parent="."]
+icon = ExtResource( 494 )
+
+[node name="train2" type="Button" parent="."]
+icon = ExtResource( 756 )
+
+[node name="metro" type="Button" parent="."]
+icon = ExtResource( 482 )
+
+[node name="light_rail" type="Button" parent="."]
+icon = ExtResource( 689 )
+
+[node name="station" type="Button" parent="."]
+icon = ExtResource( 795 )
+
+[node name="tram" type="Button" parent="."]
+icon = ExtResource( 701 )
+
+[node name="monorail" type="Button" parent="."]
+icon = ExtResource( 616 )
+
+[node name="mountain_railway" type="Button" parent="."]
+icon = ExtResource( 615 )
+
+[node name="train" type="Button" parent="."]
+icon = ExtResource( 613 )
+
+[node name="bus" type="Button" parent="."]
+icon = ExtResource( 593 )
+
+[node name="oncoming_bus" type="Button" parent="."]
+icon = ExtResource( 513 )
+
+[node name="trolleybus" type="Button" parent="."]
+icon = ExtResource( 404 )
+
+[node name="minibus" type="Button" parent="."]
+icon = ExtResource( 724 )
+
+[node name="ambulance" type="Button" parent="."]
+icon = ExtResource( 405 )
+
+[node name="fire_engine" type="Button" parent="."]
+icon = ExtResource( 88 )
+
+[node name="police_car" type="Button" parent="."]
+icon = ExtResource( 130 )
+
+[node name="oncoming_police_car" type="Button" parent="."]
+icon = ExtResource( 87 )
+
+[node name="taxi" type="Button" parent="."]
+icon = ExtResource( 454 )
+
+[node name="oncoming_taxi" type="Button" parent="."]
+icon = ExtResource( 409 )
+
+[node name="red_car" type="Button" parent="."]
+icon = ExtResource( 778 )
+
+[node name="oncoming_automobile" type="Button" parent="."]
+icon = ExtResource( 541 )
+
+[node name="blue_car" type="Button" parent="."]
+icon = ExtResource( 469 )
+
+[node name="truck" type="Button" parent="."]
+icon = ExtResource( 542 )
+
+[node name="articulated_lorry" type="Button" parent="."]
+icon = ExtResource( 776 )
+
+[node name="tractor" type="Button" parent="."]
+icon = ExtResource( 830 )
+
+[node name="bike" type="Button" parent="."]
+icon = ExtResource( 662 )
+
+[node name="busstop" type="Button" parent="."]
+icon = ExtResource( 466 )
+
+[node name="fuelpump" type="Button" parent="."]
+icon = ExtResource( 635 )
+
+[node name="rotating_light" type="Button" parent="."]
+icon = ExtResource( 608 )
+
+[node name="traffic_light" type="Button" parent="."]
+icon = ExtResource( 528 )
+
+[node name="vertical_traffic_light" type="Button" parent="."]
+icon = ExtResource( 782 )
+
+[node name="construction" type="Button" parent="."]
+icon = ExtResource( 628 )
+
+[node name="anchor" type="Button" parent="."]
+icon = ExtResource( 529 )
+
+[node name="sailboat" type="Button" parent="."]
+icon = ExtResource( 512 )
+
+[node name="speedboat" type="Button" parent="."]
+icon = ExtResource( 632 )
+
+[node name="ship" type="Button" parent="."]
+icon = ExtResource( 707 )
+
+[node name="airplane" type="Button" parent="."]
+icon = ExtResource( 507 )
+
+[node name="seat" type="Button" parent="."]
+icon = ExtResource( 833 )
+
+[node name="helicopter" type="Button" parent="."]
+icon = ExtResource( 835 )
+
+[node name="suspension_railway" type="Button" parent="."]
+icon = ExtResource( 429 )
+
+[node name="mountain_cableway" type="Button" parent="."]
+icon = ExtResource( 695 )
+
+[node name="aerial_tramway" type="Button" parent="."]
+icon = ExtResource( 807 )
+
+[node name="rocket" type="Button" parent="."]
+icon = ExtResource( 784 )
+
+[node name="stars" type="Button" parent="."]
+icon = ExtResource( 765 )
+
+[node name="rainbow" type="Button" parent="."]
+icon = ExtResource( 750 )
+
+[node name="fireworks" type="Button" parent="."]
+icon = ExtResource( 747 )
+
+[node name="sparkler" type="Button" parent="."]
+icon = ExtResource( 846 )
+
+[node name="rice_scene" type="Button" parent="."]
+icon = ExtResource( 741 )
+
+[node name="checkered_flag" type="Button" parent="."]
+icon = ExtResource( 748 )
+
+[node name="cupid" type="Button" parent="."]
+icon = ExtResource( 737 )
+
+[node name="heart" type="Button" parent="."]
+icon = ExtResource( 736 )
+
+[node name="heartbeat" type="Button" parent="."]
+icon = ExtResource( 739 )
+
+[node name="broken_heart" type="Button" parent="."]
+icon = ExtResource( 62 )
+
+[node name="two_hearts" type="Button" parent="."]
+icon = ExtResource( 839 )
+
+[node name="sparkling_heart" type="Button" parent="."]
+icon = ExtResource( 824 )
+
+[node name="heartpulse" type="Button" parent="."]
+icon = ExtResource( 681 )
+
+[node name="blue_heart" type="Button" parent="."]
+icon = ExtResource( 680 )
+
+[node name="green_heart" type="Button" parent="."]
+icon = ExtResource( 685 )
+
+[node name="yellow_heart" type="Button" parent="."]
+icon = ExtResource( 622 )
+
+[node name="purple_heart" type="Button" parent="."]
+icon = ExtResource( 811 )
+
+[node name="gift_heart" type="Button" parent="."]
+icon = ExtResource( 430 )
+
+[node name="revolving_hearts" type="Button" parent="."]
+icon = ExtResource( 617 )
+
+[node name="heart_decoration" type="Button" parent="."]
+icon = ExtResource( 418 )
+
+[node name="anger" type="Button" parent="."]
+icon = ExtResource( 619 )
+
+[node name="boom" type="Button" parent="."]
+icon = ExtResource( 143 )
+
+[node name="dizzy" type="Button" parent="."]
+icon = ExtResource( 422 )
+
+[node name="speech_balloon" type="Button" parent="."]
+icon = ExtResource( 486 )
+
+[node name="thought_balloon" type="Button" parent="."]
+icon = ExtResource( 653 )
+
+[node name="white_flower" type="Button" parent="."]
+icon = ExtResource( 717 )
+
+[node name="globe_with_meridians" type="Button" parent="."]
+icon = ExtResource( 481 )
+
+[node name="hotsprings" type="Button" parent="."]
+icon = ExtResource( 526 )
+
+[node name="clock12" type="Button" parent="."]
+icon = ExtResource( 721 )
+
+[node name="clock1230" type="Button" parent="."]
+icon = ExtResource( 686 )
+
+[node name="clock1" type="Button" parent="."]
+icon = ExtResource( 394 )
+
+[node name="clock130" type="Button" parent="."]
+icon = ExtResource( 818 )
+
+[node name="clock2" type="Button" parent="."]
+icon = ExtResource( 723 )
+
+[node name="clock230" type="Button" parent="."]
+icon = ExtResource( 568 )
+
+[node name="clock3" type="Button" parent="."]
+icon = ExtResource( 117 )
+
+[node name="clock330" type="Button" parent="."]
+icon = ExtResource( 720 )
+
+[node name="clock4" type="Button" parent="."]
+icon = ExtResource( 493 )
+
+[node name="clock430" type="Button" parent="."]
+icon = ExtResource( 99 )
+
+[node name="clock5" type="Button" parent="."]
+icon = ExtResource( 104 )
+
+[node name="clock530" type="Button" parent="."]
+icon = ExtResource( 517 )
+
+[node name="clock6" type="Button" parent="."]
+icon = ExtResource( 638 )
+
+[node name="clock630" type="Button" parent="."]
+icon = ExtResource( 614 )
+
+[node name="clock7" type="Button" parent="."]
+icon = ExtResource( 549 )
+
+[node name="clock730" type="Button" parent="."]
+icon = ExtResource( 417 )
+
+[node name="clock8" type="Button" parent="."]
+icon = ExtResource( 112 )
+
+[node name="clock830" type="Button" parent="."]
+icon = ExtResource( 719 )
+
+[node name="clock9" type="Button" parent="."]
+icon = ExtResource( 740 )
+
+[node name="clock930" type="Button" parent="."]
+icon = ExtResource( 492 )
+
+[node name="clock10" type="Button" parent="."]
+icon = ExtResource( 648 )
+
+[node name="clock1030" type="Button" parent="."]
+icon = ExtResource( 837 )
+
+[node name="clock11" type="Button" parent="."]
+icon = ExtResource( 679 )
+
+[node name="clock1130" type="Button" parent="."]
+icon = ExtResource( 610 )
+
+[node name="cyclone" type="Button" parent="."]
+icon = ExtResource( 503 )
+
+[node name="spades" type="Button" parent="."]
+icon = ExtResource( 129 )
+
+[node name="hearts" type="Button" parent="."]
+icon = ExtResource( 119 )
+
+[node name="diamonds" type="Button" parent="."]
+icon = ExtResource( 122 )
+
+[node name="clubs" type="Button" parent="."]
+icon = ExtResource( 519 )
+
+[node name="black_joker" type="Button" parent="."]
+icon = ExtResource( 697 )
+
+[node name="mahjong" type="Button" parent="."]
+icon = ExtResource( 504 )
+
+[node name="flower_playing_cards" type="Button" parent="."]
+icon = ExtResource( 485 )
+
+[node name="mute" type="Button" parent="."]
+icon = ExtResource( 114 )
+
+[node name="speaker" type="Button" parent="."]
+icon = ExtResource( 64 )
+
+[node name="sound" type="Button" parent="."]
+icon = ExtResource( 121 )
+
+[node name="loud_sound" type="Button" parent="."]
+icon = ExtResource( 553 )
+
+[node name="loudspeaker" type="Button" parent="."]
+icon = ExtResource( 77 )
+
+[node name="mega" type="Button" parent="."]
+icon = ExtResource( 7 )
+
+[node name="bell" type="Button" parent="."]
+icon = ExtResource( 470 )
+
+[node name="no_bell" type="Button" parent="."]
+icon = ExtResource( 161 )
+
+[node name="musical_note" type="Button" parent="."]
+icon = ExtResource( 521 )
+
+[node name="notes" type="Button" parent="."]
+icon = ExtResource( 509 )
+
+[node name="chart" type="Button" parent="."]
+icon = ExtResource( 72 )
+
+[node name="currency_exchange" type="Button" parent="."]
+icon = ExtResource( 556 )
+
+[node name="heavy_dollar_sign" type="Button" parent="."]
+icon = ExtResource( 554 )
+
+[node name="atm" type="Button" parent="."]
+icon = ExtResource( 499 )
+
+[node name="put_litter_in_its_place" type="Button" parent="."]
+icon = ExtResource( 411 )
+
+[node name="potable_water" type="Button" parent="."]
+icon = ExtResource( 11 )
+
+[node name="wheelchair" type="Button" parent="."]
+icon = ExtResource( 522 )
+
+[node name="mens" type="Button" parent="."]
+icon = ExtResource( 38 )
+
+[node name="womens" type="Button" parent="."]
+icon = ExtResource( 399 )
+
+[node name="restroom" type="Button" parent="."]
+icon = ExtResource( 74 )
+
+[node name="baby_symbol" type="Button" parent="."]
+icon = ExtResource( 76 )
+
+[node name="wc" type="Button" parent="."]
+icon = ExtResource( 59 )
+
+[node name="passport_control" type="Button" parent="."]
+icon = ExtResource( 851 )
+
+[node name="customs" type="Button" parent="."]
+icon = ExtResource( 729 )
+
+[node name="baggage_claim" type="Button" parent="."]
+icon = ExtResource( 495 )
+
+[node name="left_luggage" type="Button" parent="."]
+icon = ExtResource( 55 )
+
+[node name="warning" type="Button" parent="."]
+icon = ExtResource( 626 )
+
+[node name="children_crossing" type="Button" parent="."]
+icon = ExtResource( 491 )
+
+[node name="no_entry" type="Button" parent="."]
+icon = ExtResource( 86 )
+
+[node name="no_entry_sign" type="Button" parent="."]
+icon = ExtResource( 177 )
+
+[node name="no_bicycles" type="Button" parent="."]
+icon = ExtResource( 489 )
+
+[node name="no_smoking" type="Button" parent="."]
+icon = ExtResource( 181 )
+
+[node name="do_not_litter" type="Button" parent="."]
+icon = ExtResource( 566 )
+
+[node name="non-potable_water" type="Button" parent="."]
+icon = ExtResource( 502 )
+
+[node name="no_pedestrians" type="Button" parent="."]
+icon = ExtResource( 403 )
+
+[node name="no_mobile_phones" type="Button" parent="."]
+icon = ExtResource( 488 )
+
+[node name="underage" type="Button" parent="."]
+icon = ExtResource( 518 )
+
+[node name="arrow_up" type="Button" parent="."]
+icon = ExtResource( 56 )
+
+[node name="arrow_upper_right" type="Button" parent="."]
+icon = ExtResource( 10 )
+
+[node name="arrow_right" type="Button" parent="."]
+icon = ExtResource( 20 )
+
+[node name="arrow_lower_right" type="Button" parent="."]
+icon = ExtResource( 572 )
+
+[node name="arrow_down" type="Button" parent="."]
+icon = ExtResource( 500 )
+
+[node name="arrow_lower_left" type="Button" parent="."]
+icon = ExtResource( 13 )
+
+[node name="arrow_left" type="Button" parent="."]
+icon = ExtResource( 18 )
+
+[node name="arrow_upper_left" type="Button" parent="."]
+icon = ExtResource( 514 )
+
+[node name="arrow_up_down" type="Button" parent="."]
+icon = ExtResource( 54 )
+
+[node name="left_right_arrow" type="Button" parent="."]
+icon = ExtResource( 182 )
+
+[node name="leftwards_arrow_with_hook" type="Button" parent="."]
+icon = ExtResource( 50 )
+
+[node name="arrow_right_hook" type="Button" parent="."]
+icon = ExtResource( 12 )
+
+[node name="arrow_heading_up" type="Button" parent="."]
+icon = ExtResource( 58 )
+
+[node name="arrow_heading_down" type="Button" parent="."]
+icon = ExtResource( 47 )
+
+[node name="arrows_clockwise" type="Button" parent="."]
+icon = ExtResource( 49 )
+
+[node name="arrows_counterclockwise" type="Button" parent="."]
+icon = ExtResource( 51 )
+
+[node name="back" type="Button" parent="."]
+icon = ExtResource( 81 )
+
+[node name="end" type="Button" parent="."]
+icon = ExtResource( 487 )
+
+[node name="on" type="Button" parent="."]
+icon = ExtResource( 431 )
+
+[node name="soon" type="Button" parent="."]
+icon = ExtResource( 496 )
+
+[node name="top" type="Button" parent="."]
+icon = ExtResource( 427 )
+
+[node name="six_pointed_star" type="Button" parent="."]
+icon = ExtResource( 412 )
+
+[node name="aries" type="Button" parent="."]
+icon = ExtResource( 391 )
+
+[node name="taurus" type="Button" parent="."]
+icon = ExtResource( 398 )
+
+[node name="gemini" type="Button" parent="."]
+icon = ExtResource( 468 )
+
+[node name="cancer" type="Button" parent="."]
+icon = ExtResource( 667 )
+
+[node name="leo" type="Button" parent="."]
+icon = ExtResource( 669 )
+
+[node name="virgo" type="Button" parent="."]
+icon = ExtResource( 649 )
+
+[node name="libra" type="Button" parent="."]
+icon = ExtResource( 562 )
+
+[node name="scorpius" type="Button" parent="."]
+icon = ExtResource( 668 )
+
+[node name="sagittarius" type="Button" parent="."]
+icon = ExtResource( 644 )
+
+[node name="capricorn" type="Button" parent="."]
+icon = ExtResource( 646 )
+
+[node name="aquarius" type="Button" parent="."]
+icon = ExtResource( 802 )
+
+[node name="pisces" type="Button" parent="."]
+icon = ExtResource( 395 )
+
+[node name="ophiuchus" type="Button" parent="."]
+icon = ExtResource( 224 )
+
+[node name="twisted_rightwards_arrows" type="Button" parent="."]
+icon = ExtResource( 645 )
+
+[node name="repeat" type="Button" parent="."]
+icon = ExtResource( 222 )
+
+[node name="repeat_one" type="Button" parent="."]
+icon = ExtResource( 226 )
+
+[node name="arrow_forward" type="Button" parent="."]
+icon = ExtResource( 227 )
+
+[node name="fast_forward" type="Button" parent="."]
+icon = ExtResource( 225 )
+
+[node name="arrow_backward" type="Button" parent="."]
+icon = ExtResource( 233 )
+
+[node name="rewind" type="Button" parent="."]
+icon = ExtResource( 230 )
+
+[node name="arrow_up_small" type="Button" parent="."]
+icon = ExtResource( 229 )
+
+[node name="arrow_double_up" type="Button" parent="."]
+icon = ExtResource( 228 )
+
+[node name="arrow_down_small" type="Button" parent="."]
+icon = ExtResource( 236 )
+
+[node name="arrow_double_down" type="Button" parent="."]
+icon = ExtResource( 231 )
+
+[node name="cinema" type="Button" parent="."]
+icon = ExtResource( 232 )
+
+[node name="low_brightness" type="Button" parent="."]
+icon = ExtResource( 239 )
+
+[node name="high_brightness" type="Button" parent="."]
+icon = ExtResource( 234 )
+
+[node name="signal_strength" type="Button" parent="."]
+icon = ExtResource( 235 )
+
+[node name="vibration_mode" type="Button" parent="."]
+icon = ExtResource( 242 )
+
+[node name="mobile_phone_off" type="Button" parent="."]
+icon = ExtResource( 237 )
+
+[node name="recycle" type="Button" parent="."]
+icon = ExtResource( 238 )
+
+[node name="name_badge" type="Button" parent="."]
+icon = ExtResource( 243 )
+
+[node name="beginner" type="Button" parent="."]
+icon = ExtResource( 240 )
+
+[node name="trident" type="Button" parent="."]
+icon = ExtResource( 241 )
+
+[node name="o" type="Button" parent="."]
+icon = ExtResource( 245 )
+
+[node name="white_check_mark" type="Button" parent="."]
+icon = ExtResource( 246 )
+
+[node name="ballot_box_with_check" type="Button" parent="."]
+icon = ExtResource( 244 )
+
+[node name="heavy_check_mark" type="Button" parent="."]
+icon = ExtResource( 248 )
+
+[node name="heavy_multiplication_x" type="Button" parent="."]
+icon = ExtResource( 249 )
+
+[node name="x" type="Button" parent="."]
+icon = ExtResource( 223 )
+
+[node name="negative_squared_cross_mark" type="Button" parent="."]
+icon = ExtResource( 120 )
+
+[node name="heavy_plus_sign" type="Button" parent="."]
+icon = ExtResource( 247 )
+
+[node name="heavy_minus_sign" type="Button" parent="."]
+icon = ExtResource( 250 )
+
+[node name="heavy_division_sign" type="Button" parent="."]
+icon = ExtResource( 253 )
+
+[node name="curly_loop" type="Button" parent="."]
+icon = ExtResource( 252 )
+
+[node name="loop" type="Button" parent="."]
+icon = ExtResource( 251 )
+
+[node name="part_alternation_mark" type="Button" parent="."]
+icon = ExtResource( 255 )
+
+[node name="eight_spoked_asterisk" type="Button" parent="."]
+icon = ExtResource( 254 )
+
+[node name="eight_pointed_black_star" type="Button" parent="."]
+icon = ExtResource( 257 )
+
+[node name="sparkle" type="Button" parent="."]
+icon = ExtResource( 258 )
+
+[node name="bangbang" type="Button" parent="."]
+icon = ExtResource( 261 )
+
+[node name="interrobang" type="Button" parent="."]
+icon = ExtResource( 264 )
+
+[node name="question" type="Button" parent="."]
+icon = ExtResource( 259 )
+
+[node name="grey_question" type="Button" parent="."]
+icon = ExtResource( 260 )
+
+[node name="grey_exclamation" type="Button" parent="."]
+icon = ExtResource( 265 )
+
+[node name="exclamation" type="Button" parent="."]
+icon = ExtResource( 262 )
+
+[node name="wavy_dash" type="Button" parent="."]
+icon = ExtResource( 263 )
+
+[node name="tm" type="Button" parent="."]
+icon = ExtResource( 256 )
+
+[node name="keycap_ten" type="Button" parent="."]
+icon = ExtResource( 267 )
+
+[node name="100" type="Button" parent="."]
+icon = ExtResource( 266 )
+
+[node name="capital_abcd" type="Button" parent="."]
+icon = ExtResource( 270 )
+
+[node name="abcd" type="Button" parent="."]
+icon = ExtResource( 269 )
+
+[node name="1234" type="Button" parent="."]
+icon = ExtResource( 268 )
+
+[node name="symbols" type="Button" parent="."]
+icon = ExtResource( 273 )
+
+[node name="abc" type="Button" parent="."]
+icon = ExtResource( 274 )
+
+[node name="a" type="Button" parent="."]
+icon = ExtResource( 272 )
+
+[node name="ab" type="Button" parent="."]
+icon = ExtResource( 276 )
+
+[node name="b" type="Button" parent="."]
+icon = ExtResource( 271 )
+
+[node name="cl" type="Button" parent="."]
+icon = ExtResource( 279 )
+
+[node name="cool" type="Button" parent="."]
+icon = ExtResource( 277 )
+
+[node name="free" type="Button" parent="."]
+icon = ExtResource( 282 )
+
+[node name="information_source" type="Button" parent="."]
+icon = ExtResource( 275 )
+
+[node name="id" type="Button" parent="."]
+icon = ExtResource( 284 )
+
+[node name="m" type="Button" parent="."]
+icon = ExtResource( 281 )
+
+[node name="new" type="Button" parent="."]
+icon = ExtResource( 278 )
+
+[node name="ng" type="Button" parent="."]
+icon = ExtResource( 285 )
+
+[node name="o2" type="Button" parent="."]
+icon = ExtResource( 283 )
+
+[node name="ok" type="Button" parent="."]
+icon = ExtResource( 287 )
+
+[node name="parking" type="Button" parent="."]
+icon = ExtResource( 288 )
+
+[node name="sos" type="Button" parent="."]
+icon = ExtResource( 286 )
+
+[node name="up" type="Button" parent="."]
+icon = ExtResource( 294 )
+
+[node name="vs" type="Button" parent="."]
+icon = ExtResource( 291 )
+
+[node name="koko" type="Button" parent="."]
+icon = ExtResource( 290 )
+
+[node name="sa" type="Button" parent="."]
+icon = ExtResource( 280 )
+
+[node name="u6708" type="Button" parent="."]
+icon = ExtResource( 297 )
+
+[node name="u6709" type="Button" parent="."]
+icon = ExtResource( 292 )
+
+[node name="u6307" type="Button" parent="."]
+icon = ExtResource( 293 )
+
+[node name="ideograph_advantage" type="Button" parent="."]
+icon = ExtResource( 295 )
+
+[node name="u5272" type="Button" parent="."]
+icon = ExtResource( 289 )
+
+[node name="u7121" type="Button" parent="."]
+icon = ExtResource( 303 )
+
+[node name="u7981" type="Button" parent="."]
+icon = ExtResource( 298 )
+
+[node name="accept" type="Button" parent="."]
+icon = ExtResource( 296 )
+
+[node name="u7533" type="Button" parent="."]
+icon = ExtResource( 300 )
+
+[node name="u5408" type="Button" parent="."]
+icon = ExtResource( 299 )
+
+[node name="u7a7a" type="Button" parent="."]
+icon = ExtResource( 302 )
+
+[node name="congratulations" type="Button" parent="."]
+icon = ExtResource( 301 )
+
+[node name="secret" type="Button" parent="."]
+icon = ExtResource( 305 )
+
+[node name="u55b6" type="Button" parent="."]
+icon = ExtResource( 309 )
+
+[node name="u6e80" type="Button" parent="."]
+icon = ExtResource( 304 )
+
+[node name="black_small_square" type="Button" parent="."]
+icon = ExtResource( 308 )
+
+[node name="white_small_square" type="Button" parent="."]
+icon = ExtResource( 306 )
+
+[node name="white_medium_square" type="Button" parent="."]
+icon = ExtResource( 307 )
+
+[node name="black_medium_square" type="Button" parent="."]
+icon = ExtResource( 312 )
+
+[node name="white_medium_small_square" type="Button" parent="."]
+icon = ExtResource( 313 )
+
+[node name="black_medium_small_square" type="Button" parent="."]
+icon = ExtResource( 310 )
+
+[node name="black_large_square" type="Button" parent="."]
+icon = ExtResource( 317 )
+
+[node name="white_large_square" type="Button" parent="."]
+icon = ExtResource( 314 )
+
+[node name="large_orange_diamond" type="Button" parent="."]
+icon = ExtResource( 311 )
+
+[node name="large_blue_diamond" type="Button" parent="."]
+icon = ExtResource( 318 )
+
+[node name="small_orange_diamond" type="Button" parent="."]
+icon = ExtResource( 315 )
+
+[node name="small_blue_diamond" type="Button" parent="."]
+icon = ExtResource( 319 )
+
+[node name="small_red_triangle" type="Button" parent="."]
+icon = ExtResource( 320 )
+
+[node name="small_red_triangle_down" type="Button" parent="."]
+icon = ExtResource( 321 )
+
+[node name="diamond_shape_with_a_dot_inside" type="Button" parent="."]
+icon = ExtResource( 323 )
+
+[node name="radio_button" type="Button" parent="."]
+icon = ExtResource( 316 )
+
+[node name="black_square_button" type="Button" parent="."]
+icon = ExtResource( 326 )
+
+[node name="white_square_button" type="Button" parent="."]
+icon = ExtResource( 324 )
+
+[node name="white_circle" type="Button" parent="."]
+icon = ExtResource( 325 )
+
+[node name="black_circle" type="Button" parent="."]
+icon = ExtResource( 333 )
+
+[node name="red_circle" type="Button" parent="."]
+icon = ExtResource( 327 )
+
+[node name="blue_circle" type="Button" parent="."]
+icon = ExtResource( 322 )
+
+[node name="grapes" type="Button" parent="."]
+icon = ExtResource( 330 )
+
+[node name="melon" type="Button" parent="."]
+icon = ExtResource( 197 )
+
+[node name="watermelon" type="Button" parent="."]
+icon = ExtResource( 192 )
+
+[node name="tangerine" type="Button" parent="."]
+icon = ExtResource( 193 )
+
+[node name="lemon" type="Button" parent="."]
+icon = ExtResource( 200 )
+
+[node name="banana" type="Button" parent="."]
+icon = ExtResource( 196 )
+
+[node name="pineapple" type="Button" parent="."]
+icon = ExtResource( 195 )
+
+[node name="apple" type="Button" parent="."]
+icon = ExtResource( 203 )
+
+[node name="green_apple" type="Button" parent="."]
+icon = ExtResource( 198 )
+
+[node name="pear" type="Button" parent="."]
+icon = ExtResource( 199 )
+
+[node name="peach" type="Button" parent="."]
+icon = ExtResource( 190 )
+
+[node name="cherries" type="Button" parent="."]
+icon = ExtResource( 206 )
+
+[node name="strawberry" type="Button" parent="."]
+icon = ExtResource( 207 )
+
+[node name="tomato" type="Button" parent="."]
+icon = ExtResource( 205 )
+
+[node name="eggplant" type="Button" parent="."]
+icon = ExtResource( 209 )
+
+[node name="corn" type="Button" parent="."]
+icon = ExtResource( 204 )
+
+[node name="bread" type="Button" parent="."]
+icon = ExtResource( 208 )
+
+[node name="meat_on_bone" type="Button" parent="."]
+icon = ExtResource( 201 )
+
+[node name="poultry_leg" type="Button" parent="."]
+icon = ExtResource( 212 )
+
+[node name="hamburger" type="Button" parent="."]
+icon = ExtResource( 202 )
+
+[node name="fries" type="Button" parent="."]
+icon = ExtResource( 210 )
+
+[node name="pizza" type="Button" parent="."]
+icon = ExtResource( 211 )
+
+[node name="cooking" type="Button" parent="."]
+icon = ExtResource( 215 )
+
+[node name="stew" type="Button" parent="."]
+icon = ExtResource( 217 )
+
+[node name="bento" type="Button" parent="."]
+icon = ExtResource( 214 )
+
+[node name="rice_cracker" type="Button" parent="."]
+icon = ExtResource( 218 )
+
+[node name="rice_ball" type="Button" parent="."]
+icon = ExtResource( 213 )
+
+[node name="rice" type="Button" parent="."]
+icon = ExtResource( 328 )
+
+[node name="curry" type="Button" parent="."]
+icon = ExtResource( 216 )
+
+[node name="ramen" type="Button" parent="."]
+icon = ExtResource( 331 )
+
+[node name="spaghetti" type="Button" parent="."]
+icon = ExtResource( 221 )
+
+[node name="sweet_potato" type="Button" parent="."]
+icon = ExtResource( 336 )
+
+[node name="oden" type="Button" parent="."]
+icon = ExtResource( 339 )
+
+[node name="sushi" type="Button" parent="."]
+icon = ExtResource( 334 )
+
+[node name="fried_shrimp" type="Button" parent="."]
+icon = ExtResource( 329 )
+
+[node name="fish_cake" type="Button" parent="."]
+icon = ExtResource( 335 )
+
+[node name="dango" type="Button" parent="."]
+icon = ExtResource( 342 )
+
+[node name="icecream" type="Button" parent="."]
+icon = ExtResource( 337 )
+
+[node name="shaved_ice" type="Button" parent="."]
+icon = ExtResource( 332 )
+
+[node name="ice_cream" type="Button" parent="."]
+icon = ExtResource( 340 )
+
+[node name="doughnut" type="Button" parent="."]
+icon = ExtResource( 341 )
+
+[node name="cookie" type="Button" parent="."]
+icon = ExtResource( 343 )
+
+[node name="birthday" type="Button" parent="."]
+icon = ExtResource( 346 )
+
+[node name="cake" type="Button" parent="."]
+icon = ExtResource( 344 )
+
+[node name="chocolate_bar" type="Button" parent="."]
+icon = ExtResource( 347 )
+
+[node name="candy" type="Button" parent="."]
+icon = ExtResource( 348 )
+
+[node name="lollipop" type="Button" parent="."]
+icon = ExtResource( 352 )
+
+[node name="custard" type="Button" parent="."]
+icon = ExtResource( 349 )
+
+[node name="honey_pot" type="Button" parent="."]
+icon = ExtResource( 350 )
+
+[node name="baby_bottle" type="Button" parent="."]
+icon = ExtResource( 345 )
+
+[node name="coffee" type="Button" parent="."]
+icon = ExtResource( 338 )
+
+[node name="tea" type="Button" parent="."]
+icon = ExtResource( 354 )
+
+[node name="sake" type="Button" parent="."]
+icon = ExtResource( 356 )
+
+[node name="wine_glass" type="Button" parent="."]
+icon = ExtResource( 353 )
+
+[node name="cocktail" type="Button" parent="."]
+icon = ExtResource( 220 )
+
+[node name="tropical_drink" type="Button" parent="."]
+icon = ExtResource( 351 )
+
+[node name="beer" type="Button" parent="."]
+icon = ExtResource( 357 )
+
+[node name="beers" type="Button" parent="."]
+icon = ExtResource( 355 )
+
+[node name="fork_and_knife" type="Button" parent="."]
+icon = ExtResource( 360 )
+
+[node name="flag_cn" type="Button" parent="."]
+icon = ExtResource( 219 )
+
+[node name="flag_de" type="Button" parent="."]
+icon = ExtResource( 358 )
+
+[node name="flag_es" type="Button" parent="."]
+icon = ExtResource( 362 )
+
+[node name="flag_fr" type="Button" parent="."]
+icon = ExtResource( 359 )
+
+[node name="flag_gb" type="Button" parent="."]
+icon = ExtResource( 368 )
+
+[node name="flag_it" type="Button" parent="."]
+icon = ExtResource( 366 )
+
+[node name="flag_jp" type="Button" parent="."]
+icon = ExtResource( 367 )
+
+[node name="flag_kr" type="Button" parent="."]
+icon = ExtResource( 364 )
+
+[node name="flag_ru" type="Button" parent="."]
+icon = ExtResource( 361 )
+
+[node name="flag_us" type="Button" parent="."]
+icon = ExtResource( 365 )
+
+[node name="c" type="Button" parent="."]
+icon = ExtResource( 363 )
+
+[node name="d" type="Button" parent="."]
+icon = ExtResource( 372 )
+
+[node name="e" type="Button" parent="."]
+icon = ExtResource( 369 )
+
+[node name="f" type="Button" parent="."]
+icon = ExtResource( 370 )
+
+[node name="g" type="Button" parent="."]
+icon = ExtResource( 371 )
+
+[node name="h" type="Button" parent="."]
+icon = ExtResource( 374 )
+
+[node name="i" type="Button" parent="."]
+icon = ExtResource( 373 )
+
+[node name="j" type="Button" parent="."]
+icon = ExtResource( 377 )
+
+[node name="k" type="Button" parent="."]
+icon = ExtResource( 378 )
+
+[node name="l" type="Button" parent="."]
+icon = ExtResource( 376 )
+
+[node name="n" type="Button" parent="."]
+icon = ExtResource( 381 )
+
+[node name="p" type="Button" parent="."]
+icon = ExtResource( 375 )
+
+[node name="q" type="Button" parent="."]
+icon = ExtResource( 379 )
+
+[node name="r" type="Button" parent="."]
+icon = ExtResource( 383 )
+
+[node name="s" type="Button" parent="."]
+icon = ExtResource( 384 )
+
+[node name="t" type="Button" parent="."]
+icon = ExtResource( 380 )
+
+[node name="u" type="Button" parent="."]
+icon = ExtResource( 382 )
+
+[node name="w" type="Button" parent="."]
+icon = ExtResource( 386 )
+
+[node name="y" type="Button" parent="."]
+icon = ExtResource( 387 )
+
+[node name="z" type="Button" parent="."]
+icon = ExtResource( 385 )

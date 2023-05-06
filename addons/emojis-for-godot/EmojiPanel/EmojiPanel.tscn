@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/emojis-for-godot/EmojiPanel/Filter.gd" type="Script" id=1]
+[ext_resource path="res://addons/emojis-for-godot/EmojiPanel/NotificationLabel.gd" type="Script" id=2]
+[ext_resource path="res://addons/emojis-for-godot/EmojiPanel/EmojiPanel.gd" type="Script" id=3]
+[ext_resource path="res://addons/emojis-for-godot/EmojiPanel/EmojiGrid.tscn" type="PackedScene" id=4]
+
+[node name="PopupDialog" type="WindowDialog"]
+visible = true
+margin_right = 448.0
+margin_bottom = 504.0
+window_title = "Emoji"
+resizable = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Emoji" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+grid_path = NodePath("ScrollContainer/GridContainer")
+button_x = 48
+
+[node name="Filter" type="LineEdit" parent="Emoji"]
+margin_right = 432.0
+margin_bottom = 24.0
+placeholder_text = "Filter"
+placeholder_alpha = 0.3
+caret_blink = true
+caret_blink_speed = 0.5
+script = ExtResource( 1 )
+grid_node_path = NodePath("../ScrollContainer/GridContainer")
+
+[node name="HSeparator2" type="HSeparator" parent="Emoji"]
+margin_top = 28.0
+margin_right = 432.0
+margin_bottom = 32.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NotificationLabel" type="Label" parent="Emoji"]
+visible = false
+margin_top = 36.0
+margin_right = 272.0
+margin_bottom = 50.0
+custom_colors/font_color = Color( 0.231373, 0.952941, 0.227451, 1 )
+text = "Copied Emoji message here"
+align = 1
+valign = 1
+clip_text = true
+max_lines_visible = 2
+script = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="Emoji/NotificationLabel"]
+one_shot = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Emoji"]
+margin_top = 36.0
+margin_right = 432.0
+margin_bottom = 488.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" parent="Emoji/ScrollContainer" instance=ExtResource( 4 )]
+margin_right = 412.0
+margin_bottom = 4918.0
+columns = 8
+
+[connection signal="about_to_show" from="." to="Emoji" method="_on_about_to_show"]
+[connection signal="resized" from="." to="Emoji" method="_on_resized"]
+[connection signal="emoji_selected" from="Emoji" to="Emoji/NotificationLabel" method="_on_emoji_selected"]
+[connection signal="text_changed" from="Emoji/Filter" to="Emoji/Filter" method="_on_text_changed"]
+[connection signal="timeout" from="Emoji/NotificationLabel/Timer" to="Emoji/NotificationLabel" method="_on_timeout"]
