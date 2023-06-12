@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/advanced-text/examples/AdvancedTextButton/AdvancedTextButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/advanced-text/nodes/CodeEdit.gd" type="Script" id=2]
+[ext_resource path="res://addons/advanced-text/examples/EditTextOnClick/EditTextOnClick.gd" type="Script" id=3]
+
+[node name="EditTextOnClick" type="VBoxContainer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -189.0
+margin_top = -104.5
+margin_right = 189.0
+margin_bottom = 104.5
+
+[node name="Tabs" type="TabContainer" parent="."]
+margin_right = 378.0
+margin_bottom = 209.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+tabs_visible = false
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+_button = NodePath("AdvancedTextButton")
+_edit = NodePath("MarkupEdit")
+_buttons_container = NodePath("../HBoxContainer")
+_save_button = NodePath("../HBoxContainer/SaveButton")
+_cancel_button = NodePath("../HBoxContainer/CancelButton")
+
+[node name="AdvancedTextButton" parent="Tabs" instance=ExtResource( 1 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 8.0
+margin_right = -4.0
+margin_bottom = -4.0
+rect_min_size = Vector2( 0, 0 )
+
+[node name="MarkupEdit" type="TextEdit" parent="Tabs"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 8.0
+margin_right = -4.0
+margin_bottom = -4.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+syntax_highlighting = true
+script = ExtResource( 2 )
+configs = [ "res://addons/advanced-text/highlights/bbcode.json", "res://addons/advanced-text/highlights/markdown.json" ]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+visible = false
+margin_top = 38.0
+margin_right = 98.0
+margin_bottom = 58.0
+
+[node name="SaveButton" type="Button" parent="HBoxContainer"]
+margin_right = 41.0
+margin_bottom = 20.0
+text = "save"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CancelButton" type="Button" parent="HBoxContainer"]
+margin_left = 45.0
+margin_right = 98.0
+margin_bottom = 20.0
+text = "cancel"
+__meta__ = {
+"_edit_use_anchors_": false
+}

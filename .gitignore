@@ -4,6 +4,3 @@
 mono_crash.*.json
 /.plugged/
 /saves/
-/addons/*
-!addons/gd-plug
-!addons/vnkit

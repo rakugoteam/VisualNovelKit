@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/advanced-text/nodes/CodeEdit.gd" type="Script" id=1]
+[ext_resource path="res://addons/advanced-text/examples/EditTextOnClickPopup/EditTextOnClickPopup.gd" type="Script" id=2]
+[ext_resource path="res://addons/advanced-text/examples/AdvancedTextButton/AdvancedTextButton.tscn" type="PackedScene" id=3]
+
+[node name="EditTextOnClickPopup" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -156.0
+margin_top = -18.0
+margin_right = 130.0
+margin_bottom = 16.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+m_edit = NodePath("Popup/MarkupEdit")
+button = NodePath("AdvancedTextButton")
+
+[node name="AdvancedTextButton" parent="." instance=ExtResource( 3 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 8.0
+margin_right = 91.0
+margin_bottom = -2.0
+size_flags_vertical = 3
+toggle_mode = true
+
+[node name="Popup" type="Popup" parent="."]
+visible = true
+margin_left = 4.0
+margin_top = 31.0
+margin_right = 281.0
+margin_bottom = 132.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarkupEdit" type="TextEdit" parent="Popup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+syntax_highlighting = true
+script = ExtResource( 1 )
+configs = [ "res://addons/advanced-text/highlights/bbcode.json", "res://addons/advanced-text/highlights/markdown.json" ]

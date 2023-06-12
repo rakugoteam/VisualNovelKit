@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://addons/advanced-text/nodes/AdvancedTextLabel.gd" type="Script" id=1]
+[ext_resource path="res://addons/advanced-text/font/DejaVuSans-H2.tres" type="DynamicFont" id=2]
+[ext_resource path="res://addons/advanced-text/font/theme_with_fonts.tres" type="Theme" id=3]
+[ext_resource path="res://addons/advanced-text/font/DejaVuSans-H1.tres" type="DynamicFont" id=4]
+[ext_resource path="res://addons/advanced-text/font/DejaVuSans-H3.tres" type="DynamicFont" id=5]
+
+[node name="AdvancedTextLabel" type="RichTextLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+bbcode_enabled = true
+bbcode_text = "
+
+ "
+text = "
+
+ "
+script = ExtResource( 1 )
+markup_text = "
+
+ "
+markup = "markdown"
+headers_fonts = [ ExtResource( 4 ), ExtResource( 2 ), ExtResource( 5 ) ]
