@@ -127,7 +127,7 @@ window=false
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/Rakugo/plugin.cfg", "res://addons/advanced-text/plugin.cfg", "res://addons/editor_icon_previewer/plugin.cfg", "res://addons/emojis-for-godot/plugin.cfg", "res://addons/godot-plugin-refresher/plugin.cfg", "res://addons/material-design-icons/plugin.cfg", "res://addons/vnkit/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/Rakugo/plugin.cfg", "res://addons/advanced-text/plugin.cfg", "res://addons/emojis-for-godot/plugin.cfg", "res://addons/material-design-icons/plugin.cfg", "res://addons/vnkit/plugin.cfg" )
 
 [gui]
 
