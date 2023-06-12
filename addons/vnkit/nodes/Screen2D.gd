@@ -21,15 +21,15 @@ func _on_show(screen_path:Array, shown:bool):
 
 func _on_pos(screen_path:Array, pos):
 	if screen_path[0] in [name, screen_name]:
-		var nodes = get_nodes_from_path(screen_path, node)
-		var _pos = calculate_pos(pos)
+		var nodes = _base.get_nodes_from_path(screen_path, self)
+		var _pos = _base.calculate_pos(pos)
 
 		nodes.back().position = _pos
 
 func _on_scale(screen_path:Array, value):
 	if screen_path[0] in [name, screen_name]:
-		var nodes = get_nodes_from_path(screen_path, node)
-		var _scale = calculate_scale(scale)
+		var nodes = _base.get_nodes_from_path(screen_path, self)
+		var _scale = _base.calculate_scale(value)
 
 		if _scale is float:
 			_scale = Vector2(_scale, _scale)
@@ -38,8 +38,8 @@ func _on_scale(screen_path:Array, value):
 
 func _on_rot(screen_path:Array, value):
 	if screen_path[0] in [name, screen_name]:
-		var nodes = get_nodes_from_path(screen_path, node)
-		var _rot = calculate_rot(rot)
+		var nodes = _base.get_nodes_from_path(screen_path, self)
+		var _rot = _base.calculate_rot(value)
 		
 		nodes.back().rotation = _rot
 

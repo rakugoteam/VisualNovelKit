@@ -123,9 +123,9 @@ EBBCodeParser="*res://addons/advanced-text/parsers/EBBCodeParser.gd"
 MarkdownParser="*res://addons/advanced-text/parsers/MarkdownParser.gd"
 RenpyParser="*res://addons/advanced-text/parsers/RenpyParser.gd"
 Rakugo="*res://addons/Rakugo/Rakugo.gd"
+Screens="*res://addons/vnkit/rks_addons/screens.gd"
 Kit="*res://addons/vnkit/kit.gd"
 Window="*res://addons/vnkit/Window/Window.tscn"
-Screens="*res://addons/vnkit/rks_addons/screens.gd"
 
 [debug]
 

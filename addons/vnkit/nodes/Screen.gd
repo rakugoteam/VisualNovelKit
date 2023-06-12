@@ -15,26 +15,26 @@ func _ready():
 	Screens.connect("scale", self, "_on_scale")
 	Screens.connect("rot", self, "_on_rot")
 
-	func _on_pos(screen_path:Array, pos):
-		if screen_path[0] in [name, screen_name]:
-			var nodes = get_nodes_from_path(screen_path, node)
-			var _pos = calculate_pos(pos)
-	
-			nodes.back().rect_position = _pos
-	
-	func _on_scale(screen_path:Array, value):
-		if screen_path[0] in [name, screen_name]:
-			var nodes = get_nodes_from_path(screen_path, node)
-			var _scale = calculate_scale(scale)
-	
-			if _scale is float:
-				_scale = Vector2(_scale, _scale)
-	
-			nodes.back().rect_scale = _scale
-	
-	func _on_rot(screen_path:Array, value):
-		if screen_path[0] in [name, screen_name]:
-			var nodes = get_nodes_from_path(screen_path, node)
-			var _rot = calculate_rot(rot)
-			
-			nodes.back().rect_rotation = _rot
+func _on_pos(screen_path:Array, pos):
+	if screen_path[0] in [name, screen_name]:
+		var nodes = _base.get_nodes_from_path(screen_path, self)
+		var _pos = _base.calculate_pos(pos)
+
+		nodes.back().rect_position = _pos
+
+func _on_scale(screen_path:Array, value):
+	if screen_path[0] in [name, screen_name]:
+		var nodes = _base.get_nodes_from_path(screen_path, self)
+		var _scale = _base.calculate_scale(value)
+
+		if _scale is float:
+			_scale = Vector2(_scale, _scale)
+
+		nodes.back().rect_scale = _scale
+
+func _on_rot(screen_path:Array, value):
+	if screen_path[0] in [name, screen_name]:
+		var nodes = _base.get_nodes_from_path(screen_path, self)
+		var _rot = _base.calculate_rot(value)
+		
+		nodes.back().rect_rotation = _rot
