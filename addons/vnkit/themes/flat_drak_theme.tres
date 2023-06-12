@@ -1,11 +1,10 @@
-[gd_resource type="Theme" load_steps=162 format=2]
+[gd_resource type="Theme" load_steps=161 format=2]
 
 [ext_resource path="res://addons/advanced-text/font/DejaVuSans-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://addons/advanced-text/font/DejaVuSans-Oblique.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://addons/advanced-text/font/DejaVuSans-BoldOblique.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://addons/advanced-text/font/DejaVuSansMono.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://addons/advanced-text/font/DejaVuSans.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://addons/vnkit/themes/icons/circle.png" type="Texture" id=6]
 [ext_resource path="res://addons/vnkit/themes/icons/box-h.svg" type="Texture" id=7]
 [ext_resource path="res://addons/vnkit/themes/icons/box-v.svg" type="Texture" id=8]
 [ext_resource path="res://addons/vnkit/themes/icons/box-mini.svg" type="Texture" id=10]
@@ -473,7 +472,6 @@ content_margin_left = 0.0
 content_margin_right = 0.0
 content_margin_top = 0.0
 content_margin_bottom = 0.0
-texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 16, 16 )
 margin_left = 5.0
 margin_right = 5.0

@@ -53,6 +53,21 @@ _global_script_classes=[ {
 "class": "RakuScriptDialogue",
 "language": "GDScript",
 "path": "res://addons/Rakugo/lib/nodes/RakuScriptDialogue.gd"
+}, {
+"base": "Control",
+"class": "Screen",
+"language": "GDScript",
+"path": "res://addons/vnkit/nodes/Screen.gd"
+}, {
+"base": "Node2D",
+"class": "Screen2D",
+"language": "GDScript",
+"path": "res://addons/vnkit/nodes/Screen2D.gd"
+}, {
+"base": "Object",
+"class": "ScreenBase",
+"language": "GDScript",
+"path": "res://addons/vnkit/scripts/ScreenBase.gd"
 } ]
 _global_script_class_icons={
 "AdvancedTextButton": "",
@@ -63,7 +78,10 @@ _global_script_class_icons={
 "Emojis": "",
 "MaterialButton": "res://addons/material-design-icons/nodes/MaterialButton.svg",
 "MaterialIcon": "res://addons/material-design-icons/nodes/MaterialIcon.svg",
-"RakuScriptDialogue": ""
+"RakuScriptDialogue": "",
+"Screen": "",
+"Screen2D": "",
+"ScreenBase": ""
 }
 
 [addons]
@@ -105,6 +123,7 @@ EBBCodeParser="*res://addons/advanced-text/parsers/EBBCodeParser.gd"
 MarkdownParser="*res://addons/advanced-text/parsers/MarkdownParser.gd"
 RenpyParser="*res://addons/advanced-text/parsers/RenpyParser.gd"
 Rakugo="*res://addons/Rakugo/Rakugo.gd"
+Screens="*res://addons/vnkit/rks_addons/screens.gd"
 Kit="*res://addons/vnkit/kit.gd"
 Window="*res://addons/vnkit/Window/Window.tscn"
 
