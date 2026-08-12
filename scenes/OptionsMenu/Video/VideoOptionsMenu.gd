@@ -114,8 +114,8 @@ func enable_or_disable_apply_button():
 		
 	apply_button.disabled = true
 
-func _on_gui_scale_h_slider_value_changed(value: float) -> void:
+func _on_gui_scale_h_slider_value_changed(_value: float) -> void:
 	enable_or_disable_apply_button()
 
-func _on_resolution_options_item_selected(index: int) -> void:
+func _on_resolution_options_item_selected(_index: int) -> void:
 	enable_or_disable_apply_button()
