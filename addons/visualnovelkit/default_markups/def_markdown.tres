@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MarkdownParser" load_steps=6 format=3 uid="uid://6ioam3qiqsqa"]
+[gd_resource type="Resource" script_class="MarkdownParser" format=3 uid="uid://6ioam3qiqsqa"]
 
 [ext_resource type="Script" uid="uid://dpoos1ol2em05" path="res://addons/advanced-text/parsers/MarkdownParser.gd" id="1_ckysk"]
 
@@ -16,7 +16,4 @@ font_size = 24
 
 [resource]
 script = ExtResource("1_ckysk")
-italics = "both"
-bold = "both"
-points = "both"
 headers = Array[LabelSettings]([SubResource("LabelSettings_qwgxu"), SubResource("LabelSettings_g1s62"), SubResource("LabelSettings_35qfy"), SubResource("LabelSettings_j3fuf")])

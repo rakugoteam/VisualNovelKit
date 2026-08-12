@@ -110,7 +110,7 @@ static func load(file_name:String) -> Error:
 		push_error("Cannot open the save file: " + file_path)
 		return ERR_FILE_CANT_READ
 	
-	var json_data := file.get_as_text(true)
+	var json_data := file.get_as_text()
 	
 	var parsed_json = JSON.parse_string(json_data)
 	
