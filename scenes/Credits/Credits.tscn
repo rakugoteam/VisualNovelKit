@@ -16,7 +16,10 @@ vertical_scroll_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "[center][font_size=18][b]Game Credits[/b][/font_size][/center]
+text = "
+[center][font_size=18][b]Rakugo Port by Jeremi Biernacki[/b][/font_size][/center]
+
+[center][font_size=18][b]Game Credits[/b][/font_size][/center]
 
 [font_size=16][b]Developers[/b][/font_size]
 - Lead Developer: [i]John Smith[/i]
@@ -27,14 +30,11 @@ text = "[center][font_size=18][b]Game Credits[/b][/font_size][/center]
 [font_size=16][b]Special Thanks[/b][/font_size]
 - Our supportive community for their valuable feedback and suggestions.
 - Friends and family for their unwavering support during development.
-- [i]Special mention to OpenAI for their incredible language model technology![/i]
 
 [font_size=16][b]Legal[/b][/font_size]
 - This game contains assets licensed under Creative Commons and public domain.
 - Some sound effects obtained from [url=https://www.freesound.org/]freesound.org[/url].
 - All rights reserved for original content not explicitly mentioned.
-
-[font_size=14][b] 2024 Rakugo Team. [/b][/font_size]
 "
 fit_content = true
 scroll_active = false
